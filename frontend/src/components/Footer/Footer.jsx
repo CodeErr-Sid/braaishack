@@ -33,7 +33,12 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2024 © Tomato.com - All Right Reserved.</p>
+      <div className="babyfoot">
+        <p className="footer-copyright">© 2024 Braai Shack Restaurant — Restaurant website created by Zenchef.</p>
+        <div className="babyfootlinks">
+          <a href="">Disclaimer</a><a href="">Terms of Use</a><a href="">Privacy Policy</a><a href="">Cookies Policy</a>
+        </div>
+      </div>
     </div>
   )
 }

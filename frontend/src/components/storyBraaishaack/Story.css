@@ -1,0 +1,138 @@
+.Story {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.Story .Story-contents {
+    width: 50%;
+    padding: 0 3vw;
+    height: auto; /* Adjust height to auto for better responsiveness */
+    box-sizing: border-box;
+}
+
+.Story-contents h2 {
+    font-size: 3vw;
+    color: #fdcf08;
+    padding: 2vw 0;
+}
+
+.Story-contents p {
+    font-size: 1.5vw;
+    color: white;
+    line-height: 2vw;
+}
+
+.pro {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    width: 25vw;
+    height: 6.5vw;
+    margin: 2vw 0;
+}
+
+.pro .proimg {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+}
+
+.proimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pro .protitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.protitle .proname {
+    color: white;
+    font-size: 2vw;
+}
+
+.protitle .prosubname {
+    color: #ffffff;
+    font-size: 1.5vw;
+}
+
+.Story .Story-img {
+    width: 50%;
+    height: auto; /* Adjust height to auto for better responsiveness */
+    padding: 3vw;
+    box-sizing: border-box;
+}
+
+.Story-img img {
+    width: 100%;
+    height: auto; /* Adjust height to auto for better responsiveness */
+    object-fit: cover;
+    box-shadow: -2px 12px 73px rgba(255, 255, 255, 0.5);
+}
+
+/* Media Query for screens 800px or smaller */
+@media (max-width: 800px) {
+    .Story {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .Story .Story-contents {
+        width: 90%; /* Full width with some padding */
+        padding: 2vw;
+        text-align: center; /* Center align text for smaller screens */
+    }
+
+       .Story-contents h2 {
+        font-size: 9vw;
+        padding: 4vw 0 4vw;
+    }
+
+    .Story-contents p {
+        font-size: 3.5vw; /* Adjust font size for smaller screens */
+        line-height: 4vw; /* Adjust line height for readability */
+        padding: 0vw 0 6vw;
+
+    }
+
+    .pro {
+        width: 80vw;
+        height: auto;
+        margin: 4vw 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vw;
+    }
+
+    .pro .proimg {
+        width: 20vw; /* Adjust width for smaller screens */
+        height: 20vw; /* Adjust height for smaller screens */
+    }
+
+    .protitle .proname, .protitle .prosubname {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+
+    .Story .Story-img {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Adjust height for better responsiveness */
+        padding: 2vw;
+    }
+
+    .Story-img img {
+        width: 100%; /* Adjust width to ensure it remains responsive */
+        height: auto; /* Adjust height for better responsiveness */
+        box-shadow: none; /* Remove shadow for cleaner look on small screens */
+    }
+}

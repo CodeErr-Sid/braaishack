@@ -1,12 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react'
-import './Navbar.css'
-import { assets } from '../../assets/assets'
-import { Link, useNavigate } from 'react-router-dom'
-import { StoreContext } from '../../Context/StoreContext'
+import React, { useContext, useState } from 'react';
+import './Navbar.css';
+import { assets } from '../../assets/assets';
+import { Link, useNavigate } from 'react-router-dom';
+import { StoreContext } from '../../Context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
 
   const [menu, setMenu] = useState("home");
+  const [isMenuOpen , setIsMenuOpen] = useState(false);
   const { getTotalCartAmount, token ,setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -20,29 +21,15 @@ const Navbar = ({ setShowLogin }) => {
     <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
       <ul className="navbar-menu">
-        <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>home</Link>
-        <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>menu</a>
-        <a href='#app-download' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>mobile app</a>
-        <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>contact us</a>
+        <Link to="/" onClick={() => setMenu("MENUS")} className={`${menu === "MENUS" ? "active" : ""}`}>MENUS</Link>
+        <a href='#explore-menu' onClick={() => setMenu("PHOTOS")} className={`${menu === "PHOTOS" ? "active" : ""}`}>PHOTOS</a>
+        <a href='#app-download' onClick={() => setMenu("REVIEWS")} className={`${menu === "REVIEWS" ? "active" : ""}`}>REVIEWS</a>
+        <a href='#footer' onClick={() => setMenu("EVENTS")} className={`${menu === "EVENTS" ? "active" : ""}`}>EVENTS</a>
+        <a href='#footer' onClick={() => setMenu("PRESS")} className={`${menu === "PRESS" ? "active" : ""}`}>PRESS</a>
+        <a href='#footer' onClick={() => setMenu("MAP&CONTACT")} className={`${menu === "MAP&CONTACT" ? "active" : ""}`}>MAP&CONTACT</a>
       </ul>
-      <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
-        <Link to='/cart' className='navbar-search-icon'>
-          <img src={assets.basket_icon} alt="" />
-          <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
-        </Link>
-        {!token ? <button onClick={() => setShowLogin(true)}>sign in</button>
-          : <div className='navbar-profile'>
-            <img src={assets.profile_icon} alt="" />
-            <ul className='navbar-profile-dropdown'>
-              <li onClick={()=>navigate('/myorders')}> <img src={assets.bag_icon} alt="" /> <p>Orders</p></li>
-              <hr />
-              <li onClick={logout}> <img src={assets.logout_icon} alt="" /> <p>Logout</p></li> 
-            </ul>
-          </div>
-        }
+        <button onClick={()=>{alert('Pro will make')}}>BOOK A TABLE</button>
 
-      </div>
     </div>
   )
 }

@@ -1,0 +1,14 @@
+/* CustomCursor.css */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8vw; /* Adjust size as needed */
+  height: 8vw; /* Adjust size as needed */
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+  z-index: 9999; /* Ensure it's above everything else */
+  transform: translate(-50%, -50%);
+  transition: 0.2s
+}

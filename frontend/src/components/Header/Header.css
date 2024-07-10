@@ -1,55 +1,103 @@
-.header{
-    height: 34vw;
-    margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size:contain;
-    position: relative;
-}
-.header-contents{
-    position: absolute;
+.header {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
-    animation: fadeIn 3s;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
-.header-contents h2{
-    font-weight:500;
+
+.header .header-contents {
+    width: 50%;
+    padding: 0 3vw;
+    height: auto; /* Adjust height to auto for better responsiveness */
+    box-sizing: border-box;
+}
+
+.header-contents h2 {
+    font-size: 5vw;
+    color: #fdcf08;
+    padding: 7vw 0 2vw;
+}
+
+.header-contents p {
+    font-size: 1.5vw;
     color: white;
-    font-size: max(4.5vw,22px);
+    line-height: 2vw;
 }
-.header-contents p{
-    color: white;
-    font-size: 1vw;
-}
-.header-contents button{
+
+.header-contents button {
+    font-size: 1.5vw;
+    font-weight: 600;
     border: none;
-    color: #747474;
-    font-weight: 500;
-    padding: 1vw 2.3vw;
-    background: white;
-    font-size: max(1vw,13px);
-    border-radius: 50px;
+    background-color: #fdcf08;
+    padding: 1vw 16vw;
+    border-radius: 2vw;
+    margin: 3vw 0;
 }
-@media (max-width:1050px) {
-    .header{
-        height: 38vw;
-    }
-    .header-contents{
-        max-width: 45%;
-    }
+
+.header .header-img {
+    width: 40%;
+    height: auto;
+    padding: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
-@media(max-width:750px){
-    .header-contents{
-        max-width: 55%;
+
+.header-img img {
+    width: 100%;
+    height: auto; /* Adjust height to auto for better responsiveness */
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1; /* Ensure the aspect ratio is 1:1 for a perfect circle */
+    box-shadow: 7px 31px 43px rgba(255, 255, 255, 0.5);
+}
+
+/* Media Query for screens 800px or smaller */
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
     }
-    .header-contents p{
-       display: none;
+
+    .header .header-contents {
+        width: 90%; /* Full width with some padding */
+        padding: 2vw;
+        text-align: center; /* Center align text for smaller screens */
     }
-    .header-contents button{
-        padding: 2vw 4vw;
+
+        .header-contents h2 {
+        font-size: 10vw;
+        padding: 0vw 0 6vw;
+    }
+
+    .header-contents p {
+        font-size: 3.5vw; /* Adjust font size for smaller screens */
+        line-height: 4vw; /* Adjust line height for readability */
+        padding: 0 0 6vw;
+    }
+
+        .header-contents button {
+        font-size: 3.5vw;
+        padding: 2vw 14vw;
+        margin: 0 0 6vw;
+        border-radius: 1vw;
+    }
+
+    .header .header-img {
+        width: 80%; /* Adjust width for smaller screens */
+        height: auto; /* Adjust height to auto for better responsiveness */
+        padding: 2vw;
+    }
+
+    .header-img img {
+        width: 100%; /* Adjust width to ensure it remains a circle */
+        height: auto; /* Adjust height to auto for better responsiveness */
+        border-radius: 50%; /* Ensure the image is a perfect circle */
+        aspect-ratio: 1; /* Ensure the aspect ratio is 1:1 for a perfect circle */
+        box-shadow: none; /* Remove shadow for cleaner look on small screens */
     }
 }

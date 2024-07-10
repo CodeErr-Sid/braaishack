@@ -10,6 +10,7 @@ import MyOrders from './pages/MyOrders/MyOrders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify'
+import Cursor from './components/cursor/Cursor'
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
     <ToastContainer/>
     {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
       <div className='app'>
+        <Cursor/>
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
           <Route path='/' element={<Home />}/>

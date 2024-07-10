@@ -61,8 +61,12 @@ import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 import checked from './checked.png'
 import un_checked from './un_checked.png'
+import steek from './b1.webp'
+import storyimg from './b2.jpg';
 
 export const assets = {
+    storyimg,
+    steek,
     logo,
     basket_icon,
     header_img,
