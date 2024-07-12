@@ -1,0 +1,143 @@
+/* Base Styles */
+.events_main{
+    width: 100vw;
+    min-height: 10vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.events_main .event_h1{
+    font-size: 6vw;
+    color: rgb(255, 255, 255);
+    padding: 0 2vw;
+    text-align: center; /* Center align the title */
+}
+
+.events_main .event_cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event_cards .event_card{
+    margin: 2vw;
+    width: 45vw;
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fdcf08;
+}
+
+.event_card .event_content{
+    width: 30%;
+    height: 100%;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.event_card .event_content .card_data{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.card_data h1{
+    font-size: 2.5vw;
+}
+
+.event_card .event_content .card_content{
+    width: 100%;
+    height: 100%;
+    background-color: #fdcf08;
+    display: flex;
+    align-items: center;
+}
+
+.card_content p{
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+
+.event_card .event_img{
+    position: relative;
+    width: 70%;
+    height: 100%;
+}
+
+.event_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event_img h1{
+    position: absolute;
+    bottom: 1vw;
+    left: 1vw;
+    font-size: 2.5vw;
+    color: white;
+}
+
+/* Media Queries */
+
+/* For tablets and small desktops */
+@media screen and (max-width: 1024px) {
+    .events_main .event_h1 {
+        font-size: 8vw;
+    }
+    .event_cards .event_card {
+        width: 90vw;
+        height: 40vw;
+    }
+    .card_data h1, .event_img h1 {
+        font-size: 4vw;
+    }
+    .card_content p {
+        font-size: 2vw;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    .events_main .event_h1 {
+        font-size: 10vw;
+    }
+    .event_cards .event_card {
+        width: 90vw;
+        height: 60vw;
+    }
+    .card_data h1, .event_img h1 {
+        font-size: 5vw;
+    }
+    .card_content p {
+        font-size: 2.5vw;
+        padding: 2vw;
+    }
+}
+
+/* For small mobile devices */
+@media screen and (max-width: 480px) {
+    .events_main .event_h1 {
+        font-size: 12vw;
+    }
+    .event_cards .event_card {
+        width: 90vw;
+        height: 80vw;
+    }
+    .card_data h1, .event_img h1 {
+        font-size: 6vw;
+    }
+    .card_content p {
+        font-size: 3vw;
+        padding: 3vw;
+    }
+}
