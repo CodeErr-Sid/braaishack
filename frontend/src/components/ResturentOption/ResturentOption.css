@@ -23,13 +23,14 @@
     min-height: 18vw;
     background-color: #ffffff;
     margin: 2vw;
-    border-radius: 4vw;
+    border-radius: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: .5s;
     gap: 2vw;
 }
+
 .main .menulists .menulist:hover {
     background-color: #fdcf08;
 }
@@ -67,7 +68,7 @@
     .main .menulists .menulist {
         width: 80vw;
         min-height: 30vw;
-        border-radius: 6vw;
+        border-radius: 1vw;
         margin: 3vw 0;
     }
 
@@ -99,7 +100,7 @@
     .main .menulists .menulist {
         width: 90vw;
         min-height: 40vw;
-        border-radius: 8vw;
+        border-radius: 1vw;
         margin: 4vw 0;
     }
 

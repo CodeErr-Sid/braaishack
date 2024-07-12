@@ -17,6 +17,33 @@ const ResturentOption = () => {
             <p className='para'>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
+        <div className="menulist">
+          <div className="menuimg">
+            <img src={assets.steek} alt="" />
+          </div>
+          <div className="menucontent">
+            <h1>hello</h1>
+            <p className='para'>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div className="menulist">
+          <div className="menuimg">
+            <img src={assets.steek} alt="" />
+          </div>
+          <div className="menucontent">
+            <h1>hello</h1>
+            <p className='para'>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div className="menulist">
+          <div className="menuimg">
+            <img src={assets.steek} alt="" />
+          </div>
+          <div className="menucontent">
+            <h1>hello</h1>
+            <p className='para'>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
       </div>
     </div>
     </>
