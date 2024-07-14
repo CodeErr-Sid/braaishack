@@ -13,14 +13,14 @@ import Events_F from '../../components/Events_F/Events_F'
 
 import Event from '../../components/Events/Event'
 import Reservation_Table from '../../components/Reservation_Table/Reservation_Table'
+import { assets } from '../../assets/assets'
+
 
 const Home = () => {
 
-  const [category,setCategory] = useState("All")
-
   return (
     <>
-      <Header/>
+      <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} imgsrc={assets.steek} />
       <Story/>
       <ResturentOption/>
       <FeaturedProducts/>

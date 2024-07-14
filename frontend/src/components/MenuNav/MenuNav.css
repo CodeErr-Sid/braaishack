@@ -1,0 +1,107 @@
+/* Base Styles */
+.Menubtn {
+  width: 100vw;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vw;
+  padding: 2vw;
+}
+
+.Menubtn button {
+  font-size: 2vw;
+  padding: 1vw 1vw;
+  border-radius: 3vw;
+  background-color: #000000;
+  border: 2px solid #fdcf08;
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.Menubtn button:hover {
+  background-color: #fdcf08;
+  color: rgb(0, 0, 0);
+}
+
+.btnmain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  flex-direction: column;
+}
+
+.btnmain p {
+  font-size: 2vw;
+  color: white;
+  text-align: center;
+  padding: 2vw 4vw;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .Menubtn button {
+    font-size: 2.5vw;
+    padding: 1.5vw 1.5vw;
+    border-radius: 3.5vw;
+  }
+
+  .btnmain p {
+    font-size: 2.5vw;
+    padding: 3vw 5vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .Menubtn button {
+    font-size: 3vw;
+    padding: 2vw 2vw;
+    border-radius: 4vw;
+  }
+
+  .btnmain p {
+    font-size: 3vw;
+    padding: 4vw 6vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .Menubtn button {
+    font-size: 3.5vw;
+    padding: 2.5vw 2.5vw;
+    border-radius: 4.5vw;
+  }
+
+  .btnmain p {
+    font-size: 3.5vw;
+    padding: 4vw 6vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .Menubtn button {
+    font-size: 4vw;
+    padding: 3vw 3vw;
+    border-radius: 5vw;
+  }
+
+  .btnmain p {
+    font-size: 4vw;
+    padding: 5vw 7vw;
+  }
+}
+
+@media (max-width: 360px) {
+  .Menubtn button {
+    font-size: 5vw;
+    padding: 3.5vw 3.5vw;
+    border-radius: 6vw;
+  }
+
+  .btnmain p {
+    font-size: 5vw;
+    padding: 6vw 8vw;
+  }
+}
