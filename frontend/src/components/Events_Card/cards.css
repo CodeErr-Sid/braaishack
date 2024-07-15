@@ -88,16 +88,16 @@
     transform: translateY(8px)
   }
   
-/* Media Queries for Responsiveness */
+
 @media (max-width: 1024px) {
     .card {
-      width: 399px; /* Keep fixed width */
+      width: 399px; 
     }
   }
   
   @media (max-width: 768px) {
     .card {
-      width: 399px; /* Keep fixed width */
+      width: 399px;
     }
   }
   
