@@ -65,6 +65,35 @@ import steek from "./b1.webp";
 import storyimg from "./b2.jpg";
 import people1 from "./people1.jpeg";
 import people2 from "./people2.jpeg";
+import background from "./bgimg.jpg";
+
+import starters1 from "./menu01.png";
+import starters2 from "./menu02.png";
+import starters3 from "./menu03.png";
+import starters4 from "./menu04.png";
+import braai1 from "./braai01.png";
+import braai2 from "./braai02.png";
+import braai3 from "./braai03.png";
+import braai4 from "./braai04.png";
+import braai5 from "./braai05.png";
+import braai6 from "./braai06.png";
+import braai7 from "./braai07.png";
+import kids1 from "./kids1.jpeg";
+import kids2 from "./kids2.jpeg";
+import kids3 from "./kids3.png";
+import sides1 from "./sides1.png";
+import sides2 from "./sides2.png";
+import sides3 from "./sides3.png";
+import sides4 from "./sides4.png";
+import sides5 from "./sides5.png";
+import sides6 from "./sides6.png";
+import sides7 from "./sides7.png";
+import sides8 from "./sides8.png";
+import sides9 from "./sides9.png";
+import sides10 from "./sides10.png";
+import sides11 from "./sides11.png";
+import sides12 from "./sides12.png";
+
 // import background_hero from "./restaurant_background";
 
 export const assets = {
@@ -93,6 +122,34 @@ export const assets = {
   un_checked,
   people1,
   people2,
+  starters1,
+  starters2,
+  starters3,
+  starters4,
+  braai1,
+  braai2,
+  braai3,
+  braai4,
+  braai5,
+  braai6,
+  braai7,
+  kids1,
+  kids2,
+  kids3,
+  sides1,
+  sides2,
+  sides3,
+  sides4,
+  sides5,
+  sides6,
+  sides7,
+  sides8,
+  sides9,
+  sides10,
+  sides11,
+  sides12,
+  background,
+
   //   background_hero,
 };
 

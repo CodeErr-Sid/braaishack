@@ -10,7 +10,7 @@ export default function Events() {
   return (
     <>
     <div className='event-section'>
-   <Header title={"Events"} imgsrc={assets.header_img}/>
+   <Header title={"Events"} imgsrc={assets.background}/>
     <Cards/>
     </div>
     </>

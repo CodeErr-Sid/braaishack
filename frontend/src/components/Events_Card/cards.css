@@ -6,10 +6,10 @@
     padding: 20px;
     background-color: black;
     color: #000000;
-    margin-top:3rem;
+    /* margin-top:3rem; */
   }
   
-  .card {
+  .evt-card {
     background-color: #ffff;
     border-radius: 8px;
     overflow: hidden;
@@ -24,17 +24,17 @@
     transition: transform 0.3s ease-in-out; 
   }
   
-  .card:hover{
+  .evt-card:hover{
     transform: translateY(20px);
   }
-  .card-img {
+  .card-imgs {
     width: 100%;
     height: 260px;
     overflow: hidden;
     margin-bottom: 10px;
   }
   
-  .card-img img {
+  .card-imgs img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -90,13 +90,13 @@
   
 
 @media (max-width: 1024px) {
-    .card {
+    .evt-card {
       width: 399px; 
     }
   }
   
   @media (max-width: 768px) {
-    .card {
+    .evt-card{
       width: 399px;
     }
   }

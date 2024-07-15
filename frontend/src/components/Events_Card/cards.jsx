@@ -45,8 +45,8 @@ export default function cards() {
     <>
     <div className='cards-container'>
       {cards.map((card, index) => (
-        <div key={index} className='card'>
-          <div className='card-img'>
+        <div key={index} className='evt-card'>
+          <div className='card-imgs'>
             <img src={card.img} alt='Card Image' />
           </div>
           <div className='card-title'>
