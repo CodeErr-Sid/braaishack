@@ -1,7 +1,7 @@
 .reservation {
     background-color: rgb(0, 0, 0);
     width: 100%;
-    min-height: 100vh;
+    min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@
 }
 
 .reservation .reservation-form {
-        width: 35vw;
+    width: 35vw;
     height: 35vw;
     background-color: #272727;
     border: 2px solid #fdcf08;
@@ -71,4 +71,62 @@
     padding: 1vw 3vw;
     border-radius: 1vw;
     }
+
+/* Base styles already provided */
+
+
+
+@media only screen and (max-width: 800px) {
+                .reservation {
+        padding: 10vw 0;
+    }
+
+    .reservation .reservation-contents {
+        width: 100%;
+        padding: 0 6vw;
+        margin-bottom: 3vw; /* Add margin-bottom for spacing */
+    }
+
+        .reservation-contents h2 {
+        font-size: 10.5vw;
+        padding: 2vw 0;
+    }
+
+        .reservation-contents p {
+        font-size: 8vw;
+        line-height: 8.5vw;
+    }
+
+    .reservation-contents button {
+        font-size: 8vw;
+        padding: 1vw 14vw;
+        margin: 3vw 0;
+    }
+
+        .reservation .reservation-form {
+        display: flex;
+        gap: 6vw;
+        width: 90%;
+        height: auto;
+        padding: 20vw;
+        border-radius: 10vw;
+    }
+
+    .reservation-form h1 {
+                font-size: 10.5vw;
+    }
+
+    .reservation-form input {
+        font-size: 5.5vw;
+        padding: 3vw;
+        border-radius: 10vw;
+    }
+
+    .reservation-form button {
+        font-size: 7vw;
+        padding: 1vw 1vw;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
 
