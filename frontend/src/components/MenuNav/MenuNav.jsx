@@ -13,13 +13,13 @@ const MenuNav = ({ setSelectedMenu }) => {
   return (
     <>
       <div className="btnmain">
-      <div className="Menubtn">
-        {Menubtndata.map((data, index) => (
-          <button key={index} onClick={() => setSelectedMenu(data)}>
-            {data}
-          </button>
-        ))}
-      </div>
+        <div className="Menubtn">
+          {Menubtndata.map((data, index) => (
+            <a key={index} href={`#${data.replace(/\s+/g, "")}`} onClick={() => setSelectedMenu(data)}>
+              <button>{data}</button>
+            </a>
+          ))}
+        </div>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
           atque sequi perspiciatis rem cum quae, natus illum earum, itaque nihil

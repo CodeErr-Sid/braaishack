@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    position: relative;
+    padding-top: 6vw;
 }
 
 .header .header-contents {

@@ -165,7 +165,7 @@ const Menucards = () => {
   return (
     <div className="menucards">
       {sections.map((section, sectionIndex) => (
-        <div className="cardmain" key={sectionIndex}>
+        <div className="cardmain" id={section.title.replace(/\s+/g, "")} key={sectionIndex}>
           <h1>{section.title}</h1>
           <div className="cards">
             {section.cards.map((card, cardIndex) => (
