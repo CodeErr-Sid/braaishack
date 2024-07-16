@@ -1,0 +1,164 @@
+.header2 {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 6vw;
+    overflow-x: hidden;
+}
+
+.header-content2 {
+    width: 50%;
+    padding: 0 3vw;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.header-content2 h1 {
+    font-size: 5vw;
+    color: #fdcf08;
+    padding: 7vw 0 2vw;
+}
+
+.header-content2 p {
+    font-size: 1.5vw;
+    color: white;
+    line-height: 2vw;
+}
+
+.header-content2 button {
+    font-size: 1.5vw;
+    font-weight: 600;
+    border: none;
+    background-color: #fdcf08;
+    padding: 1vw 16vw;
+    border-radius: 2vw;
+    margin: 3vw 0;
+}
+
+.header-images2 {
+    width: 40%;
+    height: auto;
+    padding: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.header-images2 img {
+    position: absolute;
+}
+
+.header-images2 .burger {
+    z-index: 3;
+    width: 447px;
+    height: 415px;
+    left: 7%;
+    transform: translateY(-10%);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.header-images2 .tomato {
+    z-index: 2;
+    width: 147px;
+    height: 147px;
+    right: 3%;
+    top: 20%;
+    transform: rotate(30deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+.header-images2 .chilli {
+    z-index: 1;
+    width: 213px;
+    height: auto;
+    top: -15%;
+    left: -5%;
+    transform: rotateX(-16.9deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+.header-images2 .onion {
+    z-index: 0;
+    width: 181px;
+    height: 181px;
+    left: 13%;
+    top: 20%;
+    transform: rotateY(-51.41deg);
+    animation: float 3s ease-in-out infinite;
+}
+/* Media Query for screens 800px or smaller */
+@media (max-width: 800px) {
+    .header2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content2 {
+        width: 90%;
+        padding: 2vw;
+        text-align: center;
+    }
+
+    .header-content2 h1 {
+        font-size: 10vw;
+        padding: 0 0 6vw;
+    }
+
+    .header-content2 p {
+        font-size: 3.5vw;
+        line-height: 4vw;
+        padding: 0 0 6vw;
+    }
+
+    .header-content2 button {
+        font-size: 3.5vw;
+        padding: 2vw 14vw;
+        margin: 0 0 6vw;
+        border-radius: 1vw;
+    }
+
+    .header-images2 {
+        width: 80%;
+        padding: 2vw;
+        position: relative;
+    }
+
+    .header-images2 img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto;
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    .header-images2 .burger {
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10%);
+    }
+
+    .header-images2 .tomato,
+    .header-images2 .chilli,
+    .header-images2 .onion {
+        width: 40%; /* Adjust size for smaller screens */
+        height: auto;
+    }
+}

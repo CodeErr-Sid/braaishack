@@ -1,12 +1,13 @@
 .Menubtn {
-  width: 100vw;
+  width: 100vw!important;
   min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1vw; 
-  padding: 5vw;
+  padding: 7vw;
+  overflow-x: hidden; 
 }
 
 .Menubtn button {
