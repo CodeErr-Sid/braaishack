@@ -48,6 +48,7 @@
     justify-content: center;
     box-sizing: border-box;
     position: relative;
+    margin-top: 3rem;
 }
 
 
@@ -163,6 +164,7 @@
         flex-direction: column; /* Stack elements vertically */
         align-items: center;
         min-height: 80vh;
+        
        
     }
 
