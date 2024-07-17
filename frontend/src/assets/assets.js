@@ -94,6 +94,12 @@ import sides10 from "./sides10.png";
 import sides11 from "./sides11.png";
 import sides12 from "./sides12.png";
 
+import burger from "./burger.png";
+import onion from "./onion.png";
+import tomato from "./tomato.png";
+import chilli from "./chilli.png";
+
+import smoke from "./Smoke.mp4";
 // import background_hero from "./restaurant_background";
 
 export const assets = {
@@ -149,6 +155,11 @@ export const assets = {
   sides11,
   sides12,
   background,
+  burger,
+  onion,
+  tomato,
+  chilli,
+  smoke,
 
   //   background_hero,
 };
