@@ -14,24 +14,32 @@ const Navbar = ({ setShowLogin }) => {
   const logout = () => {
     localStorage.removeItem("token");
     setToken("");
-    navigate('/')
-  }
+    navigate('/');
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
-      <ul className="navbar-menu">
-        <Link to="/menu" onClick={() => setMenu("MENUS")} className={`${menu === "MENUS" ? "active" : ""}`}>MENUS</Link>
-        <a href='#explore-menu' onClick={() => setMenu("PHOTOS")} className={`${menu === "PHOTOS" ? "active" : ""}`}>PHOTOS</a>
-        <a href='#app-download' onClick={() => setMenu("REVIEWS")} className={`${menu === "REVIEWS" ? "active" : ""}`}>REVIEWS</a>
-        <a href='#footer' onClick={() => setMenu("EVENTS")} className={`${menu === "EVENTS" ? "active" : ""}`}>EVENTS</a>
-        <a href='#footer' onClick={() => setMenu("PRESS")} className={`${menu === "PRESS" ? "active" : ""}`}>PRESS</a>
-        <a href='#footer' onClick={() => setMenu("MAP&CONTACT")} className={`${menu === "MAP&CONTACT" ? "active" : ""}`}>MAP&CONTACT</a>
+      <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
+        <Link to="/menu" onClick={() => { setMenu("MENUS"); toggleMenu(); }} className={`${menu === "MENUS" ? "active" : ""}`}>MENUS</Link>
+        <a href='#explore-menu' onClick={() => { setMenu("PHOTOS"); toggleMenu(); }} className={`${menu === "PHOTOS" ? "active" : ""}`}>PHOTOS</a>
+        <a href='#app-download' onClick={() => { setMenu("REVIEWS"); toggleMenu(); }} className={`${menu === "REVIEWS" ? "active" : ""}`}>REVIEWS</a>
+        <a href='#footer' onClick={() => { setMenu("EVENTS"); toggleMenu(); }} className={`${menu === "EVENTS" ? "active" : ""}`}>EVENTS</a>
+        <a href='#footer' onClick={() => { setMenu("PRESS"); toggleMenu(); }} className={`${menu === "PRESS" ? "active" : ""}`}>PRESS</a>
+        <a href='#footer' onClick={() => { setMenu("MAP&CONTACT"); toggleMenu(); }} className={`${menu === "MAP&CONTACT" ? "active" : ""}`}>MAP&CONTACT</a>
+        <button onClick={() => { alert('Pro will make'); toggleMenu(); }}>BOOK A TABLE</button>
       </ul>
-        <button onClick={()=>{alert('Pro will make')}}>BOOK A TABLE</button>
-
+      <div className="menubtn" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

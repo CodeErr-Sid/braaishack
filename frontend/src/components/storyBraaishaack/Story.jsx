@@ -19,7 +19,7 @@ const Story = () => {
                     </div>
                     <div className="protitle">
                         <div className="proname">Inthisar</div>
-                        <div className="prosubname">mass</div>
+                        <div className="prosubname">devloper</div>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 .featuredproducts {
   width: 100%;
-  min-height: 100vh; /* Ensure it takes full viewport height */
+  min-height: 10vh; /* Ensure it takes full viewport height */
   background: #000;
   padding: 2vw; /* Add padding for better spacing on smaller screens */
   box-sizing: border-box; /* Ensure padding is included in the width and height */

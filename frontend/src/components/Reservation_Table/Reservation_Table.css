@@ -21,6 +21,7 @@
     color: #fdcf08;
     padding: 2vw 0 2vw;
 }
+
 .reservation-contents span {
     color: white;
     padding: 1vw;
@@ -46,38 +47,44 @@
 
 .reservation .reservation-form {
     width: 35vw;
-    height: 35vw;
-    background-color: #272727;
+    height: auto;
+    padding: 4vw;
+    background: rgba(39, 39, 39, 0.5); /* Semi-transparent background */
     border: 2px solid #fdcf08;
     border-radius: 1vw;
-    display: flex;align-items: center;justify-content: center;
-    flex-direction: column;gap: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
     overflow: hidden;
 }
 
-.reservation-form h1{
+.reservation-form h1 {
     color: #fdcf08;
     font-size: 3vw;
 }
 
-.reservation-form input{
+.reservation-form input {
     font-size: 2vw;
+    padding: 0.5vw;
+    border: 1px solid #fdcf08;
+    border-radius: 0.5vw;
 }
 
-.reservation-form button{
+.reservation-form button {
     border: none;
     background-color: #fdcf08;
     font-size: 1.5vw;
     padding: 1vw 3vw;
     border-radius: 1vw;
-    }
+}
 
-/* Base styles already provided */
-
-
-
+/* Media Query for screens 800px or smaller */
 @media only screen and (max-width: 800px) {
-                .reservation {
+    .reservation {
         padding: 10vw 0;
     }
 
@@ -87,12 +94,12 @@
         margin-bottom: 3vw; /* Add margin-bottom for spacing */
     }
 
-        .reservation-contents h2 {
+    .reservation-contents h2 {
         font-size: 10.5vw;
         padding: 2vw 0;
     }
 
-        .reservation-contents p {
+    .reservation-contents p {
         font-size: 8vw;
         line-height: 8.5vw;
     }
@@ -103,17 +110,21 @@
         margin: 3vw 0;
     }
 
-        .reservation .reservation-form {
+    .reservation .reservation-form {
         display: flex;
         gap: 6vw;
         width: 90%;
         height: auto;
-        padding: 20vw;
+        padding: 10vw;
+        background: rgba(39, 39, 39, 0.5); /* Semi-transparent background */
+        border: 2px solid #fdcf08;
         border-radius: 10vw;
+        backdrop-filter: blur(10px); /* Frosted glass effect */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
     }
 
     .reservation-form h1 {
-                font-size: 10.5vw;
+        font-size: 10.5vw;
     }
 
     .reservation-form input {
@@ -123,10 +134,8 @@
     }
 
     .reservation-form button {
-        font-size: 7vw;
-        padding: 1vw 1vw;
+        font-size: 6vw;
+        padding: 2vw 5vw;
+        border-radius: 6vw;
     }
 }
-
-/* Large devices (desktops, 992px and up) */
-

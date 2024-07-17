@@ -29,13 +29,6 @@ const FeaturedProducts = () => {
                 <h2>steek</h2>
                 <p>masala</p>
             </div>
-            <div className="product">
-                <div className="productimg">
-                    <img src={assets.steek} alt="" />
-                </div>
-                <h2>steek</h2>
-                <p>masala</p>
-            </div>
         </div>
         {/* {
             products.map((data)=>{

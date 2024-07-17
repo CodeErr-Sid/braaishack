@@ -1,7 +1,6 @@
-
 .navbar {
     width: 100%;
-    height: 6vw;
+    min-height: 6vw;
     padding: 0 1vw;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
     backdrop-filter: blur(20px); /* Frosted glass effect */
@@ -26,6 +25,7 @@
     align-items: center;
     list-style: none;
     gap: 2vw;
+    transition: max-height 0.3s ease-in-out;
 }
 
 .navbar-menu .active {
@@ -47,7 +47,7 @@
     background: rgba(255, 255, 255, 0.2); /* Light hover effect */
 }
 
-.navbar button {
+.navbar-menu button {
     border: none;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -59,190 +59,105 @@
     transition: background 0.3s ease;
 }
 
-.navbar button:hover {
+.navbar-menu button:hover {
     background-color: rgba(255, 255, 255, 0.8); /* Slightly more transparent on hover */
     color: black;
 }
 
-
-/* .navbar-right {
+.navbar .menubtn {
     display: flex;
-    align-items: center;
-    gap: 40px;
-} */
-
-/* .navbar-search-icon{
-position: relative;
-} */
-
-/* .navbar-search-icon .dot{
-    position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: #FF4C24;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
-}
-
-.navbar-right button {
-    background: transparent;
-    font-size: 16px;
-    color: #49557E;
-    border: 1px solid #FF4C24;
-    padding: 10px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-} */
-/*
-.navbar-right button:hover {
-    background: #fff4f2;
-}
-
-.navbar-profile{
-    position: relative;
-
-}
-.navbar-profile-dropdown{
-    position: absolute;
-    display: none;
-    right: 0;
-    z-index: 1;
-}
-.navbar-profile-dropdown li{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-.navbar-profile-dropdown img{
-    width: 20px;
-}
-.navbar-profile-dropdown li:hover{
-    color: #FF4C24;
-}
-.navbar-profile:hover .navbar-profile-dropdown{
-    display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 10px;
-    background-color: #fff2ef;
-    padding: 12px 25px;
-    border-radius: 4px;
-    border: 1px solid tomato;
-    outline: 2px solid white;
-    list-style: none;
-}
-.navbar-profile hr{
-    background-color: gray;
-    height: 1px;
-    border: none;
-} */
-/* @media (max-width:1050px) {
-    .navbar .logo {
-        width: 140px;
-    }
-
-    .navbar-menu {
-        gap: 20px;
-        font-size: 17px;
-    }
-
-    .navbar-right {
-        gap: 30px;
-    }
-
-    .navbar-right img {
-        width: 22px;
-    }
-
-    .navbar-right button {
-        padding: 8px 25px;
-    }
+    gap: .5vw;
+    width: 4vw;
+    height: 4vw;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other elements */
+    display: none;
 }
 
-@media (max-width:900px) {
-    .navbar .logo {
-        width: 120px;
-    }
-
-    .navbar-menu {
-        gap: 15px;
-        font-size: 16px;
-    }
-
-    .navbar-right {
-        gap: 20px;
-    }
-
-    .navbar-right img {
-        width: 20px;
-    }
-
-    .navbar-right button {
-        font-size: 15px;
-        padding: 7px 20px;
-    }
-}
-
-@media (max-width:750px) {
-    .navbar-menu {
-        display: none;
-    }
-} */
-
-
-@media only screen and (max-width:800px){
-    .navbar {
+.menubtn span {
     width: 100%;
-    height: 10vw;
-    padding: 0 1vw;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Light border for separation */
+    height: 0.5vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vw;
 }
 
-/* .navbar .logo {
-    width: 30vw;
-} */
+@media only screen and (max-width: 800px) {
 
-.navbar-menu {
-display: none;
+    .navbar {
+        width: 100%;
+        min-height: 22vw;
+        padding: 0 4vw;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(255, 0, 0, 0.1); /* Semi-transparent white */
+        backdrop-filter: blur(20px); /* Frosted glass effect */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    }
+
+    .navbar-menu.open {
+        max-height: 50vh;
+        background-color: white;
+        padding: 4vw;
+    }
+
+    .navbar .menubtn {
+        display: flex;
+        width: 10vw;
+        height: 8vw;
+        gap: 1vw;
+    }
+
+    .menubtn span {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vw;
 }
 
+        .navbar .logo {
+        width: 20vw;
+        height: 20vw;
+        margin: 4vw 0;
+    }
 
-/* .navbar .navbar-menu a {
-    font-size: 1vw;
+    .navbar .navbar-menu a {
+    font-size: 6vw;
     font-weight: 600;
-    color: #f4ac62;
+    color: #FEAA54;
     text-decoration: none;
     transition: background 0.3s ease;
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
-} */
-
-.navbar button {
-    border: none;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    padding: 1vw;
-    margin-right: 2vw;
-    border-radius: 1vw;
-    font-size: 3.5vw;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease;
 }
 
-.navbar button:hover {
-    background-color: rgba(226, 220, 220, 0.8); /* Slightly more transparent on hover */
-    color: black;
-}
+    .navbar-menu a, .navbar-menu button {
+        font-size: 4vw;
+        padding: 1vw 2vw;
+    }
+
+    .navbar-menu button {
+        padding: 2vw 4vw;
+    }
 }
