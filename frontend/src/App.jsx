@@ -13,6 +13,7 @@ import Verify from './pages/Verify/Verify'
 import Cursor from './components/cursor/Cursor'
 import Menu from './pages/Menu/Menu'
 import Events from './pages/Events/Events'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App = () => {
 

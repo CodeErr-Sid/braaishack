@@ -11,6 +11,7 @@ const Header = ({ title, content, btn, imgsrc }) => {
         <button>{btn}</button>
       </div>
       <div className="header-images2">
+      <div className="radiant-background"></div>
         {/* <video className="background-video" autoPlay loop muted>
           <source src={Smoke} type="video/mp4" />
           Your browser does not support the video tag.
