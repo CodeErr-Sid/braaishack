@@ -100,6 +100,9 @@ import tomato from "./tomato.png";
 import chilli from "./chilli.png";
 
 import smoke from "./Smoke.mp4";
+import story from "./story.png";
+import birthday from "./Birthday.jpeg";
+import promo from "./promo.jpeg";
 // import background_hero from "./restaurant_background";
 
 export const assets = {
@@ -160,6 +163,9 @@ export const assets = {
   tomato,
   chilli,
   smoke,
+  story,
+  birthday,
+  promo,
 
   //   background_hero,
 };

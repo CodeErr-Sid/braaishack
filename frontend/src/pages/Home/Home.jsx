@@ -24,7 +24,7 @@ const Home = () => {
       <Story/>
       <ResturentOption/>
       <FeaturedProducts/>
-      <Events_F/>
+      <Events_F title={"Events"}/>
       <Reservation_Table/>
       {/* <Event/> */}
       {/* <ExploreMenu setCategory={setCategory} category={category}/>

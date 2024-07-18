@@ -14,6 +14,7 @@ import Cursor from './components/cursor/Cursor'
 import Menu from './pages/Menu/Menu'
 import Events from './pages/Events/Events'
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import About from './pages/About/About';
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
           <Route path='/myorders' element={<MyOrders />}/>
           <Route path='/verify' element={<Verify />}/>
           <Route path='/events' element={<Events />}/>
+          <Route path='/about' element={<About />}/>
         </Routes>
       </div>
       <Footer />

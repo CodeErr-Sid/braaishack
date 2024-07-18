@@ -2,11 +2,11 @@ import React from 'react'
 import './Events_F.css';
 import { assets } from '../../assets/assets';
 
-const Events_F = () => {
+const Events_F = ({title}) => {
   return (
     <>
     <div className="events_main">
-        <h1 className='event_h1'>Events</h1>
+        <h1 className='event_h1'>{title}</h1>
         <div className="event_cards">
             <div className="event_card">
                 <div className="event_content">
@@ -19,7 +19,8 @@ const Events_F = () => {
                     </div>
                 </div>
                 <div className="event_img">
-                    <img src={assets.steek} alt="" />
+                <div className="image-overlay"></div>
+                    <img src={assets.birthday} alt="" />
                     <h1>Birthday</h1>
                 </div>
             </div>
@@ -34,7 +35,8 @@ const Events_F = () => {
                     </div>
                 </div>
                 <div className="event_img">
-                    <img src={assets.steek} alt="" />
+                <div className="image-overlay"></div>
+                    <img src={assets.birthday} alt="" />
                     <h1>Birthday</h1>
                 </div>
             </div>

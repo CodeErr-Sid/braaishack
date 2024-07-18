@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.main-section {
+    width: 100vw;
+    padding: 1rem;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem 0 0 0;
+    background-color: black;
+    gap: 20px;
+}
+
+.left-promo__section {
+    width: 100%;
+    text-align: center;
+}
+
+.left-promo__section .btn-promo {
+    width: 181px;
+    height: 33px;
+    padding: 2px 5px;
+    gap: 10px;
+    border-radius: 4px;
+    background: #8F8F8F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.left-promo__section h1 {
+    width: 100%;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    margin: 1rem 0;
+}
+
+.left-promo__section p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    width: 100%;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    margin: 1rem 0;
+}
+
+.left-promo__section button {
+    width: 198px;
+    height: 61px;
+    border: 8px;
+    padding: 18px 43px;
+    background-color: #FDCF09;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    margin: 2rem 0;
+}
+
+.right-promo__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.right-promo__section img {
+    width: 100%;
+    max-width: 552px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    border: 5px solid #FDCF09;
+}
+
+@media (min-width: 768px) {
+    .main-section {
+        flex-direction: row;
+        padding: 1rem 3rem;
+    }
+
+    .left-promo__section {
+        width: 45%;
+        text-align: left;
+    }
+
+    .left-promo__section .btn-promo {
+        margin: 0;
+    }
+
+    .left-promo__section h1 {
+        font-size: 38px;
+        line-height: 60px;
+        width: 100%;
+    }
+
+    .left-promo__section p {
+        font-size: 18px;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    .right-promo__section {
+        width: 45%;
+    }
+}

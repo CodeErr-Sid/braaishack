@@ -337,9 +337,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 550px;
-    height: 550px;
-    background: radial-gradient(circle, rgba(254, 170, 84, 0.4) 0%, transparent 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(254, 170, 84, 0.4) 0%, transparent 80%);
     transform: translate(-50%, -50%);
     z-index: 1;
     pointer-events: none;
