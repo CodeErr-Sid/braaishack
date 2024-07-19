@@ -17,10 +17,19 @@ import { assets } from '../../assets/assets'
 
 
 const Home = () => {
+  const headerImages = [
+   assets.smokey,
+   assets.smokey,
+   assets.smokey,
+   assets.smokey,
+   assets.smokey,
+   assets.smokey,
+   assets.smokey,
+  ];
 
   return (
     <>
-      <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} imgsrc={assets.steek} />
+      <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} overlay={headerImages} imgsrc={assets.header} />
       <Story/>
       <ResturentOption/>
       <FeaturedProducts/>
