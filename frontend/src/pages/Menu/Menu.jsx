@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/header2/Header';
 import { assets } from '../../assets/assets';
 import MenuNav from '../../components/MenuNav/MenuNav';
 import Menucards from '../../components/Menucards/Menucards';
 
+import gsap from 'gsap';
 const Menu = () => {
+
+  // gsap animation
+
+
   const images = [
     { src: assets.burger, className: 'burger' },
     { src: assets.onion, className: 'onion' },

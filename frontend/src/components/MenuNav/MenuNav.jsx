@@ -1,9 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import "./MenuNav.css";
 
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 const MenuNav = ({ setSelectedMenu }) => {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(()=>{
+    gsap.from('.btnmain p',{
+      y:100,
+      duration:1,
+      opacity:0,
+      scrollTrigger:{
+        trigger:'.btnmain p',
+        // markers:true,
+        start:'top 80%',
+        end:'top 70%',
+        scrub:5,
+      }
+    })
+  },[])
+
+
+
+
+
+
   const [showMenu, setShowMenu] = useState(false);
   const Menubtndata = [
     "Starters",
@@ -21,7 +47,7 @@ const MenuNav = ({ setSelectedMenu }) => {
     <>
       <div className="btnmain">
         <div className="filter-heading" onClick={toggleMenu}>
-         Filter by <FontAwesomeIcon icon={faFilter} /> 
+         Filter by <FontAwesomeIcon icon={faFilter} />
         </div>
         {showMenu && (
           <div className="Menubtn">

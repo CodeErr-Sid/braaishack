@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Header.css';
-// import Smoke from '../../assets/Smoke.mp4'; 
+import gsap from 'gsap';
 
 const Header = ({ title, content, btn, imgsrc }) => {
+  useEffect(() => {
+    gsap.from('.header-content2 h1, .header-content2 p', {
+      x: -500,
+      duration: 1,
+    });
+
+    gsap.from('.header-content2 button', {
+      opacity: 0,
+      y: 150,
+      duration: 1,
+    });
+
+    gsap.from('.header-images2 img', {
+      x: 500,
+      duration: 1,
+    });
+  }, []);
+
   return (
     <header className="header2">
       <div className="header-content2">
@@ -11,17 +29,13 @@ const Header = ({ title, content, btn, imgsrc }) => {
         <button>{btn}</button>
       </div>
       <div className="header-images2">
-      <div className="radiant-background"></div>
-        {/* <video className="background-video" autoPlay loop muted>
-          <source src={Smoke} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
+        <div className="radiant-background"></div>
         {imgsrc.map((image, index) => (
           <img
             key={index}
             src={image.src}
             alt={`header-image-${index}`}
-            className={`${image.className} float`} 
+            className={`${image.className} float`}
           />
         ))}
       </div>
