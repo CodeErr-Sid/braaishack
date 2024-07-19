@@ -8,13 +8,17 @@
     position: relative;
     padding-top: 6vw;
     overflow-x: hidden;
+    min-height: 100vh;
+    
 }
 
 .header-content2 {
     width: 50%;
     padding: 0 3vw;
-    height: auto;
+    height: 50%;
+    margin-top: 3rem;
     box-sizing: border-box;
+
 }
 
 .header-content2 h1 {
@@ -106,6 +110,7 @@
     animation: float 2s ease-in-out infinite;
 }
 @media screen and (max-width: 1030px) {
+
     .header-images2 .burger {
         z-index: 3;
         width: 400px;
