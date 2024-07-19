@@ -39,6 +39,8 @@ const MenuNav = ({ setSelectedMenu }) => {
     "Desserts",
   ];
 
+  console.log(typeof setSelectedMenu); // Should log 'function'
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -48,6 +50,7 @@ const MenuNav = ({ setSelectedMenu }) => {
       <div className="btnmain">
         <div className="filter-heading" onClick={toggleMenu}>
          Filter by <FontAwesomeIcon icon={faFilter} />
+          Filter by <FontAwesomeIcon icon={faFilter} />
         </div>
         {showMenu && (
           <div className="Menubtn">
@@ -67,5 +70,6 @@ const MenuNav = ({ setSelectedMenu }) => {
     </>
   );
 };
+
 
 export default MenuNav;

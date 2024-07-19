@@ -103,6 +103,9 @@ import smoke from "./Smoke.mp4";
 import story from "./story.png";
 import birthday from "./Birthday.jpeg";
 import promo from "./promo.jpeg";
+import leaf from "./leaf.png";
+import header from "./headerimg.png";
+import smokey from "./smokey.png";
 // import background_hero from "./restaurant_background";
 
 export const assets = {
@@ -166,6 +169,9 @@ export const assets = {
   story,
   birthday,
   promo,
+  leaf,
+  header,
+  smokey,
 
   //   background_hero,
 };

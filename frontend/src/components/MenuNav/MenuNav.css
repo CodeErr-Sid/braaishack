@@ -1,13 +1,13 @@
 .Menubtn {
   width: 95%;
-  display: flex;
+  display: flex!important;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1vw; 
   padding: 1rem;
   overflow-x: hidden; 
-  
+  /* background-color: rgb(31, 29, 29); */
 }
 
 .Menubtn button {
@@ -50,7 +50,7 @@
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
-  display: flex;
+  display: none; /* Keep filter heading hidden */
   justify-content: space-between;
   align-items: center;
   width: 95%;
@@ -58,16 +58,20 @@
   padding: 1rem;
   background-color: rgb(31, 29, 29);
   margin: 0 6rem;
-  position: sticky;
-  top: 20%; /* Adjust as needed */
-  z-index: 1001; /* Ensure it's above other elements */
-  display: none;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 .filter-heading i {
   margin-right: 10px;
 }
+.Menubtn.hidden {
+  transform: translateY(-100%); /* Move out of view */
+}
 
+/* Show menu when toggle is active */
+.Menubtn.show {
+  transform: translateY(0); /* Slide into view */
+}
 /* Media Queries */
 @media (max-width: 1200px) {
   .Menubtn button {
@@ -81,13 +85,11 @@
 }
 
 @media (max-width: 1045px) {
-  .filter-heading {
-    display: flex; /* Show filter heading */
-  }
   .Menubtn {
-    position: sticky;
-    top: 30%;
     background-color: rgb(31, 29, 29); 
+  }
+  .filter-heading{
+    display: flex;
   }
 }
 
@@ -101,6 +103,7 @@
     padding: 3vw 4vw;
   }
 }
+
 @media (max-width: 950px) {
   .Menubtn {
     display: flex;
@@ -131,7 +134,8 @@
     padding: 3vw 4vw;
   }
 }
-@media (max-width: 487px){
+
+@media (max-width: 487px) {
   .Menubtn button {
     width: 137px; 
     height: 42px; 

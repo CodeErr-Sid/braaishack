@@ -39,13 +39,13 @@ const Navbar = ({ setShowLogin }) => {
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState);
   };
 
   return (
     <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
-      <div className={`navbar-menu ${isMenuOpen ? 'open' : 'close'}`}>
+      <div className={`navbar-menu ${isMenuOpen ? 'open' : 'closed'}`}>
         <div className="close-icon" onClick={toggleMenu}>X</div>
         <Link to="/menu" onClick={() => { setMenu("MENUS"); toggleMenu(); }} className={`${menu === "MENUS" ? "active" : ""}`}>MENUS</Link>
         <a href='#explore-menu' onClick={() => { setMenu("PHOTOS"); toggleMenu(); }} className={`${menu === "PHOTOS" ? "active" : ""}`}>PHOTOS</a>
