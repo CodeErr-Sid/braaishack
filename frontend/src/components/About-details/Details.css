@@ -9,8 +9,8 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh; 
-    background-color: #000;
+    height: 100vh;
+    background-color: #ffffff;
 }
 
 .details-section__container {
@@ -30,7 +30,7 @@
 }
 
 .details-section__container__left img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
 }
 
@@ -51,12 +51,14 @@
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
     text-align: left;
+    color: rgb(255, 255, 255);
 }
 
 .details-section__container__right p {
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 500;
-    max-width: 100%; 
+    max-width: 100%;
     line-height: 24px;
     font-family: "Open Sans", sans-serif;
     text-align: left;
@@ -80,7 +82,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-   
+
 }
 .profile{
     width: 77px;
@@ -108,13 +110,13 @@
         height: 60%;
     }
     .details-section__container {
-        padding: 2rem 1.5rem; 
+        padding: 2rem 1.5rem;
     }
 }
 
 @media (max-width: 992px) {
     .details-section__container__right h1 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         line-height: 60px;
     }
 
@@ -124,7 +126,7 @@
 
     .font-style1,
     .font-style2 {
-        font-size: 16px; 
+        font-size: 16px;
     }
 }
 
@@ -133,13 +135,13 @@
         margin: 5rem 0;
     }
     .details-section__container {
-        flex-direction: column; 
+        flex-direction: column;
     }
     .details-section__container__right{
         padding: 0 3rem;
     }
     .details-section__container__right h1 {
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
         line-height: 50px;
     }
 
@@ -149,7 +151,7 @@
 
     .font-style1,
     .font-style2 {
-        font-size: 14px; 
+        font-size: 14px;
     }
 }
 
@@ -163,17 +165,17 @@
     }
 
     .details-section__container__right p {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .font-style1,
     .font-style2 {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .profile {
         width: 60px;
         height: 60px;
-        
+
     }
 }

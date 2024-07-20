@@ -1,50 +1,84 @@
-import React from 'react'
-import './Events_F.css';
-import { assets } from '../../assets/assets';
+import React, { useEffect } from "react";
+import "./Events_F.css";
+import { assets } from "../../assets/assets";
+import gsap from "gsap";
 
-const Events_F = ({title}) => {
+const Events_F = ({ title }) => {
+  useEffect(() => {
+    gsap.from(".events_main .event_h1", {
+      y: 500,
+      duration:1.5,
+      scrollTrigger: {
+        trigger: ".events_main",
+        // markers: true,
+        start: "top 50%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
+    gsap.from('.event_cards .event_card ,.event_card .event_content .card_data',{
+        x:500,
+        scale:1.5,
+        backgroundColor:'black',
+        color:'white',
+        duration:2,
+         scrollTrigger: {
+        trigger: ".events_main",
+        // markers: true,
+        start: "top 50%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
+
+  });
+
+  let events = [
+    {
+      data: 15,
+      month: "JUNE",
+      para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      img: assets.birthday,
+      subtitle: "Birthday",
+    },
+    {
+      data: 15,
+      month: "JUNE",
+      para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      img: assets.birthday,
+      subtitle: "Birthday",
+    },
+  ];
+
   return (
     <>
-    <div className="events_main">
-        <h1 className='event_h1'>{title}</h1>
+      <div className="events_main">
+        <h1 className="event_h1">{title}</h1>
         <div className="event_cards">
-            <div className="event_card">
+          {events.map((data, index) => {
+            return (
+              <div key={index} className="event_card">
                 <div className="event_content">
-                    <div className="card_data">
-                        <h1>15</h1>
-                        <h1>June</h1>
-                    </div>
-                    <div className="card_content">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
+                  <div className="card_data">
+                    <h1>{data.data}</h1>
+                    <h1>{data.month}</h1>
+                  </div>
+                  <div className="card_content">
+                    <p>{data.para}</p>
+                  </div>
                 </div>
                 <div className="event_img">
-                <div className="image-overlay"></div>
-                    <img src={assets.birthday} alt="" />
-                    <h1>Birthday</h1>
+                  <div className="image-overlay"></div>
+                  <img src={data.img} alt="" />
+                  <h1>{data.subtitle}</h1>
                 </div>
-            </div>
-            <div className="event_card">
-                <div className="event_content">
-                    <div className="card_data">
-                        <h1>15</h1>
-                        <h1>June</h1>
-                    </div>
-                    <div className="card_content">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div className="event_img">
-                <div className="image-overlay"></div>
-                    <img src={assets.birthday} alt="" />
-                    <h1>Birthday</h1>
-                </div>
-            </div>
-
+              </div>
+            );
+          })}
         </div>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Events_F
+export default Events_F;

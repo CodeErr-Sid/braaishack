@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Header.css';
 import { assets } from '../../assets/assets';
+import gsap from 'gsap';
+
 
 const Header = () => {
+
+    useEffect(()=>{
+        gsap.to('.header-contents3',{
+            background:'#232323',
+            color:'black',
+            duration:1,
+        })
+        gsap.from('.header-contents3 h2',{
+            y:50,
+            duration:1,
+            opacity:0,
+        });
+        gsap.from('.header-contents3 button',{
+            y:50,
+            duration:1,
+            opacity:0,
+        });
+    },[])
+
     return (
         <div className="header3">
             <div className='background'></div>

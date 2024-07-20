@@ -15,10 +15,10 @@
 .header-contents3 {
     width: 100vw;
     height: 309px;
-    background-color: #232323;
+    background-color: #000000;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     padding: 6rem;
     font-family: "Inter", sans-serif;
     margin-top: 2.5rem;
@@ -49,12 +49,12 @@
     .header-contents3 {
         padding: 4rem;
     }
-    
+
     .header-title3 {
         font-size: 36px;
         line-height: 46px;
     }
-    
+
     .header-btn3 {
         width: 300px;
         height: 55px;
@@ -67,12 +67,12 @@
     .header-contents3 {
         padding: 3rem;
     }
-    
+
     .header-title3 {
         font-size: 30px;
         line-height: 40px;
     }
-    
+
     .header-btn3 {
         width: 250px;
         height: 50px;
@@ -87,13 +87,13 @@
         padding: 2rem;
         height: auto;
     }
-    
+
     .header-title3 {
         font-size: 24px;
         line-height: 34px;
 
     }
-    
+
     .header-btn3 {
         width: 210px;
         height: 45px;
@@ -106,12 +106,12 @@
     .header-contents3 {
         padding: 1.5rem;
     }
-    
+
     .header-title3 {
         font-size: 20px;
         line-height: 30px;
     }
-    
+
     .header-btn3 {
         width: 175px;
         height: 40px;
