@@ -67,31 +67,33 @@
     font-size: 1.5vw;
 }
 
-.Story .Story-img {
+.Story-img {
     width: 50%;
-    height: auto; /* Adjust height to auto for better responsiveness */
+    height: auto;
     padding: 3vw;
     box-sizing: border-box;
+    opacity: 0; /* Start hidden */
 }
 
 .Story-img img {
     width: 100%;
-    height: auto; /* Adjust height to auto for better responsiveness */
+    height: auto;
     object-fit: cover;
     box-shadow: -2px 12px 73px rgba(255, 255, 255, 0.5);
 }
 
+
 /* Media Query for screens 800px or smaller */
 @media (max-width: 800px) {
     .Story {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .Story .Story-contents {
-        width: 90%; /* Full width with some padding */
+        width: 90%; 
         padding: 2vw;
-        text-align: center; /* Center align text for smaller screens */
+        text-align: center; 
     }
 
        .Story-contents h2 {
@@ -100,8 +102,8 @@
     }
 
     .Story-contents p {
-        font-size: 3.5vw; /* Adjust font size for smaller screens */
-        line-height: 4vw; /* Adjust line height for readability */
+        font-size: 3.5vw; 
+        line-height: 4vw;
         padding: 0vw 0 6vw;
 
     }
@@ -116,23 +118,23 @@
     }
 
     .pro .proimg {
-        width: 20vw; /* Adjust width for smaller screens */
-        height: 20vw; /* Adjust height for smaller screens */
+        width: 20vw; 
+        height: 20vw;
     }
 
     .protitle .proname, .protitle .prosubname {
-        font-size: 6vw; /* Adjust font size for smaller screens */
+        font-size: 6vw; 
     }
 
     .Story .Story-img {
-        width: 90%; /* Adjust width for smaller screens */
-        height: auto; /* Adjust height for better responsiveness */
+        width: 90%; 
+        height: auto; 
         padding: 2vw;
     }
 
     .Story-img img {
-        width: 100%; /* Adjust width to ensure it remains responsive */
-        height: auto; /* Adjust height for better responsiveness */
-        box-shadow: none; /* Remove shadow for cleaner look on small screens */
+        width: 100%; 
+        height: auto; 
+        box-shadow: none; 
     }
 }

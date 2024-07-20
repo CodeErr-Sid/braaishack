@@ -36,19 +36,22 @@
     border-bottom: 2px solid #FEAA54;
 }
 
+/* Navbar styling */
 .navbar .navbar-menu a {
     font-size: 1vw;
     font-weight: 600;
     color: #FEAA54;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition:  font-size 0.3s ease; /* Corrected property name */
     padding: 0.5vw 1vw;
     border-radius: 0.5vw;
 }
 
 .navbar .navbar-menu a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
+    font-size: 1.5vw; /* Adjusted size to a more manageable scale */
 }
+
 
 .navbar-menu button {
     border: none;
