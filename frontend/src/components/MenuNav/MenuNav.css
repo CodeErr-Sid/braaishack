@@ -1,16 +1,18 @@
-.Menubtn {
-  width: 95%;
-  display: flex!important;
-  align-items: center;
-  justify-content: space-between;
+/* Default Button Styles - applies to all screen sizes */
+.Menubtn, .Menubtn-fullscreen {
+  width: 100vw; /* Full width of the viewport */
+  display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 1vw; 
   padding: 1rem;
-  overflow-x: hidden; 
-  /* background-color: rgb(31, 29, 29); */
+  overflow-x: auto;  
+  position: relative; 
+  
 }
 
-.Menubtn button {
+.Menubtn button, .Menubtn-fullscreen button {
   width: 197px; 
   height: 52px; 
   font-size: 18px;
@@ -22,9 +24,10 @@
   color: rgb(255, 255, 255);
   transition: 0.5s;
   white-space: nowrap; 
+  z-index: 33333; /* Ensure button is above other elements */
 }
 
-.Menubtn button:hover {
+.Menubtn button:hover,  .Menubtn-fullscreen button:hover {
   background-color: #fdcf08;
   color: rgb(0, 0, 0);
 }
@@ -50,7 +53,7 @@
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
-  display: none; /* Keep filter heading hidden */
+  display: none; /* Hide filter heading for larger screens */
   justify-content: space-between;
   align-items: center;
   width: 95%;
@@ -64,6 +67,8 @@
 .filter-heading i {
   margin-right: 10px;
 }
+
+/* Show menu when toggle is active */
 .Menubtn.hidden {
   transform: translateY(-100%); /* Move out of view */
 }
@@ -72,7 +77,15 @@
 .Menubtn.show {
   transform: translateY(0); /* Slide into view */
 }
+
 /* Media Queries */
+
+/* For very large screens, no special styles needed */
+@media (min-width: 1200px) {
+  /* No specific styles needed; defaults apply */
+}
+
+/* Styles for screens 1024px and below */
 @media (max-width: 1200px) {
   .Menubtn button {
     font-size: 1rem;
@@ -85,11 +98,14 @@
 }
 
 @media (max-width: 1045px) {
-  .Menubtn {
-    background-color: rgb(31, 29, 29); 
+  .filter-heading {
+    display: flex; 
   }
-  .filter-heading{
+
+  .Menubtn {
     display: flex;
+    background-color: rgb(31, 29, 29);
+    width: 95%;
   }
 }
 
@@ -154,6 +170,7 @@
     font-size: 0.9rem;
     padding: 3vw 4vw;
   }
+
   .Menubtn {
     display: flex;
     align-items: center;

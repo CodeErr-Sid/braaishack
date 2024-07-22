@@ -15,7 +15,7 @@ const Header = ({ title, content, btn, imgsrc }) => {
       duration: 1,
     });
 
-    gsap.from('.header-images2 img', {
+    gsap.from('.header-images2 ', {
       x: 500,
       duration: 1,
     });

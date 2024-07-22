@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/header2/Header';
 import { assets } from '../../assets/assets';
 import MenuNav from '../../components/MenuNav/MenuNav';
 import Menucards from '../../components/Menucards/Menucards';
 
+
 import gsap from 'gsap';
+import Filter from '../../components/Filter/filter';
 const Menu = () => {
 
-  // gsap animation
-
+ 
+  const [selectedMenu, setSelectedMenu] = useState("");
 
   const images = [
     { src: assets.burger, className: 'burger' },
@@ -25,8 +27,9 @@ const Menu = () => {
         btn="Book a Table"
         imgsrc={images}
       />
-      <MenuNav />
-      <Menucards />
+      <MenuNav setSelectedMenu={setSelectedMenu} />
+      {/* <Filter setSelectedMenu={setSelectedMenu}/> */}
+      <Menucards selectedMenu={selectedMenu} />
     </>
   );
 };

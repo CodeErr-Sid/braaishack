@@ -164,7 +164,7 @@ const sections = [
   },
 ];
 
-const Menucards = () => {
+const Menucards = ({ selectedMenu }) => {
   const cardRefs = useRef([]);
   const headingRefs = useRef([]);
 
@@ -208,7 +208,12 @@ const Menucards = () => {
   return (
     <div className="menucards">
       {sections.map((section, sectionIndex) => (
-        <div className="cardmain" id={section.title.replace(/\s+/g, "")} key={sectionIndex}>
+        <div
+          className="cardmain"
+          id={section.title.replace(/\s+/g, "")}
+          key={sectionIndex}
+          style={{ display: selectedMenu === section.title || selectedMenu === "" ? "block" : "none" }}
+        >
           <h1 ref={(el) => (headingRefs.current[sectionIndex] = el)}>{section.title}</h1>
           <div className="cards">
             {section.cards.map((card, cardIndex) => (
