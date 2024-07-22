@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Reservation_Table.css';
 import { assets } from '../../assets/assets';
 import gsap from 'gsap';
@@ -7,9 +7,36 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Reservation_Table = () => {
+
+    const [name, setname] = useState("");
+    const [email, setemail] = useState("");
+    const [number, setnumber] = useState("");
+    const [database, setdatabase] = useState([]);
+
+    const handleSubmit = (e)=>{
+         e.preventDefault();
+         let currentdate = new Date();
+         let dataobj = {
+         name,
+         email,
+         number,
+         id:database.length+1,
+         date:currentdate.toLocaleDateString(),
+         time:currentdate.toLocaleTimeString(),
+         };
+         setdatabase([...database,dataobj]);
+         localStorage.setItem('reservationData',JSON.stringify(database))
+         console.log(database);
+    }
+
+    useEffect(()=>{
+        let storedData = localStorage.getItem('reservationData');
+        if(storedData) setdatabase(JSON.parse(storedData))
+    },[]);
+
     useEffect(() => {
         // Animate span element
-        gsap.fromTo(".reservation-contents span", 
+        gsap.fromTo(".reservation-contents span",
             {
                 opacity: 0,
                 y: -50
@@ -17,7 +44,7 @@ const Reservation_Table = () => {
             {
                 opacity: 1,
                 y: 0,
-                duration: 0.5,  
+                duration: 0.5,
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: ".reservation-contents span",
@@ -29,7 +56,7 @@ const Reservation_Table = () => {
         );
 
         // Animate h2 element
-        gsap.fromTo(".reservation-contents h2", 
+        gsap.fromTo(".reservation-contents h2",
             {
                 opacity: 0,
                 y: 50
@@ -37,7 +64,7 @@ const Reservation_Table = () => {
             {
                 opacity: 1,
                 y: 0,
-                duration: 0.7, 
+                duration: 0.7,
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: ".reservation-contents h2",
@@ -49,7 +76,7 @@ const Reservation_Table = () => {
         );
 
         // Animate p element
-        gsap.fromTo(".reservation-contents p", 
+        gsap.fromTo(".reservation-contents p",
             {
                 opacity: 0,
                 y: 30
@@ -57,7 +84,7 @@ const Reservation_Table = () => {
             {
                 opacity: 1,
                 y: 0,
-                duration: 0.6,  
+                duration: 0.6,
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: ".reservation-contents p",
@@ -69,7 +96,7 @@ const Reservation_Table = () => {
         );
 
         // Animate button in .reservation-contents
-        gsap.fromTo(".reservation-contents button", 
+        gsap.fromTo(".reservation-contents button",
             {
                 opacity: 0,
                 y: 20
@@ -77,7 +104,7 @@ const Reservation_Table = () => {
             {
                 opacity: 1,
                 y: 0,
-                duration: 0.5, 
+                duration: 0.5,
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: ".reservation-contents button",
@@ -89,7 +116,7 @@ const Reservation_Table = () => {
         );
 
         // Animate form container
-        gsap.fromTo(".reservation-form", 
+        gsap.fromTo(".reservation-form",
             {
                 opacity: 0,
                 y: 50
@@ -97,7 +124,7 @@ const Reservation_Table = () => {
             {
                 opacity: 1,
                 y: 0,
-                duration: 0.7, 
+                duration: 0.7,
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: ".reservation-form",
@@ -109,7 +136,7 @@ const Reservation_Table = () => {
         );
 
         // Animate input fields and button inside the form
-        gsap.fromTo(".reservation-form input, .reservation-form button", 
+        gsap.fromTo(".reservation-form input, .reservation-form button",
             {
                 opacity: 0,
                 y: 20
@@ -117,9 +144,9 @@ const Reservation_Table = () => {
             {
                 opacity: 1,
                 y: 0,
-                duration: 0.5,  
+                duration: 0.5,
                 ease: "power1.out",
-                stagger: 0.1,  
+                stagger: 0.1,
                 scrollTrigger: {
                     trigger: ".reservation-form",
                     start: "top 70%",
@@ -140,12 +167,12 @@ const Reservation_Table = () => {
                 <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
                 <button>BOOK A TABLE</button>
             </div>
-            <form action="" className='reservation-form'>
+            <form className='reservation-form' onSubmit={handleSubmit}>
                 <h1>Reservation</h1>
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Phone" />
-                <button>Reserve now</button>
+                <input required type="text" placeholder="Name" onChange={(e)=>setname(e.target.value)}/>
+                <input required type="email" placeholder="Email" onChange={(e)=>setemail(e.target.value)}/>
+                <input required type="number" placeholder="Phone" onChange={(e)=>setnumber(e.target.value)}/>
+                <button type='submit'>Reserve now</button>
             </form>
         </div>
     );
