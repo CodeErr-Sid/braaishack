@@ -9,9 +9,11 @@ import Promo from '../../components/About-promo/Promo';
 
 
 export default function About() {
+
+
     return (
         <div className='about-section'>
-            <Header />
+            <Header header_title={'ABOUT US'} header_btn={'HOME/ABOUT US'} />
             <Details />
             <Location/>
             <Events_F title={"Features Of Braai Shack"}/>

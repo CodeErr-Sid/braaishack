@@ -5,7 +5,7 @@ import { StoreContext } from '../../Context/StoreContext';
 import { assets } from '../../assets/assets';
 
 const MyOrders = () => {
-  
+
   const [data,setData] =  useState([]);
   const {url,token,currency} = useContext(StoreContext);
 
@@ -35,7 +35,7 @@ const MyOrders = () => {
                   else{
                     return item.name+" x "+item.quantity+", "
                   }
-                  
+
                 })}</p>
                 <p>{currency}{order.amount}.00</p>
                 <p>Items: {order.items.length}</p>
