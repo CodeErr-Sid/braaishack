@@ -98,6 +98,7 @@ import burger from "./burger.png";
 import onion from "./onion.png";
 import tomato from "./tomato.png";
 import chilli from "./chilli.png";
+import carrot from "./carrot.png";
 
 import smoke from "./Smoke.mp4";
 import story from "./story.png";
@@ -106,6 +107,13 @@ import promo from "./promo.jpeg";
 import leaf from "./leaf.png";
 import header from "./headerimg.png";
 import smokey from "./smokey.png";
+import art from "./home-art.png";
+
+import update1 from "./pub1.jpeg";
+import update2 from "./pub2.jpeg";
+import update3 from "./pub3.jpeg";
+import ring from "./onion-ring.png";
+
 // import background_hero from "./restaurant_background";
 
 export const assets = {
@@ -172,6 +180,12 @@ export const assets = {
   leaf,
   header,
   smokey,
+  update1,
+  update2,
+  update3,
+  art,
+  ring,
+  carrot,
 
   //   background_hero,
 };

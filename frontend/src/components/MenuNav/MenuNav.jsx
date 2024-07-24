@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "./MenuNav.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const MenuNav = ({ setSelectedMenu }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -20,12 +24,56 @@ const MenuNav = ({ setSelectedMenu }) => {
   };
 
   const handleResize = () => {
-    setIsSmallScreen(window.innerWidth < 1040);
+    setIsSmallScreen(window.innerWidth < 1024);
   };
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isSmallScreen) {
+      if (showMenu) {
+        gsap.to(".Menubtn", { duration: 0.5, autoAlpha: 1, y: 0, display: "flex" });
+      } else {
+        gsap.to(".Menubtn", { duration: 0.5, autoAlpha: 0, y: -50, display: "none" });
+      }
+    } else {
+      gsap.fromTo(".Menubtn-fullscreen button", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.1 });
+    }
+  }, [showMenu, isSmallScreen]);
+
+  useEffect(() => {
+    // ScrollTrigger for paragraph
+    gsap.to(".paragraph", {
+      scrollTrigger: {
+        trigger: ".paragraph",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse"
+      },
+      duration: 0.5,
+      autoAlpha: 1,
+      y: 0
+    });
+
+    // ScrollTrigger for Menubtn-fullscreen buttons
+    gsap.fromTo(".Menubtn-fullscreen button", {
+      y: -20,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: ".Menubtn-fullscreen",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse"
+      },
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.1
+    });
   }, []);
 
   return (
@@ -35,15 +83,13 @@ const MenuNav = ({ setSelectedMenu }) => {
           <div className="filter-heading" onClick={toggleMenu}>
             Filter by <FontAwesomeIcon icon={faFilter} />
           </div>
-          {showMenu && (
-            <div className="Menubtn">
-              {Menubtndata.map((data, index) => (
-                <button key={index} onClick={() => setSelectedMenu(data)}>
-                  {data}
-                </button>
-              ))}
-            </div>
-          )}
+          <div className={`Menubtn ${showMenu ? 'show' : 'hidden'}`}>
+            {Menubtndata.map((data, index) => (
+              <button key={index} onClick={() => setSelectedMenu(data)}>
+                {data}
+              </button>
+            ))}
+          </div>
         </>
       ) : (
         <div className="Menubtn-fullscreen">
@@ -54,7 +100,7 @@ const MenuNav = ({ setSelectedMenu }) => {
           ))}
         </div>
       )}
-      <p>
+      <p className="paragraph">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
         atque sequi perspiciatis rem cum quae, natus illum earum, itaque nihil
         necessitatibus nulla aliquid!

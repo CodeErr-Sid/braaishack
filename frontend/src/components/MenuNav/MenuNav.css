@@ -9,7 +9,6 @@
   padding: 1rem;
   overflow-x: auto;  
   position: relative; 
-  
 }
 
 .Menubtn button, .Menubtn-fullscreen button {
@@ -38,8 +37,11 @@
   justify-content: center;
   background-color: #000000;
   flex-direction: column;
-  padding: 20px; 
+  padding: 20px;
   width: 100vw;
+  position: sticky;
+  top: 14%;
+  z-index: 999;
 }
 
 .btnmain p {
@@ -47,6 +49,9 @@
   color: white;
   text-align: center;
   padding: 2vw 4vw;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .filter-heading {
@@ -68,7 +73,6 @@
   margin-right: 10px;
 }
 
-/* Show menu when toggle is active */
 .Menubtn.hidden {
   transform: translateY(-100%); /* Move out of view */
 }

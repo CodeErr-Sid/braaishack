@@ -6,8 +6,6 @@ import gsap from "gsap";
 export default function Details() {
   useEffect(() => {
     gsap.to(".details-section", {
-      backgroundColor: "black",
-      duration: 2,
       scrollTrigger: {
         trigger: ".details-section",
         // markers: true,
@@ -69,6 +67,7 @@ export default function Details() {
               <p className="font-style1">Klaus Mikelson</p>
               <p className=" font-style2">Klaus Mikelson</p>
             </div>
+           
           </div>
         </div>
       </div>

@@ -4,8 +4,9 @@ import Header from '../../components/About-header/Header';
 import './About.css';
 import Details from '../../components/About-details/Details';
 import Location from '../../components/location/Location';
-import Events_F from '../../components/Events_F/Events_F'
 import Promo from '../../components/About-promo/Promo';
+import Features from '../../components/Features/Features';
+import Publication from '../../components/Publication/Publication';
 
 
 export default function About() {
@@ -14,8 +15,10 @@ export default function About() {
             <Header />
             <Details />
             <Location/>
-            <Events_F title={"Features Of Braai Shack"}/>
+            <Features />
             <Promo />
+            <Publication/>
+
         </div>
     );
 }

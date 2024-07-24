@@ -10,7 +10,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #000;
 }
 
 .details-section__container {
@@ -20,6 +20,7 @@
     max-width: 1200px;
     width: 100%;
     padding: 2rem 2.5rem;
+    position: relative;
 }
 
 .details-section__container__left {
