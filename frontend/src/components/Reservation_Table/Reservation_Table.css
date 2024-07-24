@@ -14,6 +14,7 @@
     padding: 0 3vw;
     height: auto; /* Adjust height to auto for better responsiveness */
     box-sizing: border-box;
+    position: relative;
 }
 
 .reservation-contents h2 {
@@ -63,6 +64,7 @@
     backdrop-filter: blur(10px); /* Frosted glass effect */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
     overflow: hidden;
+    position: relative;
 }
 
 .reservation-form h1 {
@@ -81,10 +83,28 @@
     border: none;
     background-color: #fdcf08;
     font-size: 1.5vw;
-    padding: 1vw 3vw;
-    border-radius: 1vw;
+    padding:10px;
+    width: 360px;
 }
-
+.onion img{
+ position: absolute;
+ width: 141px;
+ height: 176px;
+ transform: rotate(-54.41deg);
+ /* bottom: 2.5rem;
+ left: -1rem; */
+ left: 40rem;
+ z-index: 2;
+}
+.carrot img{
+    width: 236px;
+    height: 157px;
+    transform: rotate(-123.19deg);
+    z-index: 222;
+    position: absolute;
+    right: -80%;
+    top: 10%;
+}
 /* Media Query for screens 800px or smaller */
 @media only screen and (max-width: 800px) {
     .reservation {

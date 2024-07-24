@@ -101,9 +101,7 @@ const MenuNav = ({ setSelectedMenu }) => {
         </div>
       )}
       <p className="paragraph">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
-        atque sequi perspiciatis rem cum quae, natus illum earum, itaque nihil
-        necessitatibus nulla aliquid!
+      Join us Every weekend 1pm to 10pm and let your taste buds embark on a journey of flavours, in perfect harmony at our Braai Bonanza weekends. Reserve your spot now and get ready to indulge in a culinary extravaganza that will leave you craving for more.
       </p>
     </div>
   );

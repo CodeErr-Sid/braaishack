@@ -39,9 +39,9 @@
   flex-direction: column;
   padding: 20px;
   width: 100vw;
-  position: sticky;
+  /* position: sticky;
   top: 14%;
-  z-index: 999;
+  z-index: 999; */
 }
 
 .btnmain p {
@@ -85,9 +85,6 @@
 /* Media Queries */
 
 /* For very large screens, no special styles needed */
-@media (min-width: 1200px) {
-  /* No specific styles needed; defaults apply */
-}
 
 /* Styles for screens 1024px and below */
 @media (max-width: 1200px) {
@@ -96,9 +93,12 @@
   }
 
   .btnmain p {
-    font-size: 2rem;
+    font-size: 18px;
     padding: 3vw 5vw;
   }
+  /* .btnmain{
+    height: 100vh;
+  } */
 }
 
 @media (max-width: 1045px) {

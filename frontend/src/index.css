@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Outfit', sans-serif;
   scroll-behavior: smooth;
+
 }
 /* Style the vertical and horizontal scrollbar track */
 ::-webkit-scrollbar-track {
@@ -47,6 +48,9 @@ a {
   width: 100%;
   margin: auto;
 } */
+ .app{
+  overflow-x: hidden;
+ }
 
 @keyframes fadeIn {
   0% {

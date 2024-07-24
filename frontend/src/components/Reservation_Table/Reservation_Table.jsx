@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import './Reservation_Table.css';
 import { assets } from '../../assets/assets';
@@ -160,6 +161,9 @@ const Reservation_Table = () => {
     return (
         <div className="reservation">
             <div className="reservation-contents">
+                <div className='carrot'>
+                    <img src={assets.carrot} alt=''/>
+                </div>
                 <span>Reservation</span>
                 <h2>Mmm...!
                     Your evening
@@ -174,6 +178,9 @@ const Reservation_Table = () => {
                 <input required type="number" placeholder="Phone" onChange={(e)=>setnumber(e.target.value)}/>
                 <button type='submit'>Reserve now</button>
             </form>
+            <div className='onion'>
+                    <img src={assets.ring} alt=''/>
+                </div>
         </div>
     );
 };

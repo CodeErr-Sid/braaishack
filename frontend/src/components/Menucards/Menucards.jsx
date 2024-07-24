@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Menucard.css";
 import { assets } from "../../assets/assets";
 import gsap from "gsap";
@@ -167,6 +168,11 @@ const sections = [
 const Menucards = ({ selectedMenu }) => {
   const cardRefs = useRef([]);
   const headingRefs = useRef([]);
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    navigate("/placeorder");
+  };
 
   useEffect(() => {
     sections.forEach((section, sectionIndex) => {
@@ -220,8 +226,13 @@ const Menucards = ({ selectedMenu }) => {
                   <img src={card.img} alt={card.productname} />
                 </div>
                 <div className="cardcontent">
-                  <div className="product_name">{card.productname}</div>
-                  <div className="product_price">{card.productprice}</div>
+                  <div className="left-card-content">
+                    <div className="product-name">{card.productname}</div>
+                    <div className="product-price">{card.productprice}</div>
+                  </div>
+                  <div className="right-card-content">
+                    <button onClick={handleAddToCart}>Add to Cart</button>
+                  </div>
                 </div>
               </div>
             ))}

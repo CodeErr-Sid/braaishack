@@ -79,7 +79,7 @@ export default function Location() {
             {contentArray.map((item, index) => (
                 <div key={index} className='content-box'>
                     <div className='left-number'>
-                        <h1>{item.leftNumber}</h1>
+                        <h1 style={{marginRight:'2rem'}}>{item.leftNumber}</h1>
                     </div>
                     <div className='right-content'>
                         <h2>{item.rightTitle}</h2>
