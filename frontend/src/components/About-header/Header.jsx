@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets';
 import gsap from 'gsap';
 
 
-const Header = () => {
+const Header = ({header_title,header_btn}) => {
 
     useEffect(()=>{
         gsap.to('.header-contents3',{
@@ -28,8 +28,8 @@ const Header = () => {
         <div className="header3">
             <div className='background'></div>
             <div className="header-contents3">
-                <h2 className="header-title3">ABOUT US</h2>
-                <button className="header-btn3">HOME / ABOUT US</button>
+                <h2 className="header-title3">{header_title}</h2>
+                <button className="header-btn3">{header_btn}</button>
             </div>
         </div>
     );

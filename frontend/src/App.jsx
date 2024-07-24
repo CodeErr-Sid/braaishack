@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Cart from './pages/Cart/Cart'
 import LoginPopup from './components/LoginPopup/LoginPopup'
-import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
+import PlaceOrder from './pages/Place_Order/Place_Order'
 import MyOrders from './pages/MyOrders/MyOrders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,6 +15,7 @@ import Menu from './pages/Menu/Menu'
 import Events from './pages/Events/Events'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import About from './pages/About/About';
+import GiftSection from './pages/Giftsection/GiftSection'
 
 const App = () => {
 
@@ -30,8 +31,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/menu' element={<Menu/>}/>
-          <Route path='/order' element={<PlaceOrder />}/>
-          <Route path='/myorders' element={<MyOrders />}/>
+          <Route path='/GiftSection' element={<GiftSection />}/>
+          <Route path='/PlaceOrder' element={<PlaceOrder />}/>
           <Route path='/verify' element={<Verify />}/>
           <Route path='/events' element={<Events />}/>
           <Route path='/about' element={<About />}/>

@@ -69,18 +69,18 @@ const Navbar = ({ setShowLogin }) => {
         >
           PHOTOS
         </Link>
-        <a
-          href="#app-download"
+        <Link
+          to="/GiftSection"
           onClick={() => {
             setMenu("REVIEWS");
             toggleMenu();
           }}
           className={`${menu === "REVIEWS" ? "active" : ""}`}
         >
-          REVIEWS
-        </a>
-        <a
-          href="#footer"
+          GiftSection
+        </Link>
+        <Link
+        to="/PlaceOrder"
           onClick={() => {
             setMenu("EVENTS");
             toggleMenu();
@@ -88,7 +88,7 @@ const Navbar = ({ setShowLogin }) => {
           className={`${menu === "EVENTS" ? "active" : ""}`}
         >
           EVENTS
-        </a>
+        </Link>
         <a
           href="#footer"
           onClick={() => {
