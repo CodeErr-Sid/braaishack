@@ -1,7 +1,7 @@
 .reservation {
   background-color: rgb(0, 0, 0);
   width: 100%;
-  min-height: 10vh;
+  /* min-height: 10vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,8 +53,8 @@
   width: 35vw;
   height: auto;
   padding: 4vw;
-  background: linear-gradient(90deg, gray, black);
-  /* background: rgba(39, 39, 39, 0.5); Semi-transparent background */
+  /* background: linear-gradient(90deg, gray, black); */
+  background: transparent;
   border: 2px solid #fdcf08;
   border-radius: 1vw;
   display: flex;
@@ -62,9 +62,10 @@
   justify-content: center;
   flex-direction: column;
   gap: 2vw;
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 6px -1px #fdcf08;
   overflow: hidden;
+  z-index: 223;
 }
 
 .reservation-form h1 {
