@@ -79,18 +79,18 @@
     justify-content: center;
     padding: 0;
     margin: 0;
-    z-index: 2; 
+    z-index: 2;
     overflow: hidden;
     pointer-events: none;
     gap: 5px;
 }
 
 .overlay-img img {
-    width: calc(100% / 7); 
-    height: 500px; 
+    width: calc(100% / 7);
+    height: 500px;
     object-fit: cover;
-    flex-shrink: 0; 
-    border: none; 
+    flex-shrink: 0;
+    border: none;
 }
 
 .overlay-img img + img {
@@ -102,24 +102,24 @@
     font-size: 1.5vw;
     font-weight: 600;
     border: none;
-    background: linear-gradient(45deg, #fdcf08, #f8a104); 
-    color: #000; 
-    padding: 1vw 2vw; 
+    background: linear-gradient(45deg, #fdcf08, #f8a104);
+    color: #000;
+    padding: 1vw 2vw;
     margin: 3vw 0;
     display: inline-block;
     white-space: nowrap;
     text-align: center;
     text-transform: uppercase;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .header-contents button:hover {
-    background: linear-gradient(45deg, #f8a104, #fdcf08); 
+    background: linear-gradient(45deg, #f8a104, #fdcf08);
     border-radius: 50%;
-    transform: scale(1.1); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     width: 520px;
 }
 
@@ -145,7 +145,7 @@
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1;
-    position: relative; 
+    position: relative;
     z-index: 1;
 }
 
@@ -163,12 +163,18 @@
         text-align: center;
     }
 
+    .header-contents p {
+        font-size: 3.5vw;
+        line-height: 5vw;
+        margin: 3vw 0;
+    }
+
     .header-contents button {
-        font-size: 3.5vw; 
+        font-size: 3.5vw;
         padding: 2vw 14vw;
         margin: 0 0 6vw;
         border-radius: 1vw;
-        white-space: nowrap; 
+        white-space: nowrap;
         text-align: center;
     }
 

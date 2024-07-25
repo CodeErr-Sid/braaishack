@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger'; // Import ScrollTrigger
 import { assets } from "../../assets/assets";
 import './cards.css';
-
+// import cards from '../../Cardsdata.json'
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +49,7 @@ export default function Cards() {
   ];
 
   useEffect(() => {
-  
+
     gsap.fromTo(".evt-card",
       {
         opacity: 0,
@@ -70,7 +70,7 @@ export default function Cards() {
           scrub: 1
         },
         onStart: () => {
-    
+
           gsap.fromTo(".evt-card .card-imgs img",
             { opacity: 0, y: 30, scale: 1.1 },
             { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power1.out" }
