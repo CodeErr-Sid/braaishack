@@ -166,7 +166,7 @@ const Place_Order = () => {
     <>
     <Header header_title={'ONLINE ORDER'} header_btn={'HOME/MENU/PRODUCT'} />
     <PlaceOrder/>
-    <Menucards/>
+    <Menucards />
     </>
   )
 }

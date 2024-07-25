@@ -50,6 +50,7 @@ a {
 } */
  .app{
   overflow-x: hidden;
+  background-color: black;
  }
 
 @keyframes fadeIn {
@@ -65,5 +66,7 @@ a {
 @media (max-width:1050px) {
   .app {
     width: 100%;
+    background-color: black;
+    overflow-x: hidden;
   }
 }

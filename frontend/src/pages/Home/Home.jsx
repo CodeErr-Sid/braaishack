@@ -14,6 +14,8 @@ import Events_F from '../../components/Events_F/Events_F'
 import Event from '../../components/Events/Event'
 import Reservation_Table from '../../components/Reservation_Table/Reservation_Table'
 import { assets } from '../../assets/assets'
+import Details from '../../components/About-details/Details.jsx'
+import Image from '../../components/images/Image.jsx'
 
 
 const Home = () => {
@@ -30,8 +32,10 @@ const Home = () => {
   return (
     <>
       <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} overlay={headerImages} imgsrc={assets.header} />
-      <Story/>
+      <Details/>
+      {/* <Story/> */}
       <ResturentOption/>
+      <Image/>
       <FeaturedProducts/>
       <Events_F title={"Events"}/>
       <Reservation_Table/>

@@ -73,18 +73,18 @@
 }
 
 .reservation-form input {
-  font-size: 2vw;
-  padding: 0.5vw;
-  border: 1px solid #fdcf08;
-  border-radius: 0.5vw;
+    font-size: 1.5vw;
+    padding: 0.5vw 2vw;
+    border: 1px solid #fdcf08;
+    border-radius: 0.5vw;
 }
 
 .reservation-form button {
-  border: none;
-  background-color: #fdcf08;
-  font-size: 1.5vw;
-  padding: 10px;
-  width: 360px;
+    border: none;
+    background: #fdcf08;
+    font-size: 1.8vw;
+    padding: 0.5vw 5vw;
+    border-radius: 2vw;
 }
 
 .onion {

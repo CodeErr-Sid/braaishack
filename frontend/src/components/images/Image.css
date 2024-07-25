@@ -1,0 +1,49 @@
+.image-container {
+    position: absolute;
+    bottom: 0;
+    left: 53%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem 3rem;
+    z-index: 2;
+    overflow-x: clip;
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotate(90.35deg);
+    }
+    to {
+        transform: rotate(450.35deg);
+    }
+}
+
+.image-style img {
+    position: absolute;
+    width: 25vw;
+    height: auto;
+    max-width: 28.26rem;
+    max-height: 28.26rem;
+    transform: rotate(90.35deg);
+    right: -10vw;
+    top: -10vw;
+    overflow-x: hidden;
+    animation: rotateImage 10s linear infinite;
+}
+
+
+@media (max-width: 1200px) {
+    .image-style img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-style img {
+        display: none;
+    }
+}

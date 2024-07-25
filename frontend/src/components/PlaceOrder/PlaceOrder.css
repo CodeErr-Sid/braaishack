@@ -89,6 +89,15 @@
   border-radius: 50%;
   color: black;
   font-weight: 700;
+  transition: .5s;
+}
+
+.multi-select .add:active{
+  scale: 0.1;
+}
+
+.multi-select .minus:active{
+  scale: 0.1;
 }
 
 .option button {

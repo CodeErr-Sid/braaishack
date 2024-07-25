@@ -24,7 +24,7 @@ const Menucards = ({ selectedMenu }) => {
         const cardEl = cardRefs.current[cardIndex + sectionIndex * 10];
         if (cardEl) {
           gsap.from(cardEl, {
-            x: sectionIndex % 2 === 0 ? -500 : 500,
+            x: sectionIndex % 2 === 0 ? -200 : 200,
             duration: 1,
             scrollTrigger: {
               trigger: cardEl,
@@ -39,7 +39,7 @@ const Menucards = ({ selectedMenu }) => {
       const headingEl = headingRefs.current[sectionIndex];
       if (headingEl) {
         gsap.from(headingEl, {
-          x: sectionIndex % 2 === 0 ? -500 : 500,
+          x: sectionIndex % 2 === 0 ? -200 : 200,
           opacity: 0,
           duration: 1,
           scrollTrigger: {

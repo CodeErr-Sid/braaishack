@@ -169,7 +169,7 @@ const Reservation_Table = () => {
                     Your evening
                     will be great!</h2>
                 <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
-                <button>BOOK A TABLE</button>
+                {/* <button>BOOK A TABLE</button> */}
             </div>
             <form className='reservation-form' onSubmit={handleSubmit}>
                 <h1>Reservation</h1>
