@@ -1,171 +1,172 @@
 .reservation {
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    min-height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    padding: 4vw 0;
-            position: relative;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  padding: 4vw 0;
+  position: relative;
 }
 
 .reservation .reservation-contents {
-    width: 50%;
-    padding: 0 3vw;
-    height: auto; /* Adjust height to auto for better responsiveness */
-    box-sizing: border-box;
-    position: relative;
+  width: 50%;
+  padding: 0 3vw;
+  height: auto; /* Adjust height to auto for better responsiveness */
+  box-sizing: border-box;
+  position: relative;
 }
 
 .reservation-contents h2 {
-    font-size: 5vw;
-    color: #fdcf08;
-    padding: 2vw 0 2vw;
+  font-size: 5vw;
+  color: #fdcf08;
+  padding: 2vw 0 2vw;
 }
 
 .reservation-contents span {
-    color: white;
-    padding: 1vw;
-    border-radius: 1vw;
-    background-color: #4e4e4e;
+  color: white;
+  padding: 1vw;
+  border-radius: 1vw;
+  background-color: #4e4e4e;
 }
 
 .reservation-contents p {
-    font-size: 1.5vw;
-    color: white;
-    line-height: 2vw;
+  font-size: 1.5vw;
+  color: white;
+  line-height: 2vw;
 }
 
 .reservation-contents button {
-    font-size: 1.5vw;
-    font-weight: 600;
-    border: none;
-    background-color: #fdcf08;
-    padding: 1vw 16vw;
-    border-radius: 2vw;
-    margin: 3vw 0;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.5vw;
+  font-weight: 600;
+  border: none;
+  background-color: #fdcf08;
+  padding: 1vw 16vw;
+  border-radius: 2vw;
+  margin: 3vw 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .reservation .reservation-form {
-
-    width: 35vw;
-    height: auto;
-    padding: 4vw;
-    background: linear-gradient(90deg,gray,black);
-    /* background: rgba(39, 39, 39, 0.5); Semi-transparent background */
-    border: 2px solid #fdcf08;
-    border-radius: 1vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2vw;
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-    overflow: hidden;
+  width: 35vw;
+  height: auto;
+  padding: 4vw;
+  background: linear-gradient(90deg, gray, black);
+  /* background: rgba(39, 39, 39, 0.5); Semi-transparent background */
+  border: 2px solid #fdcf08;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vw;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  overflow: hidden;
 }
 
 .reservation-form h1 {
-    color: #fdcf08;
-    font-size: 3vw;
+  color: #fdcf08;
+  font-size: 3vw;
 }
 
 .reservation-form input {
-    font-size: 2vw;
-    padding: 0.5vw;
-    border: 1px solid #fdcf08;
-    border-radius: 0.5vw;
+  font-size: 2vw;
+  padding: 0.5vw;
+  border: 1px solid #fdcf08;
+  border-radius: 0.5vw;
 }
 
 .reservation-form button {
-    border: none;
-    background-color: #fdcf08;
-    font-size: 1.5vw;
-    padding:10px;
-    width: 360px;
+  border: none;
+  background-color: #fdcf08;
+  font-size: 1.5vw;
+  padding: 10px;
+  width: 360px;
 }
 
-.onion{
-    width: 15vw;
-    height: 15vw;
-    position: absolute;
-    top: 69%;
-    left: 49vw;
+.onion {
+  width: 12vw;
+  height: 12vw;
+  position: absolute;
+  top: 71%;
+  left: 51vw;
+  transform: rotate(17deg) scaleX(1.5);
 }
-.onion img{
-    width: 100%;
-    height: 100%;object-fit: cover;
+.onion img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.carrot img{
-    width: 236px;
-    height: 157px;
-    transform: rotate(-123.19deg);
-    z-index: 222;
-    position: absolute;
-    right: -80%;
-    top: 10%;
+.carrot img {
+  width: 236px;
+  height: 157px;
+  transform: rotate(-123.19deg);
+  z-index: 222;
+  position: absolute;
+  right: -80%;
+  top: 10%;
 }
 /* Media Query for screens 800px or smaller */
 @media only screen and (max-width: 800px) {
-    .reservation {
-        padding: 10vw 0;
-    }
+  .reservation {
+    padding: 10vw 0;
+  }
 
-    .reservation .reservation-contents {
-        width: 100%;
-        padding: 0 6vw;
-        margin-bottom: 3vw; /* Add margin-bottom for spacing */
-    }
+  .reservation .reservation-contents {
+    width: 100%;
+    padding: 0 6vw;
+    margin-bottom: 3vw; /* Add margin-bottom for spacing */
+  }
 
-    .reservation-contents h2 {
-        font-size: 10.5vw;
-        padding: 2vw 0;
-    }
+  .reservation-contents h2 {
+    font-size: 10.5vw;
+    padding: 2vw 0;
+  }
 
-    .reservation-contents p {
-        font-size: 8vw;
-        line-height: 8.5vw;
-    }
+  .reservation-contents p {
+    font-size: 8vw;
+    line-height: 8.5vw;
+  }
 
-    .reservation-contents button {
-        font-size: 8vw;
-        padding: 1vw 14vw;
-        margin: 3vw 0;
-    }
+  .reservation-contents button {
+    font-size: 8vw;
+    padding: 1vw 14vw;
+    margin: 3vw 0;
+  }
 
-    .reservation .reservation-form {
-        display: flex;
-        gap: 6vw;
-        width: 90%;
-        height: auto;
-        padding: 10vw;
-        background: rgba(39, 39, 39, 0.5); /* Semi-transparent background */
-        border: 2px solid #fdcf08;
-        border-radius: 10vw;
-        backdrop-filter: blur(10px); /* Frosted glass effect */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-    }
+  .reservation .reservation-form {
+    display: flex;
+    gap: 6vw;
+    width: 90%;
+    height: auto;
+    padding: 10vw;
+    background: rgba(39, 39, 39, 0.5); /* Semi-transparent background */
+    border: 2px solid #fdcf08;
+    border-radius: 10vw;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  }
 
-    .reservation-form h1 {
-        font-size: 10.5vw;
-    }
+  .reservation-form h1 {
+    font-size: 10.5vw;
+  }
 
-    .reservation-form input {
-        font-size: 5.5vw;
-        padding: 3vw;
-        border-radius: 10vw;
-    }
+  .reservation-form input {
+    font-size: 5.5vw;
+    padding: 3vw;
+    border-radius: 10vw;
+  }
 
-    .reservation-form button {
-        font-size: 6vw;
-        padding: 2vw 5vw;
-        border-radius: 6vw;
-    }
+  .reservation-form button {
+    font-size: 6vw;
+    padding: 2vw 5vw;
+    border-radius: 6vw;
+  }
 
-    .onion{
-        display: none;
-    }
+  .onion {
+    display: none;
+  }
 }
