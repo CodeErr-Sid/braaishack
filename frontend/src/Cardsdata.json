@@ -1,0 +1,159 @@
+{
+  "sections": [
+    {
+      "title": "Starters",
+      "cards": [
+        {
+          "img": "starters1",
+          "productname": "samosa",
+          "productprice": "$49"
+        },
+        {
+          "img": "starters2",
+          "productname": "pakora",
+          "productprice": "$39"
+        },
+        {
+          "img": "starters3",
+          "productname": "spring roll",
+          "productprice": "$29"
+        },
+        {
+          "img": "starters4",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        }
+      ]
+    },
+    {
+      "title": "Braai Menu",
+      "cards": [
+        {
+          "img": "braai1",
+          "productname": "samosa",
+          "productprice": "$49"
+        },
+        {
+          "img": "braai2",
+          "productname": "pakora",
+          "productprice": "$39"
+        },
+        {
+          "img": "braai3",
+          "productname": "spring roll",
+          "productprice": "$29"
+        },
+        {
+          "img": "braai4",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        },
+        {
+          "img": "braai5",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        },
+        {
+          "img": "braai6",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        },
+        {
+          "img": "braai7",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        }
+      ]
+    },
+    {
+      "title": "Kids Braai Menu",
+      "cards": [
+        {
+          "img": "kids1",
+          "productname": "samosa",
+          "productprice": "$49"
+        },
+        {
+          "img": "kids2",
+          "productname": "pakora",
+          "productprice": "$39"
+        },
+        {
+          "img": "kids3",
+          "productname": "spring roll",
+          "productprice": "$29"
+        }
+      ]
+    },
+    {
+      "title": "Braai Sides",
+      "cards": [
+        {
+          "img": "sides1",
+          "productname": "samosa",
+          "productprice": "$49"
+        },
+        {
+          "img": "sides2",
+          "productname": "pakora",
+          "productprice": "$39"
+        },
+        {
+          "img": "sides3",
+          "productname": "spring roll",
+          "productprice": "$29"
+        },
+        {
+          "img": "sides4",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        },
+        {
+          "img": "sides5",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        },
+        {
+          "img": "sides6",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        },
+        {
+          "img": "sides7",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        },
+        {
+          "img": "sides8",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        }
+      ]
+    },
+    {
+      "title": "Desserts",
+      "cards": [
+        {
+          "img": "sides9",
+          "productname": "samosa",
+          "productprice": "$49"
+        },
+        {
+          "img": "sides10",
+          "productname": "pakora",
+          "productprice": "$39"
+        },
+        {
+          "img": "sides11",
+          "productname": "spring roll",
+          "productprice": "$29"
+        },
+        {
+          "img": "sides12",
+          "productname": "chicken wings",
+          "productprice": "$59"
+        }
+      ]
+    }
+  ]
+}
