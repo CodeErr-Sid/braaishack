@@ -1,6 +1,6 @@
 .placeOrder {
   width: 100vw;
-  min-height: 10vh;
+  min-height: 100vh;
   background-color: black;
   display: flex;
   align-items: center;
