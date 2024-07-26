@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import './Reservation_Table.css';
 import { assets } from '../../assets/assets';
@@ -8,32 +7,31 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Reservation_Table = () => {
-
     const [name, setname] = useState("");
     const [email, setemail] = useState("");
     const [number, setnumber] = useState("");
     const [database, setdatabase] = useState([]);
 
-    const handleSubmit = (e)=>{
-         e.preventDefault();
-         let currentdate = new Date();
-         let dataobj = {
-         name,
-         email,
-         number,
-         id:database.length+1,
-         date:currentdate.toLocaleDateString(),
-         time:currentdate.toLocaleTimeString(),
-         };
-         setdatabase([...database,dataobj]);
-         localStorage.setItem('reservationData',JSON.stringify(database))
-         console.log(database);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let currentdate = new Date();
+        let dataobj = {
+            name,
+            email,
+            number,
+            id: database.length + 1,
+            date: currentdate.toLocaleDateString(),
+            time: currentdate.toLocaleTimeString(),
+        };
+        setdatabase([...database, dataobj]);
+        localStorage.setItem('reservationData', JSON.stringify([...database, dataobj]));
+        console.log(database);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         let storedData = localStorage.getItem('reservationData');
-        if(storedData) setdatabase(JSON.parse(storedData))
-    },[]);
+        if (storedData) setdatabase(JSON.parse(storedData))
+    }, []);
 
     useEffect(() => {
         // Animate span element
@@ -156,13 +154,58 @@ const Reservation_Table = () => {
                 }
             }
         );
+
+        // Animate carrot image
+        gsap.fromTo(".carrot img",
+            {
+                opacity: 0,
+                y: -50,
+                scale: 0.8
+            },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.6,
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: ".carrot",
+                    start: "top 90%",
+                    end: "top 70%",
+                    scrub: 1
+                }
+            }
+        );
+
+        // Animate onion image
+        gsap.fromTo(".onion img",
+            {
+                opacity: 0,
+                y: 50,
+                scale: 0.8
+            },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.6,
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: ".onion",
+                    start: "top 90%",
+                    end: "top 70%",
+                    scrub: 1
+                }
+            }
+        );
+
     }, []);
 
     return (
         <div className="reservation">
             <div className="reservation-contents">
                 <div className='carrot'>
-                    <img src={assets.carrot} alt=''/>
+                    <img src={assets.carrot} alt='' />
                 </div>
                 <span>Reservation</span>
                 <h2>Mmm...!
@@ -173,14 +216,14 @@ const Reservation_Table = () => {
             </div>
             <form className='reservation-form' onSubmit={handleSubmit}>
                 <h1>Reservation</h1>
-                <input required type="text" placeholder="Name" onChange={(e)=>setname(e.target.value)}/>
-                <input required type="email" placeholder="Email" onChange={(e)=>setemail(e.target.value)}/>
-                <input required type="number" placeholder="Phone" onChange={(e)=>setnumber(e.target.value)}/>
+                <input required type="text" placeholder="Name" onChange={(e) => setname(e.target.value)} />
+                <input required type="email" placeholder="Email" onChange={(e) => setemail(e.target.value)} />
+                <input required type="number" placeholder="Phone" onChange={(e) => setnumber(e.target.value)} />
                 <button type='submit'>Reserve now</button>
             </form>
             <div className='onion'>
-                    <img src={assets.ring} alt=''/>
-                </div>
+                <img src={assets.ring} alt='' />
+            </div>
         </div>
     );
 };
