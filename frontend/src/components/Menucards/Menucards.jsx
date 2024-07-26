@@ -72,7 +72,7 @@ const Menucards = ({ selectedMenu }) => {
           key={sectionIndex}
           style={{
             display:
-              selectedMenu === section.title || selectedMenu === "" ? "block" : "none",
+              selectedMenu === section.title || selectedMenu === "" || selectedMenu === "All" ? "block" : "none",
           }}
         >
           <h1 ref={(el) => (headingRefs.current[sectionIndex] = el)}>
