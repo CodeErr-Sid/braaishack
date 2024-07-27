@@ -12,6 +12,7 @@ const MenuNav = ({ setSelectedMenu }) => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1024);
 
   const Menubtndata = [
+    'All',
     "Starters",
     "Braai Menu",
     "Kids Braai Menu",
@@ -43,7 +44,13 @@ const MenuNav = ({ setSelectedMenu }) => {
       gsap.fromTo(".Menubtn-fullscreen button", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.1 });
     }
   }, [showMenu, isSmallScreen]);
-
+  const handleMenuSelection = (menu) => {
+    if (menu === "All") {
+      setSelectedMenu("");
+    } else {
+      setSelectedMenu(menu);
+    }
+  };
   useEffect(() => {
     // ScrollTrigger for paragraph
     gsap.to(".paragraph", {

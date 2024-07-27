@@ -9,7 +9,7 @@ import gsap from 'gsap';
 import Filter from '../../components/Filter/filter';
 const Menu = () => {
 
- 
+
   const [selectedMenu, setSelectedMenu] = useState("");
 
   const images = [
@@ -28,7 +28,7 @@ const Menu = () => {
         imgsrc={images}
       />
       <MenuNav setSelectedMenu={setSelectedMenu} />
-      {/* <Filter setSelectedMenu={setSelectedMenu}/> */}
+      <Filter setSelectedMenu={setSelectedMenu}/>
       <Menucards selectedMenu={selectedMenu} />
     </>
   );
