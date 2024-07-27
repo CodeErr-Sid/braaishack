@@ -39,14 +39,27 @@ const removeFromCart = async (req, res) => {
 // get user cart
 const getCart = async (req, res) => {
    try {
-      let userData = await userModel.findById(req.body.userId);
-      let cartData = await userData.cartData;
-      res.json({ success: true, cartData:cartData });
+       let userData = await userModel.findById(req.body.userId);
+       let cartData = userData.cartData;
+
+       // Remove items with quantity of 0
+       for (let itemId in cartData) {
+           if (cartData[itemId] === 0) {
+               delete cartData[itemId];
+           }
+       }
+
+       // Update the user's cart data in the database
+       await userModel.findByIdAndUpdate(req.body.userId, { cartData });
+
+       res.json({ success: true, cartData: cartData });
    } catch (error) {
-      console.log(error);
-      res.json({ success: false, message: "Error" })
+       console.log(error);
+       res.json({ success: false, message: "Error" });
    }
-}
+};
+
+ 
 
 
 export { addToCart, removeFromCart, getCart }

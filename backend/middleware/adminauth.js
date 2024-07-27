@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-const authMiddleware = async (req, res, next) => {
+const adminauthMiddleware = async (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
         return res.json({ success: false, message: 'Not Authorized. Login Again' });
@@ -14,4 +14,4 @@ const authMiddleware = async (req, res, next) => {
     }
 }
 
-export default authMiddleware;
+export default adminauthMiddleware;

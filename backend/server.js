@@ -6,20 +6,25 @@ import foodRouter from "./routes/foodRoute.js"
 import 'dotenv/config'
 import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
+import cookieParser from "cookie-parser"
+import adminRouter from "./routes/adminRoute.js"
 
 // app config
+
 const app = express()
 const port = process.env.PORT || 4000;
 
 
 // middlewares
 app.use(express.json())
+app.use(cookieParser())
 app.use(cors())
 
 // db connection
 connectDB()
 
 // api endpoints
+app.use("/api/admin",adminRouter)
 app.use("/api/user", userRouter)
 app.use("/api/food", foodRouter)
 app.use("/images",express.static('uploads'))

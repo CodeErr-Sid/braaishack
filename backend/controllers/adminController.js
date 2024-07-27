@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import validator from "validator";
-import userModel from "../models/userModel.js";
+import adminModel from "../models/adminModel.js";
 
 //create token
 const createToken = (id) => {
@@ -9,10 +9,10 @@ const createToken = (id) => {
 }
 
 // login user
-const loginUser = async (req, res) => {
+const loginAdmin = async (req, res) => {
     const { email, password } = req.body;
     try {
-        const user = await userModel.findOne({ email });
+        const user = await adminModel.findOne({ email });
 
         if (!user) {
             return res.status(404).json({ success: false, message: "User does not exist" });
@@ -41,11 +41,11 @@ const loginUser = async (req, res) => {
 }
 
 //register user
-const registerUser = async (req, res) => {
+const registerAdmin = async (req, res) => {
     const { name, email, password } = req.body;
     try {
         //check if user already exists
-        const exists = await userModel.findOne({ email })
+        const exists = await adminModel.findOne({ email })
         if (exists) {
             return res.json({ success: false, message: "User already exists" })
         }
@@ -62,7 +62,7 @@ const registerUser = async (req, res) => {
         const salt = await bcrypt.genSalt(10); // the more no. round the more time it will take
         const hashedPassword = await bcrypt.hash(password, salt)
 
-        const newUser = new userModel({ name, email, password: hashedPassword })
+        const newUser = new adminModel({ name, email, password: hashedPassword })
         const user = await newUser.save()
         const token = createToken(user._id)
         res.json({ success: true, token })
@@ -73,4 +73,4 @@ const registerUser = async (req, res) => {
     }
 }
 
-export { loginUser, registerUser }
+export { loginAdmin, registerAdmin }
