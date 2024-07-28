@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Add.css';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { assets, url } from '../../assets/assets';
 
 const AdminAdd = () => {
   const [image, setImage] = useState(false);
@@ -21,11 +22,12 @@ const AdminAdd = () => {
     }
 
     const formData = new FormData();
-    formData.append('image', image);
+    formData.append('file', image);
+    formData.append('upload_preset', 'braaishack'); // Your upload preset name
 
     try {
-      const cloudinaryResponse = await axios.post(`http://localhost:5000/api/upload`, formData);
-      const imageUrl = cloudinaryResponse.data.url;
+      const cloudinaryResponse = await axios.post('https://api.cloudinary.com/v1_1/braaishack/image/upload', formData);
+      const imageUrl = cloudinaryResponse.data.secure_url;
 
       const productData = {
         ...data,
@@ -33,7 +35,7 @@ const AdminAdd = () => {
         price: Number(data.price)
       };
 
-      const response = await axios.post(`http://localhost:5000/api/food/add`, productData);
+      const response = await axios.post('http://localhost:5000/api/food/add', productData);
 
       if (response.data.success) {
         toast.success(response.data.message);
@@ -61,11 +63,11 @@ const AdminAdd = () => {
   return (
     <div className='add'>
       <form className='flex-col' onSubmit={onSubmitHandler}>
-        <div className='add-img-upload flex-col'>
+      <div className='add-img-upload flex-col'>
           <p>Upload image</p>
           <input onChange={(e) => { setImage(e.target.files[0]); e.target.value = '' }} type="file" accept="image/*" id="image" hidden />
           <label htmlFor="image">
-            <img src={!image ? 'path_to_your_placeholder_image' : URL.createObjectURL(image)} alt="Upload Preview" />
+            <img src={!image ? assets.upload_area : URL.createObjectURL(image)} alt="Upload Preview" />
           </label>
         </div>
         <div className='add-product-name flex-col'>
@@ -74,12 +76,12 @@ const AdminAdd = () => {
         </div>
         <div className='add-product-description flex-col'>
           <p>Product description</p>
-          <textarea name='description' onChange={onChangeHandler} value={data.description} rows={6} placeholder='Write content here' required />
+          <textarea name='description' onChange={onChangeHandler} value={data.description} type="text" rows={6} placeholder='Write content here' required />
         </div>
         <div className='add-category-price'>
           <div className='add-category flex-col'>
             <p>Product category</p>
-            <select name='category' onChange={onChangeHandler}>
+            <select name='category' onChange={onChangeHandler} >
               <option value="Salad">Salad</option>
               <option value="Rolls">Rolls</option>
               <option value="Deserts">Deserts</option>
@@ -92,10 +94,10 @@ const AdminAdd = () => {
           </div>
           <div className='add-price flex-col'>
             <p>Product Price</p>
-            <input type="number" name='price' onChange={onChangeHandler} value={data.price} placeholder='25' />
+            <input type="Number" name='price' onChange={onChangeHandler} value={data.price} placeholder='25' />
           </div>
         </div>
-        <button type='submit' className='add-btn'>ADD</button>
+        <button type='submit' className='add-btn' >ADD</button>
       </form>
     </div>
   );

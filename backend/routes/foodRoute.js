@@ -1,24 +1,27 @@
-import express from 'express';
-import { addFood, listFood, removeFood } from '../controllers/foodController.js';
-import multer from 'multer';
-import adminauthMiddleware from '../middleware/adminauth.js';
+import express from "express";
+import {
+  addFood,
+  listFood,
+  removeFood,
+} from "../controllers/foodController.js";
+import multer from "multer";
+import adminauthMiddleware from "../middleware/adminauth.js";
 
 const foodRouter = express.Router();
-
 
 //Image Storage Engine (Saving Image to uploads folder & rename it)
 
 const storage = multer.diskStorage({
-    destination: 'uploads',
-    filename: (req, file, cb) => {
-        return cb(null,`${Date.now()}${file.originalname}`);
-    }
-})
+  destination: "uploads",
+  filename: (req, file, cb) => {
+    return cb(null, `${Date.now()}${file.originalname}`);
+  },
+});
 
-const upload = multer({ storage: storage})
+const upload = multer({ storage: storage });
 
-foodRouter.get("/list",adminauthMiddleware,listFood);
-foodRouter.post("/add",adminauthMiddleware, upload.single('image'),addFood);
-foodRouter.post("/remove",adminauthMiddleware, removeFood);
+foodRouter.get("/list", adminauthMiddleware, listFood);
+foodRouter.post("/add", addFood);
+foodRouter.post("/remove", adminauthMiddleware, removeFood);
 
 export default foodRouter;
