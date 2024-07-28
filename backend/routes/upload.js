@@ -1,19 +1,30 @@
 import express from "express";
 const router = express.Router();
 import fileUpload from "express-fileupload";
-import cloudinaryConfig from "../config/cloudinaryConfig";
+import { v2 as cloudinary } from 'cloudinary';
+import dotenv from "dotenv"
 
-router.use(
+dotenv.config();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+const uploadRoute = express.Router();
+
+uploadRoute.use(
   fileUpload({
     useTempFiles: true,
     tempFileDir: "/tmp/",
   })
 );
 
-router.post("/upload", async (req, res) => {
+uploadRoute.post("/upload", async (req, res) => {
   try {
     const file = req.files.image;
-    const result = await cloudinaryConfig.uploader.upload(file.tempFilePath);
+    const result = await cloudinary.uploader.upload(file.tempFilePath);
     res.json({ success: true, url: result.secure_url });
   } catch (error) {
     console.error(error);
