@@ -1,38 +1,41 @@
-import express  from "express"
-import cors from 'cors'
-import { connectDB } from "./config/db.js"
-import userRouter from "./routes/userRoute.js"
-import foodRouter from "./routes/foodRoute.js"
-import 'dotenv/config'
-import cartRouter from "./routes/cartRoute.js"
-import orderRouter from "./routes/orderRoute.js"
-import cookieParser from "cookie-parser"
-import adminRouter from "./routes/adminRoute.js"
+import express from "express";
+import cors from "cors";
+import { connectDB } from "./config/db.js";
+import userRouter from "./routes/userRoute.js";
+import foodRouter from "./routes/foodRoute.js";
+import "dotenv/config";
+import cartRouter from "./routes/cartRoute.js";
+import orderRouter from "./routes/orderRoute.js";
+import cookieParser from "cookie-parser";
+import adminRouter from "./routes/adminRoute.js";
+import uploadRoute from "./routes/upload.js";
 
 // app config
 
-const app = express()
+const app = express();
 const port = process.env.PORT || 4000;
 
-
 // middlewares
-app.use(express.json())
-app.use(cookieParser())
-app.use(cors())
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors());
 
 // db connection
-connectDB()
+connectDB();
 
 // api endpoints
-app.use("/api/admin",adminRouter)
-app.use("/api/user", userRouter)
-app.use("/api/food", foodRouter)
-app.use("/images",express.static('uploads'))
-app.use("/api/cart", cartRouter)
-app.use("/api/order",orderRouter)
+app.use("/api/admin", adminRouter);
+app.use("/api/user", userRouter);
+app.use("/api/food", foodRouter);
+app.use("/images", express.static("uploads"));
+app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
+app.use("/api", uploadRoute);
 
 app.get("/", (req, res) => {
-    res.send("API Working")
-  });
+  res.send("API Working");
+});
 
-app.listen(port, () => console.log(`Server started on http://localhost:${port}`))
+app.listen(port, () =>
+  console.log(`Server started on http://localhost:${port}`)
+);

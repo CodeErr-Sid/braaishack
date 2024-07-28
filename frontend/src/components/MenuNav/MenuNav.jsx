@@ -107,9 +107,9 @@ const MenuNav = ({ setSelectedMenu }) => {
           ))}
         </div>
       )}
-      <p className="paragraph">
+      {/* <p className="paragraph">
       Join us Every weekend 1pm to 10pm and let your taste buds embark on a journey of flavours, in perfect harmony at our Braai Bonanza weekends. Reserve your spot now and get ready to indulge in a culinary extravaganza that will leave you craving for more.
-      </p>
+      </p> */}
     </div>
   );
 };
