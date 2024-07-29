@@ -15,7 +15,7 @@ import Menu from './pages/Menu/Menu'
 import Events from './pages/Events/Events'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import About from './pages/About/About';
-
+import GiftSection from './pages/Giftsection/GiftSection'
 
 const App = () => {
 
@@ -31,6 +31,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/menu' element={<Menu/>}/>
+          <Route path='/GiftSection' element={<GiftSection />}/>
           <Route path='/PlaceOrder' element={<PlaceOrder />}/>
           <Route path='/verify' element={<Verify />}/>
           <Route path='/events' element={<Events />}/>
