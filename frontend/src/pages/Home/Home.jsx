@@ -5,13 +5,12 @@ import React, { useState } from 'react'
 
 
 import Header from '../../components/Header/Header'
-import Story from '../../components/storyBraaishaack/story'
 import ResturentOption from '../../components/ResturentOption/ResturentOption'
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts'
 import Events_F from '../../components/Events_F/Events_F'
+// import Story from '../../components/storyBraaishaack/story.jsx'
 
-
-import Event from '../../components/Events/Event'
+// import Event from '../../components/Events/Event'
 import Reservation_Table from '../../components/Reservation_Table/Reservation_Table'
 import { assets } from '../../assets/assets'
 import Details from '../../components/About-details/Details.jsx'
