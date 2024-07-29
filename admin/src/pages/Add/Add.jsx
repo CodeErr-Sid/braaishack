@@ -23,7 +23,7 @@ const AdminAdd = () => {
 
     const formData = new FormData();
     formData.append('file', image);
-    formData.append('upload_preset', 'braaishack'); // Your upload preset name
+    formData.append('upload_preset', 'braaishack'); 
 
     try {
       const cloudinaryResponse = await axios.post('https://api.cloudinary.com/v1_1/braaishack/image/upload', formData);
@@ -35,7 +35,7 @@ const AdminAdd = () => {
         price: Number(data.price)
       };
 
-      const response = await axios.post('http://localhost:5000/api/food/add', productData);
+      const response = await axios.post('http://localhost:4000/api/food/add', productData);
 
       if (response.data.success) {
         toast.success(response.data.message);
