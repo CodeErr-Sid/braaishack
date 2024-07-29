@@ -15,7 +15,7 @@ import Menu from './pages/Menu/Menu'
 import Events from './pages/Events/Events'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import About from './pages/About/About';
-import GiftSection from './pages/Giftsection/GiftSection'
+import GiftSection from './pages/GiftSection/GiftSection';
 
 const App = () => {
 
