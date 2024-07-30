@@ -4,55 +4,52 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Footer.css';
 import { assets } from '../../assets/assets';
 
-// Register ScrollTrigger with GSAP
-gsap.registerPlugin(ScrollTrigger);
 
-const Footer = () => {
+
+  gsap.registerPlugin(ScrollTrigger);
+ const Footer = () => {
   useEffect(() => {
     // Animation for footer-content
     gsap.from(".footer-content-left", {
       opacity: 0,
       x: -100,
-      duration: 1,
+      duration: 0.75,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".footer-content-left",
         start: "top 80%",
         end: "top 60%",
-        scrub: 1,
+        scrub: 5,
       }
     });
 
     gsap.from(".footer-content-right", {
       opacity: 0,
       x: 100,
-      duration: 1,
+      duration: 0.75,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".footer-content-right",
         start: "top 80%",
         end: "top 60%",
-        scrub: 1,
+        scrub: 5,
       }
     });
 
-    // Animation for babyfoot
     // gsap.from(".babyfoot", {
     //   opacity: 0,
     //   y: 50,
-    //   duration: 1,
+    //   duration: 0.75,
     //   ease: "power2.out",
     //   scrollTrigger: {
     //     trigger: ".babyfoot",
     //     start: "top 90%",
     //     end: "top 70%",
-    //     scrub: 1,
+    //     scrub: 5,
     //   }
     // });
 
   }, []);
-
-
   return (
     <div className='footer' id='footer'>
       <div className="footer-content">
