@@ -3,6 +3,7 @@ import {
   addFood,
   listFood,
   removeFood,
+  getFoodDetails
 } from "../controllers/foodController.js";
 import multer from "multer";
 import adminauthMiddleware from "../middleware/adminauth.js";
@@ -20,7 +21,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-foodRouter.get("/list", adminauthMiddleware, listFood);
+foodRouter.get("/list", listFood);
+foodRouter.get("/fooddetails",getFoodDetails);
 foodRouter.post("/add", addFood);
 foodRouter.post("/remove", adminauthMiddleware, removeFood);
 

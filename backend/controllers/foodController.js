@@ -12,6 +12,24 @@ const listFood = async (req, res) => {
   }
 };
 
+// get food details
+const getFoodDetails = async (req, res) => {
+  const { productId } = req.body;
+
+  try {
+    const food = await foodModel.findById(productId);
+
+    if (!food) {
+      return res.status(404).json({ success: false, message: "Food item not found" });
+    }
+
+    res.json({ success: true, data: food });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: "Error" });
+  }
+};
+
 // add food
 const addFood = async (req, res) => {
   try {
@@ -45,4 +63,4 @@ const removeFood = async (req, res) => {
   }
 };
 
-export { listFood, addFood, removeFood };
+export { listFood, addFood, removeFood, getFoodDetails };
