@@ -8,48 +8,48 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const ResturentOption = () => {
-  useEffect(() => {
+  // useEffect(() => {
 
-    gsap.from(".main .mainhead", {
-      x: -120,
-      duration: 0.7,
-      scrollTrigger: {
-        trigger: ".main",
-        start: "top 80%", 
-        end: "bottom top", 
-        scrub: 2, 
-      },
-    });
+  //   gsap.from(".main .mainhead", {
+  //     x: -120,
+  //     duration: 0.7,
+  //     scrollTrigger: {
+  //       trigger: ".main",
+  //       start: "top 80%", 
+  //       end: "bottom top", 
+  //       scrub: 2, 
+  //     },
+  //   });
 
   
-    gsap.utils.toArray(".menulist").forEach((card, index) => {
-      gsap.from(card, {
-        scale: 0.9, 
-        opacity: 1, 
-        duration: 0.7,
-        delay: index * 0.8,
-        scrollTrigger: {
-          trigger: card,
-          start: "top 80%", 
-          end: "bottom top", 
-          scrub: 2, 
-        },
-      });
-    });
+  //   gsap.utils.toArray(".menulist").forEach((card, index) => {
+  //     gsap.from(card, {
+  //       scale: 0.9, 
+  //       opacity: 1, 
+  //       duration: 0.7,
+  //       delay: index * 0.8,
+  //       scrollTrigger: {
+  //         trigger: card,
+  //         start: "top 80%", 
+  //         end: "bottom top", 
+  //         scrub: 2, 
+  //       },
+  //     });
+  //   });
 
  
-    gsap.to(".main", {
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".main",
-        start: "bottom bottom", 
-        end: "bottom top",
-        scrub: 2,
-        delay: 0.6 
-      }
-    });
-  }, []);
+  //   gsap.to(".main", {
+  //     opacity: 1,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: ".main",
+  //       start: "bottom bottom", 
+  //       end: "bottom top",
+  //       scrub: 2,
+  //       delay: 0.6 
+  //     }
+  //   });
+  // }, []);
 
   return (
     <div className="main">

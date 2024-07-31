@@ -23,48 +23,48 @@ const Menucards = ({ selectedMenu }) => {
     });
   };
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 800px)");
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia("(min-width: 800px)");
 
-    if (mediaQuery.matches) {
-      sections.forEach((section, sectionIndex) => {
-        section.cards.forEach((card, cardIndex) => {
-          const cardEl = cardRefs.current[cardIndex + sectionIndex * 10];
-          if (cardEl) {
-            gsap.from(cardEl, {
-              x: sectionIndex % 2 === 0 ? -200 : 200,
-              duration: 1,
-              scrollTrigger: {
-                trigger: cardEl,
-                start: "top 80%",
-                end: "top 70%",
-                scrub: 5,
-              },
-            });
-          }
-        });
+  //   if (mediaQuery.matches) {
+  //     sections.forEach((section, sectionIndex) => {
+  //       section.cards.forEach((card, cardIndex) => {
+  //         const cardEl = cardRefs.current[cardIndex + sectionIndex * 10];
+  //         if (cardEl) {
+  //           gsap.from(cardEl, {
+  //             x: sectionIndex % 2 === 0 ? -200 : 200,
+  //             duration: 1,
+  //             scrollTrigger: {
+  //               trigger: cardEl,
+  //               start: "top 80%",
+  //               end: "top 70%",
+  //               scrub: 5,
+  //             },
+  //           });
+  //         }
+  //       });
 
-        const headingEl = headingRefs.current[sectionIndex];
-        if (headingEl) {
-          gsap.from(headingEl, {
-            x: sectionIndex % 2 === 0 ? -200 : 200,
-            opacity: 0,
-            duration: 0.75,
-            scrollTrigger: {
-              trigger: headingEl,
-              start: "top 70%",
-              end: "top 72%",
-              scrub: 5,
-            },
-          });
-        }
-      });
-    }
+  //       const headingEl = headingRefs.current[sectionIndex];
+  //       if (headingEl) {
+  //         gsap.from(headingEl, {
+  //           x: sectionIndex % 2 === 0 ? -200 : 200,
+  //           opacity: 0,
+  //           duration: 0.75,
+  //           scrollTrigger: {
+  //             trigger: headingEl,
+  //             start: "top 70%",
+  //             end: "top 72%",
+  //             scrub: 5,
+  //           },
+  //         });
+  //       }
+  //     });
+  //   }
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  //   };
+  // }, []);
 
   return (
     <div className="menucards">

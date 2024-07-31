@@ -37,57 +37,56 @@ const PlaceOrder = () => {
   const paragraphRef = useRef(null);
   const cardsRef = useRef(null);
 
-  useEffect(() => {
-    gsap.from(orderImgRef.current, { opacity: 0, x: -100, duration: 1 });
-    gsap.from(orderContentRef.current, { opacity: 0, x: 100, duration: 1 });
+  // useEffect(() => {
+  //   gsap.from(orderImgRef.current, { opacity: 0, x: -100, duration: 1 });
+  //   gsap.from(orderContentRef.current, { opacity: 0, x: 100, duration: 1 });
     
-    if (headingRef.current) {
-      gsap.from(headingRef.current, {
-        x: -500, 
-        opacity: 0,
-        duration:0.75,
-        scrollTrigger: {
-          trigger: headingRef.current,
-          start: "top 80%",
-          end: "bottom 50%",
-          scrub: 5,
-        },
-      });
-    }
+  //   if (headingRef.current) {
+  //     gsap.from(headingRef.current, {
+  //       x: -500, 
+  //       opacity: 0,
+  //       duration:0.75,
+  //       scrollTrigger: {
+  //         trigger: headingRef.current,
+  //         start: "top 80%",
+  //         end: "bottom 50%",
+  //         scrub: 5,
+  //       },
+  //     });
+  //   }
 
-    if (paragraphRef.current) {
-      gsap.from(paragraphRef.current, {
-        x: -500,
-        opacity: 0,
-        duration: 0.75,
-        scrollTrigger: {
-          trigger: paragraphRef.current,
-          start: "top 80%",
-          end: "bottom 50%",
-          scrub: 5,
-        },
-      });
-    }
+  //   if (paragraphRef.current) {
+  //     gsap.from(paragraphRef.current, {
+  //       x: -500,
+  //       opacity: 0,
+  //       duration: 0.75,
+  //       scrollTrigger: {
+  //         trigger: paragraphRef.current,
+  //         start: "top 80%",
+  //         end: "bottom 50%",
+  //         scrub: 5,
+  //       },
+  //     });
+  //   }
 
-    if (cardsRef.current) {
-      gsap.from(cardsRef.current.querySelectorAll('.card'), {
-        y: 50, 
-        opacity: 0,
-        duration: 0.75,
-        stagger: 0.2,
+  //   if (cardsRef.current) {
+  //     gsap.from(cardsRef.current.querySelectorAll('.card'), {
+  //       y: 50, 
+  //       opacity: 0,
+  //       duration: 0.75,
+  //       stagger: 0.2,
 
-        scrollTrigger: {
-          trigger: paragraphRef.current,
-          start: "top 75%",
-          end: "bottom 50%",
-          scrub: 5,
-        },
-      });
-    }
-  }, [clickedCard]);
+  //       scrollTrigger: {
+  //         trigger: paragraphRef.current,
+  //         start: "top 75%",
+  //         end: "bottom 50%",
+  //         scrub: 5,
+  //       },
+  //     });
+  //   }
+  // }, [clickedCard]);
 
   const handleAddToCart = (card) => {
-    // Handle adding to cart logic here
     console.log("Adding to cart:", card);
   };
 

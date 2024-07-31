@@ -7,34 +7,33 @@ import { assets } from '../../assets/assets';
 
 
   gsap.registerPlugin(ScrollTrigger);
- const Footer = () => {
-  useEffect(() => {
-    // Animation for footer-content
-    gsap.from(".footer-content-left", {
-      opacity: 0,
-      x: -100,
-      duration: 0.75,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".footer-content-left",
-        start: "top 80%",
-        end: "top 60%",
-        scrub: 5,
-      }
-    });
 
-    gsap.from(".footer-content-right", {
-      opacity: 0,
-      x: 100,
-      duration: 0.75,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".footer-content-right",
-        start: "top 80%",
-        end: "top 60%",
-        scrub: 5,
-      }
-    });
+  // useEffect(() => {
+  //   gsap.from(".footer-content-left", {
+  //     opacity: 0,
+  //     x: -100,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".footer-content-left",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 5,
+  //     }
+  //   });
+
+  //   gsap.from(".footer-content-right", {
+  //     opacity: 0,
+  //     x: 100,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".footer-content-right",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 5,
+  //     }
+  //   });
 
     // gsap.from(".babyfoot", {
     //   opacity: 0,
@@ -49,7 +48,8 @@ import { assets } from '../../assets/assets';
     //   }
     // });
 
-  }, []);
+  // }, []);
+  const Footer = () => {
   return (
     <div className='footer' id='footer'>
       <div className="footer-content">

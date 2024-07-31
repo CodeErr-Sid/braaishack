@@ -7,85 +7,85 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Gift_Coupen = () => {
-  useEffect(() => {
-    gsap.from('.giftsection', {
-      scrollTrigger: {
-        trigger: '.giftsection',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power2.out',
-    });
+  // useEffect(() => {
+  //   gsap.from('.giftsection', {
+  //     scrollTrigger: {
+  //       trigger: '.giftsection',
+  //       start: 'top 80%',
+  //       end: 'bottom 20%',
+  //       toggleActions: 'play none none none',
+  //     },
+  //     opacity: 0,
+  //     y: 50,
+  //     duration: 1,
+  //     ease: 'power2.out',
+  //   });
 
-    gsap.from('.giftcontent h1', {
-      scrollTrigger: {
-        trigger: '.giftcontent',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      x: -100,
-      duration: 1,
-      ease: 'power2.out',
-    });
+  //   gsap.from('.giftcontent h1', {
+  //     scrollTrigger: {
+  //       trigger: '.giftcontent',
+  //       start: 'top 80%',
+  //       end: 'bottom 20%',
+  //       toggleActions: 'play none none none',
+  //     },
+  //     opacity: 0,
+  //     x: -100,
+  //     duration: 1,
+  //     ease: 'power2.out',
+  //   });
 
-    gsap.from('.giftcontent h3', {
-      scrollTrigger: {
-        trigger: '.giftcontent',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      x: 100,
-      duration: 1,
-      ease: 'power2.out',
-    });
+  //   gsap.from('.giftcontent h3', {
+  //     scrollTrigger: {
+  //       trigger: '.giftcontent',
+  //       start: 'top 80%',
+  //       end: 'bottom 20%',
+  //       toggleActions: 'play none none none',
+  //     },
+  //     opacity: 0,
+  //     x: 100,
+  //     duration: 1,
+  //     ease: 'power2.out',
+  //   });
 
-    gsap.from('.giftcontent p', {
-      scrollTrigger: {
-        trigger: '.giftcontent',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power2.out',
-    });
+  //   gsap.from('.giftcontent p', {
+  //     scrollTrigger: {
+  //       trigger: '.giftcontent',
+  //       start: 'top 80%',
+  //       end: 'bottom 20%',
+  //       toggleActions: 'play none none none',
+  //     },
+  //     opacity: 0,
+  //     y: 50,
+  //     duration: 1,
+  //     ease: 'power2.out',
+  //   });
 
-    gsap.from('.giftcontent .rate', {
-      scrollTrigger: {
-        trigger: '.giftcontent',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      y: -50,
-      duration: 1,
-      ease: 'power2.out',
-    });
+  //   gsap.from('.giftcontent .rate', {
+  //     scrollTrigger: {
+  //       trigger: '.giftcontent',
+  //       start: 'top 80%',
+  //       end: 'bottom 20%',
+  //       toggleActions: 'play none none none',
+  //     },
+  //     opacity: 0,
+  //     y: -50,
+  //     duration: 1,
+  //     ease: 'power2.out',
+  //   });
 
-    gsap.from('.giftcontent button', {
-      scrollTrigger: {
-        trigger: '.giftcontent',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      ease: 'power2.out',
-    });
-  }, []);
+  //   gsap.from('.giftcontent button', {
+  //     scrollTrigger: {
+  //       trigger: '.giftcontent',
+  //       start: 'top 80%',
+  //       end: 'bottom 20%',
+  //       toggleActions: 'play none none none',
+  //     },
+  //     opacity: 0,
+  //     scale: 0.8,
+  //     duration: 1,
+  //     ease: 'power2.out',
+  //   });
+  // }, []);
 
   return (
     <div className="giftmain">

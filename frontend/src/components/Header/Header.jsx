@@ -5,19 +5,19 @@ import gsap from 'gsap'
 
 
 const Header = ({ title, content, btn, imgsrc, overlay }) => {
-    const overlayImages = overlay.slice(0, 7); // Ensure we only use the first 7 images
+    const overlayImages = overlay.slice(0, 7); 
 
-    useEffect(() => {
-        gsap.from(".header .header-contents", {
-            x: -120,
-            duration: 1,
-        });
+    // useEffect(() => {
+    //     gsap.from(".header .header-contents", {
+    //         x: -120,
+    //         duration: 1,
+    //     });
 
-        gsap.from(".header .header-img", {
-            x: 120,
-            duration: 1,
-        });
-    }, []);
+    //     gsap.from(".header .header-img", {
+    //         x: 120,
+    //         duration: 1,
+    //     });
+    // }, []);
 
 
 
@@ -27,7 +27,7 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
             <h2
     style={{
         animation: "bounceIn 0.6s",
-        animationFillMode: "both", /* Keep animation state after completion */
+        animationFillMode: "both",
     }}
 >
     {title}

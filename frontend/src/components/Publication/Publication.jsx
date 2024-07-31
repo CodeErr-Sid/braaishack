@@ -35,106 +35,97 @@ const publications = [
 ];
 
 export default function Publication() {
-  useEffect(() => {
-    // Animation for section-01
-    gsap.from(".section-01 h1, .section-01 p", {
-      x: -500,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".section-01",
-        // markers: true,
-        start: "top 50%",
-        end: "top 30%",
-        scrub: 1,
-      }
-    });
+  // useEffect(() => {
+  //   gsap.from(".section-01 h1, .section-01 p", {
+  //     x: -500,
+  //     opacity: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: ".section-01",
+  //       start: "top 50%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    // Animation for section-02 container
-    gsap.from(".section-02-container", {
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".section-02-container",
-        // markers: true,
-        start: "top 50%",
-        end: "top 30%",
-        scrub: 1,
-      }
-    });
+ 
+  //   gsap.from(".section-02-container", {
+  //     opacity: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: ".section-02-container",
+  //       start: "top 50%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    // Animation for each section-02 element
-    gsap.from(".section-02:nth-child(1)", {
-      x: -100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".section-02:nth-child(1)",
-        // markers: true,
-        start: "top 80%",
-        end: "top 60%",
-        scrub: 1,
-      }
-    });
+  //   gsap.from(".section-02:nth-child(1)", {
+  //     x: -100,
+  //     opacity: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: ".section-02:nth-child(1)",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    gsap.from(".section-02:nth-child(2)", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".section-02:nth-child(2)",
-        // markers: true,
-        start: "top 80%",
-        end: "top 60%",
-        scrub: 1,
-      }
-    });
+  //   gsap.from(".section-02:nth-child(2)", {
+  //     y: 100,
+  //     opacity: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: ".section-02:nth-child(2)",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    gsap.from(".section-02:nth-child(3)", {
-      x: 100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".section-02:nth-child(3)",
-        // markers: true,
-        start: "top 80%",
-        end: "top 60%",
-        scrub: 1,
-      }
-    });
+  //   gsap.from(".section-02:nth-child(3)", {
+  //     x: 100,
+  //     opacity: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: ".section-02:nth-child(3)",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    // Animation for h1 and p inside each section-02
-    gsap.from(".section-02 h1", {
-      y: 50,
-      opacity: 0,
-      duration: 0.75,
-      stagger: 0.2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".section-02",
-        // markers: true,
-        start: "top 80%",
-        end: "top 60%",
-        scrub: 1,
-      }
-    });
+  
+  //   gsap.from(".section-02 h1", {
+  //     y: 50,
+  //     opacity: 0,
+  //     duration: 0.75,
+  //     stagger: 0.2,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".section-02",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    gsap.from(".section-02 p", {
-      y: 30,
-      opacity: 0,
-      duration: 0.75,
-      stagger: 0.2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".section-02",
-        // markers: true,
-        start: "top 80%",
-        end: "top 60%",
-        scrub: 1,
-      }
-    });
+  //   gsap.from(".section-02 p", {
+  //     y: 30,
+  //     opacity: 0,
+  //     duration: 0.75,
+  //     stagger: 0.2,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".section-02",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-  }, []);
+  // }, []);
 
   return (
     <>

@@ -4,26 +4,26 @@ import { assets } from '../../assets/assets';
 import gsap from 'gsap';
 
 
-const Header = ({header_title,header_btn}) => {
 
-    useEffect(()=>{
-        gsap.to('.header-contents3',{
-            background:'#232323',
-            color:'black',
-            duration:1,
-        })
-        gsap.from('.header-contents3 h2',{
-            y:50,
-            duration:1,
-            opacity:0,
-        });
-        gsap.from('.header-contents3 button',{
-            y:50,
-            duration:1,
-            opacity:0,
-        });
-    },[])
 
+    // useEffect(()=>{
+    //     gsap.to('.header-contents3',{
+    //         background:'#232323',
+    //         color:'black',
+    //         duration:1,
+    //     })
+    //     gsap.from('.header-contents3 h2',{
+    //         y:50,
+    //         duration:1,
+    //         opacity:0,
+    //     });
+    //     gsap.from('.header-contents3 button',{
+    //         y:50,
+    //         duration:1,
+    //         opacity:0,
+    //     });
+    // },[])
+    const Header = ({header_title,header_btn}) => {
     return (
         <div className="header3">
             <div className='background'></div>
