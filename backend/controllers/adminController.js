@@ -40,6 +40,23 @@ const loginAdmin = async (req, res) => {
     }
 }
 
+// logout admin
+const logoutAdmin = async (req, res) => {
+    try {
+        // Clear the token cookie
+        res.clearCookie('token', {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production'
+        });
+
+        res.status(200).json({ success: true, message: "Logged out successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: "Error" });
+    }
+};
+
+
 //register user
 const registerAdmin = async (req, res) => {
     const { name, email, password } = req.body;
@@ -73,4 +90,4 @@ const registerAdmin = async (req, res) => {
     }
 }
 
-export { loginAdmin, registerAdmin }
+export { loginAdmin, registerAdmin, logoutAdmin}
