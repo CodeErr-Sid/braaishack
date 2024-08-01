@@ -3,7 +3,7 @@
     width: 100%;
     min-height: 6vw;
     padding: 0 1vw;
-    background: rgba(255, 255, 255, 0.1); 
+    background: rgb(0 0 0 / 57%);
     backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
@@ -20,8 +20,13 @@
     height: 83px;
 }
 
+.nav-logo{
+    flex: 1;
+}
+
 .navbar-menu {
     display: flex;
+    flex: 2;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -50,6 +55,15 @@
 .navbar .navbar-menu a:hover {
     /* background: rgba(255, 255, 255, 0.2); */
     font-size: 1.5vw; /* Adjusted size to a more manageable scale */
+}
+
+.navbar-end{
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.3rem;
 }
 
 
@@ -110,14 +124,17 @@
         z-index: 9999;
     }
 
-    .navbar-menu.open {
-        transform: translateX(0);
+    .navbar-menu.open,
+    .navbar-end.open {
+        display: block;
     }
 
-    .navbar-menu.closed {
-        transform: translateX(100%);
+    .navbar-menu.closed,
+    .navbar-end.closed {
+       display: none;
     }
 
+    
     .navbar .menubtn {
         display: flex;
         flex-direction: column-reverse;

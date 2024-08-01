@@ -10,12 +10,12 @@
 }
 /* Style the vertical and horizontal scrollbar track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #000;
 }
 
 /* Style the vertical and horizontal scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: yellow;
   border-radius: 10px;
 }
 
@@ -49,7 +49,7 @@ a {
   margin: auto;
 } */
  .app{
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: black;
  }
 
