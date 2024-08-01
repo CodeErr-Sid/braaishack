@@ -29,11 +29,11 @@ const Home = () => {
 
   return (
     <>
-      <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} overlay={headerImages} imgsrc={assets.header} />
+      <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} overlay={headerImages} imgsrc={assets.header_img_2} />
       <Details/>
       {/* <Story/> */}
       <ResturentOption/>
-      <Image/>
+      <Image/> 
       <FeaturedProducts/>
       <Events_F title={"Events"}/>
       <Reservation_Table/>

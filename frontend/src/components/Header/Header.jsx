@@ -19,8 +19,6 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
     //     });
     // }, []);
 
-
-
     return (
         <div className="header">
             <div className="header-contents">
@@ -38,12 +36,12 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
             </div>
             <div className="header-img">
                 <div className="radiant-background2"></div>
-                <div className="overlay-img">
+                <div className="overlay-img smoke-image">
                     {overlayImages.map((src, index) => (
-                        <img key={index} src={src} alt={`overlay-img-${index}`} />
+                        <img key={index} src={src} alt={`overlay-img-${index} overlay-image`} />
                     ))}
                 </div>
-                <img src={imgsrc} alt="Header" className='header-main_img'/>
+                <img  src={imgsrc} alt="Header" className='header-main_img rotate-image'/>
             </div>
         </div>
     )
