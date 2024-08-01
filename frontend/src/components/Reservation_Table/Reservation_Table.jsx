@@ -33,173 +33,170 @@ const Reservation_Table = () => {
         if (storedData) setdatabase(JSON.parse(storedData))
     }, []);
 
-    useEffect(() => {
-        // Animate span element
-        gsap.fromTo(".reservation-contents span",
-            {
-                opacity: 0,
-                y: -50
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: "power1.out",
-                scrollTrigger: {
-                    trigger: ".reservation-contents span",
-                    start: "top 90%",
-                    end: "top 70%",
-                    scrub: 1
-                }
-            }
-        );
+    // useEffect(() => {
+    //     gsap.fromTo(".reservation-contents span",
+    //         {
+    //             opacity: 0,
+    //             y: -50
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 0.5,
+    //             ease: "power1.out",
+    //             scrollTrigger: {
+    //                 trigger: ".reservation-contents span",
+    //                 start: "top 90%",
+    //                 end: "top 70%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-        // Animate h2 element
-        gsap.fromTo(".reservation-contents h2",
-            {
-                opacity: 0,
-                y: 50
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.7,
-                ease: "power1.out",
-                scrollTrigger: {
-                    trigger: ".reservation-contents h2",
-                    start: "top 80%",
-                    end: "top 60%",
-                    scrub: 1
-                }
-            }
-        );
+    //     gsap.fromTo(".reservation-contents h2",
+    //         {
+    //             opacity: 0,
+    //             y: 50
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 0.7,
+    //             ease: "power1.out",
+    //             scrollTrigger: {
+    //                 trigger: ".reservation-contents h2",
+    //                 start: "top 80%",
+    //                 end: "top 60%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-        // Animate p element
-        gsap.fromTo(".reservation-contents p",
-            {
-                opacity: 0,
-                y: 30
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                ease: "power1.out",
-                scrollTrigger: {
-                    trigger: ".reservation-contents p",
-                    start: "top 80%",
-                    end: "top 60%",
-                    scrub: 1
-                }
-            }
-        );
+    //     gsap.fromTo(".reservation-contents p",
+    //         {
+    //             opacity: 0,
+    //             y: 30
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 0.6,
+    //             ease: "power1.out",
+    //             scrollTrigger: {
+    //                 trigger: ".reservation-contents p",
+    //                 start: "top 80%",
+    //                 end: "top 60%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-        // Animate button in .reservation-contents
-        gsap.fromTo(".reservation-contents button",
-            {
-                opacity: 0,
-                y: 20
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: "power1.out",
-                scrollTrigger: {
-                    trigger: ".reservation-contents button",
-                    start: "top 80%",
-                    end: "top 60%",
-                    scrub: 1
-                }
-            }
-        );
+      
+    //     gsap.fromTo(".reservation-contents button",
+    //         {
+    //             opacity: 0,
+    //             y: 20
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 0.5,
+    //             ease: "power1.out",
+    //             scrollTrigger: {
+    //                 trigger: ".reservation-contents button",
+    //                 start: "top 80%",
+    //                 end: "top 60%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-        // Animate form container
-        gsap.fromTo(".reservation-form",
-            {
-                opacity: 0,
-                y: 50
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.7,
-                ease: "power1.out",
-                scrollTrigger: {
-                    trigger: ".reservation-form",
-                    start: "top 70%",
-                    end: "top 50%",
-                    scrub: 1
-                }
-            }
-        );
+   
+    //     gsap.fromTo(".reservation-form",
+    //         {
+    //             opacity: 0,
+    //             y: 50
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 0.7,
+    //             ease: "power1.out",
+    //             scrollTrigger: {
+    //                 trigger: ".reservation-form",
+    //                 start: "top 70%",
+    //                 end: "top 50%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-        // Animate input fields and button inside the form
-        gsap.fromTo(".reservation-form input, .reservation-form button",
-            {
-                opacity: 0,
-                y: 20
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: "power1.out",
-                stagger: 0.1,
-                scrollTrigger: {
-                    trigger: ".reservation-form",
-                    start: "top 70%",
-                    end: "top 50%",
-                    scrub: 1
-                }
-            }
-        );
+       
+    //     gsap.fromTo(".reservation-form input, .reservation-form button",
+    //         {
+    //             opacity: 0,
+    //             y: 20
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 0.5,
+    //             ease: "power1.out",
+    //             stagger: 0.1,
+    //             scrollTrigger: {
+    //                 trigger: ".reservation-form",
+    //                 start: "top 70%",
+    //                 end: "top 50%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-        // Animate carrot image
-        gsap.fromTo(".carrot img",
-            {
-                opacity: 0,
-                y: -50,
-                scale: 0.8
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.6,
-                ease: "power1.out",
-                scrollTrigger: {
-                    trigger: ".carrot",
-                    start: "top 90%",
-                    end: "top 70%",
-                    scrub: 1
-                }
-            }
-        );
+        
+    //     gsap.fromTo(".carrot img",
+    //         {
+    //             opacity: 0,
+    //             y: -50,
+    //             scale: 0.8
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             scale: 1,
+    //             duration: 0.6,
+    //             ease: "power1.out",
+    //             scrollTrigger: {
+    //                 trigger: ".carrot",
+    //                 start: "top 90%",
+    //                 end: "top 70%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-        // Animate onion image
-        gsap.fromTo(".onion img",
-            {
-                opacity: 0,
-                y: 50,
-                scale: 0.8
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.6,
-                ease: "power1.out",
-                scrollTrigger: {
-                    trigger: ".onion",
-                    start: "top 90%",
-                    end: "top 70%",
-                    scrub: 1
-                }
-            }
-        );
+       
+    //     gsap.fromTo(".onion img",
+    //         {
+    //             opacity: 0,
+    //             y: 50,
+    //             scale: 0.8
+    //         },
+    //         {
+    //             opacity: 1,
+    //             y: 0,
+    //             scale: 1,
+    //             duration: 0.6,
+    //             ease: "power1.out",
+    //             scrollTrigger: {
+    //                 trigger: ".onion",
+    //                 start: "top 90%",
+    //                 end: "top 70%",
+    //                 scrub: 1
+    //             }
+    //         }
+    //     );
 
-    }, []);
+    // }, []);
 
     return (
         <div className="reservation">

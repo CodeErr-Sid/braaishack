@@ -33,17 +33,17 @@ const MenuNav = ({ setSelectedMenu }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (isSmallScreen) {
-      if (showMenu) {
-        gsap.to(".Menubtn", { duration: 0.5, autoAlpha: 1, y: 0, display: "flex" });
-      } else {
-        gsap.to(".Menubtn", { duration: 0.5, autoAlpha: 0, y: -50, display: "none" });
-      }
-    } else {
-      gsap.fromTo(".Menubtn-fullscreen button", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.1 });
-    }
-  }, [showMenu, isSmallScreen]);
+  // useEffect(() => {
+  //   if (isSmallScreen) {
+  //     if (showMenu) {
+  //       gsap.to(".Menubtn", { duration: 0.5, autoAlpha: 1, y: 0, display: "flex" });
+  //     } else {
+  //       gsap.to(".Menubtn", { duration: 0.5, autoAlpha: 0, y: -50, display: "none" });
+  //     }
+  //   } else {
+  //     gsap.fromTo(".Menubtn-fullscreen button", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.1 });
+  //   }
+  // }, [showMenu, isSmallScreen]);
   const handleMenuSelection = (menu) => {
     if (menu === "All") {
       setSelectedMenu("");
@@ -51,37 +51,35 @@ const MenuNav = ({ setSelectedMenu }) => {
       setSelectedMenu(menu);
     }
   };
-  useEffect(() => {
-    // ScrollTrigger for paragraph
-    gsap.to(".paragraph", {
-      scrollTrigger: {
-        trigger: ".paragraph",
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse"
-      },
-      duration: 0.5,
-      autoAlpha: 1,
-      y: 0
-    });
+  // useEffect(() => {
+  //   gsap.to(".paragraph", {
+  //     scrollTrigger: {
+  //       trigger: ".paragraph",
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       toggleActions: "play none none reverse"
+  //     },
+  //     duration: 0.5,
+  //     autoAlpha: 1,
+  //     y: 0
+  //   });
 
-    // ScrollTrigger for Menubtn-fullscreen buttons
-    gsap.fromTo(".Menubtn-fullscreen button", {
-      y: -20,
-      opacity: 0
-    }, {
-      scrollTrigger: {
-        trigger: ".Menubtn-fullscreen",
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse"
-      },
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      stagger: 0.1
-    });
-  }, []);
+  //   gsap.fromTo(".Menubtn-fullscreen button", {
+  //     y: -20,
+  //     opacity: 0
+  //   }, {
+  //     scrollTrigger: {
+  //       trigger: ".Menubtn-fullscreen",
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       toggleActions: "play none none reverse"
+  //     },
+  //     y: 0,
+  //     opacity: 1,
+  //     duration: 0.5,
+  //     stagger: 0.1
+  //   });
+  // }, []);
 
   return (
     <div className="btnmain">

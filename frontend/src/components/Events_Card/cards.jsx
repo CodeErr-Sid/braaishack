@@ -48,49 +48,49 @@ export default function Cards() {
     },
   ];
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    gsap.fromTo(".evt-card",
-      {
-        opacity: 0,
-        y: 50,
-        scale: 0.9
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.4,
-        ease: "power1.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ".cards-container",
-          start: "top 80%",
-          end: "bottom 60%",
-          scrub: 1
-        },
-        onStart: () => {
+  //   gsap.fromTo(".evt-card",
+  //     {
+  //       opacity: 0,
+  //       y: 50,
+  //       scale: 0.9
+  //     },
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       scale: 1,
+  //       duration: 0.4,
+  //       ease: "power1.out",
+  //       stagger: 0.1,
+  //       scrollTrigger: {
+  //         trigger: ".cards-container",
+  //         start: "top 80%",
+  //         end: "bottom 60%",
+  //         scrub: 1
+  //       },
+  //       onStart: () => {
 
-          gsap.fromTo(".evt-card .card-imgs img",
-            { opacity: 0, y: 30, scale: 1.1 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power1.out" }
-          );
-          gsap.fromTo(".evt-card .card-title h3",
-            { opacity: 0, y: 20, rotate: -10 },
-            { opacity: 1, y: 0, rotate: 0, duration: 0.4, ease: "power1.out" }
-          );
-          gsap.fromTo(".evt-card .card-content p",
-            { opacity: 0, y: 20, scale: 0.95 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power1.out" }
-          );
-          gsap.fromTo(".evt-card .card-button button",
-            { opacity: 0, y: 20, scale: 0.9 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power1.out" }
-          );
-        }
-      }
-    );
-  }, []);
+  //         gsap.fromTo(".evt-card .card-imgs img",
+  //           { opacity: 0, y: 30, scale: 1.1 },
+  //           { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power1.out" }
+  //         );
+  //         gsap.fromTo(".evt-card .card-title h3",
+  //           { opacity: 0, y: 20, rotate: -10 },
+  //           { opacity: 1, y: 0, rotate: 0, duration: 0.4, ease: "power1.out" }
+  //         );
+  //         gsap.fromTo(".evt-card .card-content p",
+  //           { opacity: 0, y: 20, scale: 0.95 },
+  //           { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power1.out" }
+  //         );
+  //         gsap.fromTo(".evt-card .card-button button",
+  //           { opacity: 0, y: 20, scale: 0.9 },
+  //           { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power1.out" }
+  //         );
+  //       }
+  //     }
+  //   );
+  // }, []);
 
   return (
     <div className='cards-container'>
