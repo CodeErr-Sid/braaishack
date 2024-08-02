@@ -114,6 +114,9 @@ import update1 from "./pub1.jpeg";
 import update2 from "./pub2.jpeg";
 import update3 from "./pub3.jpeg";
 import ring from "./onion-ring.png";
+import burger2 from "./burger copy.png";
+import cup from "./cup.png";
+import arrow from "./arrow.svg";
 
 // import background_hero from "./restaurant_background";
 
@@ -188,6 +191,9 @@ export const assets = {
   art,
   ring,
   carrot,
+  burger2,
+  cup,
+  arrow,
 
   //   background_hero,
 };
