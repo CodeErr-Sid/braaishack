@@ -9,6 +9,7 @@ import AdminLogin from './components/AdminLogin/AdminLogin';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthProvider, useAuth } from './contexts/AuthContext.jsx';
+import { Navigate } from 'react-router-dom';
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();

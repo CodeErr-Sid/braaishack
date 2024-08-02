@@ -15,7 +15,6 @@
 }
 .background{
     width: 430px;
-    height: 520px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -34,7 +33,7 @@
         #23a2f6
     );
     left: -80px;
-    top: -80px;
+    top: -160px;
 }
 .shape:nth-of-type(2){
     background: linear-gradient(
@@ -43,10 +42,10 @@
         #f09819
     );
     right: -30px;
-    bottom: -80px;
+    bottom: -180px;
     overflow-y: hidden;
 }
-form{
+form.admin-login-form{
     height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
@@ -60,14 +59,14 @@ form{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
-form *{
+form.admin-login-form *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
 }
-form h3{
+form.admin-login-form h3{
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
@@ -80,7 +79,7 @@ label{
     font-size: 16px;
     font-weight: 500;
 }
-input{
+.admin-login input{
     display: block;
     height: 50px;
     width: 100%;

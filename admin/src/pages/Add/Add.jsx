@@ -27,7 +27,7 @@ const AdminAdd = () => {
 
     try {
       const cloudinaryResponse = await axios.post('https://api.cloudinary.com/v1_1/braaishack/image/upload', formData);
-      const imageUrl = cloudinaryResponse.data.secure_url;
+      const imageUrl = await cloudinaryResponse.data.secure_url;
 
       const productData = {
         ...data,
