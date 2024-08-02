@@ -5,24 +5,24 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1vw; 
+  gap: 1vw;
   padding: 1rem;
-  overflow-x: auto;  
-  position: relative; 
+  overflow-x: auto;
+  position: relative;
 }
 
 .Menubtn button, .Menubtn-fullscreen button {
-  width: 170px; 
-  height: 52px; 
+  width: 170px;
+  height: 52px;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  border-radius: 30px; 
+  border-radius: 30px;
   background-color: #000000;
   border: 2px solid #fdcf08;
   color: rgb(255, 255, 255);
   transition: 0.5s;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 33333; /* Ensure button is above other elements */
 }
 
@@ -43,9 +43,13 @@
   top: 14%;
   z-index: 999; */
 }
+.menubtn:active{
+  background-color: #fdcf08;
+
+}
 
 .btnmain p {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: white;
   text-align: center;
   padding: 2vw 4vw;
@@ -96,14 +100,11 @@
     font-size: 18px;
     padding: 3vw 5vw;
   }
-  /* .btnmain{
-    height: 100vh;
-  } */
 }
 
 @media (max-width: 1045px) {
   .filter-heading {
-    display: flex; 
+    display: flex;
   }
 
   .Menubtn {
@@ -157,8 +158,8 @@
 
 @media (max-width: 487px) {
   .Menubtn button {
-    width: 137px; 
-    height: 42px; 
+    width: 137px;
+    height: 42px;
     font-size: 15px;
     font-weight: 400;
     line-height: 20px;

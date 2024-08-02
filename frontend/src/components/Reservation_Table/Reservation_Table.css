@@ -81,11 +81,12 @@
 }
 
 .reservation-form button {
-  border: none;
-  background-color: #fdcf08;
-  font-size: 1.5vw;
-  padding: 10px;
-  width: 360px;
+      border: none;
+    background-color: #fdcf08;
+    font-size: 2vw;
+    padding: .5em 1em;
+    border-radius: 2vw;
+
 }
 
 .onion {

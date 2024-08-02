@@ -28,7 +28,7 @@ const Menu = () => {
         imgsrc={images}
       />
       <MenuNav setSelectedMenu={setSelectedMenu} />
-      <Filter setSelectedMenu={setSelectedMenu}/>
+      {/* <Filter setSelectedMenu={setSelectedMenu}/> */}
       <Menucards selectedMenu={selectedMenu} />
     </>
   );
