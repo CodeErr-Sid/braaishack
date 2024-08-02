@@ -10,7 +10,7 @@ import MyOrders from './pages/MyOrders/MyOrders';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify';
-import CursorFollower from './components/Cursor/CursorFollower';
+import CursorFollower from './components/cursor/Cursor';
 import Menu from './pages/Menu/Menu';
 import Events from './pages/Events/Events';
 import '@fortawesome/fontawesome-free/css/all.min.css';
