@@ -18,6 +18,7 @@ import About from './pages/About/About';
 import GiftSection from './pages/GiftSection/GiftSection';
 import Preloader from './components/Preloader/Preloader';
 import './index.css';
+import Shop from './pages/Shop/Shop';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -38,6 +39,7 @@ const App = () => {
           <Route path='/verify' element={<Verify />} />
           <Route path='/events' element={<Events />} />
           <Route path='/about' element={<About />} />
+          <Route path='/shop' element={<Shop />} />
         </Routes>
       </div>
       <Footer />

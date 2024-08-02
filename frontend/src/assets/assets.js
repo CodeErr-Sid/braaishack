@@ -117,8 +117,27 @@ import ring from "./onion-ring.png";
 import burger2 from "./burger copy.png";
 import cup from "./cup.png";
 import arrow from "./arrow.svg";
-
-// import background_hero from "./restaurant_background";
+import shop1 from "./menu/1.jpg";
+import shop2 from "./menu/2.jpg";
+import shop3 from "./menu/3.jpg";
+import shop4 from "./menu/4.jpg";
+import shop5 from "./menu/5.jpg";
+import shop6 from "./menu/6.jpg";
+import shop7 from "./menu/7.jpg";
+import shop8 from "./menu/8.jpg";
+import shop9 from "./menu/9.jpg";
+import shop10 from "./menu/10.jpg";
+import shop11 from "./menu/11.jpg";
+import shop12 from "./menu/12.jpg";
+// import shop13 from "./menu/13.jpg";
+import shop14 from "./menu/14.jpg";
+import shop15 from "./menu/15.jpg";
+import arrow2 from "./arrow2.svg";
+import burger3 from "./burger-3.png";
+import icon1 from "./2.svg";
+import icon2 from "./3.svg";
+import cart from "./cart.svg";
+import menuicon from "./menu.svg";
 
 export const assets = {
   header_img_2,
@@ -194,6 +213,26 @@ export const assets = {
   burger2,
   cup,
   arrow,
+  shop1,
+  shop2,
+  shop3,
+  shop4,
+  shop5,
+  shop6,
+  shop7,
+  shop8,
+  shop9,
+  shop10,
+  shop11,
+  shop12,
+  shop14,
+  shop15,
+  arrow2,
+  burger3,
+  icon1,
+  icon2,
+  cart,
+  menuicon,
 
   //   background_hero,
 };
