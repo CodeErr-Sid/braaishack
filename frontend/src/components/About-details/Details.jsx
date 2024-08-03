@@ -3,44 +3,42 @@ import "./Details.css";
 import { assets } from "../../assets/assets";
 import gsap from "gsap";
 
-export default function Details() {
-  useEffect(() => {
-    gsap.to(".details-section", {
-      scrollTrigger: {
-        trigger: ".details-section",
-        // markers: true,
-        start: "top 50%",
-        end: "top 30%",
-        scrub: 1,
-      },
-    });
-    gsap.from(
-      ".details-section__container__right h1 , .details-section__container__right p",
-      {
-        y: 200,
-        duration: 1,
-        scaleY: 1.4,
-        scrollTrigger: {
-          trigger: ".details-section",
-          // markers: true,
-          start: "top 50%",
-          end: "top 30%",
-          scrub: 1,
-        },
-      }
-    );
-    gsap.from(".details-section__container__left img", {
-      x: -100,
-      duration: 1,
-      scrollTrigger:{
-        trigger:'.details-section',
-        start: "top 50%",
-          end: "top 30%",
-          scrub: 1,
-      }
-    });
-  });
 
+  // useEffect(() => {
+  //   gsap.to(".details-section", {
+  //     scrollTrigger: {
+  //       trigger: ".details-section",
+  //       start: "top 50%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //     },
+  //   });
+  //   gsap.from(
+  //     ".details-section__container__right h1 , .details-section__container__right p",
+  //     {
+  //       y: 200,
+  //       duration: 1,
+  //       scaleY: 1.4,
+  //       scrollTrigger: {
+  //         trigger: ".details-section",
+  //         start: "top 50%",
+  //         end: "top 30%",
+  //         scrub: 1,
+  //       },
+  //     }
+  //   );
+  //   gsap.from(".details-section__container__left img", {
+  //     x: -100,
+  //     duration: 1,
+  //     scrollTrigger:{
+  //       trigger:'.details-section',
+  //       start: "top 50%",
+  //         end: "top 30%",
+  //         scrub: 1,
+  //     }
+  //   });
+  // });
+  export default function Details() {
   return (
     <div className="details-section">
       <div className="details-section__container">

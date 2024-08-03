@@ -4,34 +4,32 @@ import { assets } from "../../assets/assets";
 import gsap from "gsap";
 
 const Events_F = ({ title }) => {
-  useEffect(() => {
-    gsap.from(".events_main .event_h1", {
-      y: 500,
-      duration:1.5,
-      scrollTrigger: {
-        trigger: ".events_main",
-        // markers: true,
-        start: "top 50%",
-        end: "top 30%",
-        scrub: 1,
-      },
-    });
-    gsap.from('.event_cards .event_card ,.event_card .event_content .card_data',{
-        x:500,
-        scale:1.5,
-        backgroundColor:'black',
-        color:'white',
-        duration:2,
-         scrollTrigger: {
-        trigger: ".events_main",
-        // markers: true,
-        start: "top 50%",
-        end: "top 30%",
-        scrub: 1,
-      },
-    });
+  // useEffect(() => {
+  //   gsap.from(".events_main .event_h1", {
+  //     y: 500,
+  //     duration:1.5,
+  //     scrollTrigger: {
+  //       trigger: ".events_main",
+  //       start: "top 50%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //     },
+  //   });
+  //   gsap.from('.event_cards .event_card ,.event_card .event_content .card_data',{
+  //       x:500,
+  //       scale:1.5,
+  //       backgroundColor:'black',
+  //       color:'white',
+  //       duration:2,
+  //        scrollTrigger: {
+  //       trigger: ".events_main",
+  //       start: "top 50%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //     },
+  //   });
 
-  });
+  // });
 
   let events = [
     {

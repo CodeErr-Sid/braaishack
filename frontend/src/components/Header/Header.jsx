@@ -5,45 +5,42 @@ import gsap from 'gsap'
 
 
 const Header = ({ title, content, btn, imgsrc, overlay }) => {
-    const overlayImages = overlay.slice(0, 7); // Ensure we only use the first 7 images
+    const overlayImages = overlay.slice(0, 7);
 
-    useEffect(() => {
-        gsap.from(".header .header-contents", {
-            x: -120,
-            duration: 1,
-        });
+    // useEffect(() => {
+    //     gsap.from(".header .header-contents", {
+    //         x: -120,
+    //         duration: 1,
+    //     });
 
-        gsap.from(".header .header-img", {
-            x: 120,
-            duration: 1,
-        });
-    }, []);
-
-
+    //     gsap.from(".header .header-img", {
+    //         x: 120,
+    //         duration: 1,
+    //     });
+    // }, []);
 
     return (
         <div className="header">
             <div className="header-contents">
-            <h2
-    style={{
-        animation: "bounceIn 0.6s",
-        animationFillMode: "both", /* Keep animation state after completion */
-    }}
->
-    {title}
-</h2>
-
+                <h2
+                    style={{
+                        animation: "bounceIn 0.6s",
+                        animationFillMode: "both",
+                    }}
+                >
+                    {title}
+                </h2>
                 <p>{content}</p>
                 <button>{btn}</button>
             </div>
             <div className="header-img">
                 <div className="radiant-background2"></div>
-                <div className="overlay-img">
+                <div className="overlay-img smoke-image">
                     {overlayImages.map((src, index) => (
-                        <img key={index} src={src} alt={`overlay-img-${index}`} />
+                        <img key={index} src={src} alt={`overlay-img-${index} overlay-image`} />
                     ))}
                 </div>
-                <img src={imgsrc} alt="Header" className='header-main_img'/>
+                <img src={imgsrc} alt="Header" className='header-main_img rotate-image' />
             </div>
         </div>
     )

@@ -80,7 +80,7 @@
     box-sizing: 2px;
     padding: 2px 5px;
     gap: 10px;
-    background-color: #8F8F8F;
+    background-color: #FDCF09;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -105,15 +105,15 @@
     .section-01 h1 {
         font-size: 2.2rem; /* Adjusted for smaller screens */
     }
-    
+
     .section-01 p {
         font-size: 0.9rem; /* Adjusted for smaller screens */
     }
-    
+
     .section-02 img {
         max-width: 300px; /* Smaller image on medium screens */
     }
-    
+
     .section-02 h1:first-of-type {
         font-size: 1.8rem; /* Adjusted font size */
     }
@@ -133,11 +133,11 @@
         max-width: 100%; /* Full width of the container */
         height: auto;
     }
-    
+
     .section-02 h1:first-of-type {
         font-size: 1.6rem; /* Adjusted font size */
     }
-    
+
     .section-02 .date {
         font-size: 0.9rem; /* Adjusted font size */
         display: flex;
@@ -154,20 +154,20 @@
     .section-01 h1 {
         font-size: 1.8rem; /* Further adjusted font size */
     }
-    
+
     .section-01 p {
         font-size: 0.8rem; /* Further adjusted font size */
     }
-    
+
     .section-02 img {
         max-width: 100%; /* Full width of the container */
         height: auto;
     }
-    
+
     .section-02 h1:first-of-type {
         font-size: 1.4rem; /* Further adjusted font size */
     }
-    
+
     .section-02 .date {
         font-size: 0.8rem; /* Further adjusted font size */
     }

@@ -4,6 +4,7 @@
     min-height: 6vw;
     padding: 0 1vw;
     background: rgba(255, 255, 255, 0.1);
+    background: rgb(0 0 0 / 57%);
     backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
@@ -20,8 +21,13 @@
     height: 83px;
 }
 
+.nav-logo{
+    flex: 1;
+}
+
 .navbar-menu {
     display: flex;
+    flex: 2;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -36,11 +42,12 @@
     border-bottom: 2px solid #FEAA54;
 } */
 
+
 /* Navbar styling */
 .navbar .navbar-menu a {
     font-size: 1vw;
     font-weight: 600;
-    color: #FEAA54;
+    color: #FDCF09;
     text-decoration: none;
     transition:  font-size 0.3s ease; /* Corrected property name */
     padding: 0.5vw 1vw;
@@ -48,6 +55,15 @@
 }
 
 
+
+.navbar-end{
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
 
 
 .navbar-menu button {
@@ -107,13 +123,16 @@
         z-index: 9999;
     }
 
-    .navbar-menu.open {
-        transform: translateX(0);
+    .navbar-menu.open,
+    .navbar-end.open {
+        display: block;
     }
 
-    .navbar-menu.closed {
-        transform: translateX(100%);
+    .navbar-menu.closed,
+    .navbar-end.closed {
+       display: none;
     }
+
 
     .navbar .menubtn {
         display: flex;
@@ -163,3 +182,40 @@
         padding: 1rem 2rem;
     }
 }
+/* Navbar.css */
+
+:root {
+    --orange: #ea8710;
+  }
+
+  .sb-preloader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 99999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+  }
+
+  .sb-preloader .sb-preloader-bg {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--orange);
+    height: 2000px;
+    width: 2000px;
+    transform: scale(2);
+    transition: 0.6s ease-in-out;
+  }
+
+  .sb-preloader.sb-hidden {
+    pointer-events: none;
+    transition-delay: 0.2s;
+  }
+
+  .sb-preloader.sb-hidden .sb-preloader-bg {
+    transform: scale(0);
+    transition-delay: 0.2s;
+  }

@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 .placeOrder {
   width: 100vw;
   min-height: 100vh;
@@ -103,10 +108,11 @@
 .option button {
   border: none;
   background-color: #fdcf08;
-  padding: 1vw 2vw;
-  font-size: 2vw;
+  font-size: 1.2rem;
   border-radius: 1vw;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: 'Open Sans','sans serif';
+  padding: 1rem 2rem;
 }
 
 /* Media Queries */
@@ -264,5 +270,116 @@
   .option button {
     padding: 1.5vw 3vw;
     font-size: 3vw;
+  }
+}
+.related-products {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.related-products .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%; 
+  max-width: 1200px;
+  padding-left: 4rem;
+  box-sizing: border-box;
+}
+
+.related-products h1 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.5;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.related-products p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: 519px;
+}
+
+.related-products .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .related-products .content {
+    padding-left: 2rem; 
+  }
+
+  .related-products h1 {
+    font-size: 32px; 
+    padding-left: 4rem; 
+  }
+
+  .related-products p {
+    font-size: 20px; 
+    padding-left: 4rem; 
+  }
+  .related-products .cards{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .related-products .content {
+    padding-left: 1rem;
+  }
+
+  .related-products h1 {
+    font-size: 28px;
+    padding-left: 0; 
+  }
+
+  .related-products p {
+    font-size: 18px; 
+    padding-left: 0; 
+  }
+
+  .related-products .cards {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .related-products .content {
+    padding-left: 0.5rem; 
+  }
+
+  .related-products h1 {
+    font-size: 24px; 
+    padding-left: 0; 
+  }
+
+  .related-products p {
+    font-size: 16px; 
+    padding-left: 0; 
+    width: 300px;
+  }
+
+  .related-products .cards {
+    gap: 5px;
   }
 }

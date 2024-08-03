@@ -44,6 +44,7 @@ import food_30 from "./food_30.png";
 import food_31 from "./food_31.png";
 import food_32 from "./food_32.png";
 
+import header_img_2 from "./header_img_2.png";
 import add_icon_white from "./add_icon_white.png";
 import add_icon_green from "./add_icon_green.png";
 import remove_icon_red from "./remove_icon_red.png";
@@ -113,10 +114,14 @@ import update1 from "./pub1.jpeg";
 import update2 from "./pub2.jpeg";
 import update3 from "./pub3.jpeg";
 import ring from "./onion-ring.png";
+import burger2 from "./burger copy.png";
+import cup from "./cup.png";
+import arrow from "./arrow.svg";
 
 // import background_hero from "./restaurant_background";
 
 export const assets = {
+  header_img_2,
   storyimg,
   steek,
   logo,
@@ -186,6 +191,9 @@ export const assets = {
   art,
   ring,
   carrot,
+  burger2,
+  cup,
+  arrow,
 
   //   background_hero,
 };

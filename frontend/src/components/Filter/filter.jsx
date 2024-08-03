@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import "./Filter.css";
+import "./filter.css";
+
 
 const Filter = ({ setSelectedMenu }) => {
   const [showMenu, setShowMenu] = useState(false);

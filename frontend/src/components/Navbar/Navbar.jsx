@@ -3,27 +3,30 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 
 import gsap from "gsap";
 
 const Navbar = ({ setShowLogin }) => {
   // gsap animation
-  useEffect(() => {
-    gsap.from(".navbar .logo", {
-      x: -120,
-      duration: 1,
-    });
+  // useEffect(() => {
+  //   gsap.from(".navbar .logo", {
+  //     x: -120,
+  //     duration: 1,
+  //   });
 
-    gsap.from(".navbar-menu a", {
-      y: -120,
-      duration: 1,
-    });
+  //   gsap.from(".navbar-menu a", {
+  //     y: -120,
+  //     duration: 1,
+  //   });
 
-    gsap.from(".navbar-menu button", {
-      x: 120,
-      duration: 1,
-    });
-  }, []);
+  //   gsap.from(".navbar-menu button", {
+  //     x: 120,
+  //     duration: 1,
+  //   });
+  // }, []);
 
   const [menu, setMenu] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,13 +45,23 @@ const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className="navbar">
-      <Link to="/">
+      <Link to="/" className="nav-logo">
         <img className="logo" src={assets.logo} alt="" />
       </Link>
       <div className={`navbar-menu ${isMenuOpen ? "open" : "closed"}`}>
         <div className="close-icon" onClick={toggleMenu}>
           X
         </div>
+        <Link
+          to="/"
+          onClick={() => {
+            setMenu("HOME");
+            toggleMenu();
+          }}
+          className={`${menu === "HOME" ? "active" : ""}`}
+        >
+          HOME
+        </Link>
         <Link
           to="/menu"
           onClick={() => {
@@ -80,7 +93,7 @@ const Navbar = ({ setShowLogin }) => {
           GiftSection
         </Link>
         <Link
-        to="/PlaceOrder"
+          to="/PlaceOrder"
           onClick={() => {
             setMenu("EVENTS");
             toggleMenu();
@@ -109,14 +122,19 @@ const Navbar = ({ setShowLogin }) => {
         >
           MAP&CONTACT
         </a>
-        <button
+        {/* {<button
           onClick={() => {
             alert("Pro will make");
             toggleMenu();
           }}
         >
           BOOK A TABLE
-        </button>
+        </button>} */}
+      </div>
+
+      <div className={`navbar-end ${isMenuOpen ? "open" : "closed"}`}>
+        <FontAwesomeIcon icon={faCartShopping} style={{ color: "#FFD43B", }} />
+        <FontAwesomeIcon icon={faUser} style={{ color: "#FFD43B", }} />
       </div>
       <div className="menubtn" onClick={toggleMenu}>
         <span></span>

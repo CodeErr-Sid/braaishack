@@ -33,63 +33,63 @@ const imageData = {
 };
 
 export default function Features() {
-  useEffect(() => {
-    // Animation for upper-container
-    gsap.from(".upper-container .left-image", {
-      x: -200,
-      opacity: 0,
-      duration: 0.75,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".upper-container",
-        start: "top 75%",
-        end: "top 50%",
-        scrub: 1,
-      }
-    });
+  // useEffect(() => {
+    
+  //   gsap.from(".upper-container .left-image", {
+  //     x: -200,
+  //     opacity: 0,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".upper-container",
+  //       start: "top 75%",
+  //       end: "top 50%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    gsap.from(".upper-container .right-content", {
-      x: 200,
-      opacity: 0,
-      duration: 0.75,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".upper-container",
-        start: "top 75%",
-        end: "top 50%",
-        scrub: 1,
-      }
-    });
+  //   gsap.from(".upper-container .right-content", {
+  //     x: 200,
+  //     opacity: 0,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".upper-container",
+  //       start: "top 75%",
+  //       end: "top 50%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    // Animation for lower-container
-    gsap.from(".lower-container .left-content", {
-      y: -100,
-      opacity: 0,
-      duration: 0.75,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".lower-container",
-        start: "top 75%",
-        end: "top 50%",
-        scrub: 1,
-      }
-    });
+   
+  //   gsap.from(".lower-container .left-content", {
+  //     y: -100,
+  //     opacity: 0,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".lower-container",
+  //       start: "top 75%",
+  //       end: "top 50%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-    gsap.from(".lower-container .right-image .Birthday-images", {
-      y: 100,
-      opacity: 0,
-      duration: 0.75,
-      ease: "power2.out",
-      stagger: 0.2, // Use stagger here for individual items
-      scrollTrigger: {
-        trigger: ".lower-container",
-        start: "top 75%",
-        end: "top 50%",
-        scrub: 1,
-      }
-    });
+  //   gsap.from(".lower-container .right-image .Birthday-images", {
+  //     y: 100,
+  //     opacity: 0,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     stagger: 0.2,
+  //     scrollTrigger: {
+  //       trigger: ".lower-container",
+  //       start: "top 75%",
+  //       end: "top 50%",
+  //       scrub: 1,
+  //     }
+  //   });
 
-  }, []);
+  // }, []);
   return (
     <>
       <div className='feature-container'>

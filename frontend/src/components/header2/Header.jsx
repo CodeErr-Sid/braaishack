@@ -3,23 +3,23 @@ import './Header.css';
 import gsap from 'gsap';
 
 const Header = ({ title, content, btn, imgsrc }) => {
-  useEffect(() => {
-    gsap.from('.header-content2 h1, .header-content2 p', {
-      x: -500,
-      duration: 1,
-    });
+  // useEffect(() => {
+  //   gsap.from('.header-content2 h1, .header-content2 p', {
+  //     x: -500,
+  //     duration: 1,
+  //   });
 
-    gsap.from('.header-content2 button', {
-      opacity: 0,
-      y: 150,
-      duration: 1,
-    });
+  //   gsap.from('.header-content2 button', {
+  //     opacity: 0,
+  //     y: 150,
+  //     duration: 1,
+  //   });
 
-    gsap.from('.header-images2 ', {
-      x: 500,
-      duration: 1,
-    });
-  }, []);
+  //   gsap.from('.header-images2 ', {
+  //     x: 500,
+  //     duration: 1,
+  //   });
+  // }, []);
 
   return (
     <header className="header2">

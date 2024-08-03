@@ -3,7 +3,6 @@ import "./Menucard.css";
 import { useNavigate } from "react-router-dom";
 import { sections } from "../../Cardsdata";
 import { assets } from "../../assets/assets";
-
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -14,54 +13,58 @@ const Menucards = ({ selectedMenu }) => {
   const headingRefs = useRef([]);
   const navigate = useNavigate();
 
-  const handleAddToCart = () => {
-    navigate("/placeorder");
+  const handleAddToCart = (section, card) => {
+    const remainingCards = section.cards.filter(c => c !== card);
+    navigate("/placeorder", { 
+      state: { 
+        clickedCard: card,
+        remainingCards: remainingCards 
+      } 
+    });
   };
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 800px)");
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia("(min-width: 800px)");
 
-    if (mediaQuery.matches) {
-      sections.forEach((section, sectionIndex) => {
-        section.cards.forEach((card, cardIndex) => {
-          const cardEl = cardRefs.current[cardIndex + sectionIndex * 10];
-          if (cardEl) {
-            gsap.from(cardEl, {
-              x: sectionIndex % 2 === 0 ? -200 : 200,
-              duration: 1,
-              scrollTrigger: {
-                trigger: cardEl,
-                start: "top 80%",
-                end: "top 70%",
-                scrub: 5,
-              },
-            });
-          }
-        });
+  //   if (mediaQuery.matches) {
+  //     sections.forEach((section, sectionIndex) => {
+  //       section.cards.forEach((card, cardIndex) => {
+  //         const cardEl = cardRefs.current[cardIndex + sectionIndex * 10];
+  //         if (cardEl) {
+  //           gsap.from(cardEl, {
+  //             x: sectionIndex % 2 === 0 ? -200 : 200,
+  //             duration: 1,
+  //             scrollTrigger: {
+  //               trigger: cardEl,
+  //               start: "top 80%",
+  //               end: "top 70%",
+  //               scrub: 5,
+  //             },
+  //           });
+  //         }
+  //       });
 
-        const headingEl = headingRefs.current[sectionIndex];
-        if (headingEl) {
-          gsap.from(headingEl, {
-            x: sectionIndex % 2 === 0 ? -200 : 200,
-            opacity: 0,
-            duration: 1,
-            scrollTrigger: {
-              trigger: headingEl,
-              start: "top 80%",
-              end: "top 70%",
-              scrub: 5,
-              // markers: true,
-            },
-          });
-        }
-      });
-    }
+  //       const headingEl = headingRefs.current[sectionIndex];
+  //       if (headingEl) {
+  //         gsap.from(headingEl, {
+  //           x: sectionIndex % 2 === 0 ? -200 : 200,
+  //           opacity: 0,
+  //           duration: 0.75,
+  //           scrollTrigger: {
+  //             trigger: headingEl,
+  //             start: "top 70%",
+  //             end: "top 72%",
+  //             scrub: 5,
+  //           },
+  //         });
+  //       }
+  //     });
+  //   }
 
-    return () => {
-      console.log(ScrollTrigger);
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  //   };
+  // }, []);
 
   return (
     <div className="menucards">
@@ -94,7 +97,7 @@ const Menucards = ({ selectedMenu }) => {
                     <div className="product-price">{card.productprice}</div>
                   </div>
                   <div className="right-card-content">
-                    <button onClick={handleAddToCart}>Add to Cart</button>
+                    <button onClick={() => handleAddToCart(section, card)}>Add to Cart</button>
                   </div>
                 </div>
               </div>
@@ -105,5 +108,4 @@ const Menucards = ({ selectedMenu }) => {
     </div>
   );
 };
-
 export default Menucards;

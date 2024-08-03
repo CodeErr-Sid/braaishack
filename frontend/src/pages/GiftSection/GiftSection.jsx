@@ -7,6 +7,8 @@ const GiftSection = () => {
     <>
         <Header header_title={'GIFT SECTION'} header_btn={'HOME/GIFT'} />
         <Gift_Coupen/>
+        <Gift_Coupen/>
+        <Gift_Coupen/>
     </>
   )
 }

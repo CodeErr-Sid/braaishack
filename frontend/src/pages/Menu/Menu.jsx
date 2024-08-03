@@ -3,7 +3,7 @@ import Header from '../../components/header2/Header';
 import { assets } from '../../assets/assets';
 import MenuNav from '../../components/MenuNav/MenuNav';
 import Menucards from '../../components/Menucards/Menucards';
-
+import Offers from '../../components/Offers/Offers';
 
 import gsap from 'gsap';
 import Filter from '../../components/Filter/filter';
@@ -30,6 +30,8 @@ const Menu = () => {
       <MenuNav setSelectedMenu={setSelectedMenu} />
       {/* <Filter setSelectedMenu={setSelectedMenu}/> */}
       <Menucards selectedMenu={selectedMenu} />
+      {/* <Menucards/> */}
+      <Offers />
     </>
   );
 };

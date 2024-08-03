@@ -3,6 +3,7 @@ import Header from '../../components/About-header/Header'
 import PlaceOrder from '../../components/PlaceOrder/PlaceOrder';
 import Menucards from '../../components/Menucards/Menucards';
 import { assets } from '../../assets/assets';
+import datas from '../../../src/Cardsdata.json';
 
 const Place_Order = () => {
   const sections = [
