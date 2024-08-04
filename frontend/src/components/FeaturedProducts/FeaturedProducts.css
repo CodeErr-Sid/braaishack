@@ -7,6 +7,14 @@
   position: relative; /* Ensure proper positioning for overlay content */
 }
 
+.featuredproducts .b2{
+   position: absolute;
+    right: 0%;
+    width: 15vw;
+    height: auto;
+
+}
+
 .featuredproducts h1 {
   font-size: 6vw;
   color: white;
@@ -25,7 +33,7 @@
 }
 
 .products .product {
-  width: 315px; 
+  width: 315px;
   height: auto; /* Auto height for better responsiveness */
   margin-bottom: 3vw; /* Add margin at the bottom for spacing */
   box-sizing: border-box; /* Ensure padding is included in the width and height */

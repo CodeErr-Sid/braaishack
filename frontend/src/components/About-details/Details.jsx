@@ -41,6 +41,8 @@ import gsap from "gsap";
   export default function Details() {
   return (
     <div className="details-section">
+      <img className="b1" src={assets.b1} alt="" />
+      <img src={assets.b3} alt="" className="b3" />
       <div className="details-section__container">
         <div className="details-section__container__left">
           <img src={assets.story} alt="" />
@@ -65,7 +67,7 @@ import gsap from "gsap";
               <p className="font-style1">Klaus Mikelson</p>
               <p className=" font-style2">Klaus Mikelson</p>
             </div>
-           
+
           </div>
         </div>
       </div>

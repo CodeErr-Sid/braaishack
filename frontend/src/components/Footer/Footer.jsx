@@ -62,7 +62,7 @@ const Footer = () => {
 <p>01908 313838</p>
         </div>
         <div className="footer-section footer-content-left">
-          <h3>Quick Links</h3>
+
           <ul>
             <li>
               <Link to='/'>
@@ -77,31 +77,40 @@ const Footer = () => {
             </li>
             <li>
               <Link to='/about'>
-                <i className="fas fa-shield-alt"></i> PHOTOS
+                <i className="fas fa-shield-alt"></i> ABOUT US
                             </Link>
 
             </li>
             <li>
               <Link to='/GiftSection'>
-                <i className="fas fa-file-contract"></i> GIFT SECTIONS
+                <i className="fas fa-file-contract"></i> Frozen Delight
                             </Link>
-
             </li>
-            <li>
-              <Link to='/PlaceOrder'>
-                <i className="fas fa-file-contract"></i> EVENTS
-                            </Link>
+          </ul>
+        </div>
+        <div className="footer-section footer-content-left">
 
-            </li>
+          <ul>
             <li>
-              <Link to='/menu'>
-                <i className="fas fa-file-contract"></i> PRESS
-                            </Link>
-
+              <Link to='/'>
+                <i className="fas fa-info-circle"></i> HOME
+              </Link>
             </li>
             <li>
               <Link to='/menu'>
-                <i className="fas fa-file-contract"></i> MAP&CONTACT
+                <i className="fas fa-envelope"></i> TERNS & CONDITION
+                            </Link>
+
+            </li>
+            <li>
+              <Link to='/about'>
+                <i className="fas fa-shield-alt"></i> PRIVACY POLICY
+                            </Link>
+
+            </li>
+            <li>
+              <Link to='/GiftSection'>
+                <i className="fas fa-file-contract"></i> LATEST NEWS
                             </Link>
 
             </li>

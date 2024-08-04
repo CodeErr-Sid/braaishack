@@ -15,38 +15,38 @@ const ResturentOption = () => {
   //     duration: 0.7,
   //     scrollTrigger: {
   //       trigger: ".main",
-  //       start: "top 80%", 
-  //       end: "bottom top", 
-  //       scrub: 2, 
+  //       start: "top 80%",
+  //       end: "bottom top",
+  //       scrub: 2,
   //     },
   //   });
 
-  
+
   //   gsap.utils.toArray(".menulist").forEach((card, index) => {
   //     gsap.from(card, {
-  //       scale: 0.9, 
-  //       opacity: 1, 
+  //       scale: 0.9,
+  //       opacity: 1,
   //       duration: 0.7,
   //       delay: index * 0.8,
   //       scrollTrigger: {
   //         trigger: card,
-  //         start: "top 80%", 
-  //         end: "bottom top", 
-  //         scrub: 2, 
+  //         start: "top 80%",
+  //         end: "bottom top",
+  //         scrub: 2,
   //       },
   //     });
   //   });
 
- 
+
   //   gsap.to(".main", {
   //     opacity: 1,
   //     duration: 1,
   //     scrollTrigger: {
   //       trigger: ".main",
-  //       start: "bottom bottom", 
+  //       start: "bottom bottom",
   //       end: "bottom top",
   //       scrub: 2,
-  //       delay: 0.6 
+  //       delay: 0.6
   //     }
   //   });
   // }, []);
@@ -60,7 +60,7 @@ const ResturentOption = () => {
             <img src={assets.steek} alt="" />
           </div>
           <div className="menucontent">
-            <h1>hello</h1>
+            <h1>Starters</h1>
             <p className='para'>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const ResturentOption = () => {
             <img src={assets.steek} alt="" />
           </div>
           <div className="menucontent">
-            <h1>hello</h1>
+            <h1>Flames & Braai</h1>
             <p className='para'>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
@@ -78,7 +78,7 @@ const ResturentOption = () => {
             <img src={assets.steek} alt="" />
           </div>
           <div className="menucontent">
-            <h1>hello</h1>
+            <h1>Burger</h1>
             <p className='para'>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
@@ -87,7 +87,7 @@ const ResturentOption = () => {
             <img src={assets.steek} alt="" />
           </div>
           <div className="menucontent">
-            <h1>hello</h1>
+            <h1>Drinks</h1>
             <p className='para'>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>

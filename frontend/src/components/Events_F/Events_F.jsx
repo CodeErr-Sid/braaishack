@@ -51,6 +51,7 @@ const Events_F = ({ title }) => {
   return (
     <>
       <div className="events_main">
+        <img src={assets.b1} alt="" className="b1" />
         <h1 className="event_h1">{title}</h1>
         <div className="event_cards">
           {events.map((data, index) => {
