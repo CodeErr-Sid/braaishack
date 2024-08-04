@@ -53,7 +53,16 @@ import gsap from 'gsap';
             <button>Promo Video</button>
         </div>
         <div className="right-promo__section">
-            <img src={assets.promo} alt=''/>
+        <video
+        src={assets.promovideo}
+        type="video/mp4"
+        autoPlay
+        muted
+        loop
+        style={{ width: '100%', height: 'auto' }}
+      >
+        Your browser does not support the video tag.
+      </video>
         </div>
      </div>
   )

@@ -109,6 +109,7 @@ import leaf from "./leaf.png";
 import header from "./headerimg.png";
 import smokey from "./smokey.png";
 import art from "./home-art.png";
+import promovideo from "./bbq_video.mp4"
 
 import update1 from "./pub1.jpeg";
 import update2 from "./pub2.jpeg";
@@ -140,6 +141,7 @@ import cart from "./cart.svg";
 import menuicon from "./menu.svg";
 
 export const assets = {
+  promovideo,
   header_img_2,
   storyimg,
   steek,
