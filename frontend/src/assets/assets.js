@@ -109,6 +109,7 @@ import leaf from "./leaf.png";
 import header from "./headerimg.png";
 import smokey from "./smokey.png";
 import art from "./home-art.png";
+import promovideo from "./bbq_video.mp4"
 
 import update1 from "./pub1.jpeg";
 import update2 from "./pub2.jpeg";
@@ -138,6 +139,7 @@ import icon1 from "./2.svg";
 import icon2 from "./3.svg";
 import cart from "./cart.svg";
 import menuicon from "./menu.svg";
+<<<<<<< HEAD
 import b1 from "./b1.png";
 import b2 from "./b2.png";
 import b3 from "./b3.png";
@@ -154,6 +156,13 @@ export const assets = {
   b3,
   b4,
   b5,
+=======
+import face1 from "./faces/1.jpg";
+import face2 from "./faces/2.jpg";
+import delivery from "./delivery.png";
+export const assets = {
+  promovideo,
+>>>>>>> a4c4f03e7e15b03c68d6c646aa5dafbec7b167e8
   header_img_2,
   storyimg,
   steek,
@@ -247,7 +256,9 @@ export const assets = {
   icon2,
   cart,
   menuicon,
-
+  face1,
+  face2,
+  delivery,
   //   background_hero,
 };
 

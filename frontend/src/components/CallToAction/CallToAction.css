@@ -178,7 +178,7 @@ background
   margin-left: -15px;
 }
 .col-lg-6 {
-  width: 45vw;
+  width: 45vw !important;
   padding-right: 15px;
   padding-left: 15px;
   z-index: 9999;

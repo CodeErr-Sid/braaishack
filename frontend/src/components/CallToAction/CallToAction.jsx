@@ -8,7 +8,7 @@ export default function CallToAction() {
       <div className="sb-bg-3"></div>
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 align-self-center">
+          <div className="col-lg-6 ">
             <div className="sb-cta-text text-color">
               <h1 className="sb-mb-15 text-color">
                 <sup className='sup'>-</sup><span className="sb-title-lg ">50</span><sup className='sup'>%</sup> Discount <br /> for all* burgers!

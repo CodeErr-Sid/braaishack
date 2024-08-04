@@ -8,7 +8,6 @@
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
   scroll-behavior: smooth;
-  /* cursor: none; */
 }
 /* Style the vertical and horizontal scrollbar track */
 ::-webkit-scrollbar-track {
