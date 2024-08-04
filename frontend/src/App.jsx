@@ -67,13 +67,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
-<<<<<<< HEAD
-          <Route path="/menu2" element={<Menu2/>}/>
-          <Route path='/GiftSection' element={<GiftSection />} />
-=======
           <Route path="/menu2" element={<Menu2 />} />
           <Route path='/gift-section' element={<GiftSection />} />
->>>>>>> 15d65a2d26a9a5a3e25a111267c74fe447983200
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />
           <Route path='/events' element={<Events />} />
