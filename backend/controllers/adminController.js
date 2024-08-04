@@ -30,6 +30,7 @@ const loginAdmin = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production', // Set secure flag to true in production
+            sameSite:'None',
             maxAge: 3600000 // 1 hour in milliseconds
         });
 

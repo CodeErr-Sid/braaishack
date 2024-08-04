@@ -23,7 +23,7 @@ const foodRouter = express.Router();
 
 foodRouter.get("/list", listFood);
 foodRouter.get("/fooddetails",getFoodDetails);
-foodRouter.post("/add", addFood);
+foodRouter.post("/add",adminauthMiddleware, addFood);
 foodRouter.post("/remove", adminauthMiddleware, removeFood);
 
 export default foodRouter;
