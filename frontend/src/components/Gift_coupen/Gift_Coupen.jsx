@@ -94,6 +94,12 @@ const Gift_Coupen = () => {
           <img src={assets.steek} alt="Buffalo Exotic Steak" />
         </div>
         <div className="giftcontent">
+          <img src={assets.voucher} alt="" className="voucher1" />
+          <img src={assets.voucher} alt="" className="voucher2" />
+          <img src={assets.voucher} alt="" className="voucher3" />
+          <img src={assets.voucher} alt="" className="voucher4" />
+          <img src={assets.coupen} alt="" className="coupen1" />
+          <img src={assets.coupen} alt="" className="coupen2" />
           <h1>50% OFF</h1>
           <h3>BUFFALO EXOTIC STEAK</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cum deleniti porro necessitatibus numquam ut facere doloremque, commodi itaque totam!</p>

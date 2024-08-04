@@ -11,6 +11,23 @@
     width: 100vw;
     height: 100vh;
     background-color: #000;
+    position: relative;
+}
+
+.details-section .b1{
+    position: absolute;
+    right: 0%;
+    transform: rotate(171deg);
+    width: 15vw;
+    height: auto;
+    bottom: 0%;
+}
+.details-section .b3{
+    position: absolute;
+    left: 0%;
+    width: 15vw;
+    height: auto;
+    bottom: 0%;
 }
 
 .details-section__container {

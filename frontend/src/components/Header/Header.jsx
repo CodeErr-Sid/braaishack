@@ -21,6 +21,7 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
 
     return (
         <div className="header">
+            <img className='b5' src={assets.b5} alt="" />
             <div className="header-contents">
                 <h2
                     style={{
@@ -31,7 +32,10 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
                     {title}
                 </h2>
                 <p>{content}</p>
+                <div className="btn">
                 <button>{btn}</button>
+                <button>{btn}</button>
+                </div>
             </div>
             <div className="header-img">
                 <div className="radiant-background2"></div>
