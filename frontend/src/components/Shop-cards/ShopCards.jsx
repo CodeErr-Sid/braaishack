@@ -4,11 +4,10 @@ import { assets } from '../../assets/assets';
 import './ShopCards.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { menuItems } from '../../FrozenProductsData.json'; 
 import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/CartContexts'; // Import the CartContext
 
-export default function ShopCards() {
+export default function ShopCards({shopCardData}) {
     const [addedItems, setAddedItems] = useState({});
     const { addItemToCart } = useCart(); // Get the addItemToCart function from context
 
@@ -27,7 +26,7 @@ export default function ShopCards() {
             </div>
             <div className="container">
                 <div className="row">
-                    {menuItems.map(item => (
+                    {shopCardData.map(item => (
                         <div key={item.id} className="col-lg-4">
                             <div className="sb-menu-item sb-mb-30">
                                 <a href="product.html" className="sb-cover-frame">
@@ -71,15 +70,6 @@ export default function ShopCards() {
                         </div>
                     ))}
                 </div>
-            </div>
-            <div>
-                <ul className="sb-pagination">
-                    <li className="sb-active"><a href="#.">1</a></li>
-                    <li><a href="shop-list-2.html">2</a></li>
-                    <li><a href="shop-list-2.html">3</a></li>
-                    <li><a href="shop-list-2.html">4</a></li>
-                    <li><a href="shop-list-2.html">...</a></li>
-                </ul>
             </div>
         </section>
     );

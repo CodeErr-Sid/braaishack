@@ -48,7 +48,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart }) => {
           HOME
         </Link>
         <Link
-          to="/menu"
+          to="/menu2"
           onClick={() => {
             setMenu("MENUS");
             toggleMenu();

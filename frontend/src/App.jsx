@@ -10,6 +10,7 @@ import AnimatedCursor from 'react-animated-cursor'
 // Pages
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
+import Menu2 from './pages/Menu2/Menu2';
 import GiftSection from './pages/GiftSection/GiftSection';
 import PlaceOrder from './pages/Place_Order/Place_Order';
 import Verify from './pages/Verify/Verify';
@@ -67,6 +68,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
+          <Route path="/menu2" element={<Menu2/>}/>
           <Route path='/gift-section' element={<GiftSection />} />
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />

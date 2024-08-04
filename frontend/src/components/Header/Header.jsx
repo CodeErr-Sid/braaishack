@@ -40,7 +40,7 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
                         <img key={index} src={src} alt={`overlay-img-${index} overlay-image`} />
                     ))}
                 </div>
-                <img src={imgsrc} alt="Header" className='header-main_img rotate-image' />
+                <img src={imgsrc} alt="Header" className='header-main_img' />
             </div>
         </div>
     )

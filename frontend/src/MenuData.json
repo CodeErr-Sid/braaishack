@@ -1,0 +1,214 @@
+{
+  "menuItems": [
+    {
+      "id": "starter1",
+      "name": "Samosa",
+      "description": "Crispy and savory filled pastry.",
+      "price": 49,
+      "image": "starters1",
+      "category": "Starters"
+    },
+    {
+      "id": "starter2",
+      "name": "Pakora",
+      "description": "Fried snack made with gram flour.",
+      "price": 39,
+      "image": "starters2",
+      "category": "Starters"
+    },
+    {
+      "id": "starter3",
+      "name": "Spring Roll",
+      "description": "Crispy roll filled with vegetables.",
+      "price": 29,
+      "image": "starters3",
+      "category": "Starters"
+    },
+    {
+      "id": "starter4",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "starters4",
+      "category": "Starters"
+    },
+    {
+      "id": "braai1",
+      "name": "Samosa",
+      "description": "Crispy and savory filled pastry.",
+      "price": 49,
+      "image": "braai1",
+      "category": "Braai Menu"
+    },
+    {
+      "id": "braai2",
+      "name": "Pakora",
+      "description": "Fried snack made with gram flour.",
+      "price": 39,
+      "image": "braai2",
+      "category": "Braai Menu"
+    },
+    {
+      "id": "braai3",
+      "name": "Spring Roll",
+      "description": "Crispy roll filled with vegetables.",
+      "price": 29,
+      "image": "braai3",
+      "category": "Braai Menu"
+    },
+    {
+      "id": "braai4",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "braai4",
+      "category": "Braai Menu"
+    },
+    {
+      "id": "braai5",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "braai5",
+      "category": "Braai Menu"
+    },
+    {
+      "id": "braai6",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "braai6",
+      "category": "Braai Menu"
+    },
+    {
+      "id": "braai7",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "braai7",
+      "category": "Braai Menu"
+    },
+    {
+      "id": "kids1",
+      "name": "Samosa",
+      "description": "Crispy and savory filled pastry.",
+      "price": 49,
+      "image": "kids1",
+      "category": "Kids Braai Menu"
+    },
+    {
+      "id": "kids2",
+      "name": "Pakora",
+      "description": "Fried snack made with gram flour.",
+      "price": 39,
+      "image": "kids2",
+      "category": "Kids Braai Menu"
+    },
+    {
+      "id": "kids3",
+      "name": "Spring Roll",
+      "description": "Crispy roll filled with vegetables.",
+      "price": 29,
+      "image": "kids3",
+      "category": "Kids Braai Menu"
+    },
+    {
+      "id": "sides1",
+      "name": "Samosa",
+      "description": "Crispy and savory filled pastry.",
+      "price": 49,
+      "image": "sides1",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "sides2",
+      "name": "Pakora",
+      "description": "Fried snack made with gram flour.",
+      "price": 39,
+      "image": "sides2",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "sides3",
+      "name": "Spring Roll",
+      "description": "Crispy roll filled with vegetables.",
+      "price": 29,
+      "image": "sides3",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "sides4",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "sides4",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "sides5",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "sides5",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "sides6",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "sides6",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "sides7",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "sides7",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "sides8",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "sides8",
+      "category": "Braai Sides"
+    },
+    {
+      "id": "desserts1",
+      "name": "Samosa",
+      "description": "Crispy and savory filled pastry.",
+      "price": 49,
+      "image": "sides9",
+      "category": "Desserts"
+    },
+    {
+      "id": "desserts2",
+      "name": "Pakora",
+      "description": "Fried snack made with gram flour.",
+      "price": 39,
+      "image": "sides10",
+      "category": "Desserts"
+    },
+    {
+      "id": "desserts3",
+      "name": "Spring Roll",
+      "description": "Crispy roll filled with vegetables.",
+      "price": 29,
+      "image": "sides11",
+      "category": "Desserts"
+    },
+    {
+      "id": "desserts4",
+      "name": "Chicken Wings",
+      "description": "Spicy and crispy chicken wings.",
+      "price": 59,
+      "image": "sides12",
+      "category": "Desserts"
+    }
+  ]
+}
+
+
