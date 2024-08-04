@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
-import AnimatedCursor from 'react-animated-cursor'
+import AnimatedCursor from 'react-animated-cursor';
 
 // Pages
 import Home from './pages/Home/Home';
@@ -19,8 +19,8 @@ import About from './pages/About/About';
 import Shop from './pages/Shop/Shop';
 import Product from './pages/Product/Product';
 import MyOrders from './pages/MyOrders/MyOrders';
-import Checkout from './pages/Checkout/Checkout'; // Ensure this component exists
-import ShopCart from './pages/ShopCart/ShopCart'; // Ensure this component exists
+import Checkout from './pages/Checkout/Checkout';
+import ShopCart from './pages/ShopCart/ShopCart';
 
 // Components
 import Footer from './components/Footer/Footer';
@@ -29,12 +29,11 @@ import LoginPopup from './components/LoginPopup/LoginPopup';
 // import CursorFollower from './components/cursor/Cursor';
 import Preloader from './components/Preloader/Preloader';
 import MiniCart from './components/MiniCart/MiniCart';
-import { CartProvider } from './Context/CartContexts'; // Ensure this context exists
+import { CartProvider } from './Context/CartContexts';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showMiniCart, setShowMiniCart] = useState(false); // State for MiniCart visibility
-
 
   return (
     <CartProvider>
@@ -68,8 +67,13 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
+<<<<<<< HEAD
           <Route path="/menu2" element={<Menu2/>}/>
           <Route path='/GiftSection' element={<GiftSection />} />
+=======
+          <Route path="/menu2" element={<Menu2 />} />
+          <Route path='/gift-section' element={<GiftSection />} />
+>>>>>>> 15d65a2d26a9a5a3e25a111267c74fe447983200
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />
           <Route path='/events' element={<Events />} />
