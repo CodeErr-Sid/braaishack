@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
+import AnimatedCursor from 'react-animated-cursor'
 
 // Pages
 import Home from './pages/Home/Home';
@@ -39,6 +40,25 @@ const App = () => {
       <Preloader /> {/* Consider managing visibility of Preloader */}
       <div className='app'>
         {/* <CursorFollower /> */}
+        <AnimatedCursor
+  innerSize={8}
+  outerSize={35}
+  innerScale={1}
+  outerScale={2}
+  outerAlpha={0}
+  hasBlendMode={true}
+  innerStyle={{
+    backgroundColor: 'var(--cursor-color)',
+    zIndex:9999,
+    mixBlendMode:'difference'
+  }}
+  outerStyle={{
+    zIndex:9999,
+    mixBlendMode:'difference',
+    background:'transparent',
+    border: '3px solid var(--cursor-color)'
+  }}
+/>
         <MiniCart />
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
