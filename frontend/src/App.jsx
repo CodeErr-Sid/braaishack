@@ -22,13 +22,21 @@ import MyOrders from './pages/MyOrders/MyOrders';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import LoginPopup from './components/LoginPopup/LoginPopup';
+import PlaceOrder from './pages/Place_Order/Place_Order';
+import MyOrders from './pages/MyOrders/MyOrders';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Verify from './pages/Verify/Verify';
 import CursorFollower from './components/cursor/Cursor';
-import MiniCart from './components/MiniCart/MiniCart';
+import Menu from './pages/Menu/Menu';
+import Events from './pages/Events/Events';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import About from './pages/About/About';
+import GiftSection from './pages/GiftSection/GiftSection';
 import Preloader from './components/Preloader/Preloader';
-import { CartProvider } from "./Context/CartContexts";
-import Checkout from './pages/Checkout/Checkout';
-import ShopCart from './pages/ShopCart/ShopCart';
-
+import './index.css';
+import Shop from './pages/Shop/Shop';
+import MiniCart from './components/MiniCart/MiniCart';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -41,7 +49,7 @@ const App = () => {
       <Preloader /> {/* Consider managing visibility of Preloader */}
       <div className='app'>
         <CursorFollower />
-        <MiniCart />
+        <MiniCart/>
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
           <Route path='/' element={<Home />} />

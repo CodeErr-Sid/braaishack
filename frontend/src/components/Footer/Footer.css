@@ -1,355 +1,169 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
-
-/* Default styles */
-.footer {
-  color: #d9d9d9;
-  background-color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.25rem 8vw;
-  padding-top: 5rem;
-  width: 100vw;
-  height: 412px;
-  position: relative;
-  overflow: hidden;
+/* Footer Styling */
+footer {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 50px 0 20px;
+    font-family: Arial, sans-serif;
+}
+.logo{
+    width: 10vw;height: 10vw;
+}
+.logo img{
+    width: 100%;height: 100%;object-fit: contain;
 }
 
-.footer-content {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 5rem;
-}
-/* .flex{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-.footer-content-left img {
-  width: 100%;
-  max-width: 8.875rem;
-  height: 8.875rem;
-  object-fit: cover;
-  object-position: center;
-  margin: -0.625rem 0 0 -1.25rem;
+.foot p{
+      padding-top: 1vw;
+    padding-right: 5vw;
+    padding-bottom: 1vw;
 }
 
-.address, .phone-number {
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.3125rem;
-  width: 18.1875rem;
-}
-
-.subscribe {
-  display: flex;
-  flex-direction: row;
-  gap: 0.625rem;
-}
-
-.subscribe input {
-  width: 30.625rem;
-  height: 3.5625rem;
-  border-radius: 0.25rem;
-  border: none;
-  outline: none;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #000000;
-  line-height: 1.6875rem;
-  font-family: 'Open Sans', 'sans serif';
-  padding-left: 1rem;
-}
-
-.subscribe::placeholder {
-  color: #ffffff;
-}
-
-.subscribe input:focus {
-  border: 0.125rem solid #FDCF09;
-}
-
-.subscribe button {
-  width: 15.25rem;
-  height: 3.5625rem;
-  border-radius: 0.25rem;
-  background-color: #FDCF09;
-  font-family: 'Open Sans', 'sans serif';
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.6875rem;
-  border: none;
-  outline: none;
-}
-
-.footer-content-left {
-  font-family: 'Open Sans', 'sans serif';
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 0.625rem; 
-}
-
-.footer-content-right {
-  width: 100%;
-  max-width: 47.5rem;
-  /* height: 10.4375rem; */
-  height: 100%;
-}
-
-.footer-content-right h2 {
-  font-family: 'Montserrat', 'sans serif';
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.3rem;
-  color: #FDCF09;
-  text-transform: uppercase;
-}
-
-.footer-content-right p {
-  width: 45.1875rem;
-  font-size: 1.25rem;
-  font-weight: 400;
-  font-family: 'Open Sans', 'sans serif';
-}
-
-.footer-content-left,
-.footer-content-right {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 0.625rem;
-}
-
-.babyfoot {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 15vw;
-  width: 100vw;
-  background-color: #353535;
-  height: 5.25rem;
-  position: absolute;
-  bottom: 0;
-}
-
-.babyfoot .babyfootlinks {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 2vw;
-}
-/* Media query for screens up to 1030px */
-@media (max-width: 1030px) {
-  .footer-content-right {
-    width: 100%;
-    max-width: 37.5rem;
-    height: auto; /* Adjust height to auto for better responsiveness */
-  }
-
-  .footer-content-right p {
-    width: 25rem;
-    font-size: 1rem;
-  }
-
-  .subscribe {
-    flex-direction: column;
-    align-items: center; /* Center align items */
-  }
-
-  .subscribe input {
-    max-width: 20rem; /* Adjust max width */
-    font-size: 0.875rem; /* Adjust font size */
-    margin-bottom: 1rem; /* Add spacing between input and button */
-  }
-
-  .subscribe button {
-    width: 100%; /* Full width */
-    font-size: 0.875rem; /* Adjust font size */
-  }
-}
-
-/* Media query for screens up to 738px */
-@media (max-width: 738px) {
-  .footer {
-    padding: 1rem;
-    height: auto; /* Adjust height to auto for better responsiveness */
-    text-align: center; /* Center align text */
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr; /* Stack columns */
-    gap: 2rem;
-    align-items: center; /* Center content vertically */
-  }
-
-  .footer-content-left {
-    align-items: center; /* Center items horizontally */
-    gap: 1rem; /* Adjust gap for better spacing */
-  }
-
-  .footer-content-right {
+.footer-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center;
-    gap: 1rem; /* Adjust gap for better spacing */
-    margin: 0; /* Remove margin to fit content properly */
-    width: 100%; /* Ensure it uses full width */
-    margin-bottom: 4rem;
-  }
-
-  .footer-content-right h2 {
-    font-size: 1.5rem; /* Smaller heading */
-    margin: 0; /* Remove margin for better alignment */
-  }
-
-  .footer-content-right p {
-    font-size: 1rem; /* Smaller paragraph */
-    margin: 0; /* Remove margin for better alignment */
-    max-width: 70%; /* Ensure full width */
-  }
-
-  .footer-content-left img {
-    max-width: 6rem; /* Reduce logo size */
-    margin: 0 auto; /* Center image */
-  }
-
-  .address, .phone-number {
-    font-size: 0.875rem; /* Smaller font size */
-    width: 50%; /* Full width */
-    margin: 0 auto; /* Center text block */
-  }
-
-  .subscribe {
-    flex-direction: column; /* Stack input and button */
-    align-items: center; /* Center align items */
-  }
-
-  .subscribe input {
-    max-width: 40rem; /* Max width */
-    font-size: 0.875rem; /* Adjust font size for smaller screens */
-    margin-bottom: 1rem; /* Add spacing between input and button */
-  }
-
-  .subscribe button {
-    width: 100%; /* Full width */
-    font-size: 0.875rem; /* Adjust font size for smaller screens */
-  }
-
-  .babyfoot {
-    flex-direction: column; /* Stack babyfoot items */
-    align-items: center; /* Center items horizontally */
-    gap: 1rem; /* Adjust gap for better spacing */
-  }
-
-  .babyfoot .babyfootlinks {
-    flex-direction: row; /* Keep links in row */
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center align links */
-    gap: 1rem; /* Adjust gap for better spacing */
-  }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Media query for tablets (739px to 900px) */
-@media (min-width: 739px) and (max-width: 900px) {
-  .footer {
-    padding: 1.5rem;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 3rem;
-  }
-
-  .footer-content-left img {
-    max-width: 7rem; /* Slightly larger logo */
-  }
-
-  .address, .phone-number {
-    font-size: 0.95rem; /* Adjust font size */
-  }
-
-  .footer-content-right h2 {
-    font-size: 1.75rem; /* Adjust heading size */
-  }
-
-  .footer-content-right p {
-    font-size: 1.125rem; /* Adjust paragraph size */
-  }
-
-  .subscribe input {
-    width: 20.625rem; /* Adjust input width */
-  }
-
-  .subscribe button {
-    width: 15.25rem; /* Adjust button width */
-  }
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
 }
 
-/* Media query for screens up to 515px */
-@media (max-width: 515px) {
-  .subscribe input {
-    max-width: 20rem; /* Max width */
-    font-size: 0.875rem; /* Adjust font size for smaller screens */
-    margin-bottom: 1rem; /* Add spacing between input and button */
-  }
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    position: relative;
+}
 
-  .subscribe button {
-    width: 100%; /* Full width */
-    font-size: 0.875rem; /* Adjust font size for smaller screens */
-  }
-  .babyfoot .babyfootlinks {
-    flex-direction: row; /* Keep links in row */
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center align links */
-    gap: 1rem; /* Adjust gap for better spacing */
-  }
-  .footer-content{
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 30px;
+    height: 2px;
+    background-color: #FDCF09;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FDCF09;
+}
+
+.footer-section ul li a i {
+    margin-right: 5px;
+    color: #FDCF09;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #FDCF09;
+    transform: translateY(-3px);
+}
+
+.newsletter h4 {
+    margin-bottom: 15px;
+}
+
+.newsletter form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
-/* Media query for desktop (901px and up) */
-@media (min-width: 901px) {
-  .footer {
-    padding: 1.25rem 8vw; /* Original padding */
-  }
+.newsletter input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+}
 
-  .footer-content {
-    grid-template-columns: 2fr 1fr; /* Original layout */
-    gap: 5rem;
-  }
+.newsletter button {
+    background-color: #FDCF09;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-  .footer-content-left img {
-    max-width: 8.875rem; /* Original logo size */
-  }
+.newsletter button:hover {
+    background-color: #FDCF09;
+}
 
-  .address, .phone-number {
-    font-size: 1rem; /* Original font size */
-  }
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    position: relative;
+}
 
-  /* .subscribe input {
-    width: 20.625rem; 
-  }
+.back-to-top {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #FDCF09;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
 
-  .subscribe button {
-    width: 15.25rem; 
-  } */
+.back-to-top:hover {
+    background-color: #FDCF09;
+}
 
-  .footer-content-right h2 {
-    font-size: 2rem; /* Original heading size */
-  }
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
 
-  .footer-content-right p {
-    font-size: 1.25rem; /* Original paragraph size */
-  }
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+    }
 }

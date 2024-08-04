@@ -1,3 +1,5 @@
+
+
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -34,9 +36,12 @@
   height: 0px;
 }
 
+:root{
+  --cursor-color:rgb(253, 253, 252);
+}
+
 body {
   min-height: 100vh;
-  cursor: none;
   scroll-behavior: smooth;
 }
 

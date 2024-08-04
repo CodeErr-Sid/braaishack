@@ -24,7 +24,9 @@ const AdminLogin = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/api/admin/login', credentials);
+      const response = await axios.post('http://localhost:4000/api/admin/login', credentials, {
+        withCredentials: true // Ensure cookies are sent and received
+      });
       if (response.data.success) {
         toast.success('Login successful');
         login(); // Update auth context

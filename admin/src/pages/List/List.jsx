@@ -28,6 +28,7 @@ const List = () => {
     }
     else {
       toast.error("Error")
+      console.log(response.data)
     }
   }
 
@@ -49,7 +50,7 @@ const List = () => {
         {list.map((item, index) => {
           return (
             <div key={index} className='list-table-format'>
-              <img src={`${url}/images/` + item.image} alt="" />
+              <img src={item.image} alt="" />
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>{currency}{item.price}</p>
