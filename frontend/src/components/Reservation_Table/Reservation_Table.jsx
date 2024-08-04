@@ -212,11 +212,11 @@ const Reservation_Table = () => {
                 {/* <button>BOOK A TABLE</button> */}
             </div>
             <form className='reservation-form' onSubmit={handleSubmit}>
-                <h1>Reservation</h1>
+                <h1>Reservation Table</h1>
                 <input required type="text" placeholder="Name" onChange={(e) => setname(e.target.value)} />
                 <input required type="email" placeholder="Email" onChange={(e) => setemail(e.target.value)} />
                 <input required type="number" placeholder="Phone" onChange={(e) => setnumber(e.target.value)} />
-                <button type='submit'>Reserve now</button>
+                <button type='submit'>Reserve</button>
             </form>
             <div className='onion'>
                 <img src={assets.ring} alt='' />
