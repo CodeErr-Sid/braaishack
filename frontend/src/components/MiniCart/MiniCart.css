@@ -4,18 +4,21 @@ minicart
 
 ***************************/
 .sb-minicart {
+  background: black;
   border-top: solid 1px #0a0a0a;
-  top: 121px;
+  top: 0;
   right: 25rem;
-  height: calc(100vh - 120px);
+  height: 100vh;
+  z-index: 998;
+  padding-top: 120px;
   width: 100%;
   max-width: 403px;
-  position: absolute;
+  position: fixed;
   transform: translateX(100%);
-  background-color: rgba(16, 16, 16, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.05);
+  /* background-color: rgba(16, 16, 16, 0.92); */
+  /* backdrop-filter: blur(8px); */
+  /* -webkit-backdrop-filter: blur(8px); */
+  /* box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.05); */
   border-left: solid 1px #080808;
   transition: 0.4s ease-in-out;
 }
@@ -39,7 +42,6 @@ minicart
   border-top: solid 1px #0e0e0e;
   background-color: #000000;
   position: absolute;
-  z-index: 2;
   bottom: 0;
   left: 0;
   width: 100%;

@@ -8,10 +8,9 @@ import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 import MiniCart from "../MiniCart/MiniCart";
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = ({ setShowLogin, setShowMiniCart }) => {
   const [menu, setMenu] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(true);
-  const [showMiniCart, setShowMiniCart] = useState(false); // State for MiniCart visibility
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -117,7 +116,7 @@ const Navbar = ({ setShowLogin }) => {
         <FontAwesomeIcon icon={faUser} style={{ color: "#FFD43B" }} />
       </div>
 
-      {showMiniCart && <MiniCart />} {/* Conditionally render MiniCart */}
+       {/* Conditionally render MiniCart */}
 
       <div className="menubtn" onClick={toggleMenu}>
         <span></span>

@@ -32,6 +32,8 @@ import { CartProvider } from './Context/CartContexts'; // Ensure this context ex
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
+  const [showMiniCart, setShowMiniCart] = useState(false); // State for MiniCart visibility
+
 
   return (
     <CartProvider>
@@ -41,26 +43,27 @@ const App = () => {
       <div className='app'>
         {/* <CursorFollower /> */}
         <AnimatedCursor
-  innerSize={8}
-  outerSize={35}
-  innerScale={1}
-  outerScale={2}
-  outerAlpha={0}
-  hasBlendMode={true}
-  innerStyle={{
-    backgroundColor: 'var(--cursor-color)',
-    zIndex:9999,
-    mixBlendMode:'difference'
-  }}
-  outerStyle={{
-    zIndex:9999,
-    mixBlendMode:'difference',
-    background:'transparent',
-    border: '3px solid var(--cursor-color)'
-  }}
-/>
-        <MiniCart />
-        <Navbar setShowLogin={setShowLogin} />
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          outerAlpha={0}
+          hasBlendMode={true}
+          innerStyle={{
+            backgroundColor: 'var(--cursor-color)',
+            zIndex: 9999,
+            mixBlendMode: 'difference'
+          }}
+          outerStyle={{
+            zIndex: 9999,
+            mixBlendMode: 'difference',
+            background: 'transparent',
+            border: '3px solid var(--cursor-color)'
+          }}
+        />
+        {/* <MiniCart /> */}
+        <Navbar setShowLogin={setShowLogin} setShowMiniCart={setShowMiniCart} />
+        {showMiniCart && <MiniCart />}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
