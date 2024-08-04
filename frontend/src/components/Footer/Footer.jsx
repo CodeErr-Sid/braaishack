@@ -66,18 +66,18 @@ const Footer = () => {
           <ul>
             <li>
               <Link to='/'>
-                <i className="fas fa-info-circle"></i> HOME
+                <i className="fas fa-info-circle"></i> Home
               </Link>
             </li>
             <li>
               <Link to='/menu'>
-                <i className="fas fa-envelope"></i> MENUS
+                <i className="fas fa-envelope"></i> Menus
                             </Link>
 
             </li>
             <li>
               <Link to='/about'>
-                <i className="fas fa-shield-alt"></i> ABOUT US
+                <i className="fas fa-shield-alt"></i> About Us
                             </Link>
 
             </li>
@@ -93,24 +93,24 @@ const Footer = () => {
           <ul>
             <li>
               <Link to='/'>
-                <i className="fas fa-info-circle"></i> HOME
+                <i className="fas fa-info-circle"></i> Home
               </Link>
             </li>
             <li>
               <Link to='/menu'>
-                <i className="fas fa-envelope"></i> TERNS & CONDITION
+                <i className="fas fa-envelope"></i> Terms & Condistion
                             </Link>
 
             </li>
             <li>
               <Link to='/about'>
-                <i className="fas fa-shield-alt"></i> PRIVACY POLICY
+                <i className="fas fa-shield-alt"></i> Privacy Policy
                             </Link>
 
             </li>
             <li>
               <Link to='/GiftSection'>
-                <i className="fas fa-file-contract"></i> LATEST NEWS
+                <i className="fas fa-file-contract"></i> Latest News
                             </Link>
 
             </li>

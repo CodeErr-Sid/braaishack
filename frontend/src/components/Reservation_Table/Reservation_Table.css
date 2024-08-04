@@ -73,18 +73,20 @@
 }
 
 .reservation-form input {
-  font-size: 2vw;
-  padding: 0.5vw;
-  border: 1px solid #fdcf08;
-  border-radius: 0.5vw;
+      font-size: 1.5vw;
+    width: 100%;
+    padding: 0.5vw;
+    border: 1px solid #fdcf08;
+    border-radius: 0.5vw;
 }
 
 .reservation-form button {
-      border: none;
+    border: none;
     background-color: #fdcf08;
-    font-size: 2vw;
-    padding: .5em 1em;
-    border-radius: 2vw;
+    width: 100%;
+    font-size: 1.5vw;
+    border-radius: 1vw;
+    padding: .5vw;
 
 }
 
