@@ -39,7 +39,8 @@
   margin-bottom: 30px !important;
 }
 .sb-p-0-60 {
-  padding-bottom: 60px !important;
+    padding-bottom: 60px !important;
+    display: flex;
 }
 .sb-mb-30 {
   margin-bottom: 30px !important;
