@@ -138,7 +138,9 @@ import icon1 from "./2.svg";
 import icon2 from "./3.svg";
 import cart from "./cart.svg";
 import menuicon from "./menu.svg";
-
+import face1 from "./faces/1.jpg";
+import face2 from "./faces/2.jpg";
+import delivery from "./delivery.png";
 export const assets = {
   header_img_2,
   storyimg,
@@ -233,7 +235,9 @@ export const assets = {
   icon2,
   cart,
   menuicon,
-
+  face1,
+  face2,
+  delivery,
   //   background_hero,
 };
 

@@ -1,0 +1,257 @@
+.ingredients-section {
+  /* width: 90vw !important; */
+  height: 70vh;
+  margin: 4rem 3rem 0 3rem;
+}
+.sb-mb-15 {
+  margin-bottom: 15px !important;
+}
+.sb-mb-60 {
+  margin-bottom: 60px !important;
+}
+.sb-mb-10 {
+  margin-bottom: 10px !important;
+  color: white;
+}
+/***************************
+
+filter
+
+***************************/
+.sb-filter {
+  margin-bottom: 60px;
+}
+.sb-filter .sb-filter-link {
+  padding: 0 20px;
+  font-weight: 500;
+  line-height: 55px;
+  cursor: pointer;
+  /* position: relative; */
+  display: inline-block;
+  text-align: center;
+  height: 55px;
+  font-size: 14px;
+  margin-right: 10px;
+  background-color: #000000;
+  transition: 0.3s ease-in-out;
+  color: #aaaab5;
+  text-decoration: none;
+}
+.sb-filter .sb-filter-link:last-child {
+  margin-right: 0;
+}
+.sb-filter .sb-filter-link.sb-active {
+  background-color: #f5c332;
+  color: #ffffff;
+}
+.sb-filter .sb-filter-link:hover {
+  filter: brightness(102%);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .sb-filter {
+    margin-bottom: 60px;
+  }
+  .sb-filter .sb-filter-link {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+/***************************
+
+grid
+
+***************************/
+.sb-masonry-grid {
+  width: calc(100% + 30px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.sb-masonry-grid .sb-grid-item {
+  padding: 0 15px;
+  width: 100%;
+}
+.sb-masonry-grid .sb-grid-item.sb-item-25 {
+  width: 25%;
+  padding: 0 15px;
+}
+.sb-masonry-grid .sb-grid-item.sb-item-33 {
+  width: 33.333%;
+  padding: 0 15px;
+}
+.sb-masonry-grid .sb-grid-item.sb-item-50 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.grid-sizer {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .sb-masonry-grid .sb-grid-item.sb-item-25 {
+    width: 33.333%;
+  }
+  .sb-masonry-grid .sb-grid-item.sb-item-33 {
+    width: 50%;
+  }
+  .sb-masonry-grid .sb-grid-item.sb-item-50 {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .sb-masonry-grid .sb-grid-item.sb-item-25 {
+    width: 100%;
+  }
+  .sb-masonry-grid .sb-grid-item.sb-item-33 {
+    width: 100%;
+  }
+  .sb-masonry-grid .sb-grid-item.sb-item-50 {
+    width: 100%;
+  }
+}
+/***************************
+
+list
+
+***************************/
+.sb-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 15px 0;
+  border-bottom: solid 1px #101010;
+  width: 45vw;
+}
+.sb-tab {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between columns */
+}
+.sb-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px; /* Space between list items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sb-list li b {
+  font-weight: 400;
+  color: #f5c332;
+}
+.sb-list li b a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease-in-out;
+}
+.sb-list li b a:hover {
+  transform: translateX(10px);
+}
+.sb-list li span {
+  font-size: 12px;
+  color: #babac7;
+}
+.sb-list li span.sb-number {
+  background-color: #f2f3f5;
+  padding: 2px 5px;
+  color: #efefef;
+}
+.sb-list li:first-child {
+  border-top: solid 1px #000000;
+}
+
+/***************************
+
+tabs
+
+***************************/
+.sb-tab {
+  width: 100%;
+  margin-bottom: 90px;
+}
+.sb-tab .sb-list {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  grid-column-gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .sb-tab {
+    width: 100%;
+    margin-bottom: 90px;
+  }
+  .sb-tab .sb-list {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(100, auto);
+    grid-column-gap: 0;
+  }
+}
+
+.sb-text {
+  color: #e8e8f2;
+  margin: 0;
+  font-size: 15px;
+}
+.sb-text.sb-text-xs {
+  font-size: 12px;
+}
+.sb-text.sb-text-sm {
+  font-size: 14px;
+}
+.sb-text.sb-text-lg {
+  font-size: 16px;
+}
+.width2 {
+  width: 90% !important;
+}
+
+.sb-tab2 {
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/***************************
+
+reviews
+
+***************************/
+.sb-review-card {
+  /* position: relative; */
+  color: white;
+}
+.sb-review-card .sb-review-header {
+  flex-wrap: nowrap;
+}
+.sb-review-card .sb-review-header h3 {
+  width: calc(100% - 110px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
+}
+.sb-review-card .sb-review-header .sb-stars {
+  width: 110px;
+}
+
+@media (max-width: 768px) {
+  .sb-review-card .sb-review-header span {
+    display: none;
+  }
+}

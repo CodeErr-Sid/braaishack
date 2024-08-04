@@ -51,10 +51,10 @@ call to action
 }
 
 /***************************
-
-background
-
-***************************/
+  
+  background
+  
+  ***************************/
 .sb-bg-1 {
   border-left: solid 30px #000000;
   border-right: solid 30px #000000;
@@ -68,15 +68,15 @@ background
   position: relative;
 }
 /* .sb-bg-1 div:after {
-  content: "";
-  height: 40vw;
-  width: 300%;
-  background-color: #000000;
-  position: absolute;
-  top: 500px;
-  left: -100%;
-  transform: rotate(-30deg);
-} */
+    content: "";
+    height: 40vw;
+    width: 300%;
+    background-color: #000000;
+    position: absolute;
+    top: 500px;
+    left: -100%;
+    transform: rotate(-30deg);
+  } */
 
 .sb-bg-2 {
   position: absolute;
@@ -202,7 +202,7 @@ background
   font-size: 5rem;
 }
 .sb-title-lg {
-  font-size: 100px;
+  font-size: 80px;
 }
 
 @media (max-width: 1030px) {
@@ -240,10 +240,10 @@ background
   margin-bottom: 30px !important;
 }
 /***************************
-
-buttons
-
-***************************/
+  
+  buttons
+  
+  ***************************/
 .sb-btn {
   opacity: 1;
   border: none;
@@ -357,10 +357,10 @@ buttons
   }
 }
 /***************************
-  
-  mobile menu button
-  
-  ***************************/
+    
+    mobile menu button
+    
+    ***************************/
 .sb-info-btn,
 .sb-menu-btn {
   margin-left: 15px;
@@ -446,10 +446,10 @@ buttons
   }
 }
 /***************************
-
-illustration 6
-
-***************************/
+  
+  illustration 6
+  
+  ***************************/
 .sb-illustration-6 {
   position: relative;
   padding-bottom: 75%;

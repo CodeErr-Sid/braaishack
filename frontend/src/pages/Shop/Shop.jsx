@@ -6,7 +6,7 @@ import CallToAction from '../../components/CallToAction/CallToAction'
 export default function Shop() {
   return (
     <>
-    <Header header_title={'Main dishes'} header_btn={'HOME/Shop/Main dishes'} />
+    <Header header_title={'Frozen Items'} header_btn={'HOME/Shop/Frozen'} />
     <ShopCards />
     <CallToAction />
     </>

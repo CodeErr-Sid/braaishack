@@ -1,0 +1,188 @@
+{
+"menuItems" :  [
+    {
+      "id": "product1",
+      "name": "Chocolate Cake",
+      "description": "Delicious chocolate cake with rich flavor.",
+      "price": 30,
+      "image": "shop1",
+      "category": "Cake"
+    },
+    {
+      "id": "product2",
+      "name": "Vanilla Cupcake",
+      "description": "Soft vanilla cupcake with creamy frosting.",
+      "price": 12,
+      "image": "shop2",
+      "category": "Cupcake"
+    },
+    {
+      "id": "product3",
+      "name": "Red Velvet Cake",
+      "description": "Elegant red velvet cake with cream cheese frosting.",
+      "price": 35,
+      "image": "shop3",
+      "category": "Cake"
+    },
+    {
+      "id": "product4",
+      "name": "Lemon Meringue Pie",
+      "description": "Tangy lemon pie with a light meringue topping.",
+      "price": 25,
+      "image": "shop4",
+      "category": "Pie"
+    },
+    {
+      "id": "product5",
+      "name": "Carrot Cake",
+      "description": "Spicy carrot cake with walnuts and cream cheese frosting.",
+      "price": 28,
+      "image": "shop5",
+      "category": "Cake"
+    },
+    {
+      "id": "product6",
+      "name": "Berry Cheesecake",
+      "description": "Creamy cheesecake topped with fresh berries.",
+      "price": 40,
+      "image": "shop6",
+      "category": "Cheesecake"
+    },
+    {
+      "id": "product7",
+      "name": "Macarons",
+      "description": "Colorful macarons with various flavors.",
+      "price": 15,
+      "image": "shop7",
+      "category": "Macaron"
+    },
+    {
+      "id": "product8",
+      "name": "Strawberry Shortcake",
+      "description": "Layered shortcake with fresh strawberries and whipped cream.",
+      "price": 32,
+      "image": "shop8",
+      "category": "Cake"
+    },
+    {
+      "id": "product9",
+      "name": "Apple Pie",
+      "description": "Classic apple pie with a flaky crust.",
+      "price": 20,
+      "image": "shop9",
+      "category": "Pie"
+    },
+    {
+      "id": "product10",
+      "name": "Chocolate Chip Cookies",
+      "description": "Chewy chocolate chip cookies with a hint of vanilla.",
+      "price": 10,
+      "image": "shop10",
+      "category": "Cookie"
+    },
+    {
+      "id": "product11",
+      "name": "Pecan Pie",
+      "description": "Sweet pecan pie with a buttery crust.",
+      "price": 27,
+      "image": "shop11",
+      "category": "Pie"
+    },
+    {
+      "id": "product12",
+      "name": "Mango Sorbet",
+      "description": "Refreshing mango sorbet with a fruity flavor.",
+      "price": 18,
+      "image": "shop12",
+      "category": "Sorbet"
+    },
+    {
+      "id": "product13",
+      "name": "Almond Cake",
+      "description": "Delicate almond cake with a hint of vanilla.",
+      "price": 33,
+      "image": "shop5",
+      "category": "Cake"
+    },
+    {
+      "id": "product14",
+      "name": "Cheesecake Brownies",
+      "description": "Rich brownies with a creamy cheesecake swirl.",
+      "price": 22,
+      "image": "shop14",
+      "category": "Brownie"
+    },
+    {
+      "id": "product15",
+      "name": "Peach Cobbler",
+      "description": "Warm peach cobbler with a biscuit topping.",
+      "price": 26,
+      "image": "shop15",
+      "category": "Cobbler"
+    },
+    {
+      "id": "product16",
+      "name": "Pistachio Cake",
+      "description": "Nutty pistachio cake with a light frosting.",
+      "price": 34,
+      "image": "shop15",
+      "category": "Cake"
+    },
+    {
+      "id": "product17",
+      "name": "Coconut Macarons",
+      "description": "Chewy macarons with a coconut flavor.",
+      "price": 17,
+      "image": "shop1",
+      "category": "Macaron"
+    },
+    {
+      "id": "product18",
+      "name": "Chocolate Mousse",
+      "description": "Smooth and creamy chocolate mousse.",
+      "price": 22,
+      "image": "shop2",
+      "category": "Mousse"
+    },
+    {
+      "id": "product19",
+      "name": "Banana Cream Pie",
+      "description": "Creamy banana pie with a graham cracker crust.",
+      "price": 29,
+      "image": "shop3",
+      "category": "Pie"
+    },
+    {
+      "id": "product20",
+      "name": "Pumpkin Spice Cake",
+      "description": "Spiced pumpkin cake with cream cheese frosting.",
+      "price": 31,
+      "image": "shop4",
+      "category": "Cake"
+    },
+    {
+      "id": "product21",
+      "name": "Tiramisu",
+      "description": "Classic Italian tiramisu with layers of coffee-soaked ladyfingers.",
+      "price": 38,
+      "image": "shop5",
+      "category": "Dessert"
+    },
+    {
+      "id": "product22",
+      "name": "Lemon Bars",
+      "description": "Tangy lemon bars with a powdered sugar topping.",
+      "price": 14,
+      "image": "shop6",
+      "category": "Bar"
+    },
+    {
+      "id": "product23",
+      "name": "Chocolate Eclairs",
+      "description": "Cream-filled eclairs with a chocolate glaze.",
+      "price": 24,
+      "image": "shop7",
+      "category": "Pastry"
+    }
+  ]
+}

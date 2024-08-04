@@ -1,8 +1,8 @@
 import React from 'react';
 import { assets } from '../../assets/assets'; // Ensure this path is correct
-import './CallToAction.css';
+import './OrderDeliver.css';
 
-export default function CallToAction() {
+export default function CallToAction2() {
   return (
     <section className="sb-call-to-action">
       <div className="sb-bg-3"></div>
@@ -11,7 +11,7 @@ export default function CallToAction() {
           <div className="col-lg-6 ">
             <div className="sb-cta-text text-color">
               <h1 className="sb-mb-15 text-color">
-                <sup className='sup'>-</sup><span className="sb-title-lg ">50</span><sup className='sup'>%</sup> Discount <br /> for all* burgers!
+               <span className="sb-title-lg ">Free delivery service.</span>
               </h1>
               <p className="sb-text sb-mb-30 text-color">
                 *Consectetur numquam poro nemo veniam<br />eligendi rem adipisci quo modi.
@@ -36,7 +36,7 @@ export default function CallToAction() {
           </div>
           <div className="col-lg-6">
             <div className="sb-illustration-6">
-              <img src={assets.burger3} alt="burger" className="sb-burger" />
+              <img src={assets.delivery} alt="burger" className="sb-burger" />
               <div className="sb-cirkle-1"></div>
               <div className="sb-cirkle-2"></div>
               <div className="sb-cirkle-3"></div>
