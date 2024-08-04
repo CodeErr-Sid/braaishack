@@ -40,12 +40,13 @@ const App = () => {
           innerStyle={{
             backgroundColor: 'var(--cursor-color)',
             mixBlendMode:'difference',
+            zIndex:9999
           }}
           outerStyle={{
             border: '3px solid var(--cursor-color)',
             mixBlendMode:'difference',
-            background:'transparent'
-
+            background:'transparent',
+            zIndex:9999
           }}
         />
         <Navbar setShowLogin={setShowLogin} />
