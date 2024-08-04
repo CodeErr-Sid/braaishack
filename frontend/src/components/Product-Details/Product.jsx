@@ -9,14 +9,17 @@ const ProductDetails = ({ productId }) => {
 
     const increment = () => {
         setQuantity(prevQuantity => prevQuantity + 1); // Use functional update to ensure correct value
+        console.log(quantity);
     };
 
     const decrement = () => {
-        setQuantity(prevQuantity => Math.max(prevQuantity - 1, 1)); // Ensure quantity doesn't go below 1
+        setQuantity(prevQuantity => Math.max(prevQuantity - 1)); // Ensure quantity doesn't go below 1
+        console.log(quantity);
     };
 
     // State to track which items have been added to the cart
     const [addedItems, setAddedItems] = useState({});
+
 
     // Function to handle the add to cart click
     const handleAddToCart = (id) => {
@@ -91,11 +94,11 @@ const ProductDetails = ({ productId }) => {
                             </div>
                             <div className="sb-buttons-frame">
                                 <div className="multi-select">
-                                    <div className="minus" onClick={decrement}>
+                                    <div className="minus" onClick={decrement} style={{ cursor: 'pointer' }}>
                                         -
                                     </div>
                                     <h1>{quantity}</h1>
-                                    <div className="add" onClick={increment}>
+                                    <div className="add" onClick={increment} style={{ cursor: 'pointer' }}>
                                         +
                                     </div>
                                 </div>

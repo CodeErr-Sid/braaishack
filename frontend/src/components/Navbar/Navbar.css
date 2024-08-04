@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 2vw;
+  gap: 1vw;
   transition: transform 0.3s ease-in-out;
   /* Default state: menu is closed */
 }
@@ -58,6 +58,7 @@
   gap: 2rem;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   font-size: 1.3rem;
 }
 
@@ -118,15 +119,13 @@
     z-index: 9999;
   }
 
-  .navbar-menu.open,
-  .navbar-end.open {
-    display: block;
-  }
+  .navbar-menu.open {
+    transform: translateX(0);
+}
 
-  .navbar-menu.closed,
-  .navbar-end.closed {
-    display: none;
-  }
+.navbar-menu.close {
+    transform: translateX(100%);
+}
 
   .navbar .menubtn {
     display: flex;
@@ -145,11 +144,6 @@
     height: 0.5vw;
   }
 
-  .navbar .logo {
-    width: 100px;
-    height: 100px;
-    margin: 2rem 0;
-  }
 
   .navbar .navbar-menu a {
     font-size: 3vw;
@@ -218,11 +212,16 @@
   align-items: center;
 }
 
+.three-dot-container{
+  transform: rotate(90deg);
+  color: yellow;
+}
+
 .icon-container {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: #fdcf09; /* Yellow background */
+  /* background-color: #fdcf09; Yellow background */
   display: flex;
   align-items: center;
   justify-content: center;

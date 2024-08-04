@@ -42,25 +42,28 @@ const App = () => {
       <Preloader /> {/* Consider managing visibility of Preloader */}
       <div className='app'>
         {/* <CursorFollower /> */}
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={35}
-          innerScale={1}
-          outerScale={2}
-          outerAlpha={0}
-          hasBlendMode={true}
-          innerStyle={{
-            backgroundColor: 'var(--cursor-color)',
-            zIndex: 9999,
-            mixBlendMode: 'difference'
-          }}
-          outerStyle={{
-            zIndex: 9999,
-            mixBlendMode: 'difference',
-            background: 'transparent',
-            border: '3px solid var(--cursor-color)'
-          }}
-        />
+        <div className="custom-animated-cursor">
+          <AnimatedCursor
+            innerSize={8}
+            outerSize={35}
+            innerScale={1}
+            outerScale={2}
+            outerAlpha={0}
+            hasBlendMode={true}
+            innerStyle={{
+              backgroundColor: 'var(--cursor-color)',
+              zIndex: 9999,
+              mixBlendMode: 'difference'
+            }}
+            outerStyle={{
+              zIndex: 9999,
+              mixBlendMode: 'difference',
+              background: 'transparent',
+              border: '3px solid var(--cursor-color)'
+            }}
+          />
+        </div>
+
         {/* <MiniCart /> */}
         <Navbar setShowLogin={setShowLogin} setShowMiniCart={setShowMiniCart} />
         {showMiniCart && <MiniCart />}

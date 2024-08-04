@@ -4,13 +4,12 @@ import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 import MiniCart from "../MiniCart/MiniCart";
 
 const Navbar = ({ setShowLogin, setShowMiniCart }) => {
   const [menu, setMenu] = useState("home");
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -23,6 +22,8 @@ const Navbar = ({ setShowLogin, setShowMiniCart }) => {
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
+
+  console.log(isMenuOpen)
 
   const toggleMiniCart = () => {
     setShowMiniCart((prevState) => !prevState); // Toggle MiniCart visibility
@@ -48,6 +49,16 @@ const Navbar = ({ setShowLogin, setShowMiniCart }) => {
           HOME
         </Link>
         <Link
+          to="/about"
+          onClick={() => {
+            setMenu("PHOTOS");
+            toggleMenu();
+          }}
+          className={`${menu === "PHOTOS" ? "active" : ""}`}
+        >
+          ABOUT
+        </Link>
+        <Link
           to="/menu2"
           onClick={() => {
             setMenu("MENUS");
@@ -58,25 +69,26 @@ const Navbar = ({ setShowLogin, setShowMiniCart }) => {
           MENUS
         </Link>
         <Link
-          to="/about"
-          onClick={() => {
-            setMenu("PHOTOS");
-            toggleMenu();
-          }}
-          className={`${menu === "PHOTOS" ? "active" : ""}`}
-        >
-          PHOTOS
-        </Link>
-        <Link
-          to="/GiftSection"
+          to="/shop"
           onClick={() => {
             setMenu("REVIEWS");
             toggleMenu();
           }}
           className={`${menu === "REVIEWS" ? "active" : ""}`}
         >
-          GiftSection
+          FROZEN DELIGHT
         </Link>
+        <Link
+          to="/gift-section"
+          onClick={() => {
+            setMenu("REVIEWS");
+            toggleMenu();
+          }}
+          className={`${menu === "REVIEWS" ? "active" : ""}`}
+        >
+          GIFT
+        </Link>
+        {/*
         <Link
           to="/PlaceOrder"
           onClick={() => {
@@ -87,7 +99,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart }) => {
         >
           EVENTS
         </Link>
-        <a
+         <a
           href="#footer"
           onClick={() => {
             setMenu("PRESS");
@@ -106,23 +118,30 @@ const Navbar = ({ setShowLogin, setShowMiniCart }) => {
           className={`${menu === "MAP&CONTACT" ? "active" : ""}`}
         >
           MAP&CONTACT
-        </a>
+        </a> */}
+        <a href="https://sunnysidecafe.vercel.app/">BREAKFAST</a>
+        <a href="#">PUB</a>
       </div>
 
-      <div className={`navbar-end fill ${isMenuOpen ? "open" : "closed"}`}>
+
+
+      <div className={`navbar-end ${isMenuOpen ? "open" : "closed"}`}>
         <div className="icon-container" onClick={toggleMiniCart}>
           <img src={assets.cart} alt="cart icon" />
         </div>
-        <FontAwesomeIcon icon={faUser} style={{ color: "#FFD43B" }} />
+        <div className="three-dot-container">
+          ...
+        </div>
+        <div className="menubtn" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
-       {/* Conditionally render MiniCart */}
+      {/* Conditionally render MiniCart */}
 
-      <div className="menubtn" onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+
     </div>
   );
 };
