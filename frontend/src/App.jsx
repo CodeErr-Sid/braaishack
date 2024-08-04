@@ -10,7 +10,6 @@ import MyOrders from './pages/MyOrders/MyOrders';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify';
-import CursorFollower from './components/cursor/Cursor';
 import Menu from './pages/Menu/Menu';
 import Events from './pages/Events/Events';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -19,6 +18,7 @@ import GiftSection from './pages/GiftSection/GiftSection';
 import Preloader from './components/Preloader/Preloader';
 import './index.css';
 import Shop from './pages/Shop/Shop';
+import AnimatedCursor from "react-animated-cursor"
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -29,7 +29,26 @@ const App = () => {
       {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
       <Preloader />
       <div className='app'>
-        <CursorFollower />
+        {/* <CursorFollower /> */}
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          outerAlpha={0}
+          hasBlendMode={true}
+          innerStyle={{
+            backgroundColor: 'var(--cursor-color)',
+            mixBlendMode:'difference',
+            zIndex:9999
+          }}
+          outerStyle={{
+            border: '3px solid var(--cursor-color)',
+            mixBlendMode:'difference',
+            background:'transparent',
+            zIndex:9999
+          }}
+        />
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
           <Route path='/' element={<Home />} />

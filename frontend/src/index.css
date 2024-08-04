@@ -36,9 +36,12 @@
   height: 0px;
 }
 
+:root{
+  --cursor-color:rgb(253, 253, 252);
+}
+
 body {
   min-height: 100vh;
-  cursor: none;
   scroll-behavior: smooth;
 }
 

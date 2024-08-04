@@ -32,6 +32,12 @@ width: 100vw;
   color: rgb(0, 0, 0);
 }
 
+.Menubtn button.active,
+.Menubtn-fullscreen button.active{
+  background-color: yellow;
+  color: black;
+}
+
 .btnmain {
   display: flex;
   align-items: center;

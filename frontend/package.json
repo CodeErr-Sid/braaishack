@@ -21,6 +21,7 @@
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
     "react-toastify": "^10.0.4",
