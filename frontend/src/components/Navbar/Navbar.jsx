@@ -5,31 +5,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
-
 import gsap from "gsap";
+import MiniCart from "../MiniCart/MiniCart";
 
 const Navbar = ({ setShowLogin }) => {
-  // gsap animation
-  // useEffect(() => {
-  //   gsap.from(".navbar .logo", {
-  //     x: -120,
-  //     duration: 1,
-  //   });
-
-  //   gsap.from(".navbar-menu a", {
-  //     y: -120,
-  //     duration: 1,
-  //   });
-
-  //   gsap.from(".navbar-menu button", {
-  //     x: 120,
-  //     duration: 1,
-  //   });
-  // }, []);
-
   const [menu, setMenu] = useState("home");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [showMiniCart, setShowMiniCart] = useState(false); // State for MiniCart visibility
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -41,6 +23,10 @@ const Navbar = ({ setShowLogin }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleMiniCart = () => {
+    setShowMiniCart((prevState) => !prevState); // Toggle MiniCart visibility
   };
 
   return (
@@ -122,20 +108,17 @@ const Navbar = ({ setShowLogin }) => {
         >
           MAP&CONTACT
         </a>
-        {/* {<button
-          onClick={() => {
-            alert("Pro will make");
-            toggleMenu();
-          }}
-        >
-          BOOK A TABLE
-        </button>} */}
       </div>
 
-      <div className={`navbar-end ${isMenuOpen ? "open" : "closed"}`}>
-        <FontAwesomeIcon icon={faCartShopping} style={{ color: "#FFD43B", }} />
-        <FontAwesomeIcon icon={faUser} style={{ color: "#FFD43B", }} />
+      <div className={`navbar-end fill ${isMenuOpen ? "open" : "closed"}`}>
+        <div className="icon-container" onClick={toggleMiniCart}>
+          <img src={assets.cart} alt="cart icon" />
+        </div>
+        <FontAwesomeIcon icon={faUser} style={{ color: "#FFD43B" }} />
       </div>
+
+      {showMiniCart && <MiniCart />} {/* Conditionally render MiniCart */}
+
       <div className="menubtn" onClick={toggleMenu}>
         <span></span>
         <span></span>
