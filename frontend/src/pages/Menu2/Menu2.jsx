@@ -8,7 +8,6 @@ import ShopCards from '../../components/Shop-cards/ShopCards';
 const Menu2 = () => {
 
     const [selectedMenu, setSelectedMenu] = useState("");
-    console.log(menuItems)
 
     const images = [
         { src: assets.burger, className: 'burger' },
@@ -16,6 +15,15 @@ const Menu2 = () => {
         { src: assets.tomato, className: 'tomato' },
         { src: assets.chilli, className: 'chilli' }
     ];
+
+    const Menubtndata = [
+        "All",
+        "Starters",
+        "Braai Menu",
+        "Kids Braai Menu",
+        "Braai Sides",
+        "Desserts",
+      ];
 
     
 
@@ -27,8 +35,8 @@ const Menu2 = () => {
                 btn="Book a Table"
                 imgsrc={images}
             />
-            <MenuNav setSelectedMenu={setSelectedMenu} />
-            <ShopCards shopCardData={menuItems} />
+            <MenuNav setSelectedMenu={setSelectedMenu} Menubtndata={Menubtndata} />
+            <ShopCards shopCardData={menuItems} selectedMenu={selectedMenu} />
         </>)
 }
 

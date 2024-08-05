@@ -1,36 +1,43 @@
-// src/components/ShopCards.js
 import React, { useState } from 'react';
 import { assets } from '../../assets/assets';
 import './ShopCards.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
-import { useCart } from '../../Context/CartContexts'; // Import the CartContext
+import { useCart } from '../../Context/CartContexts';
 
-export default function ShopCards({shopCardData}) {
+export default function ShopCards({ shopCardData, selectedMenu }) {
     const [addedItems, setAddedItems] = useState({});
-    const { addItemToCart } = useCart(); // Get the addItemToCart function from context
+    const { addItemToCart } = useCart();
 
     const handleAddToCart = (item) => {
-        addItemToCart(item); // Add the item to cart
+        addItemToCart(item);
         setAddedItems(prev => ({
             ...prev,
-            [item.id]: !prev[item.id] // Toggle the 'added' state for this item
+            [item.id]: !prev[item.id]
         }));
     };
 
     return (
-        <section className="sb-menu-section sb-p-90-60">
+        <section className="sb-menu-sectiAon sb-p-90-60">
             <div className="sb-bg-1">
                 <div></div>
             </div>
             <div className="container">
                 <div className="row">
-                    {shopCardData.map(item => (
-                        <div key={item.id} className="col-lg-4">
+                    {shopCardData.map((item) => (
+                        <div
+                            id={`item-${item.id}`} // Ensure the id is unique
+                            key={item.id} // Prefer unique id over index
+                            style={{
+                                display:
+                                    selectedMenu === item.category || selectedMenu === "" || selectedMenu === "All" ? "flex" : "none",
+                            }}
+                            className="col-lg-4"
+                        >
                             <div className="sb-menu-item sb-mb-30">
                                 <a href="product.html" className="sb-cover-frame">
-                                    <img src={assets[item.image]} alt={item.name} className='cards-img'/>
+                                    <img src={assets[item.image]} alt={item.name} className='cards-img' />
                                 </a>
                                 <div className="sb-card-tp">
                                     <h4 className="sb-card-title">
@@ -50,7 +57,7 @@ export default function ShopCards({shopCardData}) {
                                         </span>
                                         <span>Details</span>
                                     </Link>
-                                    <a 
+                                    <a
                                         href="#."
                                         className="sb-btn sb-atc"
                                         onClick={() => handleAddToCart(item)}
