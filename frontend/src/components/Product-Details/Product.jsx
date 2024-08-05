@@ -1,20 +1,20 @@
 import React, { useState } from 'react'; // Import useState from React
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import './Product.css'; 
+import './Product.css';
 import { assets } from '../../assets/assets';
 
 const ProductDetails = ({ productId }) => {
     const [quantity, setQuantity] = useState(1);
 
-    const increment = () => {
+    const increment = (e) => {
         setQuantity(prevQuantity => prevQuantity + 1); // Use functional update to ensure correct value
-        console.log(quantity);
+        console.log(quantity + "Increeement clicked");
     };
 
-    const decrement = () => {
-        setQuantity(prevQuantity => Math.max(prevQuantity - 1)); // Ensure quantity doesn't go below 1
-        console.log(quantity);
+    const decrement = (e) => {
+        setQuantity(prevQuantity => Math.max(prevQuantity - 1),1); // Ensure quantity doesn't go below 1
+        console.log(quantity + "Decreement clicked");
     };
 
     // State to track which items have been added to the cart
@@ -52,14 +52,14 @@ const ProductDetails = ({ productId }) => {
                                 <h3>Saumon Gravlax</h3>
                                 <div className="sb-price"><sub>$</sub> 19</div>
                             </div>
-                            <ul className="sb-stars sb-mb-25">
-                                <li><i className="fas fa-star"></i></li>
-                                <li><i className="fas fa-star"></i></li>
-                                <li><i className="fas fa-star"></i></li>
-                                <li><i className="fas fa-star"></i></li>
-                                <li><i className="fas fa-star"></i></li>
-                                <li><span>(4 ratings)</span></li>
-                            </ul>
+                            <div className="sb-stars">
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <span>(4 ratings)</span>
+                            </div>
                             <p className="sb-text sb-mb-30">
                                 <span>tomatoes</span>, <span>nori</span>, <span>feta cheese</span>, <span>mushrooms</span>, <span>rice noodles</span>, <span>corn</span>, <span>shrimp</span>.
                             </p>
@@ -103,7 +103,7 @@ const ProductDetails = ({ productId }) => {
                                     </div>
                                 </div>
                                 {/* button */}
-                                <a 
+                                <a
                                     href="#."
                                     className="sb-btn sb-atc"
                                     onClick={() => handleAddToCart(productId)}

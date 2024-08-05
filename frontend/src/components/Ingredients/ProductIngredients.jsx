@@ -79,13 +79,13 @@ const ProductIngredients = () => {
                                     <div className="sb-review-card sb-mb-60">
                                         <div className="sb-review-header sb-mb-15">
                                             <h4 className="sb-mb-10">Very tasty</h4>
-                                            <ul className="sb-stars">
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                            </ul>
+                                            <div className="sb-stars">
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                            </div>
                                         </div>
                                         <p className="sb-text sb-mb-15">
                                             Inventore possimus laudantium provident, rem eligendi velit. Aut molestias, ipsa itaque laborum, natus tempora, quo iure expedita.
@@ -102,13 +102,13 @@ const ProductIngredients = () => {
                                     <div className="sb-review-card sb-mb-60">
                                         <div className="sb-review-header sb-mb-15">
                                             <h4 className="sb-mb-10">Good Quality</h4>
-                                            <ul className="sb-stars">
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                                <li><i className="fas fa-star"></i></li>
-                                            </ul>
+                                            <div className="sb-stars">
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
+                                            </div>
                                         </div>
                                         <p className="sb-text sb-mb-15">
                                             Inventore possimus laudantium provident, rem eligendi velit. Aut molestias, ipsa itaque laborum, natus tempora, quo iure expedita.
