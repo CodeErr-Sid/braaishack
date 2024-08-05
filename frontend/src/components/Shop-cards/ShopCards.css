@@ -16,11 +16,7 @@
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
+
 
 @media (min-width: 768px) {
   .container {
@@ -111,6 +107,7 @@
     height: 50vh;
     top: 450px;
   }
+
 
   .sb-bg-3 {
     width: 100%;
@@ -524,4 +521,17 @@ pagination
 }
 .sb-pagination li.sb-active a {
   background-color: #fdcf09;
+}
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (0 < width <= 576px) {
+  .row{
+    flex-direction: column;
+  }
 }

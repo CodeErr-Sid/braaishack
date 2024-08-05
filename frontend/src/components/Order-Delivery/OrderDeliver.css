@@ -106,7 +106,7 @@ call to action
   width: 63%;
   height: 100%;
   position: absolute;
-  border-left: solid 30px #060606;
+  /* border-left: solid 30px #060606; */
   top: 0;
   left: 0;
 }
