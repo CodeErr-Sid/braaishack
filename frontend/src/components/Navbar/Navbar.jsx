@@ -120,7 +120,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart }) => {
           MAP&CONTACT
         </a> */}
         <a href="https://sunnysidecafe.vercel.app/">BREAKFAST</a>
-        <a href="#">PUB</a>
+        <a href="https://digispirits28.wixstudio.io/my-site-4">PUB</a>
       </div>
 
 

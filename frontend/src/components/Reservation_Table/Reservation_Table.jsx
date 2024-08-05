@@ -11,6 +11,8 @@ const Reservation_Table = () => {
     const [email, setemail] = useState("");
     const [number, setnumber] = useState("");
     const [database, setdatabase] = useState([]);
+    const [guests, setGuests] = useState(0);
+    const [datetime, setDatetime] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,9 +21,10 @@ const Reservation_Table = () => {
             name,
             email,
             number,
+            guests,
             id: database.length + 1,
-            date: currentdate.toLocaleDateString(),
-            time: currentdate.toLocaleTimeString(),
+            reservedDate: datetime.toLocaleDateString(),
+            date:currentdate.toLocaleDateString(),
         };
         setdatabase([...database, dataobj]);
         localStorage.setItem('reservationData', JSON.stringify([...database, dataobj]));
@@ -216,6 +219,8 @@ const Reservation_Table = () => {
                 <input required type="text" placeholder="Name" onChange={(e) => setname(e.target.value)} />
                 <input required type="email" placeholder="Email" onChange={(e) => setemail(e.target.value)} />
                 <input required type="number" placeholder="Phone" onChange={(e) => setnumber(e.target.value)} />
+                <input required type="number" placeholder='Guests' onChange={(e) => setGuests(e.target.value)}  />
+                <input required type="datetime-local" placeholder='date-time' onChange={(e)=>setDatetime(e.target.value)}/>
                 <button type='submit'>Reserve</button>
             </form>
             <div className='onion'>
