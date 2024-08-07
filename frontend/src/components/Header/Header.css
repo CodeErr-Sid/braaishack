@@ -179,7 +179,7 @@
     opacity: 1;
 }
 
-.header-img img {
+.header-img .header-main_img {
     width: 100%;
     height: auto;
     border-radius: 50%;
