@@ -108,7 +108,7 @@
     }
 }
 
-/* .overlay-img img {
+.overlay-img img {
     width: calc(100% / 7);
     height: 500px;
     object-fit: cover;
@@ -118,7 +118,7 @@
 
 .overlay-img img + img {
     margin-left: 2px;
-} */
+}
 
 .btn{
     display: flex;align-items: center;
