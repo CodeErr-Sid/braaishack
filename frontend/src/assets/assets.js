@@ -109,7 +109,7 @@ import leaf from "./leaf.png";
 import header from "./headerimg.png";
 import smokey from "./smokey.png";
 import art from "./home-art.png";
-import promovideo from "./bbq_video.mp4"
+import promovideo from "./bbq_video.mp4";
 
 import update1 from "./pub1.jpeg";
 import update2 from "./pub2.jpeg";
@@ -145,12 +145,11 @@ import b3 from "./b3.png";
 import b4 from "./b4.png";
 import b5 from "./b5.png";
 import coupen from "./coupon.png";
-import voucher from "./voucher.png"
+import voucher from "./voucher.png";
 import face1 from "./faces/1.jpg";
 import face2 from "./faces/2.jpg";
 import delivery from "./delivery.png";
-
-
+import Zoom from "./zoom.svg";
 
 export const assets = {
   voucher,
@@ -257,6 +256,7 @@ export const assets = {
   face1,
   face2,
   delivery,
+  Zoom,
   //   background_hero,
 };
 

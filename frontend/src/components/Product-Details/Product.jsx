@@ -1,33 +1,47 @@
-import React, { useState } from 'react'; // Import useState from React
+import React, { useEffect } from 'react'; // Import useEffect from React
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import './Product.css';
+import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
+import '@fancyapps/fancybox/dist/fancybox.css';
+import { Fancybox } from "@fancyapps/fancybox";
+import './Product.css'; 
 import { assets } from '../../assets/assets';
 
 const ProductDetails = ({ productId }) => {
     const [quantity, setQuantity] = useState(1);
 
-    const increment = (e) => {
-        setQuantity(prevQuantity => prevQuantity + 1); // Use functional update to ensure correct value
-        console.log(quantity + "Increeement clicked");
+    const increment = () => {
+        setQuantity(prevQuantity => prevQuantity + 1);
     };
 
-    const decrement = (e) => {
-        setQuantity(prevQuantity => Math.max(prevQuantity - 1),1); // Ensure quantity doesn't go below 1
-        console.log(quantity + "Decreement clicked");
+    const decrement = () => {
+        setQuantity(prevQuantity => Math.max(prevQuantity - 1, 1));
     };
 
-    // State to track which items have been added to the cart
     const [addedItems, setAddedItems] = useState({});
 
-
-    // Function to handle the add to cart click
     const handleAddToCart = (id) => {
         setAddedItems(prev => ({
             ...prev,
-            [id]: !prev[id] // Toggle the 'added' state for this item
+            [id]: !prev[id]
         }));
     };
+
+    useEffect(() => {
+        // Initialize Fancybox
+        Fancybox.bind('[data-fancybox="menu"]', {
+            animationEffect: "zoom-in-out",
+            animationDuration: 600,
+            transitionDuration: 1200,
+        });
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            animationEffect: "zoom-in-out",
+            animationDuration: 600,
+            transitionDuration: 1200,
+        });
+
+        // Disable URL hash
+        Fancybox.defaults.hash = false; // Set Fancybox default options
+    }, []);
 
     return (
         <section className="sb-p-90-0">
@@ -38,9 +52,14 @@ const ProductDetails = ({ productId }) => {
                             <img src={assets.shop4} alt="photo" />
                             <div className="sb-badge sb-vegan"><i className="fas fa-leaf"></i> Vegan</div>
                             {/* button */}
-                            <a data-fancybox="menu" data-no-swup href="img/menu/4.jpg" className="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
+                            <a
+                                data-fancybox="menu"
+                                data-no-swup
+                                href={assets.shop4}
+                                className="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom"
+                            >
                                 <span className="sb-icon">
-                                    <img src="img/ui/icons/zoom.svg" alt="icon" />
+                                    <img src={assets.Zoom} alt="icon" />
                                 </span>
                             </a>
                             {/* button end */}
@@ -52,13 +71,16 @@ const ProductDetails = ({ productId }) => {
                                 <h3>Saumon Gravlax</h3>
                                 <div className="sb-price"><sub>$</sub> 19</div>
                             </div>
-                            <div className="sb-stars">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <span>(4 ratings)</span>
+                            <div className="rating">
+                                {[...Array(5)].map((_, index) => (
+                                    <FontAwesomeIcon
+                                        key={index}
+                                        icon={faStar}
+                                        size="sm"
+                                        style={{ color: "#FFD43B" }}
+                                    />
+                                ))}
+                                <span> (124)</span>
                             </div>
                             <p className="sb-text sb-mb-30">
                                 <span>tomatoes</span>, <span>nori</span>, <span>feta cheese</span>, <span>mushrooms</span>, <span>rice noodles</span>, <span>corn</span>, <span>shrimp</span>.
@@ -94,16 +116,16 @@ const ProductDetails = ({ productId }) => {
                             </div>
                             <div className="sb-buttons-frame">
                                 <div className="multi-select">
-                                    <div className="minus" onClick={decrement} style={{ cursor: 'pointer' }}>
+                                    <div className="minus" onClick={decrement}>
                                         -
                                     </div>
                                     <h1>{quantity}</h1>
-                                    <div className="add" onClick={increment} style={{ cursor: 'pointer' }}>
+                                    <div className="add" onClick={increment}>
                                         +
                                     </div>
                                 </div>
                                 {/* button */}
-                                <a
+                                <a 
                                     href="#."
                                     className="sb-btn sb-atc"
                                     onClick={() => handleAddToCart(productId)}
