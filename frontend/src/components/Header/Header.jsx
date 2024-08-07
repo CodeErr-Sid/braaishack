@@ -5,7 +5,6 @@ import gsap from 'gsap'
 
 
 const Header = ({ title, content, btn, imgsrc, overlay }) => {
-    const overlayImages = overlay.slice(0, 7);
 
     // useEffect(() => {
     //     gsap.from(".header .header-contents", {
@@ -40,7 +39,7 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
             <div className="header-img">
                 <div className="radiant-background2"></div>
                 <div className="overlay-img smoke-image">
-                    {overlayImages.map((src, index) => (
+                    {overlay.map((src, index) => (
                         <img key={index} src={src} alt={`overlay-img-${index} overlay-image`} />
                     ))}
                 </div>

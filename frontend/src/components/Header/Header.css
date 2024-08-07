@@ -157,7 +157,7 @@
     }
     to {
       transform: rotate(360deg);
-    } */ 
+    } */
 
 .rotate-image {
     animation: rotate 10s linear infinite;
@@ -191,7 +191,7 @@
 
 /* Media Query for screens 800px or smaller */
 @media (max-width: 800px) {
-    
+
 
     .header {
         flex-direction: column-reverse;
