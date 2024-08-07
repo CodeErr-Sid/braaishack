@@ -26,7 +26,6 @@ import ShopCart from './pages/ShopCart/ShopCart';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import LoginPopup from './components/LoginPopup/LoginPopup';
-// import CursorFollower from './components/cursor/Cursor';
 import Preloader from './components/Preloader/Preloader';
 import MiniCart from './components/MiniCart/MiniCart';
 import { CartProvider } from './Context/CartContexts';
@@ -43,7 +42,6 @@ const App = () => {
       {showLogin &&  <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
       <Preloader /> {/* Consider managing visibility of Preloader */}
       <div className='app'>
-        {/* <CursorFollower /> */}
         <div className="custom-animated-cursor">
           <AnimatedCursor
             innerSize={8}

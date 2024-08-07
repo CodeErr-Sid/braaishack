@@ -3,21 +3,43 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
+import { toast } from 'react-toastify';
+import axios from "axios";
+
 
 const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) => {
+  const {url, loadCartData } = useContext(StoreContext);
+
   const [menu, setMenu] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    setToken("");
-    setShowLogout(false);
-    setIsLoggedin(false);
-    // navigate("/"); // Uncomment if you want to redirect
-  };
+
+  const logout = async () => {
+
+    try {
+        // Send a request to the server to clear the token
+        await axios.post(`${url}/api/user/logout`, {}, {
+            withCredentials: true // Ensure cookies are sent with the request
+        });
+
+        // Clear token from local storage and reset application state
+        localStorage.removeItem("token");
+        setToken(""); // Clear token state
+        setIsLoggedin(false); // Update login state
+        setShowLogin(false); // Hide login modal if it is open
+        setShowLogout(false); // Hide logout button if it is open
+        loadCartData({ token: "" }); // Reset cart data
+
+        toast.success("Logged out successfully.");
+    } catch (error) {
+        console.log(error)
+        toast.error("Something went wrong during logout. Please try again.");
+    }
+};
+
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
