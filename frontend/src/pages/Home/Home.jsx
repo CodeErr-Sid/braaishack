@@ -33,7 +33,7 @@ const Home = () => {
       <Details/>
       {/* <Story/> */}
       <ResturentOption/>
-      <Image/> 
+      <Image/>
       <FeaturedProducts/>
       <Events_F title={"Events"}/>
       <Reservation_Table/>
