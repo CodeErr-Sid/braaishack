@@ -31,7 +31,6 @@ import Preloader from './components/Preloader/Preloader';
 import MiniCart from './components/MiniCart/MiniCart';
 import { CartProvider } from './Context/CartContexts';
 // index.js or App.js
-import '@fancyapps/fancybox/dist/fancybox.css';
 
 
 const App = () => {
@@ -85,6 +84,7 @@ const App = () => {
           <Route path='/product' element={<Product />} />
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/cart' element={<ShopCart />} />
+          <Route path="/product/:productId" element={<Product />} />
           {/* Add other routes if needed */}
         </Routes>
       </div>
