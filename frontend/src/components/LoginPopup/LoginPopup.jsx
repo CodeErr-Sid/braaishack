@@ -5,7 +5,7 @@ import { StoreContext } from '../../Context/StoreContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const LoginPopup = ({ setShowLogin }) => {
+const LoginPopup = ({ setShowLogin, setIsLoggedin }) => {
     const { setToken, url, loadCartData } = useContext(StoreContext);
     const [currState, setCurrState] = useState("Sign Up");
     const [data, setData] = useState({ name: "", email: "", password: "" });
@@ -27,12 +27,15 @@ const LoginPopup = ({ setShowLogin }) => {
             newUrl += "/api/user/register";
         }
 
+
         try {
             const response = await axios.post(newUrl, data);
             if (response.data.success) {
                 setToken(response.data.token);
                 localStorage.setItem("token", response.data.token);
                 loadCartData({ token: response.data.token });
+                toast.success(response.data.message);
+                setIsLoggedin(true)
                 setShowLogin(false);
             } else {
                 toast.error(response.data.message);

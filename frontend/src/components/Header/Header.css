@@ -122,6 +122,8 @@
 
 .btn{
     display: flex;align-items: center;
+    padding: 0;
+    gap: 22px;
 }
 
 .btn button {
@@ -132,7 +134,6 @@
     background: linear-gradient(45deg, #fdcf08, #f8a104);
     color: #000;
     padding: 1vw 2vw;
-    margin: 3vw 1vw;
     display: inline-block;
     white-space: nowrap;
     text-align: center;

@@ -16,6 +16,51 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.br-logout-btn{
+  position: absolute;
+  z-index: 10000;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
+  /* all: unset; */
+  padding: 10px;
+  border-radius: .6rem;
+  border: none;
+  top: 30px;
+  right: 0;
+}
+
+@keyframes btn-scaleUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes btn-scaleDown {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.btn-scale-up {
+  animation: btn-scaleUp 0.3s ease-out;
+}
+
+.btn-scale-down {
+  animation: btn-scaleDown 0.3s ease-out;
+}
+
+
 .navbar .logo {
   width: 83px;
   height: 83px;
@@ -213,8 +258,12 @@
 }
 
 .three-dot-container{
-  transform: rotate(90deg);
   color: yellow;
+  position: relative;
+}
+
+.three-dot-container .three-dot{
+  transform: rotate(90deg);
 }
 
 .icon-container {

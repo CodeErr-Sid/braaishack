@@ -10,8 +10,8 @@ export default function Location() {
       duration: 2,
       scrollTrigger: {
         trigger: ".section-section__container",
-        start: "top 50%",
-        end: "top 30%",
+        start: "top 90%",
+        end: "top 50%",
         scrub: 1,
       },
     });
@@ -23,8 +23,8 @@ export default function Location() {
         scaleY: 1.4,
         scrollTrigger: {
           trigger: ".section-section__container",
-          start: "top 50%",
-          end: "top 30%",
+          start: "top 90%",
+          end: "top 50%",
           scrub: 5,
         },
       }
@@ -35,8 +35,8 @@ export default function Location() {
       opacity:0,
       scrollTrigger:{
         trigger:'.section-section__container',
-        start: "top 50%",
-          end: "top 30%",
+        start: "top 90%",
+          end: "top 50%",
           scrub: 5,
       }
     });

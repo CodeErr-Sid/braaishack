@@ -34,11 +34,13 @@ import { CartProvider } from './Context/CartContexts';
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showMiniCart, setShowMiniCart] = useState(false); // State for MiniCart visibility
+  const [isLoggedin, setIsLoggedin] = useState(false)
+  console.log(isLoggedin)
 
   return (
     <CartProvider>
       <ToastContainer />
-      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+      {showLogin &&  <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
       <Preloader /> {/* Consider managing visibility of Preloader */}
       <div className='app'>
         {/* <CursorFollower /> */}
@@ -65,7 +67,7 @@ const App = () => {
         </div>
 
         {/* <MiniCart /> */}
-        <Navbar setShowLogin={setShowLogin} setShowMiniCart={setShowMiniCart} />
+        <Navbar isLoggedin={isLoggedin} setShowLogin={setShowLogin} setIsLoggedin={setIsLoggedin} setShowMiniCart={setShowMiniCart} />
         {showMiniCart && <MiniCart />}
         <Routes>
           <Route path='/' element={<Home />} />

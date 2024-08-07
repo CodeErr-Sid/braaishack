@@ -218,7 +218,7 @@ const Reservation_Table = () => {
                 <h1>Reservation Table</h1>
                 <input required type="text" placeholder="Name" onChange={(e) => setname(e.target.value)} />
                 <input required type="email" placeholder="Email" onChange={(e) => setemail(e.target.value)} />
-                <input required type="number" placeholder="Phone" onChange={(e) => setnumber(e.target.value)} />
+                <input required type="text" placeholder="Phone" onChange={(e) => setnumber(e.target.value)} />
                 <input required type="number" placeholder='Guests' onChange={(e) => setGuests(e.target.value)}  />
                 <input required type="datetime-local" placeholder='date-time' onChange={(e)=>setDatetime(e.target.value)}/>
                 <button type='submit'>Reserve</button>
