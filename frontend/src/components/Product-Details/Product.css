@@ -468,7 +468,7 @@ stars
   color: #f2f3f5;
   filter: brightness(95%);
 }
-.sb-stars  span {
+.sb-stars span {
   font-size: 12px;
   color: #6f6f87;
   white-space: nowrap;
@@ -647,7 +647,7 @@ list
   -webkit-user-select: none; /* For Safari */
   -moz-user-select: none; /* For Firefox */
   -ms-user-select: none; /* For Internet Explorer/Edge */
-  cursor: not-allowed; 
+  cursor: not-allowed;
   /* transition: transform 0.3s ease, background-color 0.3s ease; Added background color transition */
 }
 

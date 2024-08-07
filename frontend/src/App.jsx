@@ -29,6 +29,9 @@ import LoginPopup from './components/LoginPopup/LoginPopup';
 import Preloader from './components/Preloader/Preloader';
 import MiniCart from './components/MiniCart/MiniCart';
 import { CartProvider } from './Context/CartContexts';
+// index.js or App.js
+import '@fancyapps/fancybox/dist/fancybox.css';
+
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
