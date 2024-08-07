@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Header from '../../components/About-header/Header'
 import ShopCards from '../../components/Shop-cards/ShopCards'
 import CallToAction from '../../components/CallToAction/CallToAction'
-import { menuItems } from '../../FrozenProductsData.json'; 
+import { frozenProducts } from '../../FrozenProductsData.json'; 
 import MenuNav from '../../components/MenuNav/MenuNav';
 
 
@@ -33,7 +33,7 @@ export default function Shop() {
     <>
     <Header header_title={'Frozen Items'} header_btn={'HOME/Shop/Frozen'} />
     <MenuNav setSelectedMenu={setSelectedProducts} Menubtndata={productBtnData} />
-    <ShopCards shopCardData={menuItems} selectedMenu={selectedProducts}/>
+    <ShopCards shopCardData={frozenProducts} selectedMenu={selectedProducts}/>
     <CallToAction />
     </>
   )

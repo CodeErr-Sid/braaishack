@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets';
 import './ShortMenu.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import {menuItems} from '../../FrozenProductsData.json';  // Adjust import based on your file structure
+import {frozenProducts} from '../../FrozenProductsData.json';  // Adjust import based on your file structure
 import { Link } from 'react-router-dom';
 
 export default function ShortMenu() {
@@ -19,7 +19,7 @@ export default function ShortMenu() {
   };
 
   // Get only the first 4 items from the menuItems array
-  const displayedItems = menuItems.slice(0, 4);
+  const displayedItems = frozenProducts.slice(0, 4);
 
   return (
     <section className="sb-menu-section sb-p-90-60">

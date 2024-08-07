@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
 import './Product.css';
 import { assets } from '../../assets/assets';
-import { menuItems } from '../../FrozenProductsData.json'; // Ensure this path is correct
+import { menuItems } from '../../MenuData.json'; // Ensure this path is correct
+import { frozenProducts } from '../../FrozenProductsData.json'
 
 const ProductDetails = () => {
     const { productId } = useParams();
@@ -23,7 +24,17 @@ const ProductDetails = () => {
             console.log("Fetching product with ID:", id);
             try {
                 // Find the product from menuItems by ID
-                const fetchedProduct = menuItems.find(item => item.id === id); // Use strict comparison for strings
+                // const fetchedProduct = menuItems.find(item => item.id === id); // Use strict comparison for 
+                
+                // changeble code  
+                let fetchedProduct = menuItems.find(item => item.id === id);
+
+                // If not found in menuItems, search in frozenProducts
+                if (!fetchedProduct) {
+                    fetchedProduct = frozenProducts.find(item => item.id === id);
+                }
+
+
                 console.log("Fetched Product:", fetchedProduct);
                 if (fetchedProduct) {
                     setProduct(fetchedProduct);
@@ -76,42 +87,42 @@ const ProductDetails = () => {
                                 <div className="sb-price"><sub>$</sub> {product.price}</div>
                             </div>
                             <div className="row">
-    <div className="col-lg-4">
-        <div className="sb-features-item sb-features-item-sm sb-mb-30">
-            <div className="sb-number">01</div>
-            <div className="sb-feature-text">
-                <h4 className="sb-mb-15 font-size">Add to the cart and place an order</h4>
-                <p className="sb-text sb-text-sm">Select your desired items and proceed to checkout.</p>
-            </div>
-        </div>
-    </div>
-    <div className="col-lg-4">
-        <div className="sb-features-item sb-features-item-sm sb-mb-30">
-            <div className="sb-number">02</div>
-            <div className="sb-feature-text">
-                <h4 className="sb-mb-15 font-size">Enter your phone number and address</h4>
-                <p className="sb-text sb-text-sm">Provide accurate contact details for delivery.</p>
-            </div>
-        </div>
-    </div>
-    <div className="col-lg-4">
-        <div className="sb-features-item sb-features-item-sm sb-mb-30">
-            <div className="sb-number">03</div>
-            <div className="sb-feature-text">
-                <h4 className="sb-mb-15 font-size">Enjoy your favorite food at home!</h4>
-                <p className="sb-text sb-text-sm">Relax and savor your meal delivered right to your door.</p>
-            </div>
-        </div>
-    </div>
-</div>
+                                <div className="col-lg-4">
+                                    <div className="sb-features-item sb-features-item-sm sb-mb-30">
+                                        <div className="sb-number">01</div>
+                                        <div className="sb-feature-text">
+                                            <h4 className="sb-mb-15 font-size">Add to the cart and place an order</h4>
+                                            <p className="sb-text sb-text-sm">Select your desired items and proceed to checkout.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4">
+                                    <div className="sb-features-item sb-features-item-sm sb-mb-30">
+                                        <div className="sb-number">02</div>
+                                        <div className="sb-feature-text">
+                                            <h4 className="sb-mb-15 font-size">Enter your phone number and address</h4>
+                                            <p className="sb-text sb-text-sm">Provide accurate contact details for delivery.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4">
+                                    <div className="sb-features-item sb-features-item-sm sb-mb-30">
+                                        <div className="sb-number">03</div>
+                                        <div className="sb-feature-text">
+                                            <h4 className="sb-mb-15 font-size">Enjoy your favorite food at home!</h4>
+                                            <p className="sb-text sb-text-sm">Relax and savor your meal delivered right to your door.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div className="rating">
                                 {[...Array(5)].map((_, index) => (
                                     <FontAwesomeIcon
-                                      key={index}
-                                      icon={faStar}
-                                      size="sm"
-                                      style={{ color: "#FFD43B" }}
+                                        key={index}
+                                        icon={faStar}
+                                        size="sm"
+                                        style={{ color: "#FFD43B" }}
                                     />
                                 ))}
                                 <span> (124)</span>
@@ -128,7 +139,7 @@ const ProductDetails = () => {
                                     <h1>{quantity}</h1>
                                     <div className="add" onClick={increment}>+</div>
                                 </div>
-                                <a 
+                                <a
                                     href="#."
                                     className="sb-btn sb-atc"
                                     onClick={() => handleAddToCart(productId)}
