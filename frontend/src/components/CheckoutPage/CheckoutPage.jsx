@@ -57,9 +57,9 @@ const CartItem = ({ item }) => (
           </div>
         </a>
       </div>
-      {/* <div className="col-lg-3 text-md-right">
-        <div className="sb-price-2"><span>Total: </span>${item.total.toFixed(2)}</div>
-      </div> */}
+      <div className="col-lg-3 text-md-right">
+        <div className="sb-price-2"><span>Total: </span>${item.quantity * item.price}</div>
+      </div>
     </div>
   </div>
 );
