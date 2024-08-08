@@ -14,7 +14,7 @@ const InputField = ({ type, label, required }) => (
 const CartItems = [
   {
     id: 1,
-    imgSrc: assets.shop1,
+    image: assets.shop1,
     title: 'Chevrefrit au miel',
     description: 'tomatoes, nori, feta cheese, mushrooms, rice noodles, corn, shrimp',
     quantity: 1,
@@ -23,7 +23,7 @@ const CartItems = [
   },
   {
     id: 2,
-    imgSrc: assets.shop2,
+    image: assets.shop2,
     title: 'Carpaccio de daurade',
     description: 'tomatoes, nori, feta cheese, mushrooms, rice noodles, corn, shrimp',
     quantity: 1,
@@ -32,7 +32,7 @@ const CartItems = [
   },
   {
     id: 3,
-    imgSrc: assets.shop3,
+    image: assets.shop3,
     title: 'Stracciatella',
     description: 'tomatoes, nori, feta cheese, mushrooms, rice noodles, corn, shrimp',
     quantity: 1,
@@ -48,7 +48,7 @@ const CartItem = ({ item }) => (
       <div className="col-lg-9">
         <a className="sb-product">
           <div className="sb-cover-frame">
-            <img src={item.imgSrc} alt={item.title} />
+            <img src={assets[item.image]} alt={item.title} />
           </div>
           <div className="sb-prod-description">
             <h4 className="sb-mb-10">{item.title}</h4>
@@ -57,9 +57,9 @@ const CartItem = ({ item }) => (
           </div>
         </a>
       </div>
-      <div className="col-lg-3 text-md-right">
+      {/* <div className="col-lg-3 text-md-right">
         <div className="sb-price-2"><span>Total: </span>${item.total.toFixed(2)}</div>
-      </div>
+      </div> */}
     </div>
   </div>
 );
@@ -70,21 +70,24 @@ const CheckoutPage = () => {
 
   const { cartItems } = useCart();
 
+  console.log(cartItems)
+
   const calculateTotal = () => {
     // Ensure cartItems is defined and is an array
     if (!Array.isArray(cartItems)) {
       return 0;
     }
-
+  
     // Calculate subtotal
     const subtotal = cartItems.reduce((acc, item) => {
-      // Safeguard against undefined item.total
-      const total = item.total ? parseFloat(item.total.slice(1)) : 0;
-      return acc + total * (item.quantity || 0);
+      // Safeguard against undefined item.price
+      const price = item.price ? parseFloat(item.price) : 0;
+      return acc + price * (item.quantity || 0);
     }, 0);
-
+  
     return subtotal + 5.00; // Adding a fixed shipping cost of $5.00
   };
+  
 
   return (
     <section className="sb-p-90-90">
@@ -179,10 +182,7 @@ const CheckoutPage = () => {
                     cartItems.map((item) => (
                       <CartItem 
                         key={item.id}
-                        imgSrc={assets[item.imgSrc]} 
-                        title={item.title} 
-                        quantity={item.quantity} 
-                        total={item.total} 
+                        item={item}
                       />
                     ))
                   )}
@@ -193,12 +193,12 @@ const CheckoutPage = () => {
                           <div className="sb-total-title">Subtotal:</div>
                         </div>
                         <div className="col-6">
-                          <div className="sb-price-1 text-right">
+                          {/* <div className="sb-price-1 text-right">
                             ${cartItems.reduce((acc, item) => {
                               const total = item.total ? parseFloat(item.total.slice(1)) : 0;
                               return acc + total * (item.quantity || 0);
                             }, 0).toFixed(2)}
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
