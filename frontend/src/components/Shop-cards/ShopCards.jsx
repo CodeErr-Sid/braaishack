@@ -53,11 +53,11 @@ export default function ShopCards({ shopCardData }) {
                                     <h4 className="sb-card-title">
                                         <Link to={`/product/${item.id}`}>{item.name}</Link>
                                     </h4>
-                                    <div className="multi-select">
+                                    {/* <div className="multi-select">
                                         <div className="minus" onClick={() => decrement(item)}>-</div>
                                         <h1>{quantities[item.id] || 1}</h1>
                                         <div className="add" onClick={() => increment(item)}>+</div>
-                                    </div>
+                                    </div> */}
                                     <div className="sb-price">
                                         <sub>$</sub> {item.price}
                                     </div>
