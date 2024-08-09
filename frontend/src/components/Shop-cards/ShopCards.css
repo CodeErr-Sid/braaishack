@@ -16,8 +16,6 @@
   margin-left: auto;
 }
 
-
-
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -107,7 +105,6 @@
     height: 50vh;
     top: 450px;
   }
-
 
   .sb-bg-3 {
     width: 100%;
@@ -523,7 +520,6 @@ pagination
   background-color: #fdcf09;
 }
 
-
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -531,7 +527,15 @@ pagination
 }
 
 @media screen and (0 < width <= 576px) {
-  .row{
+  .row {
     flex-direction: column;
   }
+}
+
+.multi-select {
+  margin: 1rem 1.5rem 0 0;
+}
+.minus,
+.add {
+  background-color: #fdcf09 !important;
 }
