@@ -15,9 +15,9 @@ const ProductDetails = () => {
     const [error, setError] = useState(null); // State for error
     const [addedItems, setAddedItems] = useState({});
 
-    console.log("ProductDetails component is rendering");
-    console.log("Product ID from URL:", productId);
-    console.log("Menu Items:", menuItems);
+    // console.log("ProductDetails component is rendering");
+    // console.log("Product ID from URL:", productId);
+    // console.log("Menu Items:", menuItems);
 
     useEffect(() => {
         const fetchProductById = (id) => {

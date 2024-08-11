@@ -97,7 +97,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
         >
           MENUS
         </Link>
-        <Link
+        {/* <Link
           to="/shop"
           onClick={() => {
             setMenu("REVIEWS");
@@ -106,7 +106,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
           className={`${menu === "REVIEWS" ? "active" : ""}`}
         >
           FROZEN DELIGHT
-        </Link>
+        </Link> */}
         <Link
           to="/gift-section"
           onClick={() => {

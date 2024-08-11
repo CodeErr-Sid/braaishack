@@ -41,7 +41,7 @@ const App = () => {
   return (
     <CartProvider>
       <ToastContainer />
-      {showLogin &&  <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
+      {showLogin && <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
       <Preloader /> {/* Consider managing visibility of Preloader */}
       <div className='app'>
         <div className="custom-animated-cursor">
@@ -83,6 +83,7 @@ const App = () => {
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/cart' element={<ShopCart />} />
           <Route path="/product/:productId" element={<Product />} />
+          <Route path="/orders-braai" element={<MyOrders />} />
           {/* Add other routes if needed */}
         </Routes>
       </div>
