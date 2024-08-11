@@ -8,14 +8,32 @@ import { useCart } from '../../Context/CartContexts'; // Adjust the import path 
 
 export default function ShopCards({ shopCardData }) {
     const [addedItems, setAddedItems] = useState({});
+    const [quantities, setQuantities] = useState({}); // State for quantities per item
     const { addItemToCart } = useCart();
 
     const handleAddToCart = (item) => {
-        addItemToCart(item);
+        addItemToCart({ ...item, quantity: quantities[item.id] || 1 }); // Include quantity in cart
         setAddedItems(prev => ({
             ...prev,
             [item.id]: !prev[item.id]
         }));
+    };
+
+    const increment = (item) => {
+        setQuantities(prev => ({
+            ...prev,
+            [item.id]: (prev[item.id] || 1) + 1
+        }));
+        console.log(increment);
+        
+    };
+
+    const decrement = (item) => {
+        setQuantities(prev => ({
+            ...prev,
+            [item.id]: Math.max((prev[item.id] || 1) - 1, 1) // Ensure quantity doesn't go below 1
+        }));
+        
     };
 
     return (
@@ -35,6 +53,11 @@ export default function ShopCards({ shopCardData }) {
                                     <h4 className="sb-card-title">
                                         <Link to={`/product/${item.id}`}>{item.name}</Link>
                                     </h4>
+                                    {/* <div className="multi-select">
+                                        <div className="minus" onClick={() => decrement(item)}>-</div>
+                                        <h1>{quantities[item.id] || 1}</h1>
+                                        <div className="add" onClick={() => increment(item)}>+</div>
+                                    </div> */}
                                     <div className="sb-price">
                                         <sub>$</sub> {item.price}
                                     </div>
