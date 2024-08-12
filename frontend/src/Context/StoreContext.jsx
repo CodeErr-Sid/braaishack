@@ -12,17 +12,40 @@ const StoreContextProvider = (props) => {
     const currency = "₹";
     const deliveryCharge = 50;
 
-    const addToCart = async (itemId) => {
+    console.log(cartItems)
+
+    const addToCart = async (itemId, quantity = 1) => {
+        console.log("addToCart called with itemId:", itemId);  // Log the itemId passed to the function
+        console.log("Quantity:", quantity);  // Log the quantity passed to the function
+        
+        // Check if itemId exists in cartItems
+        console.log("Current cartItems:", cartItems);  // Log current cartItems
+        
         if (!cartItems[itemId]) {
-            setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+            console.log(`Item ${itemId} not in cart, adding with quantity ${quantity}.`);
+            setCartItems((prev) => ({ ...prev, [itemId]: quantity }));
+        } else {
+            console.log(`Item ${itemId} already in cart, updating quantity.`);
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + quantity }));
         }
-        else {
-            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-        }
+    
+        // Check if token is present
         if (token) {
-            await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } });
+            console.log("Token found, sending request to add item to cart.");
+            try {
+                const response = await axios.post(url + "/api/cart/add", { itemId, quantity }, { headers: { token } });
+                console.log("Response from server:", response.data);  // Log the server response
+            } catch (error) {
+                console.error("Error adding item to cart:", error);  // Log any error from the server
+            }
+        } else {
+            console.log("No token found, skipping server request.");
         }
-    }
+    };
+    
+    
+
+    console.log(food_list)
 
     const removeFromCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))

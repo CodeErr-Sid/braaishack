@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../../components/header2/Header';
 import { assets } from '../../assets/assets';
 import MenuNav from '../../components/MenuNav/MenuNav';
-import { menuItems } from '../../MenuData.json'; 
+import { menuItems } from '../../MenuData.json';
 import ShopCards from '../../components/Shop-cards/ShopCards';
+import { StoreContext } from '../../Context/StoreContext'
 
 const Menu2 = () => {
+
+    const { food_list } = useContext(StoreContext)
+    console.log(food_list)
+
 
     const [selectedMenu, setSelectedMenu] = useState("");
 
@@ -23,9 +28,9 @@ const Menu2 = () => {
         "Kids Braai Menu",
         "Braai Sides",
         "Desserts",
-      ];
+    ];
 
-    
+
 
     return (
         <>
@@ -36,7 +41,7 @@ const Menu2 = () => {
                 imgsrc={images}
             />
             <MenuNav setSelectedMenu={setSelectedMenu} Menubtndata={Menubtndata} />
-            <ShopCards shopCardData={menuItems} selectedMenu={selectedMenu} />
+            <ShopCards shopCardData={food_list} selectedMenu={selectedMenu} />
         </>)
 }
 

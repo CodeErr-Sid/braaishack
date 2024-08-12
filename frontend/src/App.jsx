@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -36,7 +36,14 @@ const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showMiniCart, setShowMiniCart] = useState(false); // State for MiniCart visibility
   const [isLoggedin, setIsLoggedin] = useState(false)
-  console.log(isLoggedin)
+useEffect(()=>{
+  const token = localStorage.getItem('token');
+
+  // If token exists, set loggedIn to true; otherwise, set it to false
+  if (token) {
+      setIsLoggedin(true);
+  }
+},[])
 
   return (
     <CartProvider>
@@ -83,7 +90,7 @@ const App = () => {
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/cart' element={<ShopCart />} />
           <Route path="/product/:productId" element={<Product />} />
-          <Route path="/orders-braai" element={<MyOrders />} />
+          {/* <Route path="/orders-braai" element={<MyOrders />} /> */}
           {/* Add other routes if needed */}
         </Routes>
       </div>

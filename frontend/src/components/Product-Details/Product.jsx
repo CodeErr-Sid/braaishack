@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
@@ -6,8 +6,12 @@ import './Product.css';
 import { assets } from '../../assets/assets';
 import { menuItems } from '../../MenuData.json'; // Ensure this path is correct
 import { frozenProducts } from '../../FrozenProductsData.json'
+import { StoreContext } from '../../Context/StoreContext';
 
 const ProductDetails = () => {
+
+    const { food_list, addToCart } = useContext(StoreContext)
+
     const { productId } = useParams();
     const [quantity, setQuantity] = useState(1);
     const [product, setProduct] = useState(null); // State to hold the product data
@@ -19,20 +23,22 @@ const ProductDetails = () => {
     // console.log("Product ID from URL:", productId);
     // console.log("Menu Items:", menuItems);
 
+    console.log(error)
+
     useEffect(() => {
         const fetchProductById = (id) => {
             console.log("Fetching product with ID:", id);
             try {
                 // Find the product from menuItems by ID
                 // const fetchedProduct = menuItems.find(item => item.id === id); // Use strict comparison for 
-                
+
                 // changeble code  
-                let fetchedProduct = menuItems.find(item => item.id === id);
+                let fetchedProduct = food_list.find(item => item._id === id);
 
                 // If not found in menuItems, search in frozenProducts
-                if (!fetchedProduct) {
-                    fetchedProduct = frozenProducts.find(item => item.id === id);
-                }
+                // if (!fetchedProduct) {
+                //     fetchedProduct = frozenProducts.find(item => item.id === id);
+                // }
 
 
                 console.log("Fetched Product:", fetchedProduct);
@@ -55,6 +61,8 @@ const ProductDetails = () => {
     const decrement = () => setQuantity(prev => Math.max(prev - 1, 1));
 
     const handleAddToCart = (id) => {
+        addToCart(id, quantity)
+        console.log(id,quantity)
         setAddedItems(prev => ({
             ...prev,
             [id]: !prev[id]
