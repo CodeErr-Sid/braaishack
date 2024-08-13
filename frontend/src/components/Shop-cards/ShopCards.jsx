@@ -52,7 +52,7 @@ export default function ShopCards({ shopCardData }) {
                         <div key={item._id} className="col-lg-4">
                             <div className="sb-menu-item sb-mb-30">
                                 <Link to={`/product/${item._id}`} className="sb-cover-frame">
-                                    <img src={assets.braai1} alt={item.name} className='cards-img'/>
+                                    <img src={item.image} alt={item.name} className='cards-img'/>
                                 </Link>
                                 <div className="sb-card-tp">
                                     <h4 className="sb-card-title">

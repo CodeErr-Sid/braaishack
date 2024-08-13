@@ -29,7 +29,8 @@ const AdminLogin = () => {
       });
       if (response.data.success) {
         toast.success('Login successful');
-        login(); // Update auth context
+        // Pass the token from the response to the login function
+        login(response.data.token);
         navigate('/'); // Redirect to home page
       } else {
         toast.error(response.data.message);

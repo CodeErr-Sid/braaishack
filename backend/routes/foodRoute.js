@@ -3,7 +3,8 @@ import {
   addFood,
   listFood,
   removeFood,
-  getFoodDetails
+  getFoodDetails,
+  getBulkFoods
 } from "../controllers/foodController.js";
 import multer from "multer";
 import adminauthMiddleware from "../middleware/adminauth.js";
@@ -23,6 +24,7 @@ const foodRouter = express.Router();
 
 foodRouter.get("/list", listFood);
 foodRouter.get("/fooddetails",getFoodDetails);
+foodRouter.post('/list/bulk',getBulkFoods)
 foodRouter.post("/add",adminauthMiddleware, addFood);
 foodRouter.post("/remove", adminauthMiddleware, removeFood);
 

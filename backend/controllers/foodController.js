@@ -30,6 +30,34 @@ const getFoodDetails = async (req, res) => {
   }
 };
 
+const getBulkFoods = async (req, res) => {
+  const { cartItems } = req.body; // Expecting an object with id:quantity pairs
+
+
+  console.log(req.body)
+
+  try {
+    // Extract item IDs from the cartItems object
+    const itemIds = Object.keys(cartItems);
+
+    // Fetch products based on itemIds
+    const products = await foodModel.find({ _id: { $in: itemIds } });
+
+    // Convert products to an object keyed by ID
+    const productsById = products.reduce((acc, product) => {
+      acc[product._id] = {
+        ...product._doc,
+        quantity: cartItems[product._id], // Add quantity to each product
+      };
+      return acc;
+    }, {});
+
+    res.json({success:true, data:productsById});
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching products', error: error.message });
+  }
+}
+
 // add food
 const addFood = async (req, res) => {
   try {
@@ -62,4 +90,4 @@ const removeFood = async (req, res) => {
   }
 };
 
-export { listFood, addFood, removeFood, getFoodDetails };
+export { listFood, addFood, removeFood, getFoodDetails, getBulkFoods };

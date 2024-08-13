@@ -1,32 +1,51 @@
-// src/components/MiniCart.js
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import { useCart } from '../../Context/CartContexts'
+import { StoreContext } from "../../Context/StoreContext";
 import './MiniCart.css'; // Ensure this path is correct
 import { assets } from '../../assets/assets';
 
 export default function MiniCart() {
-    const { cartItems } = useCart();
+    const { cartItems, loadProductData } = useContext(StoreContext);
     const navigate = useNavigate();
-
-    // Load cart items from localStorage on component mount
-    useEffect(() => {
-        const savedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        // Since `setCartItems` is not available here, you need to handle loading data
-        // by setting cartItems directly or via another approach.
-    }, []);
-
-    // Save cart items to localStorage on change
-    useEffect(() => {
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    }, [cartItems]);
+    const [productItems, setProductItems] = useState([]); // Initialize with an empty array or null
 
     const handleCheckout = () => {
         navigate('/checkout'); // Navigate to the checkout page
     };
+
+    console.log('Cart Items:', cartItems);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            if (cartItems && Object.keys(cartItems).length > 0) {
+                try {
+                    const data = await loadProductData(cartItems);
+
+                    if (data.success) {
+                        // Assuming data.data is an object with product IDs as keys and product details as values
+                        const itemsArray = Object.values(data.data); // Convert object to array
+                        setProductItems(itemsArray);
+                    } else {
+                        console.error('Failed to fetch product data:', data.message);
+                        setProductItems([]); // Handle case where API returns failure
+                    }
+                } catch (error) {
+                    console.error('Error fetching product data:', error.message);
+                    setProductItems([]); // Handle error case
+                }
+            } else {
+                setProductItems([]); // Handle case where cartItems is empty
+            }
+        };
+
+        fetchData(); // Call the async function
+    }, [cartItems, loadProductData]);
+
+    console.log('Product Items:', productItems);
+
     const handleViewOrder = () => {
-      navigate('/cart'); // Navigate to the checkout page
-  };
+        navigate('/cart'); // Navigate to the cart page
+    };
 
     return (
         <div className="sb-minicart">
@@ -35,13 +54,13 @@ export default function MiniCart() {
                     <h4>Your order</h4>
                     <i className="fas fa-arrow-down"></i>
                 </div>
-                {cartItems.length === 0 ? (
+                {productItems.length === 0 ? (
                     <p>No items in cart</p>
                 ) : (
-                    cartItems.map((item) => (
+                    productItems.map((item) => (
                         <a href={`product/${item.id}`} key={item.id} className="sb-menu-item sb-menu-item-sm sb-mb-15">
                             <div className="sb-cover-frame">
-                                <img src={assets[item.image]} alt={item.title || item.name} />
+                                <img src={item.image} alt={item.title || item.name} />
                             </div>
                             <div className="sb-card-tp">
                                 <h4 className="sb-card-title">{item.title || item.name}</h4>

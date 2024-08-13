@@ -1,10 +1,13 @@
 import jwt from 'jsonwebtoken';
 
 const adminauthMiddleware = async (req, res, next) => {
-    const token = req.cookies.token;
+    // Get token from headers or body
+    const token = req.headers.authorization
+
     if (!token) {
         return res.json({ success: false, message: 'Not Authorized. Login Again' });
     }
+
     try {
         const token_decode = jwt.verify(token, process.env.JWT_SECRET);
         req.body.userId = token_decode.id;
@@ -12,6 +15,6 @@ const adminauthMiddleware = async (req, res, next) => {
     } catch (error) {
         return res.json({ success: false, message: error.message });
     }
-}
+};
 
 export default adminauthMiddleware;

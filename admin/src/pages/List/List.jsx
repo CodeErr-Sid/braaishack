@@ -3,8 +3,13 @@ import './List.css'
 import { url, currency } from '../../assets/assets'
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useAuth } from '../../contexts/AuthContext';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const List = () => {
+
+  const { token } = useAuth()
 
   const [list, setList] = useState([]);
 
@@ -19,9 +24,11 @@ const List = () => {
   }
 
   const removeFood = async (foodId) => {
-    const response = await axios.post(`${url}/api/food/remove`, {
-      id: foodId
-    })
+    const response = await axios.post(`${url}/api/food/remove`, 
+      { id: foodId }, 
+      { headers: { authorization: token } }
+    );
+    
     await fetchList();
     if (response.data.success) {
       toast.success(response.data.message);

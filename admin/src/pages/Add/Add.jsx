@@ -3,8 +3,12 @@ import './Add.css';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { assets, url } from '../../assets/assets';
-
+import { useAuth } from '../../contexts/AuthContext';
 const AdminAdd = () => {
+
+  const { token } = useAuth()
+
+
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
@@ -23,7 +27,7 @@ const AdminAdd = () => {
 
     const formData = new FormData();
     formData.append('file', image);
-    formData.append('upload_preset', 'braaishack'); 
+    formData.append('upload_preset', 'braaishack');
 
     try {
       const cloudinaryResponse = await axios.post('https://api.cloudinary.com/v1_1/braaishack/image/upload', formData);
@@ -35,7 +39,12 @@ const AdminAdd = () => {
         price: Number(data.price)
       };
 
-      const response = await axios.post('http://localhost:4000/api/food/add', productData);
+      const response = await axios.post('http://localhost:4000/api/food/add', productData, {
+        headers: {
+          authorization: token // Use Bearer scheme if needed
+        }
+      });
+      
 
       if (response.data.success) {
         toast.success(response.data.message);
@@ -63,7 +72,7 @@ const AdminAdd = () => {
   return (
     <div className='add'>
       <form className='flex-col' onSubmit={onSubmitHandler}>
-      <div className='add-img-upload flex-col'>
+        <div className='add-img-upload flex-col'>
           <p>Upload image</p>
           <input onChange={(e) => { setImage(e.target.files[0]); e.target.value = '' }} type="file" accept="image/*" id="image" hidden />
           <label htmlFor="image">
