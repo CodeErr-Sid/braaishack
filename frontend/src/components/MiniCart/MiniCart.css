@@ -14,7 +14,7 @@ minicart
   width: 100%;
   max-width: 403px;
   position: fixed;
-  transform: translateX(100%);
+  transform: translateX(200%);
   /* background-color: rgba(16, 16, 16, 0.92); */
   /* backdrop-filter: blur(8px); */
   /* -webkit-backdrop-filter: blur(8px); */
@@ -23,7 +23,7 @@ minicart
   transition: 0.4s ease-in-out;
 }
 .sb-minicart.sb-active {
-  transform: translateX(0);
+  transform: translateX(100%);
 }
 .sb-minicart.sb-scroll {
   top: 91px;

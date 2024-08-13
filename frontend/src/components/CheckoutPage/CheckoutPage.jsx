@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useCart } from '../../Context/CartContexts'; // Import the useCart hook
 import './Checkout.css'; // Import CSS for styling
 import { assets } from '../../assets/assets';
+import { StoreContext } from '../../Context/StoreContext';
 
 // Reusable input component
 const InputField = ({ type, label, required }) => (
@@ -11,35 +12,6 @@ const InputField = ({ type, label, required }) => (
     <label>{label}</label>
   </div>
 );
-const CartItems = [
-  {
-    id: 1,
-    image: assets.shop1,
-    title: 'Chevrefrit au miel',
-    description: 'tomatoes, nori, feta cheese, mushrooms, rice noodles, corn, shrimp',
-    quantity: 1,
-    price: 14.00,
-    total: 14.00,
-  },
-  {
-    id: 2,
-    image: assets.shop2,
-    title: 'Carpaccio de daurade',
-    description: 'tomatoes, nori, feta cheese, mushrooms, rice noodles, corn, shrimp',
-    quantity: 1,
-    price: 7.99,
-    total: 7.99,
-  },
-  {
-    id: 3,
-    image: assets.shop3,
-    title: 'Stracciatella',
-    description: 'tomatoes, nori, feta cheese, mushrooms, rice noodles, corn, shrimp',
-    quantity: 1,
-    price: 11.00,
-    total: 11.00,
-  },
-];
 
 // Cart item component
 const CartItem = ({ item }) => (
@@ -48,7 +20,7 @@ const CartItem = ({ item }) => (
       <div className="col-lg-9">
         <a className="sb-product">
           <div className="sb-cover-frame">
-            <img src={assets[item.image]} alt={item.title} />
+            <img src={item.image} alt={item.title} />
           </div>
           <div className="sb-prod-description">
             <h4 className="sb-mb-10">{item.title}</h4>
@@ -58,36 +30,61 @@ const CartItem = ({ item }) => (
         </a>
       </div>
       <div className="col-lg-3 text-md-right">
-        <div className="sb-price-2"><span>Total: </span>${item.quantity * item.price}</div>
+        <div className="sb-price-2"><span>Total: </span>${(item.quantity * item.price).toFixed(2)}</div>
       </div>
     </div>
   </div>
 );
-// Dummy data to simulate cart items
 
 const CheckoutPage = () => {
-    
+  const { cartItems, loadProductData } = useContext(StoreContext);
+  const [items, setItems] = useState([]);
 
-  const { cartItems } = useCart();
+  useEffect(() => {
+    const fetchData = async () => {
+      if (cartItems && Object.keys(cartItems).length > 0) {
+        try {
+          const data = await loadProductData(cartItems);
 
-  console.log(cartItems)
+          if (data.success) {
+            const itemsArray = Object.values(data.data); // Convert object to array
+            setItems(itemsArray);
+          } else {
+            console.error('Failed to fetch product data:', data.message);
+            setItems([]); // Handle case where API returns failure
+          }
+        } catch (error) {
+          console.error('Error fetching product data:', error.message);
+          setItems([]); // Handle error case
+        }
+      } else {
+        setItems([]); // Handle case where cartItems is empty
+      }
+    };
+
+    fetchData(); // Call the async function
+  }, [cartItems, loadProductData]);
+
+  const shippingCharges = 5
+
 
   const calculateTotal = () => {
-    // Ensure cartItems is defined and is an array
-    if (!Array.isArray(cartItems)) {
-      return 0;
-    }
+    // Convert items array to a map for easy lookup
+    const productMap = new Map(items.map(item => [item._id, item]));
   
-    // Calculate subtotal
-    const subtotal = cartItems.reduce((acc, item) => {
-      // Safeguard against undefined item.price
-      const price = item.price ? parseFloat(item.price) : 0;
-      return acc + price * (item.quantity || 0);
+    // Calculate subtotal using productMap
+    const subtotal = Object.entries(cartItems).reduce((acc, [productId, quantity]) => {
+      const product = productMap.get(productId); // Get the product by its ID
+      const price = product ? parseFloat(product.price) : 0; // Safeguard against missing prices
+      return acc + price * quantity;
     }, 0);
   
-    return subtotal + 5.00; // Adding a fixed shipping cost of $5.00
+    return subtotal;
   };
   
+
+console.log(calculateTotal())
+
 
   return (
     <section className="sb-p-90-90">
@@ -176,12 +173,12 @@ const CheckoutPage = () => {
                       <div className="col-lg-3 text-right">Total</div>
                     </div>
                   </div>
-                  {cartItems.length === 0 ? (
+                  {items.length === 0 ? (
                     <p>Your cart is empty</p>
                   ) : (
-                    cartItems.map((item) => (
-                      <CartItem 
-                        key={item.id}
+                    items.map((item,index) => (
+                      <CartItem
+                        key={index}
                         item={item}
                       />
                     ))
@@ -193,12 +190,9 @@ const CheckoutPage = () => {
                           <div className="sb-total-title">Subtotal:</div>
                         </div>
                         <div className="col-6">
-                          {/* <div className="sb-price-1 text-right">
-                            ${cartItems.reduce((acc, item) => {
-                              const total = item.total ? parseFloat(item.total.slice(1)) : 0;
-                              return acc + total * (item.quantity || 0);
-                            }, 0).toFixed(2)}
-                          </div> */}
+                          <div className="sb-price-1 text-right">
+                            ${calculateTotal().toFixed(2)}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -208,7 +202,7 @@ const CheckoutPage = () => {
                           <div className="sb-total-title">Total:</div>
                         </div>
                         <div className="col-6">
-                          <div className="sb-price-2 text-right">${calculateTotal().toFixed(2)}</div>
+                          <div className="sb-price-2 text-right">${(calculateTotal() + shippingCharges).toFixed(2)}</div>
                         </div>
                       </div>
                     </div>

@@ -79,7 +79,7 @@ const ProductDetails = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-7 width">
                         <div className="sb-gallery-item sb-gallery-square sb-mb-90">
-                            <img src={assets[product.image]} alt={product.name} />
+                            <img src={product.image} alt={product.name} />
                             <div className="sb-badge sb-vegan"><i className="fas fa-leaf"></i> Vegan</div>
                             <a data-fancybox="menu" data-no-swup href={assets.Zoom} className="sb-btn sb-btn-2 sb-btn-icon sb-btn-gray sb-zoom">
                                 <span className="sb-icon">

@@ -34,8 +34,6 @@ const getBulkFoods = async (req, res) => {
   const { cartItems } = req.body; // Expecting an object with id:quantity pairs
 
 
-  console.log(req.body)
-
   try {
     // Extract item IDs from the cartItems object
     const itemIds = Object.keys(cartItems);

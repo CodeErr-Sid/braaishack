@@ -4,7 +4,7 @@ import { StoreContext } from "../../Context/StoreContext";
 import './MiniCart.css'; // Ensure this path is correct
 import { assets } from '../../assets/assets';
 
-export default function MiniCart() {
+export default function MiniCart( { showMiniCart }) {
     const { cartItems, loadProductData } = useContext(StoreContext);
     const navigate = useNavigate();
     const [productItems, setProductItems] = useState([]); // Initialize with an empty array or null
@@ -48,7 +48,7 @@ export default function MiniCart() {
     };
 
     return (
-        <div className="sb-minicart">
+        <div className={`sb-minicart ${showMiniCart ? 'sb-active' : ''}`}>
             <div className="sb-minicart-content">
                 <div className="sb-ib-title-frame sb-mb-30">
                     <h4>Your order</h4>
@@ -57,8 +57,8 @@ export default function MiniCart() {
                 {productItems.length === 0 ? (
                     <p>No items in cart</p>
                 ) : (
-                    productItems.map((item) => (
-                        <a href={`product/${item.id}`} key={item.id} className="sb-menu-item sb-menu-item-sm sb-mb-15">
+                    productItems.map((item, index) => (
+                        <a href={`product/${item.id}`} key={index} className="sb-menu-item sb-menu-item-sm sb-mb-15">
                             <div className="sb-cover-frame">
                                 <img src={item.image} alt={item.title || item.name} />
                             </div>
