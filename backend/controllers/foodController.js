@@ -88,4 +88,57 @@ const removeFood = async (req, res) => {
   }
 };
 
-export { listFood, addFood, removeFood, getFoodDetails, getBulkFoods };
+
+const addFoods= async (foodData) => {
+  try {
+    const food = new foodModel({
+      name: foodData.name,
+      description: foodData.description,
+      price: foodData.price,
+      category: foodData.category,
+      image: foodData.image,
+    });
+    await food.save();
+    return { success: true };
+  } catch (error) {
+    console.error(error);
+    return { success: false, message: "Error saving food item" };
+  }
+};
+
+// Define the bulk upload method
+const uploadBulkFoods = async (req, res) => {
+  const { foods } = req.body;
+
+  if (!Array.isArray(foods) || foods.length === 0) {
+    return res.status(400).json({ success: false, message: "No food items provided" });
+  }
+
+  try {
+    // Track success and failure counts
+    let successCount = 0;
+    let failureCount = 0;
+    const results = [];
+
+    for (const foodData of foods) {
+      const result = await addFoods(foodData);
+      if (result.success) {
+        successCount++;
+      } else {
+        failureCount++;
+      }
+      results.push(result);
+    }
+
+    res.json({
+      success: true,
+      message: `Bulk upload completed: ${successCount} items added, ${failureCount} failed`,
+      results,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: "Error during bulk upload" });
+  }
+};
+
+export { listFood, addFood, removeFood, getFoodDetails, getBulkFoods, uploadBulkFoods };

@@ -7,14 +7,15 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/CartContexts'; // Adjust the import path if necessary
 import { StoreContext } from '../../Context/StoreContext';
 
-export default function ShopCards({ shopCardData }) {
+export default function ShopCards({ shopCardData, selectedMenu }) {
     const [addedItems, setAddedItems] = useState({});
     const [quantities, setQuantities] = useState({}); // State for quantities per item
     const { addItemToCart } = useCart();
 
     const { addToCart } = useContext(StoreContext)
 
-    console.log(shopCardData)
+    console.log(selectedMenu)
+
 
     const handleAddToCart = (item) => {
         // addItemToCart({ ...item, quantity: quantities[item._id] || 1 }); // Include quantity in cart
@@ -38,7 +39,7 @@ export default function ShopCards({ shopCardData }) {
             ...prev,
             [item._id]: Math.max((prev[item._id] || 1) - 1, 1) // Ensure quantity doesn't go below 1
         }));
-        
+
     };
 
     return (
@@ -49,10 +50,15 @@ export default function ShopCards({ shopCardData }) {
             <div className="container">
                 <div className="row">
                     {shopCardData.map(item => (
-                        <div key={item._id} className="col-lg-4">
+                        <div key={item._id} className="col-lg-3"
+                            style={{
+                                display: selectedMenu.length === 0 || selectedMenu.includes(item.category)
+                                    ? "block"
+                                    : "none",
+                            }}>
                             <div className="sb-menu-item sb-mb-30">
                                 <Link to={`/product/${item._id}`} className="sb-cover-frame">
-                                    <img src={item.image} alt={item.name} className='cards-img'/>
+                                    <img src={item.image} alt={item.name} className='cards-img' />
                                 </Link>
                                 <div className="sb-card-tp">
                                     <h4 className="sb-card-title">
@@ -77,7 +83,7 @@ export default function ShopCards({ shopCardData }) {
                                         </span>
                                         <span>Details</span>
                                     </Link>
-                                    <a 
+                                    <a
                                         href="#."
                                         className="sb-btn sb-atc"
                                         onClick={(e) => {

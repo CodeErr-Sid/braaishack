@@ -8,8 +8,8 @@ const StoreContextProvider = (props) => {
     const url = "http://localhost:4000"
     const [food_list, setFoodList] = useState([]);
     const [cartItems, setCartItems] = useState({});
-    const [token, setToken] = useState("")
-    const currency = "₹";
+    const [token, setToken] = useState("");
+    const currency = "£";
     const deliveryCharge = 50;
 
     console.log(cartItems)
@@ -43,9 +43,6 @@ const StoreContextProvider = (props) => {
         }
     };
 
-
-
-
     const removeFromCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
         if (token) {
@@ -62,7 +59,7 @@ const StoreContextProvider = (props) => {
                     totalAmount += itemInfo.price * cartItems[item];
                 }
             } catch (error) {
-
+                console.log(error);
             }
 
         }
@@ -122,7 +119,8 @@ const StoreContextProvider = (props) => {
         setCartItems,
         currency,
         deliveryCharge,
-        loadProductData
+        loadProductData,
+        fetchFoodList
     };
 
     return (

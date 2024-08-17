@@ -13,7 +13,7 @@ export default function Product() {
     <>
     <Header header_title={'Online Shop'} header_btn={'HOME/Shop/Product'} />
     <ProductDetails/>
-    <ProductIngredients/>
+    {/* <ProductIngredients/> */}
     <ShortMenu/>
     <CallToAction2/>
     </>

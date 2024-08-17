@@ -75,7 +75,7 @@ useEffect(()=>{
 
         {/* <MiniCart /> */}
         <Navbar isLoggedin={isLoggedin} setShowLogin={setShowLogin} setIsLoggedin={setIsLoggedin} setShowMiniCart={setShowMiniCart} />
-        {showMiniCart && <MiniCart />}
+         <MiniCart showMiniCart={showMiniCart}/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />

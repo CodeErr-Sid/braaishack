@@ -6,23 +6,23 @@ import "./MenuNav.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const MenuNav = ({ setSelectedMenu, Menubtndata }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("");
 
-  const handleMenuSelection = (menu, index) => {
-    setSelectedMenu(menu === "All" ? "" : menu);
-    setActiveIndex(index);
+  const handleCategorySelection = (category) => {
+    setActiveCategory(category);
+    setSelectedMenu(category === "" ? [] : Menubtndata[category]);
   };
 
   return (
     <div className="btnmain">
       <div className="Menubtn">
-        {Menubtndata.map((data, index) => (
+        {Object.keys(Menubtndata).map((category, index) => (
           <button
             key={index}
-            className={activeIndex === index ? "active" : ""}
-            onClick={() => handleMenuSelection(data, index)}
+            className={`category-btn ${activeCategory === category ? "active" : ""}`}
+            onClick={() => handleCategorySelection(category)}
           >
-            {data}
+            {category}
           </button>
         ))}
       </div>

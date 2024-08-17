@@ -7,10 +7,11 @@ import { assets } from '../../assets/assets';
 import { menuItems } from '../../MenuData.json'; // Ensure this path is correct
 import { frozenProducts } from '../../FrozenProductsData.json'
 import { StoreContext } from '../../Context/StoreContext';
+import axios from 'axios';
 
 const ProductDetails = () => {
 
-    const { food_list, addToCart } = useContext(StoreContext)
+    const { url, addToCart, currency } = useContext(StoreContext)
 
     const { productId } = useParams();
     const [quantity, setQuantity] = useState(1);
@@ -25,21 +26,26 @@ const ProductDetails = () => {
 
     console.log(error)
 
+    const getFoodDetails = async (productId) => {
+        try {
+          const response = await axios.post(url + '/api/food/fooddetails', { productId });
+      
+          if (!response.data.success) {
+            throw new Error(response.data.message);
+          }
+      
+          return response.data.data; // Return the food details
+        } catch (error) {
+          console.error('Error fetching food details:', error);
+          return null; // or handle the error as needed
+        }
+      };
+
+
     useEffect(() => {
-        const fetchProductById = (id) => {
-            console.log("Fetching product with ID:", id);
-            try {
-                // Find the product from menuItems by ID
-                // const fetchedProduct = menuItems.find(item => item.id === id); // Use strict comparison for 
-
-                // changeble code  
-                let fetchedProduct = food_list.find(item => item._id === id);
-
-                // If not found in menuItems, search in frozenProducts
-                // if (!fetchedProduct) {
-                //     fetchedProduct = frozenProducts.find(item => item.id === id);
-                // }
-
+        const fetchProductById =  async (id) => {
+            try {             
+                let fetchedProduct = await getFoodDetails(id)
 
                 console.log("Fetched Product:", fetchedProduct);
                 if (fetchedProduct) {
@@ -53,7 +59,6 @@ const ProductDetails = () => {
                 setLoading(false);
             }
         };
-
         fetchProductById(productId);
     }, [productId]);
 
@@ -62,7 +67,7 @@ const ProductDetails = () => {
 
     const handleAddToCart = (id) => {
         addToCart(id, quantity)
-        console.log(id,quantity)
+        console.log(id, quantity)
         setAddedItems(prev => ({
             ...prev,
             [id]: !prev[id]
@@ -92,7 +97,7 @@ const ProductDetails = () => {
                         <div className="sb-product-description sb-mb-90">
                             <div className="sb-price-frame sb-mb-30">
                                 <h3>{product.name}</h3>
-                                <div className="sb-price"><sub>$</sub> {product.price}</div>
+                                <div className="sb-price"><sub>{currency}</sub> {product.price}</div>
                             </div>
                             <div className="row">
                                 <div className="col-lg-4">

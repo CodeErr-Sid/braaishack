@@ -58,7 +58,7 @@ export default function MiniCart( { showMiniCart }) {
                     <p>No items in cart</p>
                 ) : (
                     productItems.map((item, index) => (
-                        <a href={`product/${item.id}`} key={index} className="sb-menu-item sb-menu-item-sm sb-mb-15">
+                        <a href={`/product/${item._id}`} key={index} className="sb-menu-item sb-menu-item-sm sb-mb-15">
                             <div className="sb-cover-frame">
                                 <img src={item.image} alt={item.title || item.name} />
                             </div>
