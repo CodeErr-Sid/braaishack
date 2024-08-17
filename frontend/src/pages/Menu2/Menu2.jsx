@@ -5,7 +5,7 @@ import MenuNav from '../../components/MenuNav/MenuNav';
 import { StoreContext } from '../../Context/StoreContext';
 import ShopCards from '../../components/Shop-cards/ShopCards';
 
-const Menu2 = () => {
+const Menu2 = ({ isLoggedin, setShowLogin }) => {
   const { food_list } = useContext(StoreContext);
 
   const [selectedMenu, setSelectedMenu] = useState([]);
@@ -56,7 +56,7 @@ const Menu2 = () => {
         imgsrc={images}
       />
       <MenuNav setSelectedMenu={setSelectedMenu} Menubtndata={Menubtndata} />
-      <ShopCards shopCardData={food_list} selectedMenu={selectedMenu} />
+      <ShopCards setShowLogin={setShowLogin} shopCardData={food_list} isLoggedin={isLoggedin} selectedMenu={selectedMenu} />
     </>
   );
 };

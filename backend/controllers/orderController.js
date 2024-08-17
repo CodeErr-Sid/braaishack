@@ -4,7 +4,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 //config variables
-const currency = "inr";
+const currency = "GBP";
 const deliveryCharge = 50;
 const frontend_URL = 'http://localhost:5173';
 

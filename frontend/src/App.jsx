@@ -75,11 +75,11 @@ useEffect(()=>{
 
         {/* <MiniCart /> */}
         <Navbar isLoggedin={isLoggedin} setShowLogin={setShowLogin} setIsLoggedin={setIsLoggedin} setShowMiniCart={setShowMiniCart} />
-         <MiniCart showMiniCart={showMiniCart}/>
+         <MiniCart setShowMiniCart={setShowMiniCart} showMiniCart={showMiniCart} isLoggedin={isLoggedin} setShowLogin={setShowLogin}/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
-          <Route path="/menu2" element={<Menu2 />} />
+          <Route path="/menu2" element={<Menu2 setShowLogin={setShowLogin} isLoggedin={isLoggedin} />} />
           <Route path='/gift-section' element={<GiftSection />} />
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />
@@ -90,7 +90,7 @@ useEffect(()=>{
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/cart' element={<ShopCart />} />
           <Route path="/product/:productId" element={<Product />} />
-          {/* <Route path="/orders-braai" element={<MyOrders />} /> */}
+          <Route path="/myorders" element={<MyOrders />} />
           {/* Add other routes if needed */}
         </Routes>
       </div>

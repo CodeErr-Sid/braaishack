@@ -3,49 +3,71 @@ import { useCart } from '../../Context/CartContexts'; // Import the useCart hook
 import './Checkout.css'; // Import CSS for styling
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../Context/StoreContext';
+import axios from 'axios';
 
 // Reusable input component
-const InputField = ({ type, label, required }) => (
+// Reusable input component
+const InputField = ({ type, label, required, name, value, onChange }) => (
   <div className="sb-group-input">
-    <input type={type} required={required} />
+    <input
+      type={type}
+      name={name}
+      value={value}
+      required={required}
+      onChange={onChange}
+    />
     <span className="sb-bar"></span>
     <label>{label}</label>
   </div>
 );
 
+
 // Cart item component
-const CartItem = ({ item }) => (
+const CartItem = ({ item, currency }) => (
   <div className="sb-cart-item">
     <div className="row align-items-center">
       <div className="col-lg-9">
         <a className="sb-product">
           <div className="sb-cover-frame">
             <img src={item.image} alt={item.title} />
+            <div className="quantity-red-circle">{item.quantity}</div>
           </div>
           <div className="sb-prod-description">
             <h4 className="sb-mb-10">{item.title}</h4>
-            <p className="sb-text sb-text-sm">Quantity: x{item.quantity}</p>
+            <p className="sb-text sb-text-sm">price: {currency + item.price}</p>
             <p className="sb-text sb-text-sm">{item.description}</p>
           </div>
         </a>
       </div>
       <div className="col-lg-3 text-md-right">
-        <div className="sb-price-2"><span>Total: </span>${(item.quantity * item.price).toFixed(2)}</div>
+        <div className="sb-price-2"><span>Total: </span>{currency + (item.quantity * item.price).toFixed(2)}</div>
       </div>
     </div>
   </div>
 );
 
 const CheckoutPage = () => {
-  const { cartItems, loadProductData } = useContext(StoreContext);
+  const { cartItems, loadProductData, currency, token, url } = useContext(StoreContext);
   const [items, setItems] = useState([]);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    companyName: '',
+    country: '',
+    city: '',
+    state: '',
+    street: '',
+    postcode: '',
+    phone: '',
+    email: '',
+    orderNotes: ''
+  });
 
   useEffect(() => {
     const fetchData = async () => {
       if (cartItems && Object.keys(cartItems).length > 0) {
         try {
           const data = await loadProductData(cartItems);
-
           if (data.success) {
             const itemsArray = Object.values(data.data); // Convert object to array
             setItems(itemsArray);
@@ -65,25 +87,66 @@ const CheckoutPage = () => {
     fetchData(); // Call the async function
   }, [cartItems, loadProductData]);
 
-  const shippingCharges = 5
-
+  const shippingCharges = 5;
 
   const calculateTotal = () => {
-    // Convert items array to a map for easy lookup
-    const productMap = new Map(items.map(item => [item._id, item]));
-  
-    // Calculate subtotal using productMap
-    const subtotal = Object.entries(cartItems).reduce((acc, [productId, quantity]) => {
-      const product = productMap.get(productId); // Get the product by its ID
-      const price = product ? parseFloat(product.price) : 0; // Safeguard against missing prices
-      return acc + price * quantity;
-    }, 0);
-  
-    return subtotal;
+    if (cartItems) {
+      const productMap = new Map(items.map(item => [item._id, item]));
+      const subtotal = Object.entries(cartItems).reduce((acc, [productId, quantity]) => {
+        const product = productMap.get(productId);
+        const price = product ? parseFloat(product.price) : 0;
+        return acc + price * quantity;
+      }, 0);
+      return subtotal;
+    }
+    return 0
   };
-  
 
-console.log(calculateTotal())
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Assuming formData contains user information (e.g., address), 
+    // items contain the cart items, and calculateTotal() gives the total amount
+    const orderData = {
+      items: items, // Array of cart items
+      amount: calculateTotal(), // Total amount for the order
+      address: formData, // User's address and contact info
+    };
+
+    if(token){
+      try {
+        // Send the order data to the server
+        const response = await axios.post(url + '/api/order/place', orderData, {
+          headers: {
+            token
+          }
+        });
+  
+        // Handle the response from the server
+        if (response.data.success) {
+          // Redirect user to the Stripe checkout page
+          window.location.href = response.data.session_url;
+        } else {
+          // Handle error from the server (e.g., show a message to the user)
+          console.error('Order placement failed:', response.data.message);
+          alert('Failed to place order. Please try again.');
+        }
+      } catch (error) {
+        // Handle any errors during the Axios request
+        console.error('Error placing order:', error.message);
+        alert('An error occurred while placing the order. Please try again later.');
+      }
+    }else{
+      console.log("No request made to server in the absence of token")
+    }
+    
+  };
+
 
 
   return (
@@ -91,47 +154,34 @@ console.log(calculateTotal())
       <div className="container" data-sticky-container>
         <div className="row">
           <div className="col-lg-8">
-            <form className="sb-checkout-form">
+            <form className="sb-checkout-form" onSubmit={handleSubmit}>
               <div className="sb-mb-30">
                 <h3>Billing details</h3>
               </div>
               <div className="row">
-                <div className="col-lg-6">
-                  <InputField type="text" label="First name" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="text" label="Last name" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="text" label="Company name" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="text" label="Country" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="text" label="City" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="text" label="State / Province" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="text" label="Street" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="text" label="Postcode" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="tel" label="Phone" required />
-                </div>
-                <div className="col-lg-6">
-                  <InputField type="email" label="Email" required />
-                </div>
+                {Object.keys(formData).map((key, index) => (
+                  <div className="col-lg-6" key={index}>
+                    <InputField
+                      type={key === 'email' ? 'email' : 'text'}
+                      label={key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}
+                      required
+                      name={key}
+                      value={formData[key]}
+                      onChange={handleChange}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="sb-mb-30">
                 <h3>Additional information</h3>
               </div>
               <div className="sb-group-input">
-                <textarea name="name" required></textarea>
+                <textarea
+                  name="orderNotes"
+                  required
+                  value={formData.orderNotes}
+                  onChange={handleChange}
+                ></textarea>
                 <span className="sb-bar"></span>
                 <label>Order notes</label>
               </div>
@@ -139,17 +189,17 @@ console.log(calculateTotal())
                 <h3 className="sb-mb-30">Payment method</h3>
                 <ul>
                   <li className="sb-radio">
-                    <input type="radio" id="option-1" name="selector" defaultChecked />
+                    <input type="radio" id="option-1" name="paymentMethod" defaultChecked />
                     <label htmlFor="option-1">Direct bank transfer</label>
                     <div className="sb-check"></div>
                   </li>
                   <li className="sb-radio">
-                    <input type="radio" id="option-2" name="selector" />
+                    <input type="radio" id="option-2" name="paymentMethod" />
                     <label htmlFor="option-2">Check payments</label>
                     <div className="sb-check"></div>
                   </li>
                   <li className="sb-radio">
-                    <input type="radio" id="option-3" name="selector" />
+                    <input type="radio" id="option-3" name="paymentMethod" />
                     <label htmlFor="option-3">Cash on delivery</label>
                     <div className="sb-check"></div>
                   </li>
@@ -176,11 +226,8 @@ console.log(calculateTotal())
                   {items.length === 0 ? (
                     <p>Your cart is empty</p>
                   ) : (
-                    items.map((item,index) => (
-                      <CartItem
-                        key={index}
-                        item={item}
-                      />
+                    items.map((item, index) => (
+                      <CartItem key={index} item={item} currency={currency} />
                     ))
                   )}
                   <div className="sb-cart-total sb-cart-total-2">
@@ -216,5 +263,6 @@ console.log(calculateTotal())
     </section>
   );
 };
+
 
 export default CheckoutPage;

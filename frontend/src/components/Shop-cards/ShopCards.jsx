@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/CartContexts'; // Adjust the import path if necessary
 import { StoreContext } from '../../Context/StoreContext';
 
-export default function ShopCards({ shopCardData, selectedMenu }) {
+export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setShowLogin }) {
     const [addedItems, setAddedItems] = useState({});
     const [quantities, setQuantities] = useState({}); // State for quantities per item
     const { addItemToCart } = useCart();
@@ -19,12 +19,16 @@ export default function ShopCards({ shopCardData, selectedMenu }) {
 
     const handleAddToCart = (item) => {
         // addItemToCart({ ...item, quantity: quantities[item._id] || 1 }); // Include quantity in cart
-        addToCart(item._id)
-        console.log(item._id)
-        setAddedItems(prev => ({
-            ...prev,
-            [item._id]: !prev[item._id]
-        }));
+        if(isLoggedin){
+            addToCart(item._id)
+            console.log(item._id)
+            setAddedItems(prev => ({
+                ...prev,
+                [item._id]: !prev[item._id]
+            }));
+        }else{
+            setShowLogin(true)
+        }
     };
 
     const increment = (item) => {

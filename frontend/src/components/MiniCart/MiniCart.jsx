@@ -3,14 +3,20 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { StoreContext } from "../../Context/StoreContext";
 import './MiniCart.css'; // Ensure this path is correct
 import { assets } from '../../assets/assets';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
-export default function MiniCart( { showMiniCart }) {
+export default function MiniCart( {setShowMiniCart, showMiniCart, isLoggedin, setShowLogin }) {
     const { cartItems, loadProductData } = useContext(StoreContext);
     const navigate = useNavigate();
     const [productItems, setProductItems] = useState([]); // Initialize with an empty array or null
 
     const handleCheckout = () => {
-        navigate('/checkout'); // Navigate to the checkout page
+        if(isLoggedin){
+            navigate('/checkout'); // Navigate to the checkout page
+            setShowMiniCart(false)
+        }else{
+            setShowLogin(true)
+        }
     };
 
     console.log('Cart Items:', cartItems);
