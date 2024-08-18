@@ -30,7 +30,7 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Burger",
       "Hot Rock Grill",
       "Grills",
-      "Steaks"
+      "Steak"
     ],
     "Sweet Indulgences": [
       "Desserts",

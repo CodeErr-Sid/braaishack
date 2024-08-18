@@ -18,7 +18,7 @@ const port = process.env.PORT || 4000;
 // middlewares
 app.use(express.json());
 app.use(cookieParser());
-const allowedOrigins = ['http://localhost:5174', 'http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5174', 'http://localhost:5173', 'https://braaishack.vercel.app'];
 
 const corsOptions = {
   origin: function (origin, callback) {
