@@ -25,15 +25,13 @@ const corsOptions = {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
-      console.error(`Blocked by CORS: ${origin}`); // Log the blocked origin
-      callback(new Error(`Not allowed by CORS: ${origin}`)); // More detailed error
+      callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
 
-app.use(cors(corsOptions));
-
+app.use(cors(corsOptions))
 
 
 // db connection
