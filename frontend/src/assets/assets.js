@@ -10,7 +10,7 @@ import menu_5 from "./menu_5.png";
 import menu_6 from "./menu_6.png";
 import menu_7 from "./menu_7.png";
 import menu_8 from "./menu_8.png";
-
+import login_icon from "./login_icon.png";
 import food_1 from "./food_1.png";
 import food_2 from "./food_2.png";
 import food_3 from "./food_3.png";
@@ -257,6 +257,7 @@ export const assets = {
   face2,
   delivery,
   Zoom,
+  login_icon,
   //   background_hero,
 };
 
