@@ -52,7 +52,10 @@ const ResturentOption = () => {
   // }, []);
 
   return (
+    
     <div className="main">
+            <img className="b1" alt="" src={assets.b2}  />
+            <img alt="" className="b3" src={assets.b4}  />
       <h1 className='mainhead'>What do you like Today?</h1>
       <div className="menulists">
         <div className="menulist">

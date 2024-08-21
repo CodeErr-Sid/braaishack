@@ -33,7 +33,7 @@ import gsap from "gsap";
   //     scrollTrigger:{
   //       trigger:'.details-section',
   //       start: "top 50%",
-  //         end: "top 30%",
+  //         end: "top 30%" ,
   //         scrub: 1,
   //     }   / ./
   //   });

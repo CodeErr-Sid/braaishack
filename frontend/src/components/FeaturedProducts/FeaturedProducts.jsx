@@ -48,11 +48,12 @@ const FeaturedProducts = () => {
     //             }
     //         }
     //     );
-    // }, []);
+    // }, []); 
 
     return (
         <div className="featuredproducts">
-            <img src={assets.b2} alt="" className="b2" />
+            <img src={assets.b5} alt="" className="b2" />
+            <img src={assets.b3} alt="" className="b3" />
             <h1>Featured Products</h1>
             <div className="products">
                 <div className="product">

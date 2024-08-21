@@ -17,7 +17,7 @@ import Details from '../../components/About-details/Details.jsx'
 import Image from '../../components/images/Image.jsx'
 
 const Home = () => {
-  const headerImages = [
+  const headerImages = [ 
    assets.smokey,
    assets.smokey,
    assets.smokey,

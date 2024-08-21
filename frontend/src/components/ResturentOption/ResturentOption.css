@@ -3,6 +3,24 @@
     width: 100vw;
     min-height: 0vh;
     background-color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.main .b1{
+    position: absolute;
+   left: -5%;
+   /* transform: rotate(171deg); */
+   width: 15vw;
+   height: auto;
+   bottom: 50%;
+}
+
+.main .b3{
+    position: absolute;
+    right: 0%;
+    width: 15vw;
+    height: auto;
+    bottom: 0%;
 }
 
 .main .mainhead {
@@ -18,9 +36,13 @@
     flex-wrap: wrap;
 }
 
+.menucontent h1{
+    font-size: 2rem;
+}
+
 .main .menulists .menulist {
-    width: 40vw;
-    min-height: 18vw;
+    width: 34vw;
+    min-height: 13vw;
     background-color: #ffffff;
     margin: 2vw;
     border-radius: 0.2vw;
@@ -36,8 +58,8 @@
 }
 
 .menulist .menuimg {
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -49,7 +71,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 1vw;
+    /* gap: 1vw; */
 }
 
 .menucontent .para {

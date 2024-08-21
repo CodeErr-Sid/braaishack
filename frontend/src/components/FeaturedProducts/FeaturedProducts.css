@@ -9,10 +9,18 @@
 
 .featuredproducts .b2{
    position: absolute;
-    right: 0%;
-    width: 15vw;
+    left: -4%;
+    width: 14vw;
     height: auto;
+    top: 6%;
+}
 
+.featuredproducts .b3{
+  position: absolute;
+   right: -4%;
+   width: 14vw;
+   height: auto;
+   bottom: 0%;
 }
 
 .featuredproducts h1 {
