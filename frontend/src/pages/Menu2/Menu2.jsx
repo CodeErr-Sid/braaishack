@@ -18,9 +18,28 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
   ];
 
   const Menubtndata = {
+    "All":[
+      "Soul Food",
+      "Vegetarian Dishes",
+      "Bunny Chows",
+      "Potjiekos",
+      "Sosaties",
+      "Go Traditional",
+      "Burger",
+      "Hot Rock Grill",
+      "Grill",
+      "Steak",
+      "Desserts",
+      "Milkshake",
+      "Alcoholic Milkshake",
+      "Add Extras",
+      "Sides",
+      "Sauces",
+      "Hot Drink"
+    ],
     "Starters & Soulful Flavors": [
       "Soul Food",
-      "Veggie/Vegan",
+      "Vegetarian Dishes",
       "Bunny Chows",
       "Potjiekos",
       "Sosaties",
@@ -29,13 +48,13 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
     "Grills & Burgers": [
       "Burger",
       "Hot Rock Grill",
-      "Grills",
+      "Grill",
       "Steak"
     ],
     "Sweet Indulgences": [
       "Desserts",
-      "Milkshakes",
-      "Don Pedro (Alcohol Milkshakes)"
+      "Milkshake",
+      "Alcoholic Milkshake"
     ],
     "Beverages": [
       "Hot Drink"
@@ -46,6 +65,7 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Sauces"
     ]
   };
+  
 
   return (
     <>
