@@ -39,7 +39,7 @@ const AdminAdd = () => {
         price: Number(data.price)
       };
 
-      const response = await axios.post('http://localhost:4000/api/food/add', productData, {
+      const response = await axios.post( url +'/api/food/add', productData, {
         headers: {
           authorization: token // Use Bearer scheme if needed
         }

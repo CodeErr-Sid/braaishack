@@ -80,23 +80,22 @@ const StoreContextProvider = (props) => {
 
     const loadProductData = async (cartItems = {}) => {
         try {
-          // Check if cartItems is empty or invalid
-          if (!cartItems || typeof cartItems !== 'object' || Array.isArray(cartItems) || Object.keys(cartItems).length === 0) {
-            return 'Cart is empty'; // Handle empty cart case
-          }
-      
-          // Send a POST request with cartItems in the request body
-          const response = await axios.post(url + "/api/food/list/bulk", { cartItems });
-          return response.data;
+            // Check if cartItems is empty or invalid
+            if (!cartItems || typeof cartItems !== 'object' || Array.isArray(cartItems) || Object.keys(cartItems).length === 0) {
+                return 'Cart is empty'; // Handle empty cart case
+            }
+
+            // Send a POST request with cartItems in the request body
+            const response = await axios.post(url + "/api/food/list/bulk", { cartItems });
+            return response.data;
         } catch (error) {
-          console.error('Error loading product data:', error.message);
-          throw error;
+            console.error('Error loading product data:', error.message);
+            throw error;
         }
-      };
+    };
 
     useEffect(() => {
         async function loadData() {
-            await fetchFoodList();
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"))
                 await loadCartData({ token: localStorage.getItem("token") })
@@ -104,6 +103,15 @@ const StoreContextProvider = (props) => {
         }
         loadData()
     }, [])
+
+    useEffect(() => {
+        const fetchFoodList = async () => {
+            const response = await axios.get(url + "/api/food/list");
+            setFoodList(response.data.data)
+        }
+
+        fetchFoodList()
+    })
 
     const contextValue = {
         url,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -11,7 +11,16 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthProvider, useAuth } from './contexts/AuthContext.jsx';
 
 const ProtectedRoute = ({ children }) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, checkLogin, token } = useAuth();
+
+  useEffect(() => {
+    checkLogin();
+  }, [token]);
+
+  console.log("Token in localStorage:", localStorage.getItem("admin:token"));
+console.log("Token in state:", token);
+console.log("IsAuthenticated:", isAuthenticated);
+
   return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
@@ -25,7 +34,7 @@ const App = () => {
           <Route path="/login" element={<AdminLogin />} />
 
           {/* Protected Routes */}
-          <Route 
+          <Route
             path="/*"
             element={
               <ProtectedRoute>
@@ -43,6 +52,7 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+
         </Routes>
       </div>
     </AuthProvider>

@@ -50,7 +50,12 @@ export default function MiniCart( {setShowMiniCart, showMiniCart, isLoggedin, se
     console.log('Product Items:', productItems);
 
     const handleViewOrder = () => {
-        navigate('/cart'); // Navigate to the cart page
+        if(isLoggedin){
+            navigate('/myorders'); // Navigate to the orders page
+            setShowMiniCart(false)
+        }else{
+            setShowLogin(true)
+        }
     };
 
     return (

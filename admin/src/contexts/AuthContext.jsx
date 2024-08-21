@@ -8,26 +8,19 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [token, setToken] = useState(() => localStorage.getItem("admin:token") || null);
 
-  console.log(isAuthenticated)
-
-
-  useEffect(() => {
+  const checkLogin = () => {
     const storedToken = localStorage.getItem("admin:token");
     if (storedToken) {
       setToken(storedToken);
+      console.log(storedToken)
       setIsAuthenticated(true);
     } else {
       setIsAuthenticated(false);
     }
-  }, []);
+  }
 
-  useEffect(() => {
-    if (token) {
-      setIsAuthenticated(true);
-    } else {
-      setIsAuthenticated(false);
-    }
-  }, [token]);
+  console.log(isAuthenticated)
+
 
   const login = (newToken) => {
     setToken(newToken);
@@ -42,7 +35,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, token, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, token, login, logout, checkLogin }}>
       {children}
     </AuthContext.Provider>
   );

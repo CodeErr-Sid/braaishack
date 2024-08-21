@@ -13,16 +13,9 @@ const List = () => {
 
   const [list, setList] = useState([]);
 
-  const fetchList = async () => {
-    const response = await axios.get(`${url}/api/food/list`)
-    if (response.data.success) {
-      setList(response.data.data);
-    }
-    else {
-      toast.error("Error")
-    }
-  }
 
+
+  // console.log(list)
   const removeFood = async (foodId) => {
     const response = await axios.post(`${url}/api/food/remove`, 
       { id: foodId }, 
@@ -40,7 +33,17 @@ const List = () => {
   }
 
   useEffect(() => {
-    fetchList();
+    const fetchList = async () => {
+      const response = await axios.get(`${url}/api/food/list`)
+      if (response.data.success) {
+        setList(response.data.data);
+      }
+      else {
+        toast.error("Error")
+      }
+    }
+
+    fetchList()
   }, [])
 
   return (

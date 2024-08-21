@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './AdminLogin.css';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { url } from '../../assets/assets'
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,7 +25,7 @@ const AdminLogin = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/api/admin/login', credentials, {
+      const response = await axios.post(url + '/api/admin/login', credentials, {
         withCredentials: true // Ensure cookies are sent and received
       });
       if (response.data.success) {
