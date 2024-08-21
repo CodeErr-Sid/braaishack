@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 .section-section__container {
-    padding: 2rem 3rem;
+    padding: 2rem 3rem; 
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
