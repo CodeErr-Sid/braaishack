@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
-import AnimatedCursor from 'react-animated-cursor';
+// import AnimatedCursor from 'react-animated-cursor';
 
 // Pages
 import Home from './pages/Home/Home';
@@ -51,7 +51,7 @@ useEffect(()=>{
       {showLogin && <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
       <Preloader /> {/* Consider managing visibility of Preloader */}
       <div className='app'>
-        <div className="custom-animated-cursor">
+        {/* <div className="custom-animated-cursor">
           <AnimatedCursor
             innerSize={8}
             outerSize={35}
@@ -71,7 +71,7 @@ useEffect(()=>{
               border: '3px solid var(--cursor-color)'
             }}
           />
-        </div>
+        </div> */}
 
         {/* <MiniCart /> */}
         <Navbar isLoggedin={isLoggedin} setShowLogin={setShowLogin} setIsLoggedin={setIsLoggedin} setShowMiniCart={setShowMiniCart} />

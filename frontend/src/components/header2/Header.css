@@ -60,9 +60,9 @@
 
 .header-images2 .burger {
   z-index: 3;
-  width: 447px;
-  height: 415px;
-  left: 7%;
+  width: auto;
+  height: 350px;
+  left: 13%;
   transform: translateY(-10%);
   animation: float 6s ease-in-out infinite;
 }
@@ -110,8 +110,8 @@
 @media screen and (max-width: 1030px) {
   .header-images2 .burger {
     z-index: 3;
-    width: 400px;
-    height: 385px;
+    width: auto;
+    height: 350px;
     left: 5%;
     /* transform: translateY(-10%); */
     animation: float 6s ease-in-out infinite;
