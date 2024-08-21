@@ -25,6 +25,9 @@ const Home = () => {
    assets.smokey,
    assets.smokey,
    assets.smokey,
+   assets.smokey,
+   assets.smokey,
+   assets.smokey,
   ];
 
   return (

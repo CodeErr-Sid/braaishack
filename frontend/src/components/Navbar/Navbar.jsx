@@ -148,7 +148,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
         >
           MAP&CONTACT
         </a> */}
-        <a href="https://sunnysidecafe.vercel.app/">BREAKFAST</a>
+        <a href="https://sunnysidecafe.vercel.app/">SunnySide Cafe</a>
         <a href="https://digispirits28.wixstudio.io/my-site-4/">PUB</a>
       </div>
 
@@ -156,8 +156,8 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
         <div className="icon-container" onClick={toggleMiniCart}>
           <img src={assets.cart} alt="cart icon" />
         </div>
-        <div className="three-dot-container" onClick={isLoggedin ? toggleLogout : toggleLogin}>
-          <div className="three-dot">...</div>
+        <div className="icon-container2" onClick={isLoggedin ? toggleLogout : toggleLogin}>
+          <img src={assets.login_icon} alt="cart icon" />
           {isLoggedin && showLogout && <button className={`br-logout-btn ${showLogout ? "btn-scale-up" : "btn-scale-down"}`} onClick={logout}>Logout</button>}
         </div>
         <div className="menubtn" onClick={toggleMenu}>
