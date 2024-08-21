@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets';
 import MenuNav from '../../components/MenuNav/MenuNav';
 import { StoreContext } from '../../Context/StoreContext';
 import ShopCards from '../../components/Shop-cards/ShopCards';
+// import Preloader from '../../components/Preloader/Preloader';
 
 const Menu2 = ({ isLoggedin, setShowLogin }) => {
   const { food_list } = useContext(StoreContext);
@@ -11,7 +12,7 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
   const [selectedMenu, setSelectedMenu] = useState([]);
 
   const images = [
-    { src: assets.burger, className: 'burger' },
+    { src: assets.burger3, className: 'burger' },
     { src: assets.onion, className: 'onion' },
     { src: assets.tomato, className: 'tomato' },
     { src: assets.chilli, className: 'chilli' }
@@ -49,6 +50,7 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
 
   return (
     <>
+    {/* <Preloader /> */}
       <Header
         title="MENUS"
         content="Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."

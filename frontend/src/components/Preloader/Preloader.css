@@ -18,12 +18,12 @@ preloader
     align-items: center;
     transition: 0.4s ease-in-out;
   }
-  
+ 
   .sb-preloader .sb-preloader-bg {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
     border-radius: 50%;
     position: absolute;
-    background-color: var(--orange);
+    background-color: #FDCF09;
     height: 2000px;
     width: 2000px;
     /* top: 20%; */
