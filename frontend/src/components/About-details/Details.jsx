@@ -35,7 +35,7 @@ import gsap from "gsap";
   //       start: "top 50%",
   //         end: "top 30%",
   //         scrub: 1,
-  //     }
+  //     }   / ./
   //   });
   // });
   export default function Details() {

@@ -24,11 +24,12 @@
   font-size: 1rem;
   font-weight: 900;
   /* all: unset; */
-  padding: 10px;
-  border-radius: .6rem;
+  padding: 7px;
+  border-radius: 12px;
   border: none;
-  top: 30px;
-  right: 0;
+  top: 75px;
+  right: 3px;
+  background-color: #d4b21b;
 }
 
 @keyframes btn-scaleUp {
