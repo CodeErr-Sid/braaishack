@@ -29,6 +29,7 @@ import LoginPopup from './components/LoginPopup/LoginPopup';
 import Preloader from './components/Preloader/Preloader';
 import MiniCart from './components/MiniCart/MiniCart';
 import { CartProvider } from './Context/CartContexts';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 // index.js or App.js
 
 
@@ -76,6 +77,7 @@ useEffect(()=>{
         {/* <MiniCart /> */}
         <Navbar isLoggedin={isLoggedin} setShowLogin={setShowLogin} setIsLoggedin={setIsLoggedin} setShowMiniCart={setShowMiniCart} />
          <MiniCart setShowMiniCart={setShowMiniCart} showMiniCart={showMiniCart} isLoggedin={isLoggedin} setShowLogin={setShowLogin}/>
+        <ScrollToTop/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
