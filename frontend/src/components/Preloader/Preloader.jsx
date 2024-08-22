@@ -83,7 +83,7 @@ const Preloader = () => {
         <div className="sb-loading">
           <div className="sb-percent">
             <span className="sb-preloader-number" data-count="101">00</span>
-            <span>%</span>
+            <span className="sb-percentage">%</span>
           </div>
         </div>
         <div className="sb-loading-bar">

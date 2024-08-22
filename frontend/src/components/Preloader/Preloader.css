@@ -18,12 +18,12 @@ preloader
     align-items: center;
     transition: 0.4s ease-in-out;
   }
- 
+  
   .sb-preloader .sb-preloader-bg {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.05);
     border-radius: 50%;
     position: absolute;
-    background-color: var(--orange) !important;
+    background-color: black !important;
     height: 2000px;
     width: 2000px;
     /* top: 20%; */
@@ -31,6 +31,14 @@ preloader
     transition: 0.6s ease-in-out;
   }
   
+  .sb-preloader-number {
+    color: #FDCF09 !important;
+  }
+  .sb-percentage{
+    color: #FDCF09 !important;
+  }
+ 
+
   .sb-preloader .sb-preloader-body {
     position: absolute;
     bottom: 0;
@@ -60,7 +68,7 @@ preloader
   .sb-preloader .sb-preloader-body .sb-loading-bar .sb-bar {
     width: 100%;
     height: 0;
-    background-color: #231e41;
+    background-color: #FDCF09;
   }
   
   .sb-preloader.sb-hidden {
