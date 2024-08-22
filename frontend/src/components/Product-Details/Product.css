@@ -4,6 +4,10 @@
   margin-bottom: 90px !important;
 }
 
+.mb-0{
+  margin-bottom: 0;
+}
+
 .sb-mb-30 {
   margin-bottom: 30px !important;
 }
@@ -20,7 +24,7 @@
 }
 .sb-p-90-0 {
   /* width: 90vw; */
-  height: 100vh;
+  /* height: 100vh; */
 }
 /***************************
 
@@ -670,5 +674,5 @@ list
 }
 
 .width {
-  width: 45vw !important;
+  width: 40vw !important;
 }

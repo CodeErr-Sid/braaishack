@@ -14,8 +14,8 @@ export default function Product() {
     <Header header_title={'Online Shop'} header_btn={'HOME/Shop/Product'} />
     <ProductDetails/>
     {/* <ProductIngredients/> */}
-    <ShortMenu/>
-    <CallToAction2/>
+    {/* <ShortMenu/>
+    <CallToAction2/> */}
     </>
   )
 }

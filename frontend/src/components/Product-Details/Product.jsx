@@ -80,7 +80,7 @@ const ProductDetails = () => {
 
     return (
         <section className="sb-p-90-0">
-            <div className="container">
+            <div className="container mb-0">
                 <div className="row align-items-center">
                     <div className="col-lg-7 width">
                         <div className="sb-gallery-item sb-gallery-square sb-mb-90">
