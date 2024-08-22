@@ -81,7 +81,7 @@ const Brailoader = () => {
             <div className="mil-preloader-animation">
                 <div className="mil-pos-abs mil-animation-1">
                     <p className="mil-h3 mil-bla mil-thin" id="color-mil-txt">Culinary</p>
-                    <p className="mil-h3 mil-maroon" id="color-mil-txt">Exquisite</p>
+                    <p className="mil-h3 mil-maroon" id="color-mil-txt" style={{ color: '#fde419' }}>Exquisite</p>
                     <p className="mil-h3 mil-black mil-thin" id="color-mil-txt">Meticulous</p>
                 </div>
                 <div className="mil-pos-abs mil-animation-2">
