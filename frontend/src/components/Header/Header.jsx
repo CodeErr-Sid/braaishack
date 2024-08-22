@@ -33,7 +33,7 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
                 <p>{content}</p>
                 <div className="btn">
                 <button>{btn}</button>
-                {/* <button>{btn}</button> */}
+                <button>View Menu</button>
                 </div>
             </div>
             <div className="header-img">

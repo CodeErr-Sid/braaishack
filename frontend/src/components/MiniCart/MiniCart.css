@@ -184,8 +184,33 @@ menu
   outline: inherit;
 }
 .sb-ib-title-frame {
+
   color: white; /* Change color of the heading */
 }
 .sb-ib-title-frame .fa-arrow-down {
   color: white; /* Change color of the icon */
+}
+/* close button */
+
+.sb-close-btn {
+  position: absolute;
+  top: 0px;
+  right: 40px;
+  background-color: transparent;
+  border: none;
+  color: #f5c332; /* Gold color */
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sb-close-btn:hover {
+  color: #ffdd4a; /* A lighter shade of gold for hover effect */
+}
+@media (max-width: 992px) {
+  .sb-close-btn {
+      top: 0px;
+      /* right: 5px; */
+      font-size: 32px;
+  }
 }
