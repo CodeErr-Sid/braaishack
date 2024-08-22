@@ -70,7 +70,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
         <Link
           to="/"
           onClick={() => {
-            setMenu("HOME");
+            setMenu("Home");
             toggleMenu();
           }}
           className={`${menu === "HOME" ? "active" : ""}`}
@@ -148,8 +148,8 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
         >
           MAP&CONTACT
         </a> */}
-        <a href="https://sunnysidecafe.vercel.app/">SunnySide Cafe</a>
-        <a href="https://digispirits28.wixstudio.io/my-site-4/">PUB</a>
+        <a className="animate-btn" href="https://sunnysidecafe.vercel.app/">SUNNY SIDE</a>
+        <a className="animate-btn" href="https://digispirits28.wixstudio.io/my-site-4/">PUB</a>
       </div>
 
       <div className={`navbar-end ${isMenuOpen ? "open" : "closed"}`}>

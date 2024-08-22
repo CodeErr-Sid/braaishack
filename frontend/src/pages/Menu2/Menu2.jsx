@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets';
 import MenuNav from '../../components/MenuNav/MenuNav';
 import { StoreContext } from '../../Context/StoreContext';
 import ShopCards from '../../components/Shop-cards/ShopCards';
-// import Preloader from '../../components/Preloader/Preloader';
+import Preloader from '../../components/Preloader/Preloader';
 
 const Menu2 = ({ isLoggedin, setShowLogin }) => {
   const { food_list } = useContext(StoreContext);
@@ -70,11 +70,11 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
 
   return (
     <>
-    {/* <Preloader /> */}
+    <Preloader />
       <Header
         title="MENUS"
         content="Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."
-        btn="Book a Table"
+        btn="Order Now"
         imgsrc={images}
       />
       <MenuNav setSelectedMenu={setSelectedMenu} Menubtndata={Menubtndata} />

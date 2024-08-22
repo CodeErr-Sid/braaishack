@@ -134,7 +134,8 @@ call to action
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 30px;
+    /* padding: 0 30px; */
+    width: 80% ;
   }
 
   .swiper-container {

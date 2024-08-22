@@ -4,8 +4,25 @@
 .updates {
     width: 100%;
     display: flex;
+    position: relative;
     justify-content: center; /* Center the content horizontally */
 }
+
+.b2{
+    position: absolute;
+     left: -4%;
+     width: 14vw;
+     height: auto;
+     top: 6%;
+  }
+  
+  .b3{
+   position: absolute;
+    right: -4%;
+    width: 14vw;
+    height: auto;
+    bottom: 0%;
+  }
 
 .publication-container {
     max-width: 87%;

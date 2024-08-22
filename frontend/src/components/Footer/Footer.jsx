@@ -4,116 +4,112 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Footer.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
-  //   useEffect(() => {
-  //     gsap.from(".footer-content-left", {
-  //       opacity: 0,
-  //       x: -100,
-  //       duration: 0.75,
-  //       ease: "power2.out",
-  //       scrollTrigger: {
-  //         trigger: ".footer-content-left",
-  //         start: "top 80%",
-  //         end: "top 60%",
-  //         scrub: 5,
-  //       }
-  //     });
+  // Uncomment the following if you want to use GSAP animations
+  // useEffect(() => {
+  //   gsap.from(".footer-content-left", {
+  //     opacity: 0,
+  //     x: -100,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".footer-content-left",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 5,
+  //     }
+  //   });
 
-  //     gsap.from(".footer-content-right", {
-  //       opacity: 0,
-  //       x: 100,
-  //       duration: 0.75,
-  //       ease: "power2.out",
-  //       scrollTrigger: {
-  //         trigger: ".footer-content-right",
-  //         start: "top 80%",
-  //         end: "top 60%",
-  //         scrub: 5,
-  //       }
-  //     });
+  //   gsap.from(".footer-content-right", {
+  //     opacity: 0,
+  //     x: 100,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".footer-content-right",
+  //       start: "top 80%",
+  //       end: "top 60%",
+  //       scrub: 5,
+  //     }
+  //   });
 
-  //     gsap.from(".babyfoot", {
-  //       opacity: 0,
-  //       y: 50,
-  //       duration: 0.75,
-  //       ease: "power2.out",
-  //       scrollTrigger: {
-  //         trigger: ".babyfoot",
-  //         start: "top 90%",
-  //         end: "top 70%",
-  //         scrub: 5,
-  //       }
-  //     });
-
-  //   }, []);
+  //   gsap.from(".babyfoot", {
+  //     opacity: 0,
+  //     y: 50,
+  //     duration: 0.75,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".babyfoot",
+  //       start: "top 90%",
+  //       end: "top 70%",
+  //       scrub: 5,
+  //     }
+  //   });
+  // }, []);
 
   return (
     <footer>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+      </Helmet>
       <div className="footer-container">
-        <div className="footer-section footer-content-left foot" >
+        <div className="footer-section footer-content-left foot">
           <div className="logo">
-            <img src={assets.logo} alt="" />
+            <img src={assets.logo} alt="Logo" />
           </div>
-          <p >42 Church Street, Wolverton MK 12 5JN Milton Keynes</p>
-<p>01908 313838</p>
+          <p>42 Church Street, Wolverton MK 12 5JN Milton Keynes</p>
+          <p className="ph-no">+44 0190 31383</p>
         </div>
         <div className="footer-section footer-content-left">
-
           <ul>
             <li>
-              <Link to='/'>
-                <i className="fas fa-info-circle"></i> Home
+              <Link to="/">
+                <i className="fas fa-caret-right"></i> Home
               </Link>
             </li>
             <li>
-              <Link to='/menu'>
-                <i className="fas fa-envelope"></i> Menus
-                            </Link>
-
+              <Link to="/about">
+                <i className="fas fa-caret-right"></i> About Us
+              </Link>
             </li>
             <li>
-              <Link to='/about'>
-                <i className="fas fa-shield-alt"></i> About Us
-                            </Link>
-
+              <Link to="/menu2">
+                <i className="fas fa-caret-right"></i> Menu
+              </Link>
             </li>
             <li>
-              <Link to='/GiftSection'>
-                <i className="fas fa-file-contract"></i> Frozen Delight
-                            </Link>
+              <Link to="/GiftSection">
+                <i className="fas fa-caret-right"></i> Gift
+              </Link>
             </li>
           </ul>
         </div>
         <div className="footer-section footer-content-left">
-
           <ul>
-            <li>
-              <Link to='/'>
-                <i className="fas fa-info-circle"></i> Home
-              </Link>
+          <li>
+              <a href="#">
+                <i className="fas fa-envelope"></i> Contact Us
+              </a>
             </li>
             <li>
-              <Link to='/menu'>
-                <i className="fas fa-envelope"></i> Terms & Condistion
-                            </Link>
-
+              <a href="https://sunnysidecafe.vercel.app" target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-globe"></i> Sunny Side Cafe
+              </a>
             </li>
             <li>
-              <Link to='/about'>
-                <i className="fas fa-shield-alt"></i> Privacy Policy
-                            </Link>
-
+              <a href="#">
+                <i className="fas fa-globe"></i> Queen Victoria PUB
+              </a>
             </li>
-            <li>
-              <Link to='/GiftSection'>
-                <i className="fas fa-file-contract"></i> Latest News
-                            </Link>
-
-            </li>
+            
           </ul>
         </div>
         <div className="footer-section babyfoot">

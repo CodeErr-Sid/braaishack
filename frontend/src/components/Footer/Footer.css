@@ -13,9 +13,18 @@ footer {
 }
 
 .foot p{
-      padding-top: 1vw;
+      /* padding-top: 1vw; */
     padding-right: 5vw;
-    padding-bottom: 1vw;
+    /* padding-bottom: 1vw; */
+}
+
+.foot .ph-no{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FDCF09;
+}
+.foot .ph-no:hover{
+    color: white;
 }
 
 .footer-container {
@@ -129,7 +138,7 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     padding-top: 20px;
     border-top: 1px solid #333;
     position: relative;

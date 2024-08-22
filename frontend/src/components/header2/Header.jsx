@@ -26,7 +26,7 @@ const Header = ({ title, content, btn, imgsrc }) => {
       <div className="header-content2">
         <h1>{title}</h1>
         <p>{content}</p>
-        <button>{btn}</button>
+        <button className='abt-btn'>{btn}</button>
       </div>
       <div className="header-images2">
         <div className="radiant-background"></div>

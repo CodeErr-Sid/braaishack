@@ -15,6 +15,7 @@ import Reservation_Table from '../../components/Reservation_Table/Reservation_Ta
 import { assets } from '../../assets/assets'
 import Details from '../../components/About-details/Details.jsx'
 import Image from '../../components/images/Image.jsx'
+import Preloader from '../../components/Preloader/Preloader';
 
 const Home = () => {
   const headerImages = [ 
@@ -28,12 +29,13 @@ const Home = () => {
    assets.smokey,
    assets.smokey,
    assets.smokey,
-  ];
+  ]; 
 
   return (
     <>
+      <Preloader />
       <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} overlay={headerImages} imgsrc={assets.header_img_2} />
-      <Details/>
+      <Details/> 
       {/* <Story/> */}
       <ResturentOption/>
       <Image/>

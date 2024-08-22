@@ -6,9 +6,39 @@
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  padding-top: 6vw;
+  /* padding-top: 6vw; */
   /* overflow-x: hidden; */
   min-height: 100vh;
+}
+
+{
+  background-color: #fdcf08;
+}
+
+.abt-btn {
+  width: 30%;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border: none;
+  background: linear-gradient(45deg, #fdcf08, #f8a104);
+  color: #000;
+  padding: 1vw 2vw;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.abt-btn:hover {
+  background: linear-gradient(45deg, #f8a104, #fdcf08);
+  /* border-radius: 2vw; */
+  /* transform: scale(1.1); */
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); */
 }
 
 .header-content2 {
@@ -32,13 +62,13 @@
 }
 
 .header-content2 button {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 600;
   border: none;
   border-radius: 4px;
   margin: 3vw 0;
-  width: 213px;
-  height: 57px;
+  /* width: 213px;
+  height: 57px; */
   text-align: center;
 }
 
@@ -164,7 +194,7 @@
   .header2 {
     flex-direction: column; /* Stack elements vertically */
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
     overflow-y: hidden;
   }
 
@@ -288,7 +318,7 @@
 @media (max-width: 390px) {
   .header-images2 .burger {
     width: 305px;
-    height: 280px;
+    height: 250px;
     left: -50%;
   }
   .header-images2 .chilli {

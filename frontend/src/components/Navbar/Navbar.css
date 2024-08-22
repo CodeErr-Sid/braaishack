@@ -220,7 +220,7 @@
 /* Navbar.css */
 
 :root {
-  --orange: #ea8710;
+  /* --orange: #ea8710; */
 }
 
 .sb-preloader {
@@ -304,3 +304,4 @@
   height: 50px; /* Make image fit within the container */
   object-fit: cover; /* Ensure image maintains aspect ratio */
 }
+

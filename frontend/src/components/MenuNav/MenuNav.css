@@ -177,11 +177,12 @@
 
 @media (max-width: 487px) {
   .Menubtn button {
-    width: 137px;
-    height: 42px;
-    font-size: 15px;
+    width: 148px;
+    height: 44px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 20px;
+   
   }
 }
 

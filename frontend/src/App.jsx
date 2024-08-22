@@ -50,7 +50,7 @@ useEffect(()=>{
     <CartProvider>
       <ToastContainer />
       {showLogin && <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
-      <Preloader /> {/* Consider managing visibility of Preloader */}
+      {/* <Preloader /> Consider managing visibility of Preloader */}
       <div className='app'>
         {/* <div className="custom-animated-cursor">
           <AnimatedCursor

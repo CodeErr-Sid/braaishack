@@ -85,7 +85,7 @@ export default function Features() {
   //       trigger: ".lower-container",
   //       start: "top 75%",
   //       end: "top 50%",
-  //       scrub: 1,
+  //       scrub: 1, 
   //     }
   //   });
 
@@ -93,6 +93,8 @@ export default function Features() {
   return (
     <>
       <div className='feature-container'>
+      <img src={assets.b3} alt="" className="b2" />
+      <img src={assets.b2} alt="" className="b3" />
         <h1>Features of Braai shack</h1>
         <div className='upper-container'>
           <div className="left-image">

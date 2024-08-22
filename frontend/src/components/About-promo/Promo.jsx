@@ -44,6 +44,8 @@ import gsap from 'gsap';
   export default function Promo() {
   return (
      <div className="main-section">
+            <img src={assets.b3} alt="" className="b2" />
+            <img src={assets.b4} alt="" className="b3" />
         <div className="left-promo__section">
             <p className='btn-promo'>Promo Video</p>
             <h1>Restaurant is like a Theater. Our task is to amaze you!</h1>

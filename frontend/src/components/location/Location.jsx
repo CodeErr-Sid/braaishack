@@ -25,7 +25,7 @@ export default function Location() {
           trigger: ".section-section__container",
           start: "top 90%",
           end: "top 50%",
-          scrub: 5,
+          scrub: 6,
         },
       }
     );
@@ -37,7 +37,7 @@ export default function Location() {
         trigger:'.section-section__container',
         start: "top 90%",
           end: "top 50%",
-          scrub: 5,
+          scrub: 6,
       }
     });
   });
@@ -69,7 +69,12 @@ export default function Location() {
             leftNumber: '05',
             rightTitle: 'We are located in the city center',
             rightContent: 'Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo'
-        }
+        },
+        {
+          leftNumber: '06',
+          rightTitle: 'We are located in the city center',
+          rightContent: 'Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo'
+      }
     ];
 
     return (

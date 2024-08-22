@@ -130,6 +130,8 @@ export default function Publication() {
   return (
     <>
       <section className='updates'>
+      <img src={assets.b2} alt="" className="b2" />
+      <img src={assets.b5} alt="" className="b3" />
         <div className="publication-container">
           <div className="section-01">
             <h1>Latest Publications</h1>

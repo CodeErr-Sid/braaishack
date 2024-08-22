@@ -9,6 +9,24 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
+  position: relative;
+}
+
+
+.b2{
+  position: absolute;
+   left: -4%;
+   width: 14vw;
+   height: auto;
+   top: 6%;
+}
+
+.b3{
+ position: absolute;
+  right: -4%;
+  width: 14vw;
+  height: auto;
+  bottom: 0%;
 }
 
 .feature-container h1 {
