@@ -86,7 +86,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/GiftSection">
+              <Link to="/gift-section">
                 <i className="fas fa-caret-right"></i> Gift
               </Link>
             </li>
