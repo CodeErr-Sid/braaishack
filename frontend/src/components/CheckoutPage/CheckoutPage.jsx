@@ -185,7 +185,7 @@ const CheckoutPage = () => {
                 <span className="sb-bar"></span>
                 <label>Order notes</label>
               </div>
-              <div className="sb-mb-30">
+              {/* <div className="sb-mb-30">
                 <h3 className="sb-mb-30">Payment method</h3>
                 <ul>
                   <li className="sb-radio">
@@ -204,7 +204,7 @@ const CheckoutPage = () => {
                     <div className="sb-check"></div>
                   </li>
                 </ul>
-              </div>
+              </div> */}
               <button type="submit" className="sb-btn sb-m-0">
                 <span className="sb-icon">
                   <img src={assets.arrow} alt="icon" />

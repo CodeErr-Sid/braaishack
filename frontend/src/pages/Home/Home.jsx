@@ -41,7 +41,7 @@ const Home = () => {
       <Image/>
       <FeaturedProducts/>
       <Events_F title={"Events"}/>
-      <Reservation_Table/>
+      {/* <Reservation_Table/> */}
       {/* <Event/> */}
       {/* <ExploreMenu setCategory={setCategory} category={category}/>
       <FoodDisplay category={category}/> */}

@@ -1,12 +1,15 @@
 .my-orders{
     margin-top: 80px;
-    height: 100vh;
+    /* height: 100vh; */
+    padding: 3rem 0;
+
 }
 .my-orders .container{
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 30px;
+    margin-bottom: 0;
 }
 .tittle1{
     text-align: center;
@@ -15,7 +18,7 @@
 }
 .my-orders-order{
     display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 0.5fr 3fr 2fr 2fr 2fr 2fr 2fr;
     align-items: center;
     gap: 30px;
     font-size: 14px;

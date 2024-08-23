@@ -19,6 +19,8 @@ export default function MiniCart({ setShowMiniCart, showMiniCart, isLoggedin, se
         }
     };
 
+    console.log(productItems)
+
     useEffect(() => {
         const fetchData = async () => {
             if (cartItems && Object.keys(cartItems).length > 0) {

@@ -23,12 +23,10 @@ const MyOrders = () => {
     // Retrieve stored order IDs from localStorage
     const storedOrderIds = JSON.parse(localStorage.getItem('orderIds')) || {};
 
+    console.log(orders)
+
     // Assign a random order ID to each order if not already assigned
-    orders.forEach((order) => {
-      if (!storedOrderIds[order._id]) {
-        storedOrderIds[order._id] = generateOrderId();
-      }
-    });
+
 
     // Save the updated order IDs back to localStorage
     localStorage.setItem('orderIds', JSON.stringify(storedOrderIds));
@@ -53,19 +51,19 @@ const MyOrders = () => {
           return (
             <div key={index} className='my-orders-order'>
               <img src={assets.parcel_icon} alt="" />
-              <p>{order.items.map((item, index) => {
+              <ul>{order.items.map((item, index) => {
                 if (index === order.items.length - 1) {
-                  return item.name + " x " + item.quantity;
+                  return (<li>{item.name + " x " + item.quantity}</li>);
                 } else {
-                  return item.name + " x " + item.quantity + ", ";
+                  return (<li>{item.name + " x " + item.quantity + ", "}</li>);
                 }
-              })}</p>
+              })}</ul>
               <p>{currency}{order.amount}.00</p>
               <p>Items: {order.items.length}</p>
               <p><span>&#x25cf;</span> <b>{order.status}</b></p>
               {/* Display the permanent order ID */}
-              <p>Order ID: {orderIds[order._id]}</p>
-              <button onClick={() => navigate(`/TrackOrder/${orderIds[order._id]}`)}>Track Order</button>
+              <p>Order ID: {order._id}</p>
+              <button onClick={() => navigate(`/TrackOrder/${order._id}`)}>Track Order</button>
             </div>
           );
         })}
