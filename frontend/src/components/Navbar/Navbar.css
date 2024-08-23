@@ -149,6 +149,10 @@
     transition: all 1s ease-in-out;
   }
 
+  .br-logout-btn{
+    right: 14%;
+  }
+
   .navbar-menu {
     flex-direction: column;
     width: 100%;
@@ -177,8 +181,8 @@
   .navbar .menubtn {
     display: flex;
     flex-direction: column-reverse;
-    width: 9vw;
-    height: 5vw;
+    width: 6vw;
+    /* height: 5vw; */
     gap: 1vw;
   }
 
