@@ -81,7 +81,8 @@ export default function MiniCart({ setShowMiniCart, showMiniCart, isLoggedin, se
                             </div>
                             <div className="sb-card-tp">
                                 <h4 className="sb-card-title">{item.title || item.name}</h4>
-                                <div className="sb-price"><sub>$</sub> {item.price}</div><button
+                                <div className="sb-price"><sub>$</sub> {item.price}</div>
+                                <button
                                     className="sb-remove-btn"
                                     onClick={(e) => {
                                         e.preventDefault();

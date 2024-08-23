@@ -51,12 +51,12 @@ const StoreContextProvider = (props) => {
         }
     };
 
-    const removeFromCart = async (itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
-        if (token) {
-            await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
-        }
-    }
+    // const removeFromCart = async (itemId) => {
+    //     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
+    //     if (token) {
+    //         await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
+    //     }
+    // }
 
     const getTotalCartAmount = () => {
         let totalAmount = 0;
@@ -128,6 +128,29 @@ const StoreContextProvider = (props) => {
     //     }
     //     return totalCount;
     // };
+
+
+        // Updated removeFromCart function
+        const removeFromCart = async (itemId) => {
+            setCartItems((prev) => {
+                const updatedCart = { ...prev };
+                if (updatedCart[itemId] > 1) {
+                    updatedCart[itemId] -= 1; // Decrease quantity by 1
+                } else {
+                    delete updatedCart[itemId]; // Remove item from cart if quantity is 1 or less
+                }
+                return updatedCart;
+            });
+    
+            if (token) {
+                try {
+                    await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
+                    console.log(`Item ${itemId} removed from cart on server.`);
+                } catch (error) {
+                    console.error("Error removing item from cart:", error);
+                }
+            }
+        };
     
 
     const contextValue = {
