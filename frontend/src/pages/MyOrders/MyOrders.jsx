@@ -22,11 +22,12 @@ const MyOrders = () => {
 
   return (
     <div className='my-orders'>
-      <h2>My Orders</h2>
+      <h2 className='tittle1'>My Orders</h2>
       <div className="container">
         {data.map((order,index)=>{
           return (
             <div key={index} className='my-orders-order'>
+              
                 <img src={assets.parcel_icon} alt="" />
                 <p>{order.items.map((item,index)=>{
                   if (index === order.items.length-1) {
