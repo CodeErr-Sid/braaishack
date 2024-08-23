@@ -214,3 +214,30 @@ menu
       font-size: 32px;
   }
 }
+
+.sb-menu-item .sb-cover-frame {
+  position: relative; /* Make this the positioning context */
+}
+
+.sb-remove-btn {
+  position: absolute; /* Position absolutely within the relative container */
+  /* top: 10px;  */
+  right: 25px; /* Adjust as needed */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  border: none;
+  color: #ff4d4f; /* Color of the remove button */
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%; /* Makes the button round */
+  z-index: 10; /* Ensure it stays above other elements */
+  transition: background-color 0.3s;
+}
+
+.sb-remove-btn:hover {
+  background-color: rgba(255, 255, 255, 1); /* Fully white on hover */
+}

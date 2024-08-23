@@ -15,8 +15,8 @@
 }
 .my-orders-order{
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
-    align-items: end;
+    grid-template-columns: 0.5fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    align-items: center;
     gap: 30px;
     font-size: 14px;
     padding: 10px 20px;
@@ -37,9 +37,9 @@
     border: none;
     padding: 12px 0px;
     border-radius: 4px;
-    background-color: #FFE1E1;
+    background-color: lightgreen;
     cursor: pointer;
-    color: #454545;
+    color: black;
 }
 @media (max-width:900px) {
     .my-orders-order{

@@ -20,6 +20,7 @@ import Product from './pages/Product/Product';
 import MyOrders from './pages/MyOrders/MyOrders';
 import Checkout from './pages/Checkout/Checkout';
 import ShopCart from './pages/ShopCart/ShopCart';
+import TrackOrder from './pages/TrackOrder/TrackOrder';
 
 // Components
 import Footer from './components/Footer/Footer';
@@ -103,6 +104,8 @@ const App = () => {
             <Route path='/cart' element={<ShopCart />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/myorders" element={<MyOrders />} />
+            <Route path="/TrackOrder/:id" element={<TrackOrder />} />
+
             {/* Add other routes if needed */}
           </Routes>
         </div>
