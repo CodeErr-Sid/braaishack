@@ -51,21 +51,17 @@ import gsap from "gsap";
         <div className="details-section__container__right">
           <h1>Story Of Braai Shack</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
+          Welcome to our family’s cherished kitchen, where the art of cooking has been a heartfelt tradition, passed down through the lanes. Since childhood, we’ve been deeply inspired by the rich, soulful flavors of Africa, and that passion continues to shape every dish we create.
+Step in to relax and let us treat you to a dining experience that goes beyond the plate. Here, every bite is infused with our family’s history, every flavor tells a tale, and every moment is a celebration of togetherness. Step into our world, where tradition meets elegance, and where each visit feels like coming home to something familiar, yet beautifully refined and let your senses be delighted.
+
           </p>
           <div className="name_container">
             <div className="name_container__left">
               <div className="profile"></div>
             </div>
             <div className="name_container__right">
-              <p className="font-style1">Klaus Mikelson</p>
-              <p className=" font-style2">Klaus Mikelson</p>
+              <p className="font-style1">Rozlin</p>
+              <p className=" font-style2">Rozlin</p>
             </div>
 
           </div>

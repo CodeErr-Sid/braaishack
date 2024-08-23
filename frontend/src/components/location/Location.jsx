@@ -47,23 +47,23 @@ export default function Location() {
     const contentArray = [
         {
             leftNumber: '01',
-            rightTitle: 'We are located in the city center',
-            rightContent: 'Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo'
+            rightTitle: 'City Center Charm ',
+            rightContent: 'Nestled in the city’s lively core, we provide a cozy retreat from the daily grind. Come in and enjoy a perfect mix of warmth and excitement!'
         },
         {
             leftNumber: '02',
-            rightTitle: 'We are located in the city center',
-            rightContent: 'Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo'
+            rightTitle: 'Delicious Delights',
+            rightContent: "We've got mouthwatering dishes that'll knock your socks off. Dive in and taste the best around!"
         },
         {
             leftNumber: '03',
-            rightTitle: 'We are located in the city center',
-            rightContent: 'Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo'
+            rightTitle: 'Timeless Tradition',
+            rightContent: 'Serving up smiles with a touch of history. Join us and experience our warm, welcoming legacy.'
         },
         {
             leftNumber: '04',
-            rightTitle: 'We are located in the city center',
-            rightContent: 'Porro nemo veniam necessitatibus praesentium eligendi rem temporibus adipisci quo'
+            rightTitle: 'Unforgettable Experience',
+            rightContent: "Every visit is a treat with flavors and ambiance that'll stick with you. Swing by and make some great memories!"
         },
         {
             leftNumber: '05',

@@ -25,6 +25,6 @@ export default function About() {
             <Promo />
             <Publication/>
 
-        </div>
+        </div> 
     );
 }

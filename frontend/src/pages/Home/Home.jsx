@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <>
       {/* <Preloader /> */}
-      <Header title={"BRAAI SHAACK"} content={"Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."} btn={'BOOK TABLE NOW'} overlay={headerImages} imgsrc={assets.header_img_2} />
+      <Header title={"BRAAI SHAACK"} content={"Psst..hey come here and take a look at our diverse menu, where every dish is a delightful creation made with top-notch ingredients and a whole lot of culinary passion. Making your taste buds happy is our main goal and we are committed. Come on in and let us treat you to something truly delicious!"} btn={'BOOK TABLE NOW'} overlay={headerImages} imgsrc={assets.header_img_2} />
       <Details/> 
       {/* <Story/> */}
       <ResturentOption/>
