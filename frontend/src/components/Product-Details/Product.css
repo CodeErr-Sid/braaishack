@@ -59,7 +59,7 @@ gallery
   padding-bottom: 120%;
 }
 .sb-gallery-item.sb-gallery-square {
-  padding-bottom: 100%;
+  padding-bottom: 72%;
 }
 .sb-gallery-item:hover > img {
   transform: scale(1.05);
@@ -83,6 +83,7 @@ badge
 
 ***************************/
 .sb-badge {
+  display: none !important;
   position: absolute;
   z-index: 2;
   top: 15px;

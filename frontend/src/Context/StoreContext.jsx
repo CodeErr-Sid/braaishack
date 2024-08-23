@@ -12,6 +12,14 @@ const StoreContextProvider = (props) => {
     const currency = "£";
     const deliveryCharge = 50;
 
+    const getTotalItemCount = () => {
+        let totalCount = 0;
+        for (const item in cartItems) {
+            totalCount += cartItems[item];
+        }
+        return totalCount;
+    };
+
     console.log(cartItems)
 
     const addToCart = async (itemId, quantity = 1) => {
@@ -113,6 +121,15 @@ const StoreContextProvider = (props) => {
         fetchFoodList()
     }, [])
 
+    // const getTotalItemCount = () => {
+    //     let totalCount = 0;
+    //     for (const item in cartItems) {
+    //         totalCount += cartItems[item];
+    //     }
+    //     return totalCount;
+    // };
+    
+
     const contextValue = {
         url,
         food_list,
@@ -121,6 +138,7 @@ const StoreContextProvider = (props) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
+        getTotalItemCount,
         token,
         setToken,
         loadCartData,
