@@ -8,6 +8,8 @@ const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1h' }); // Set token expiration as needed
 }
 
+//checkLogin
+
 // login user
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
@@ -40,6 +42,38 @@ const loginUser = async (req, res) => {
         res.status(500).json({ success: false, message: "Error" });
     }
 }
+
+//checkLogin
+const checkLogin = async (req, res, next) => {
+    try {
+        // Get the token from the request body
+        const { token } = req.body;
+
+        // Check if token is available
+        if (!token) {
+            return res.status(401).json({ success: false, message: "Access denied. No token provided." });
+        }
+
+        // Verify the token
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+        // Find the user by decoded id
+        const user = await userModel.findById(decoded.id);
+
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found." });
+        }
+
+        // Attach user information to the request object
+        req.user = user;
+
+        // Proceed to the next middleware or route handler
+        next();
+    } catch (error) {
+        console.error(error);
+        res.status(401).json({ success: false, message: "Invalid token or token expired." });
+    }
+};
 
 // logout user
 const logoutUser = async (req, res) => {
@@ -91,4 +125,4 @@ const registerUser = async (req, res) => {
     }
 }
 
-export { loginUser, registerUser, logoutUser }
+export { loginUser, registerUser, logoutUser, checkLogin }
