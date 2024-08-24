@@ -31,6 +31,7 @@ import MiniCart from './components/MiniCart/MiniCart';
 import { CartProvider } from './Context/CartContexts';
 import StoreContextProvider from './Context/StoreContext';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Zenchef from './components/Zenchef/Zenchef';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -109,6 +110,7 @@ const App = () => {
             {/* Add other routes if needed */}
           </Routes>
         </div>
+        <Zenchef/>
         <Footer />
       </CartProvider>
     </StoreContextProvider>
