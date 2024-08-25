@@ -38,7 +38,7 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
             </div>
             <div className="header-img">
                 <div className="radiant-background2"></div>
-                <div className="overlay-img smoke-image">
+                <div className="overlay-img smoke-image"> 
                     {overlay.map((src, index) => (
                         <img key={index} src={src} alt={`overlay-img-${index} overlay-image`} />
                     ))}

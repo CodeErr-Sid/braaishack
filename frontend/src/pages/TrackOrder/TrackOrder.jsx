@@ -1,22 +1,25 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './TrackOrder.css'; // Assuming you have a CSS file for styling
+import './TrackOrder.css'; 
+
 
 const TrackOrder = () => {
   const { id } = useParams(); // Get the order ID from the URL
 
   // Function to handle the call button click
   const handleCallClick = () => {
-    window.open('tel:+1234567890'); // Replace with your desired phone number
+    window.open('tel:+1234567890'); 
   };
 
   // Function to handle the WhatsApp button click
   const handleMessageClick = () => {
-    window.open('https://wa.me/1234567890'); // Replace with your desired WhatsApp number
+    window.open('https://wa.me/1234567890'); 
   };
 
   return (
+
     <div className='track-order'>
+
       <h2>Order Tracking: <span className='id-clr'>#{id}</span></h2>
       
       {/* Status Box */}

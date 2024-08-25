@@ -44,10 +44,10 @@ import gsap from 'gsap';
   export default function Promo() {
   return (
      <div className="main-section">
-            <img src={assets.b3} alt="" className="b2" />
+            {/* <img src={assets.b3} alt="" className="b2" /> */}
             <img src={assets.b4} alt="" className="b3" />
         <div className="left-promo__section">
-            <h1>Promo <span className='gold-txt'>Video</span></h1>
+            {/* <h1>Promo <span className='gold-txt'>Video</span></h1> */}
             <h1>Restaurant is like a Theater. Our task is to <span className='gold-txt'>amaze you!</span></h1>
             <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.

@@ -7,6 +7,7 @@ import { frozenProducts } from '../../FrozenProductsData.json';
 import MenuNav from '../../components/MenuNav/MenuNav';
 
 
+
 export default function Shop() {
   const [selectedProducts, setSelectedProducts] = useState("");
   const productBtnData = [
@@ -32,6 +33,7 @@ export default function Shop() {
   return (
     <>
     <Header header_title={'Frozen Items'} header_btn={'HOME/Shop/Frozen'} />
+
     <MenuNav setSelectedMenu={setSelectedProducts} Menubtndata={productBtnData} />
     <ShopCards shopCardData={frozenProducts} selectedMenu={selectedProducts}/>
     <CallToAction />

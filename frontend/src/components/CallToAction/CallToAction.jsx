@@ -34,7 +34,7 @@ export default function CallToAction() {
               {/* Button end */}
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6"> 
             <div className="sb-illustration-6">
               <img src={assets.burger3} alt="burger" className="sb-burger" />
               <div className="sb-cirkle-1"></div>
