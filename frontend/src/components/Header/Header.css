@@ -218,7 +218,7 @@
   }
 
   .header-contents button {
-    font-size: 3.5vw;
+    font-size: 3.5vw !important;
     padding: 2vw 14vw;
     margin: 0 0 6vw;
     border-radius: 1vw;
@@ -241,8 +241,8 @@
   }
 
   .btn button {
-    width: auto; /* Adjust width to fit text content */
-    padding: 2vw 5vw; /* Adjust padding for better spacing */
+    width: auto !important; 
+    padding: 2vw 5vw !important; 
   }
 
   .btn {
