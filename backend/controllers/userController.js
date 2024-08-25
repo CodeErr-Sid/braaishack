@@ -49,7 +49,8 @@ const loginUser = async (req, res) => {
 const checkLogin = async (req, res, next) => {
     try {
         // Get the token from the request body
-        const { token } = req.body;
+        const token = req.headers['token'];
+
 
         // Check if token is available
         if (!token) {
@@ -57,19 +58,14 @@ const checkLogin = async (req, res, next) => {
         }
 
         // Verify the token
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const token_decode = jwt.verify(token, process.env.JWT_SECRET);
 
         // Find the user by decoded id
-        const user = await userModel.findById(decoded.id);
+        const user = await userModel.findById(token_decode.id);
 
-        if (!user) {
-            return res.status(404).json({ success: false, message: "User not found." });
-        }
 
-        // Attach user information to the request object
-        req.user = user;
+        res.json({ success: true, message: "User is Found" })
 
-        // Proceed to the next middleware or route handler
         next();
     } catch (error) {
         console.error(error);
@@ -153,7 +149,7 @@ const forgotPassword = async (req, res) => {
         const transporter = nodemailer.createTransport({
             host: process.env.MAIL_HOST,
             port: process.env.MAIL_PORT,
-            secure:false,
+            secure: false,
             auth: {
                 user: process.env.MAIL_USER,
                 pass: process.env.MAIL_PASS
