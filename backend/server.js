@@ -25,9 +25,10 @@ const allowedOrigins = [
   'https://braaishack.vercel.app'
 ];
 
+// CORS Options
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow requests with no origin, like mobile apps or curl requests
+    // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -39,7 +40,26 @@ const corsOptions = {
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
+// CORS Middleware
 app.use(cors(corsOptions));
+
+// Custom Middleware for Additional CORS Headers
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
+
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+
+  if (req.method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
+    return res.status(200).json({});
+  }
+
+  next();
+});
 
 // db connection
 connectDB();
