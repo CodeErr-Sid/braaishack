@@ -40,15 +40,15 @@ span{
 }
 
 .menucontent h1{
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .main .menulists .menulist {
     width: 34vw;
-    padding: 45px;
+    padding: 20px;
     /* min-height: 13vw; */
-    background-color: whitesmoke;
+    background-color: lightgrey;
     margin: 2vw;
     border-radius: 0.2vw;
     display: flex;

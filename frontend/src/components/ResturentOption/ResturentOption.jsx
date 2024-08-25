@@ -64,12 +64,12 @@ const ResturentOption = () => {
           </div> */}
           <div className="menucontent">
             <h1>Starters</h1>
-            <p className='para'>Start your meal with a bang! Enjoy our crispy, spicy starters that are so tasty, you’ll be hooked from the first bite.</p>
+            <p className='para'>Start your meal with a bang! Enjoy our crispy, spicy starters that are so tasty, you’ll be hooked from the first bite. </p>
           </div>
         </div>
         <div className="menulist">
           {/* <div className="menuimg">
-            <img src={assets.steek} alt="" />
+            <img src={assets.steek} alt="" /> 
           </div> */}
           <div className="menucontent">
             <h1>Flames & Braai</h1>
@@ -91,7 +91,7 @@ const ResturentOption = () => {
           </div> */}
           <div className="menucontent">
             <h1>Drinks</h1>
-            <p className='para'>Refresh yourself with our cool, handcrafted drinks. From zesty mocktails to classic sodas, they’re the perfect complement to your meal.</p>
+            <p className='para'>Refresh yourself with our cool, handcrafted drinks. From zesty mocktails to classic sodas, they’re the perfect complement for the meal</p>
           </div>
         </div>
       </div>
