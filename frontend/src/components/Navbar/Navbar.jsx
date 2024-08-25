@@ -100,6 +100,16 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
         >
           GIFT
         </Link>
+        <Link
+          to="/reservation"
+          onClick={() => {
+            setMenu("RESERVATION");
+            toggleMenu();
+          }}
+          className={`${menu === "RESERVATION" ? "active" : ""}`}
+        >
+          RESERVATION
+        </Link>
         <a className="animate-btn" href="https://sunnysidecafe.vercel.app/">SUNNY SIDE</a>
         <a className="animate-btn" href="https://digispirits28.wixstudio.io/my-site-4/">PUB</a>
       </div>

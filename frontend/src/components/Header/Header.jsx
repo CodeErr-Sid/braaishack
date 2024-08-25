@@ -32,8 +32,8 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
                 </h2>
                 <p>{content}</p>
                 <div className="btn">
-                <button>{btn}</button>
-                <button>View Menu</button>
+                <button onClick={ () => window.location.href="/reservation"}>{btn}</button>
+                <button onClick={ () => window.location.href="/menu2"}>View Menu</button>
                 </div>
             </div>
             <div className="header-img">

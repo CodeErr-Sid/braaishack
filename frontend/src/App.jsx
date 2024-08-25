@@ -31,7 +31,7 @@ import MiniCart from './components/MiniCart/MiniCart';
 import { CartProvider } from './Context/CartContexts';
 import StoreContextProvider from './Context/StoreContext';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import Zenchef from './components/Zenchef/Zenchef';
+import Reservation from './pages/Reservation/Reservation';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -78,16 +78,16 @@ const App = () => {
           </div> */}
 
           {/* <MiniCart /> */}
-          <Navbar 
-            isLoggedin={isLoggedin} 
-            setShowLogin={setShowLogin} 
-            setIsLoggedin={setIsLoggedin} 
-            setShowMiniCart={setShowMiniCart} 
+          <Navbar
+            isLoggedin={isLoggedin}
+            setShowLogin={setShowLogin}
+            setIsLoggedin={setIsLoggedin}
+            setShowMiniCart={setShowMiniCart}
           />
-          <MiniCart 
-            setShowMiniCart={setShowMiniCart} 
-            showMiniCart={showMiniCart} 
-            isLoggedin={isLoggedin} 
+          <MiniCart
+            setShowMiniCart={setShowMiniCart}
+            showMiniCart={showMiniCart}
+            isLoggedin={isLoggedin}
             setShowLogin={setShowLogin}
           />
           <ScrollToTop />
@@ -100,6 +100,7 @@ const App = () => {
             <Route path='/verify' element={<Verify />} />
             <Route path='/events' element={<Events />} />
             <Route path='/about' element={<About />} />
+            <Route path='/reservation' element={<Reservation />} />
             <Route path='/shop' element={<Shop />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/cart' element={<ShopCart />} />
@@ -110,7 +111,6 @@ const App = () => {
             {/* Add other routes if needed */}
           </Routes>
         </div>
-        <Zenchef/>
         <Footer />
       </CartProvider>
     </StoreContextProvider>

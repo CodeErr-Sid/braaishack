@@ -58,24 +58,24 @@ const FeaturedProducts = () => {
             <div className="products">
                 <div className="product">
                     <div className="productimg">
-                        <img src={assets.steek} alt="" />
+                        <img src="https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/T-Bone%20300z.jpg" alt="" />
                     </div>
-                    <h2>steek</h2>
-                    <p>masala</p>
+                    <h2>T-Bone</h2>
+                    <p>300z</p>
                 </div>
                 <div className="product">
                     <div className="productimg">
-                        <img src={assets.steek} alt="" />
+                        <img src="https://www.seriouseats.com/thmb/KhpkXCH6RmaviegAZm3iiRleWvI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2019__07__20190618-grilled-turkish-chicken-wings-vicky-wasik-13-6f722c8e117f4d6ab1b99ec8340de765.jpg" alt="" />
                     </div>
-                    <h2>steek</h2>
-                    <p>masala</p>
+                    <h2>Chicken</h2>
+                    <p>Wings</p>
                 </div>
                 <div className="product">
                     <div className="productimg">
-                        <img src={assets.steek} alt="" />
+                        <img src="https://lh3.googleusercontent.com/-YntdQrMK_ac/X6EtnUxFLSI/AAAAAAAAYy4/GGFJ8KvvGqQT4x74GIxhp8hWCA4QbsmEwCLcBGAsYHQ/w640-h427/1604398361122732-0.png" alt="" />
                     </div>
-                    <h2>steek</h2>
-                    <p>masala</p>
+                    <h2>Grilled</h2>
+                    <p>Fish</p>
                 </div>
             </div>
             {/* {
