@@ -276,7 +276,8 @@ call to action
 .sb-btn .sb-icon img {
   width: 22px;
 }
-.sb-btn span {
+.sb-btn span {  
+  
   white-space: nowrap;
   line-height: 55px;
   color: black;
