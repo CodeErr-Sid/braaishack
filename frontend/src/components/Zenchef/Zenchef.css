@@ -1,5 +1,5 @@
 /* General page reset */
-/* body, html {
+.zenchef_body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -9,11 +9,16 @@
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     background-color: #000; 
-} */
+    
+}
+iframe{
+    background-color: #000 !important;
+}
 
 /* Fullscreen centered container */
 .widget-container {
     margin-top: 50px;
+
     width: 100%;
     height: 100vh;
     display: flex;
@@ -28,7 +33,8 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
-    /* background-color: black !important; */
+
+    background-color: black !important;
 }
 
 /* Responsive adjustments */
