@@ -1,29 +1,16 @@
-// Zenchef.js
-import { useEffect } from 'react';
+import React from 'react';
+import './Zenchef.css';
 
-const Zenchef = () => {
-  useEffect(() => {
-    const scriptId = 'zenchef-sdk';
-    const scriptElement = document.getElementById(scriptId);
-
-    if (!scriptElement) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.async = true;
-      script.src = 'https://sdk.zenchef.com/v1/sdk.min.js';
-
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      if (firstScriptTag && firstScriptTag.parentNode) {
-        firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
-      }
-    }
-  }, []);
-
+const ZenchefBooking = () => {
   return (
-    <div>
-      <div className="zc-widget-config" data-restaurant="344015" data-open="2000"></div>
+    <div className="widget-container">
+      <iframe
+        src="https://bookings.zenchef.com/results?rid=344015&showCollapsed=1"
+        allow="payment"
+        title="Zenchef Booking"
+      ></iframe>
     </div>
   );
 };
 
-export default Zenchef;
+export default ZenchefBooking;
