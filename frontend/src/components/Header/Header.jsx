@@ -20,7 +20,7 @@ const Header = ({ title, content, btn, imgsrc, overlay }) => {
 
     return (
         <div className="header">
-            <img className='b5' src={assets.b5} alt="" />
+            {/* <img className='b5' src={assets.b5} alt="" /> */}
             <div className="header-contents">
                 <h2
                     style={{

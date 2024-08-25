@@ -52,7 +52,7 @@ const Events_F = ({ title }) => {
     <>
       <div className="events_main">
         <img src={assets.b1} alt="" className="b1" />
-        <h1 className="event_h1">{title}</h1>
+        <h1 className="event_h1">Our <span>Events</span> </h1>
         <div className="event_h2">
         <p className="margin-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi asperiores Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi asperiores, laudantium officiis sint reprehenderit ratione nesciunt nobis magni itaque et enim minima, suscipit, pariatur non tempore distinctio! Impedit, voluptas doloribus.</p>
         </div>

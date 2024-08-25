@@ -36,7 +36,7 @@ import gsap from "gsap";
   //         end: "top 30%" ,
   //         scrub: 1,
   //     }   / ./
-  //   });
+  //   }); 
   // });
   export default function Details() {
   return (
@@ -49,7 +49,7 @@ import gsap from "gsap";
         </div>
 
         <div className="details-section__container__right">
-          <h1>Story Of Braai Shack</h1>
+          <h1>Story Of <span>Braai Shack</span> </h1>
           <p>
           Welcome to our family’s cherished kitchen, where the art of cooking has been a heartfelt tradition, passed down through the lanes. Since childhood, we’ve been deeply inspired by the rich, soulful flavors of Africa, and that passion continues to shape every dish we create.
 Step in to relax and let us treat you to a dining experience that goes beyond the plate. Here, every bite is infused with our family’s history, every flavor tells a tale, and every moment is a celebration of togetherness. Step into our world, where tradition meets elegance, and where each visit feels like coming home to something familiar, yet beautifully refined and let your senses be delighted.

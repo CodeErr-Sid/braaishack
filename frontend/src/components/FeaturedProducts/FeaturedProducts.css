@@ -7,6 +7,9 @@
   position: relative; /* Ensure proper positioning for overlay content */
 }
 
+span{
+  color: #fdcf08;
+}
 .featuredproducts .b2{
    position: absolute;
     left: -4%;

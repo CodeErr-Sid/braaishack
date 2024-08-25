@@ -12,6 +12,9 @@
   position: relative;
 }
 
+span .gold-txt{
+  color: #FDCF09;
+}
 
 .b2{
   position: absolute;

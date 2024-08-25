@@ -95,7 +95,7 @@ export default function Features() {
       <div className='feature-container'>
       <img src={assets.b3} alt="" className="b2" />
       <img src={assets.b2} alt="" className="b3" />
-        <h1>Features of Braai shack</h1>
+        <h1>Features of <span className='gold-txt'>Braai shack</span></h1>
         <div className='upper-container'>
           <div className="left-image">
             <div className="image-overlay"></div>
@@ -108,12 +108,12 @@ export default function Features() {
           <div className="right-content">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.</p>
-            <button>BUTTON 1</button>
+            {/* <button>BUTTON 1</button> */}
           </div>
         </div>
         <div className='lower-container'>
           <div className="left-content">
-            <h1><span>EVENTS </span>UPCOMING</h1>
+            <h1><span>EVENTS</span>OUR</h1>
           </div>
           <div className='left-heading' style={{display:'inline-block'}}>
           <h1>Events Upcoming</h1>

@@ -15,6 +15,13 @@
     position: relative;
 }
 
+h1 .gold-txt{
+    color: #FDCF09;
+}
+
+span .gold-txt{
+    color: #FDCF09;
+}
 
 .b2{
     position: absolute;
@@ -43,7 +50,7 @@
     padding: 2px 5px;
     gap: 10px;
     border-radius: 4px;
-    background: #8F8F8F;
+    /* background: #8F8F8F; */
     display: flex;
     align-items: center;
     justify-content: center;

@@ -134,7 +134,7 @@ export default function Publication() {
       <img src={assets.b3} alt="" className="b3" />
         <div className="publication-container">
           <div className="section-01">
-            <h1>Latest Publications</h1>
+            <h1>Latest <span className='gold-txt'>Publications</span></h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
           </div>
           <div className="section-02-container">

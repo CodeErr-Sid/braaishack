@@ -29,6 +29,10 @@
     font-family: "Montserrat", sans-serif;
 }
 
+span{
+    color: #fdcf08;
+}
+
 .margin-txt{
     padding-right: 300px;
     color: silver;

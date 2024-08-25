@@ -5,6 +5,9 @@
     background-color: rgb(0, 0, 0);
     position: relative;
 }
+span{
+    color: #fdcf08;
+}
 
 .main .b1{
     position: absolute;
@@ -37,13 +40,15 @@
 }
 
 .menucontent h1{
-    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 .main .menulists .menulist {
     width: 34vw;
-    min-height: 13vw;
-    background-color: #ffffff;
+    padding: 45px;
+    /* min-height: 13vw; */
+    background-color: whitesmoke;
     margin: 2vw;
     border-radius: 0.2vw;
     display: flex;

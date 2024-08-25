@@ -8,6 +8,10 @@
     justify-content: center; /* Center the content horizontally */
 }
 
+span gold-txt{
+    color: #FDCF09;
+}
+
 .b2{
     position: absolute;
      left: -4%;

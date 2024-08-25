@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
 /* Base styles */
+span{
+    color: #fdcf08;
+}
+
 .details-section {
     display: flex;
     justify-content: center;
