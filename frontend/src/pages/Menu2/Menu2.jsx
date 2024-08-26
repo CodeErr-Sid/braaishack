@@ -30,7 +30,7 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Hot Rock Grill",
       "Grill",
       "Steak",
-      "Desserts",
+      "Dessert",
       "Milkshake",
       "Alcoholic Milkshake",
       "Add Extras",
@@ -53,7 +53,7 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Steak"
     ],
     "Sweet Indulgences": [
-      "Desserts",
+      "Dessert",
       "Milkshake",
       "Alcoholic Milkshake"
     ],
