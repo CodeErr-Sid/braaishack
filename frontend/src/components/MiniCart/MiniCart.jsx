@@ -99,7 +99,7 @@ export default function MiniCart({ setShowMiniCart, showMiniCart, isLoggedin, se
                 )}
             </div>
             <div className="sb-minicart-footer">
-                <button onClick={handleViewOrder} className="sb-btn sb-btn-gray sb-btn-text">
+                <button onClick={handleViewOrder} className="sb-btn sb-btn-gray sb-btn-white sb-btn-text">
                     <span>View order</span>
                 </button>
                 <button onClick={handleCheckout} className="sb-btn sb-btn-text">

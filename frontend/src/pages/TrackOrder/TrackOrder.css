@@ -25,11 +25,27 @@
   .status-dot {
     height: 10px;
     width: 10px;
-    background-color: #ff0000;
     border-radius: 50%;
     margin-right: 10px;
     animation: blink 1s infinite;
   }
+
+  .status-dot.red {
+    background-color: red;
+  }
+  
+  .status-dot.yellow {
+    background-color: yellow;
+  }
+  
+  .status-dot.green {
+    background-color: green;
+  }
+  
+  .status-dot.gray {
+    background-color: gray; /* Fallback color */
+  }
+  
   
   @keyframes blink {
     0% { opacity: 1; }

@@ -53,6 +53,10 @@ minicart
 .sb-minicart .sb-minicart-footer .sb-btn {
   margin: 0;
 }
+
+.sb-btn-white span{
+  color: white;
+}
 .sb-minicart .sb-minicart-footer .sb-btn span {
   display: flex;
   align-items: center;

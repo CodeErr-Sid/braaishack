@@ -34,6 +34,19 @@ const MyOrders = () => {
     setData(orders);
   };
 
+  const statusDotColor = (status) => {
+    switch (status) {
+      case 'Food Processing':
+        return 'red';
+      case 'Out for delivery':
+        return 'yellow';
+      case 'Delivered':
+        return 'green';
+      default:
+        return 'gray'; // Fallback color for unknown status
+    }
+  };
+
   useEffect(() => {
     if (token) {
       fetchOrders();
@@ -60,10 +73,14 @@ const MyOrders = () => {
               })}</ul>
               <p>{currency}{order.amount}.00</p>
               <p>Items: {order.items.length}</p>
-              <p><span>&#x25cf;</span> <b>{order.status}</b></p>
+              <p><span style={{color: statusDotColor(order.status)}}>&#x25cf;</span> <b>{order.status}</b></p>
               {/* Display the permanent order ID */}
               <p>Order ID: {order._id}</p>
-              <button onClick={() => navigate(`/TrackOrder/${order._id}`)}>Track Order</button>
+              <button
+                onClick={() => navigate(`/TrackOrder/${order._id}`, { state: { status: order.status } })}
+              >
+                Track Order
+              </button>
             </div>
           );
         })}

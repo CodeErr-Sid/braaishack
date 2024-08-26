@@ -52,14 +52,13 @@ const CheckoutPage = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    companyName: '',
+    email: '',
+    phone: '',
     country: '',
-    city: '',
     state: '',
+    city: '',
     street: '',
     postcode: '',
-    phone: '',
-    email: '',
     orderNotes: ''
   });
 
