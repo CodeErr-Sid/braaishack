@@ -11,6 +11,8 @@
 
 
 
+
+
 .events_main .b1{
      position: absolute;
     left: 0%;
@@ -34,7 +36,6 @@ span{
 }
 
 .margin-txt{
-    padding-right: 300px;
     color: silver;
 }
 .events_main .event_h2{
