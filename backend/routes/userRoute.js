@@ -5,7 +5,7 @@ import authMiddleware from '../middleware/auth.js'
 
 userRouter.post("/register", registerUser);
 userRouter.post("/login", loginUser);
-userRouter.post("/checklogin", checkLogin)
+userRouter.post("/checklogin", authMiddleware, checkLogin)
 userRouter.post("/logout", authMiddleware, logoutUser);
 userRouter.post("/forgotpassword", forgotPassword);
 userRouter.post("/verifyotp", verifyOtp);
