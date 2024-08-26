@@ -2,9 +2,6 @@ import React from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import './TrackOrder.css';
 
-import { useParams } from 'react-router-dom';
-import './TrackOrder.css';
-
 const TrackOrder = () => {
   const { id } = useParams(); //  Get the order ID from the URL
 
@@ -46,17 +43,14 @@ const TrackOrder = () => {
       <h1>Order Tracking:</h1>
       <h2><span className='id-clr'>#{id}</span></h2>
 
-      <h2>Order Tracking: <span className='id-clr'>#{id}</span></h2>
-
-      {/* Progress Bar */}
-      {/* <div className='progress-bar'>
-        <div className='progress-bar-fill' style={{ width: '50%' }}></div> 
-      </div> */}
 
       {/* Status Box */}
       <div className='status-box'>
-        <span className='status-dot' title='Order Status'></span> {/* Tooltip for status dot */}
-        <p>Status: In Transit</p> {/* Replace with dynamic status from the backend */}
+      <span
+          className={`status-dot ${statusDotColor(status)}`}
+          title='Order Status'
+        ></span>
+        <p>Status: {status}</p> {/* Replace with dynamic status from the backend */}
       </div>
 
       {/* Estimated Delivery Date */}
