@@ -48,28 +48,17 @@ const loginUser = async (req, res) => {
 //checkLogin
 const checkLogin = async (req, res, next) => {
     try {
-        // Get the token from the request body
-        const token = req.headers['token'];
+        const userId = req.body.userId
+        const user = await userModel.findById(userId);
 
-
-        // Check if token is available
-        if (!token) {
-            return res.status(401).json({ success: false, message: "Access denied. No token provided." });
+        if(!user){
+            res.status(404).json({success: false, message:"User Not found"})
         }
-
-        // Verify the token
-        const token_decode = jwt.verify(token, process.env.JWT_SECRET);
-
-        // Find the user by decoded id
-        const user = await userModel.findById(token_decode.id);
-
-
-        res.json({ success: true, message: "User is Found" })
-
-        next();
+        
+        res.status(200).json({ success: true, message: "User is Logged In here" });
     } catch (error) {
         console.error(error);
-        res.status(401).json({ success: false, message: "Invalid token or token expired." });
+        res.status(500).json({ success: false, message: "Error" });
     }
 };
 
