@@ -124,7 +124,7 @@ const Footer = () => {
             <a href="#" target="_blank" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" target="_blank" aria-label="Instagram">
+            <a href="https://www.instagram.com/braaishack/" target="_blank" aria-label="Instagram">
               <i className="fab fa-instagram"></i>
             </a>
           </div>
