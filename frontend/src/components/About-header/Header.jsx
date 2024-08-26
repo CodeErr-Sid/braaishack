@@ -29,7 +29,7 @@ import gsap from 'gsap';
             <div className='background'></div>
             <div className="header-contents3">
                 <h2 className="header-title3">{header_title}</h2>
-                <button className="header-btn3">{header_btn}</button>
+                {/* <button className="header-btn3">{header_btn}</button> */}
             </div>
         </div>
     );

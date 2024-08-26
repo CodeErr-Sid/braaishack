@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,33 +29,60 @@ import LoginPopup from './components/LoginPopup/LoginPopup';
 import Brailoader from './components/Brailoader/Brailoader';
 import MiniCart from './components/MiniCart/MiniCart';
 import { CartProvider } from './Context/CartContexts';
-import StoreContextProvider from './Context/StoreContext';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Reservation from './pages/Reservation/Reservation';
+import { StoreContext } from './Context/StoreContext';
+import axios from 'axios';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showMiniCart, setShowMiniCart] = useState(false);
   const [isLoggedin, setIsLoggedin] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
+  const { url } = useContext(StoreContext);
 
-    // If token exists, set loggedIn to true; otherwise, set it to false
-    if (token) {
-      setIsLoggedin(true);
+
+  const checkLogin = async () => {
+    try {
+
+      const token = localStorage.getItem("token");
+
+      // Assume the token is stored in localStorage or another secure storage method
+      if (!token) {
+        console.log("No token provided. Access denied.");
+        return;
+      }
+
+      // Make the Axios request with the token in the headers
+      const response = await axios.post(url + '/api/user/checklogin', null, {
+        headers: { token }
+      });
+
+      // Handle the response
+      if (response.data.success) {
+        console.log(response.data.message);
+        setIsLoggedin(true)
+      } else {
+        console.log(response.data.message); // Handle the error message
+        setIsLoggedin(false)
+      }
+      console.log(isLoggedin)
+    } catch (error) {
+      console.error("Error:", error.response ? error.response.data.message : error.message);
     }
-  }, []);
+  };
 
+  useEffect(() => {
+    checkLogin()
+  }, [])
   return (
-    <StoreContextProvider> {/* Ensure StoreContextProvider wraps the entire application */}
-      <CartProvider> {/* Wrap your app with CartProvider to provide the cart context */}
-        <ToastContainer />
-        {showLogin && <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
-        <Brailoader />
-        {/* <Preloader /> Consider managing visibility of Preloader */}
-        <div className='app'>
-          {/* <div className="custom-animated-cursor">
+    <CartProvider> {/* Wrap your app with CartProvider to provide the cart context */}
+      <ToastContainer />
+      {showLogin && <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
+      <Brailoader />
+      {/* <Preloader /> Consider managing visibility of Preloader */}
+      <div className='app'>
+        {/* <div className="custom-animated-cursor">
             <AnimatedCursor
               innerSize={8}
               outerSize={35}
@@ -77,43 +104,42 @@ const App = () => {
             />
           </div> */}
 
-          {/* <MiniCart /> */}
-          <Navbar
-            isLoggedin={isLoggedin}
-            setShowLogin={setShowLogin}
-            setIsLoggedin={setIsLoggedin}
-            setShowMiniCart={setShowMiniCart}
-          />
-          <MiniCart
-            setShowMiniCart={setShowMiniCart}
-            showMiniCart={showMiniCart}
-            isLoggedin={isLoggedin}
-            setShowLogin={setShowLogin}
-          />
-          <ScrollToTop />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/menu' element={<Menu />} />
-            <Route path="/menu2" element={<Menu2 setShowLogin={setShowLogin} isLoggedin={isLoggedin} />} />
-            <Route path='/gift-section' element={<GiftSection />} />
-            <Route path='/place-order' element={<PlaceOrder />} />
-            <Route path='/verify' element={<Verify />} />
-            <Route path='/events' element={<Events />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/reservation' element={<Reservation />} />
-            <Route path='/shop' element={<Shop />} />
-            <Route path='/checkout' element={<Checkout />} />
-            <Route path='/cart' element={<ShopCart />} />
-            <Route path="/product/:productId" element={<Product />} />
-            <Route path="/myorders" element={<MyOrders />} />
-            <Route path="/TrackOrder/:id" element={<TrackOrder />} />
+        {/* <MiniCart /> */}
+        <Navbar
+          isLoggedin={isLoggedin}
+          setShowLogin={setShowLogin}
+          setIsLoggedin={setIsLoggedin}
+          setShowMiniCart={setShowMiniCart}
+        />
+        <MiniCart
+          setShowMiniCart={setShowMiniCart}
+          showMiniCart={showMiniCart}
+          isLoggedin={isLoggedin}
+          setShowLogin={setShowLogin}
+        />
+        <ScrollToTop />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path="/menu2" element={<Menu2 setShowLogin={setShowLogin} isLoggedin={isLoggedin} />} />
+          <Route path='/gift-section' element={<GiftSection />} />
+          <Route path='/place-order' element={<PlaceOrder />} />
+          <Route path='/verify' element={<Verify />} />
+          <Route path='/events' element={<Events />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/reservation' element={<Reservation />} />
+          <Route path='/shop' element={<Shop />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/cart' element={<ShopCart />} />
+          <Route path="/product/:productId" element={<Product />} />
+          <Route path="/myorders" element={<MyOrders />} />
+          <Route path="/TrackOrder/:id" element={<TrackOrder />} />
 
-            {/* Add other routes if needed */}
-          </Routes>
-        </div>
-        <Footer />
-      </CartProvider>
-    </StoreContextProvider>
+          {/* Add other routes if needed */}
+        </Routes>
+      </div>
+      <Footer />
+    </CartProvider>
   );
 };
 
