@@ -20,6 +20,7 @@
   transition: transform 0.5s, opacity 0.5s; /* Smooth transition */
   font-size: 5vw;
   color: #fdcf08;
+  text-align: left;
   padding: 7vw 0 2vw;
 }
 
@@ -70,6 +71,7 @@
   font-size: 1.5vw;
   color: white;
   line-height: 2vw;
+  text-align: left;
   padding-bottom: 30px;
 }
 
