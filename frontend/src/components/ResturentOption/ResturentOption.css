@@ -43,6 +43,7 @@ span{
 .menucontent h1{
     font-size: 2rem;
     font-weight: 700;
+    text-align: left;
 }
 
 .main .menulists .menulist {
@@ -61,6 +62,10 @@ span{
 
 .main .menulists .menulist:hover {
     background-color: #fdcf08;
+}
+
+.menucontent p{
+    text-align: left;
 }
 
 .menulist .menuimg {

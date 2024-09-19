@@ -49,7 +49,7 @@ const Story = () => {
             </div>
             <div className="Story-contents">
                 <h2>STORY OF BRAAI SHAACK</h2>
-                <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
+                <p>A Culinary Journey Through Our Family's Heritage - Step into our beloved kitchen, where the art of cooking is a cherished tradition passed down through generations. Since childhood, we have been captivated by the rich, soulful flavors of Africa, and that passion continues to inspire every dish we create.  At Braai Shack, we invite you to unwind and indulge in a dining experience that transcends the plate. Here, every bite is infused with our family's history, every flavor tells a story, and every moment is a celebration of togetherness.   Join us in our world, where tradition meets elegance, and each visit feels like coming home—familiar yet beautifully refined. Let your senses be delighted as you savor the essence of our culinary journey.</p>
                 <div className="pro">
                     <div className="proimg">
                         <img src={assets.steek} alt="" />

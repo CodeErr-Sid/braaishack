@@ -98,8 +98,8 @@ const Gift_Coupen = () => {
           <img src={assets.voucher} alt="" className="voucher2" />
           <img src={assets.voucher} alt="" className="voucher3" />
           <img src={assets.voucher} alt="" className="voucher4" />
-          <img src={assets.coupen} alt="" className="coupen1" />
-          <img src={assets.coupen} alt="" className="coupen2" />
+          {/* <img src={assets.coupen} alt="" className="coupen1" /> */}
+          {/* <img src={assets.coupen} alt="" className="coupen2" /> */}
           <h1>30% OFF</h1>
           <h3>MAGIC30</h3>
           <p> Say the magic word, and you will find out.

@@ -100,36 +100,12 @@ const ProductDetails = () => {
                                 <div className="sb-price"><sub>{currency}</sub> {product.price}</div>
                             </div>
                             <div className="row">
-                                <div className="col-lg-4">
-                                    <div className="sb-features-item sb-features-item-sm sb-mb-30">
-                                        <div className="sb-number">01</div>
-                                        <div className="sb-feature-text">
-                                            <h4 className="sb-mb-15 font-size">Add to the cart and place an order</h4>
-                                            <p className="sb-text sb-text-sm">Select your desired items and proceed to checkout.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="sb-features-item sb-features-item-sm sb-mb-30">
-                                        <div className="sb-number">02</div>
-                                        <div className="sb-feature-text">
-                                            <h4 className="sb-mb-15 font-size">Enter your phone number and address</h4>
-                                            <p className="sb-text sb-text-sm">Provide accurate contact details for delivery.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="sb-features-item sb-features-item-sm sb-mb-30">
-                                        <div className="sb-number">03</div>
-                                        <div className="sb-feature-text">
-                                            <h4 className="sb-mb-15 font-size">Enjoy your favorite food at home!</h4>
-                                            <p className="sb-text sb-text-sm">Relax and savor your meal delivered right to your door.</p>
-                                        </div>
-                                    </div>
+                                <div className="col-lg">
+                                    {product.description}
                                 </div>
                             </div>
 
-                            <div className="rating">
+                            {/* <div className="rating">
                                 {[...Array(5)].map((_, index) => (
                                     <FontAwesomeIcon
                                         key={index}
@@ -139,29 +115,29 @@ const ProductDetails = () => {
                                     />
                                 ))}
                                 <span> (124)</span>
-                            </div>
-                            <p className="sb-text sb-mb-30">
+                            </div> */}
+                            {/* <p className="sb-text sb-mb-30">
                                 {product.description}
                             </p>
                             <div className="row">
-                                {/* Features */}
-                            </div>
+                                Featurers
+                            </div> */}
                             <div className="sb-buttons-frame">
-                                <div className="multi-select">
+                                {/* <div className="multi-select">
                                     <div className="minus" onClick={decrement}>-</div>
                                     <h1>{quantity}</h1>
                                     <div className="add" onClick={increment}>+</div>
-                                </div>
+                                </div> */}
                                 <a
                                     href="#."
                                     className="sb-btn sb-atc"
-                                    onClick={() => handleAddToCart(productId)}
+                                    // onClick={() => handleAddToCart(productId)}
                                 >
                                     <span className="sb-icon">
                                         <FontAwesomeIcon icon={faCartShopping} style={{ color: "black" }} />
                                     </span>
                                     <span className="sb-add-to-cart-text">
-                                        {addedItems[productId] ? 'Added' : 'Add to cart'}
+                                        Add to Cart
                                     </span>
                                     {addedItems[productId] && (
                                         <span className="sb-added-text"></span>
@@ -172,6 +148,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
+            
         </section>
     );
 };

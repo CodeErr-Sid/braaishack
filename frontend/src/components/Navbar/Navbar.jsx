@@ -115,13 +115,13 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
       </div>
 
       <div className={`navbar-end ${isMenuOpen ? "open" : "closed"}`}>
-        <div className="icon-container" onClick={toggleMiniCart}>
+        {/* <div className="icon-container" onClick={toggleMiniCart}>
           <img src={assets.cart} alt="Cart icon" />
           {getTotalItemCount() > 0 && (
             <div className="cart-count">{getTotalItemCount()}</div>
           )}
-        </div>
-        <div className="icon-container2" onClick={isLoggedin ? toggleLogout : toggleLogin}>
+        </div> */}
+        {/* <div className="icon-container2" onClick={isLoggedin ? toggleLogout : toggleLogin}>
           <img src={assets.login_icon} alt="Login icon" />
           {isLoggedin && showLogout && (
             <button
@@ -131,7 +131,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
               Logout
             </button>
           )}
-        </div>
+        </div> */}
         <div className="menubtn" onClick={toggleMenu}>
           <span></span>
           <span></span>

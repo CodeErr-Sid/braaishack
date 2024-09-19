@@ -50,7 +50,7 @@ import gsap from 'gsap';
             {/* <h1>Promo <span className='gold-txt'>Video</span></h1> */}
             <h1>Restaurant is like a Theater. Our task is to <span className='gold-txt'>amaze you!</span></h1>
             <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
+            Hey foodie, Get ready for a flavor-packed journey, where every bite tells a story from our kitchen to yours. We mix love, bold spices, and a touch of tradition to create meals that feel like home. Taste the passion, straight from the heart of Africa. Because here, every dish is made to leave you craving more.
             </p>
             {/* <button>Promo Video</button> */}
         </div>

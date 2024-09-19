@@ -26,7 +26,8 @@
 }
 
 .progress-bar-fill {
-  background-color: #4caf50; /* Green color for progress */
+  background-color: #4caf50;
+  /* Green color for progress */
   height: 100%;
   border-radius: 5px;
   transition: width 0.3s ease;
@@ -67,12 +68,20 @@
 }
 
 .status-dot.gray {
-  background-color: gray; /* Fallback color */
+  background-color: gray;
+  /* Fallback color */
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .delivery-date {
@@ -112,35 +121,37 @@
   color: #4caf50;
 }
 
-p {
+.track-order p {
   margin-bottom: 0;
   font-size: 1em;
   text-align: center;
 }
 
-h1, h2 {
+.track-order h1,
+.track-order h2 {
   margin-bottom: 10px;
   text-align: center;
 }
 
 @media (max-width: 600px) {
   .track-order {
-      padding: 20px;
+    padding: 20px;
   }
 
   .progress-bar {
-      width: 100%;
+    width: 100%;
   }
 
   .status-box {
-      width: 100%;
-      padding: 15px;
+    width: 100%;
+    padding: 15px;
   }
+
   .action-icons i {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .refresh-button {
-      width: 100%;
+    width: 100%;
   }
 }

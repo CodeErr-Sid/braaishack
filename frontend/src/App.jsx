@@ -42,43 +42,43 @@ const App = () => {
   const { url } = useContext(StoreContext);
 
 
-  const checkLogin = async () => {
-    try {
+  // const checkLogin = async () => {
+  //   try {
 
-      const token = localStorage.getItem("token");
+  //     const token = localStorage.getItem("token");
 
-      // Assume the token is stored in localStorage or another secure storage method
-      if (!token) {
-        console.log("No token provided. Access denied.");
-        return;
-      }
+  //     // Assume the token is stored in localStorage or another secure storage method
+  //     if (!token) {
+  //       console.log("No token provided. Access denied.");
+  //       return;
+  //     }
 
-      // Make the Axios request with the token in the headers
-      const response = await axios.post(url + '/api/user/checklogin', null, {
-        headers: { token }
-      });
+  //     // Make the Axios request with the token in the headers
+  //     const response = await axios.post(url + '/api/user/checklogin', null, {
+  //       headers: { token }
+  //     });
 
-      // Handle the response
-      if (response.data.success) {
-        console.log(response.data.message);
-        setIsLoggedin(true)
-      } else {
-        console.log(response.data.message); // Handle the error message
-        setIsLoggedin(false)
-      }
-      console.log(isLoggedin)
-    } catch (error) {
-      console.error("Error:", error.response ? error.response.data.message : error.message);
-    }
-  };
+  //     // Handle the response
+  //     if (response.data.success) {
+  //       console.log(response.data.message);
+  //       setIsLoggedin(true)
+  //     } else {
+  //       console.log(response.data.message); // Handle the error message
+  //       setIsLoggedin(false)
+  //     }
+  //     console.log(isLoggedin)
+  //   } catch (error) {
+  //     console.error("Error:", error.response ? error.response.data.message : error.message);
+  //   }
+  // };
 
-  useEffect(() => {
-    checkLogin()
-  }, [])
+  // useEffect(() => {
+  //   checkLogin()
+  // }, [])
   return (
     <CartProvider> {/* Wrap your app with CartProvider to provide the cart context */}
       <ToastContainer />
-      {showLogin && <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />}
+      {/* {showLogin && <LoginPopup setIsLoggedin={setIsLoggedin} setShowLogin={setShowLogin} />} */}
       <Brailoader />
       {/* <Preloader /> Consider managing visibility of Preloader */}
       <div className='app'>
@@ -111,12 +111,12 @@ const App = () => {
           setIsLoggedin={setIsLoggedin}
           setShowMiniCart={setShowMiniCart}
         />
-        <MiniCart
+        {/* <MiniCart
           setShowMiniCart={setShowMiniCart}
           showMiniCart={showMiniCart}
           isLoggedin={isLoggedin}
           setShowLogin={setShowLogin}
-        />
+        /> */}
         <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />

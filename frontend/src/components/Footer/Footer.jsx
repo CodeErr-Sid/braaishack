@@ -66,7 +66,7 @@ const Footer = () => {
             <img src={assets.logo} alt="Logo" />
           </div>
           <p>42 Church Street, Wolverton MK 12 5JN Milton Keynes</p>
-          <p className="ph-no">+44 0190 31383</p>
+          <p className="ph-no">+01908 31383</p>
         </div>
         <div className="footer-section footer-content-left">
           <ul>
