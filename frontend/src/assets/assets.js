@@ -150,8 +150,10 @@ import face1 from "./faces/1.jpg";
 import face2 from "./faces/2.jpg";
 import delivery from "./delivery.png";
 import Zoom from "./zoom.svg";
+import HotRockGrill from "./hotrockgrill.png"
 
 export const assets = {
+  HotRockGrill,
   voucher,
   coupen,
   b1,

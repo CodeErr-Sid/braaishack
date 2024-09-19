@@ -15,6 +15,7 @@ import Reservation_Table from '../../components/Reservation_Table/Reservation_Ta
 import { assets } from '../../assets/assets'
 import Details from '../../components/About-details/Details.jsx'
 import Image from '../../components/images/Image.jsx'
+import HotRockGrill from '../../components/HotRockGrill/HotRockGrill.jsx'
 // import Preloader from '../../components/Preloader/Preloader';
 
 const Home = () => {
@@ -40,6 +41,7 @@ const Home = () => {
       <ResturentOption/>
       <Image/>
       <FeaturedProducts/>
+      <HotRockGrill/>
       <Events_F title={"Events"}/>
       {/* <Reservation_Table/> */}
       {/* <Event/> */}
