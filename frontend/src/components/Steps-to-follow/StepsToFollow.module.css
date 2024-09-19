@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&display=swap');
+
+.stepstofollowcontainer {
+    color: white;
+    width: 85%;
+    margin: 2rem auto 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.stepheader {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 48.41px;
+    text-align: center;
+}
+
+.stepsdescription {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 27.24px;
+    text-align: center;
+    margin-bottom:.5rem
+}
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stepcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.stepnumbercircle {
+    --radius: 105px;
+    width: var(--radius);
+    height: var(--radius);
+    background-color: yellow;
+    border-radius: 5rem;
+    display: grid;
+    place-items: center;
+}
+
+.stepnumber {
+    font-size: 40px;
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    color: black;
+}
+
+.stepdescription {
+    text-align: center;
+}
