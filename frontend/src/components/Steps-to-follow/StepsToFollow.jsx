@@ -27,7 +27,6 @@ const StepsToFollow = () => {
                         <div className={styles.stepdescription}>
                             {step}
                         </div>
-
                     </div>
                 ))}
             </div>
