@@ -19,7 +19,7 @@ export default function MiniCart({ setShowMiniCart, showMiniCart, isLoggedin, se
         }
     };
 
-    console.log(productItems)
+    // // console.log(productItems)
 
     useEffect(() => {
         const fetchData = async () => {

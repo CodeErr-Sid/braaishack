@@ -23,7 +23,7 @@ const MyOrders = () => {
     // Retrieve stored order IDs from localStorage
     const storedOrderIds = JSON.parse(localStorage.getItem('orderIds')) || {};
 
-    console.log(orders)
+    // console.log(orders)
 
     // Assign a random order ID to each order if not already assigned
 

@@ -8,6 +8,8 @@ import { menuItems } from '../../MenuData.json'; // Ensure this path is correct
 import { frozenProducts } from '../../FrozenProductsData.json'
 import { StoreContext } from '../../Context/StoreContext';
 import axios from 'axios';
+import MenuData from "../../data/shopdata.json"
+
 
 const ProductDetails = () => {
 
@@ -20,39 +22,47 @@ const ProductDetails = () => {
     const [error, setError] = useState(null); // State for error
     const [addedItems, setAddedItems] = useState({});
 
-    // console.log("ProductDetails component is rendering");
-    // console.log("Product ID from URL:", productId);
-    // console.log("Menu Items:", menuItems);
-
-    console.log(error)
+    // // console.log("ProductDetails component is rendering");
+    // // console.log("Product ID from URL:", productId);
+    // // console.log("Menu Items:", menuItems);
 
     const getFoodDetails = async (productId) => {
         try {
-          const response = await axios.post(url + '/api/food/fooddetails', { productId });
-      
-          if (!response.data.success) {
-            throw new Error(response.data.message);
-          }
-      
-          return response.data.data; // Return the food details
+            const response = await axios.post(url + '/api/food/fooddetails', { productId });
+
+            if (!response.data.success) {
+                throw new Error(response.data.message);
+            }
+
+            return response.data.data; // Return the food details
         } catch (error) {
-          console.error('Error fetching food details:', error);
-          return null; // or handle the error as needed
+            // // console.error('Error fetching food details:', error);
+            return null; // or handle the error as needed
         }
-      };
+    };
 
 
     useEffect(() => {
-        const fetchProductById =  async (id) => {
-            try {             
-                let fetchedProduct = await getFoodDetails(id)
+        const fetchProductById = async (id) => {
+            try {
+                let fetchedProduct = await getFoodDetails(id);
 
-                console.log("Fetched Product:", fetchedProduct);
-                if (fetchedProduct) {
-                    setProduct(fetchedProduct);
-                } else {
-                    setError('Product not found');
+                if (!fetchedProduct) {
+                    // // console.log(productId);
+                    const product = MenuData.find(item => item._id === String(productId));
+                    if(product){
+                        setProduct(product)
+                    }else{
+                        setError("Product Not Found")
+                    }
+                }else{
+                    if (fetchedProduct) {
+                        setProduct(fetchedProduct);
+                    } else {
+                        setError('Product not found');
+                    }
                 }
+
             } catch (err) {
                 setError(err.message || 'An error occurred');
             } finally {
@@ -67,7 +77,7 @@ const ProductDetails = () => {
 
     const handleAddToCart = (id) => {
         addToCart(id, quantity)
-        console.log(id, quantity)
+        // console.log(id, quantity)
         setAddedItems(prev => ({
             ...prev,
             [id]: !prev[id]
@@ -131,7 +141,7 @@ const ProductDetails = () => {
                                 <a
                                     href="#."
                                     className="sb-btn sb-atc"
-                                    // onClick={() => handleAddToCart(productId)}
+                                // onClick={() => handleAddToCart(productId)}
                                 >
                                     <span className="sb-icon">
                                         <FontAwesomeIcon icon={faCartShopping} style={{ color: "black" }} />
@@ -148,7 +158,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
-            
+
         </section>
     );
 };

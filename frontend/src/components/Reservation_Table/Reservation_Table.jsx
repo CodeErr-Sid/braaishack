@@ -28,7 +28,7 @@ const Reservation_Table = () => {
         };
         setdatabase([...database, dataobj]);
         localStorage.setItem('reservationData', JSON.stringify([...database, dataobj]));
-        console.log(database);
+        // console.log(database);
     }
 
     useEffect(() => {

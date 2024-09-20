@@ -88,7 +88,7 @@ const PlaceOrder = () => {
   // }, [clickedCard]);
 
   const handleAddToCart = (card) => {
-    console.log("Adding to cart:", card);
+    // // console.log("Adding to cart:", card);
   };
 
   return (

@@ -30,7 +30,7 @@ const Navbar = ({ setShowLogin, setShowMiniCart, setIsLoggedin, isLoggedin }) =>
 
       toast.success("Logged out successfully.");
     } catch (error) {
-      console.log(error);
+      // // console.log(error);
       toast.error("Something went wrong during logout. Please try again.");
     }
   };

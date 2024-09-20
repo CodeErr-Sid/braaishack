@@ -27,7 +27,7 @@ export default function Shop() {
     // "Pastry"
   ];
 
-  console.log(selectedProducts)
+  // console.log(selectedProducts)
   
 
   return (

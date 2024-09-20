@@ -49,7 +49,7 @@ const App = () => {
 
   //     // Assume the token is stored in localStorage or another secure storage method
   //     if (!token) {
-  //       console.log("No token provided. Access denied.");
+  //       // console.log("No token provided. Access denied.");
   //       return;
   //     }
 
@@ -60,15 +60,15 @@ const App = () => {
 
   //     // Handle the response
   //     if (response.data.success) {
-  //       console.log(response.data.message);
+  //       // console.log(response.data.message);
   //       setIsLoggedin(true)
   //     } else {
-  //       console.log(response.data.message); // Handle the error message
+  //       // console.log(response.data.message); // Handle the error message
   //       setIsLoggedin(false)
   //     }
-  //     console.log(isLoggedin)
+  //     // console.log(isLoggedin)
   //   } catch (error) {
-  //     console.error("Error:", error.response ? error.response.data.message : error.message);
+  //     // console.error("Error:", error.response ? error.response.data.message : error.message);
   //   }
   // };
 

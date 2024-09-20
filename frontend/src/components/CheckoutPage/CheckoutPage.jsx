@@ -71,11 +71,11 @@ const CheckoutPage = () => {
             const itemsArray = Object.values(data.data); // Convert object to array
             setItems(itemsArray);
           } else {
-            console.error('Failed to fetch product data:', data.message);
+            // console.error('Failed to fetch product data:', data.message);
             setItems([]); // Handle case where API returns failure
           }
         } catch (error) {
-          console.error('Error fetching product data:', error.message);
+          // console.error('Error fetching product data:', error.message);
           setItems([]); // Handle error case
         }
       } else {
@@ -132,16 +132,16 @@ const CheckoutPage = () => {
           window.location.href = response.data.session_url;
         } else {
           // Handle error from the server (e.g., show a message to the user)
-          console.error('Order placement failed:', response.data.message);
+          // console.error('Order placement failed:', response.data.message);
           alert('Failed to place order. Please try again.');
         }
       } catch (error) {
         // Handle any errors during the Axios request
-        console.error('Error placing order:', error.message);
+        // console.error('Error placing order:', error.message);
         alert('An error occurred while placing the order. Please try again later.');
       }
     }else{
-      console.log("No request made to server in the absence of token")
+      // console.log("No request made to server in the absence of token")
     }
     
   };

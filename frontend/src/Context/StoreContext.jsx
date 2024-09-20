@@ -20,34 +20,34 @@ const StoreContextProvider = (props) => {
         return totalCount;
     };
 
-    console.log(cartItems)
+    // // console.log(cartItems)
 
     const addToCart = async (itemId, quantity = 1) => {
-        console.log("addToCart called with itemId:", itemId);  // Log the itemId passed to the function
-        console.log("Quantity:", quantity);  // Log the quantity passed to the function
+        // console.log("addToCart called with itemId:", itemId);  // Log the itemId passed to the function
+        // console.log("Quantity:", quantity);  // Log the quantity passed to the function
 
         // Check if itemId exists in cartItems
-        console.log("Current cartItems:", cartItems);  // Log current cartItems
+        // console.log("Current cartItems:", cartItems);  // Log current cartItems
 
         if (!cartItems[itemId]) {
-            console.log(`Item ${itemId} not in cart, adding with quantity ${quantity}.`);
+            // console.log(`Item ${itemId} not in cart, adding with quantity ${quantity}.`);
             setCartItems((prev) => ({ ...prev, [itemId]: quantity }));
         } else {
-            console.log(`Item ${itemId} already in cart, updating quantity.`);
+            // console.log(`Item ${itemId} already in cart, updating quantity.`);
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + quantity }));
         }
 
         // Check if token is present
         if (token) {
-            console.log("Token found, sending request to add item to cart.");
+            // console.log("Token found, sending request to add item to cart.");
             try {
                 const response = await axios.post(url + "/api/cart/add", { itemId, quantity }, { headers: { token } });
-                console.log("Response from server:", response.data);  // Log the server response
+                // console.log("Response from server:", response.data);  // Log the server response
             } catch (error) {
-                console.error("Error adding item to cart:", error);  // Log any error from the server
+                // console.error("Error adding item to cart:", error);  // Log any error from the server
             }
         } else {
-            console.log("No token found, skipping server request.");
+            // console.log("No token found, skipping server request.");
         }
     };
 
@@ -67,7 +67,7 @@ const StoreContextProvider = (props) => {
                     totalAmount += itemInfo.price * cartItems[item];
                 }
             } catch (error) {
-                console.log(error);
+                // console.log(error);
             }
 
         }
@@ -97,7 +97,7 @@ const StoreContextProvider = (props) => {
             const response = await axios.post(url + "/api/food/list/bulk", { cartItems });
             return response.data;
         } catch (error) {
-            console.error('Error loading product data:', error.message);
+            // console.error('Error loading product data:', error.message);
             throw error;
         }
     };
@@ -145,9 +145,9 @@ const StoreContextProvider = (props) => {
             if (token) {
                 try {
                     await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
-                    console.log(`Item ${itemId} removed from cart on server.`);
+                    // console.log(`Item ${itemId} removed from cart on server.`);
                 } catch (error) {
-                    console.error("Error removing item from cart:", error);
+                    // console.error("Error removing item from cart:", error);
                 }
             }
         };

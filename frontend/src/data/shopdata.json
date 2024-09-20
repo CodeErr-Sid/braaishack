@@ -1,0 +1,1001 @@
+[
+    {
+      "_id": "66be11403b92b32e92245edd",
+      "name": "Tea Pot",
+      "description": "A pot of tea for a cozy and comforting beverage to share or enjoy solo.",
+      "price": 4.45,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Tea%20Pot.jpg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245edf",
+      "name": "American",
+      "description": "Bold American coffee with a strong flavor, perfect for a morning boost.",
+      "price": 2,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/American.jpg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245ee1",
+      "name": "Flat White",
+      "description": "Smooth flat white coffee with a velvety texture and balanced flavor.",
+      "price": 2.4,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Flat White.jpg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245ee3",
+      "name": "Espresso",
+      "description": "Rich and intense espresso shot, ideal for a quick coffee fix.",
+      "price": 1.6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Espresso.jpeg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245ee5",
+      "name": "Latte",
+      "description": "Creamy latte coffee with a smooth texture and rich flavor.",
+      "price": 2.4,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Latte.jpeg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245ee7",
+      "name": "Cappuccino",
+      "description": "Classic cappuccino with a balanced blend of coffee, milk, and foam.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Cappuccino.jpeg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245ee9",
+      "name": "Herbal Teas",
+      "description": "Assorted herbal teas offering a soothing and aromatic experience.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Herbal Teas.jpg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245eeb",
+      "name": "Baileys Latte",
+      "description": "Latte coffee infused with Baileys, delivering a rich and indulgent flavor.",
+      "price": 4.25,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Baileys Latte.jpg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be11403b92b32e92245eed",
+      "name": "Liqueur Coffees",
+      "description": "Coffee drinks mixed with liqueur for a unique and flavorful twist.",
+      "price": 4.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Liqueur Coffees.jpg",
+      "category": "Hot Drink",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245ef6",
+      "name": "Braaishack",
+      "description": "Tasty Signature burger.",
+      "price": 11.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/Braaishack.jpg",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245ef8",
+      "name": "Chicken Burger",
+      "description": "Juicy chicken burger.",
+      "price": 10.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/chicken-burger.webp",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245efa",
+      "name": "Buffalo Burger",
+      "description": "Savory buffalo burger.",
+      "price": 13.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/Buffalo%20Burger.jpeg",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245efc",
+      "name": "Ostrich Burger",
+      "description": "Delicious ostrich burger.",
+      "price": 14.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/Ostrich%20Burger.jpg",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245efe",
+      "name": "Crocodile Burger",
+      "description": "Exotic crocodile burger.",
+      "price": 15.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/Crocodile%20Burger.jpeg",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245f00",
+      "name": "Zebra Burger",
+      "description": "Unique zebra burger.",
+      "price": 15.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/Zebra%20Burger.jpg",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245f02",
+      "name": "Wild Boar Burger",
+      "description": "Flavorful wild boar burger.",
+      "price": 13.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/Wild%20Boar%20Burger.jpeg",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be14453b92b32e92245f04",
+      "name": "Venison Burger",
+      "description": "Tasty venison burger.",
+      "price": 11.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/burger/Venison%20Burger.jpeg",
+      "category": "Burger",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f07",
+      "name": "Ostrich 8 OZ",
+      "description": "Tender ostrich steak.",
+      "price": 26.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/Ostrich%20Roz.jpeg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f09",
+      "name": "Venison 8 OZ",
+      "description": "Juicy venison steak.",
+      "price": 24.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/Venison%20Roz.jpeg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f0b",
+      "name": "Wild Boar 8 OZ",
+      "description": "Savory wild boar steak.",
+      "price": 24.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/Wild%20Boar.jpeg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f0d",
+      "name": "Buffalo 8 OZ",
+      "description": "Hearty buffalo steak.",
+      "price": 24.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/Buffalo%20Boz.jpeg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f0f",
+      "name": "Zebra 8 OZ",
+      "description": "Distinctive zebra steak.",
+      "price": 26.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/Zebra.jpeg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f11",
+      "name": "Crocodile 8 OZ",
+      "description": "Exotic crocodile steak.",
+      "price": 28.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20%26%20Burgers/steaks/Crocodile%20Boz.jpg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f13",
+      "name": "2 Exotics 16 OZ",
+      "description": "Choose any two exotic steaks.",
+      "price": 44.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/2%20Exotics.jpg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f15",
+      "name": "T-Bone 300z",
+      "description": "Juicy T-bone steak.",
+      "price": 38,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/T-Bone%20300z.jpg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f17",
+      "name": "Ribeye 100z",
+      "description": "Succulent ribeye steak.",
+      "price": 22.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/Ribeye%20100z.jpg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be147b3b92b32e92245f19",
+      "name": "Sirloin 10 oz",
+      "description": "Tender sirloin steak.",
+      "price": 21.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/steaks/Sirloin%2010%20oz.jpeg",
+      "category": "Steak",
+      "__v": 0
+    },
+    {
+      "_id": "66be15b73b92b32e92245f1f",
+      "name": "Hot Rock Grill",
+      "description": "Interactive dining with preheated lava rock.",
+      "price": 3,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20%26%20Burgers/Hot%20rock%20grill/Hot%20Rock%20Grill.jpg",
+      "category": "Hot Rock Grill",
+      "__v": 0
+    },
+    {
+      "_id": "66be16113b92b32e92245f21",
+      "name": "Bushman",
+      "description": "Ostrich, buffalo, zebra, venison, and two wild boar sausages.",
+      "price": 57.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20%26%20Burgers/Grills/Bushman.jpeg",
+      "category": "Grill",
+      "__v": 0
+    },
+    {
+      "_id": "66be16113b92b32e92245f23",
+      "name": "Zulu",
+      "description": "Rump steak, boerewors sausage, lamb cutlets, peri peri chicken wings, and pork ribs.",
+      "price": 32,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Grills%20%26%20Burgers/Grills/Zulu.jpg",
+      "category": "Grill",
+      "__v": 0
+    },
+    {
+      "_id": "66be16113b92b32e92245f25",
+      "name": "Ultimate Pork Ribs",
+      "description": "Our biggest ever full rack of ribs, smothered in a 'sweet and smoky' glaze.",
+      "price": 28.95,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/Grills%20&%20Burgers/Grills/Ultimate%20Pork%20Rib.jpg?raw=true",
+      "category": "Grill",
+      "__v": 0
+    },
+    {
+      "_id": "66be1afe3b92b32e92245f2f",
+      "name": "Potjie of the Day",
+      "description": "Ask your server for the 'Potjie' of the Day. Served with veggie rice or pap.",
+      "price": 14.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Potjiekos/Potjie.jpeg",
+      "category": "Potjiekos",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b243b92b32e92245f32",
+      "name": "Chicken Sosatie",
+      "description": "Hanging kebab with chicken.",
+      "price": 12.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Sosaties/Chicken%20Sosatie.jpeg",
+      "category": "Sosaties",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b243b92b32e92245f34",
+      "name": "Beef Sosatie",
+      "description": "Hanging kebab with beef.",
+      "price": 13.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Sosaties/Beef%20Sosatie.jpeg",
+      "category": "Sosaties",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b243b92b32e92245f36",
+      "name": "Mutton Sosatie",
+      "description": "Hanging kebab with mutton.",
+      "price": 15.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Sosaties/Mutton%20Sosatie.jpeg",
+      "category": "Sosaties",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b243b92b32e92245f38",
+      "name": "Prawn Sosatie",
+      "description": "Hanging kebab with prawns.",
+      "price": 15.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Sosaties/Prawn%20Sosatie.jpg",
+      "category": "Sosaties",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b243b92b32e92245f3a",
+      "name": "Vegetable & Halloumi Sosatie",
+      "description": "Hanging kebab with vegetables and halloumi.",
+      "price": 11.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Sosaties/Vegetable%20%26%20Halloumi%20Sosatie.jpg",
+      "category": "Sosaties",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b593b92b32e92245f3d",
+      "name": "Kumusha(Home)",
+      "description": "Maize meal with meats, greens, and beans.",
+      "price": 18.95,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Go%20to%20Traditional/Kumusha.jpeg",
+      "category": "Go Traditional",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b5a3b92b32e92245f46",
+      "name": "Oxtail Stew",
+      "description": "Rich and flavorful oxtail stew.",
+      "price": 6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Go%20to%20Traditional/Oxtail%20Stew.jpg",
+      "category": "Go Traditional",
+      "__v": 0
+    },
+    {
+      "_id": "66be1b5a3b92b32e92245f48",
+      "name": "Nyama Platter",
+      "description": "Boerewors, brisket, chicken gizzards, and pork ribs platter.",
+      "price": 29.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Starters%20%26%20Soulful%20Flavors/Go%20to%20Traditional/Nyama%20Platter.jpeg",
+      "category": "Go Traditional",
+      "__v": 0
+    },
+    {
+      "_id": "66be2bde3b92b32e92245f53",
+      "name": "Mushroom Sauce",
+      "description": "Rich and creamy mushroom sauce.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Sauses/Mushroom%20Sauce.jpg",
+      "category": "Sauces",
+      "__v": 0
+    },
+    {
+      "_id": "66be2bde3b92b32e92245f55",
+      "name": "Cheese Sauce",
+      "description": "Savory cheese sauce.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Sauses/Cheese%20Sauce.jpeg",
+      "category": "Sauces",
+      "__v": 0
+    },
+    {
+      "_id": "66be2bde3b92b32e92245f57",
+      "name": "Peri Peri Sauce",
+      "description": "Spicy peri peri sauce.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Sauses/Peri%20Peri%20Sauce.jpg",
+      "category": "Sauces",
+      "__v": 0
+    },
+    {
+      "_id": "66be2bde3b92b32e92245f59",
+      "name": "Pepper Sauce",
+      "description": "Peppery sauce for an extra kick.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Sauses/Pepper%20Sauce.jpeg",
+      "category": "Sauces",
+      "__v": 0
+    },
+    {
+      "_id": "66be2bde3b92b32e92245f5b",
+      "name": "Garlic Sauce",
+      "description": "Garlic-infused sauce.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Sauses/Garlic%20Sauce.jpeg",
+      "category": "Sauces",
+      "__v": 0
+    },
+    {
+      "_id": "66be2bde3b92b32e92245f5d",
+      "name": "Mrs 'B' Chutney",
+      "description": "Tangy chutney sauce.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Sauses/Mrs%20'B'%20Chutney.jpeg",
+      "category": "Sauces",
+      "__v": 0
+    },
+    {
+      "_id": "66be2bde3b92b32e92245f5f",
+      "name": "Monkey Gland Sauce",
+      "description": "Fruity and spicy sauce.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Sauses/Monkey%20Gland%20Sauce.jpeg",
+      "category": "Sauces",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca026e",
+      "name": "Halloumi",
+      "description": "Grilled halloumi cheese for a savory side dish.",
+      "price": 3.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Halloumi.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0270",
+      "name": "Chakalaka",
+      "description": "Spicy South African vegetable relish.",
+      "price": 3.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Chakalaka.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0272",
+      "name": "Sweet Potato Fries",
+      "description": "Crispy sweet potato fries, a healthier alternative to regular fries.",
+      "price": 3.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Sweet%20Potato%20Fries.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0274",
+      "name": "Chips",
+      "description": "Classic crispy chips to accompany your meal.",
+      "price": 3,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Chips.jpg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0276",
+      "name": "Peri Peri Chips",
+      "description": "Spicy peri peri chips for an extra kick.",
+      "price": 3.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Peri%20Peri%20Chips.jpg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0278",
+      "name": "Greens",
+      "description": "Seasonal greens to add a fresh touch to your meal.",
+      "price": 3,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Greens.jpg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca027a",
+      "name": "Curried Kidney Beans",
+      "description": "Flavorful curried kidney beans for a hearty side dish.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Curried%20Kidney%20Beans.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca027c",
+      "name": "Onion Rings",
+      "description": "Crispy onion rings for a crunchy side.",
+      "price": 2,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Onion%20Rings.jpg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca027e",
+      "name": "Rolls",
+      "description": "Freshly baked rolls to complement your meal.",
+      "price": 1.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Rolls.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0280",
+      "name": "Mac & Cheese",
+      "description": "Creamy mac & cheese for a comforting side dish.",
+      "price": 5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Mac%20&%20Cheese.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0282",
+      "name": "Homemade Chillies",
+      "description": "Spicy homemade chillies for adding heat to your meal.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Homemade%20Chillies.jpg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0284",
+      "name": "Pap/Sadza",
+      "description": "Traditional maize meal served as a side dish.",
+      "price": 2.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/PapSadza.jpg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0286",
+      "name": "Vegetable Rice",
+      "description": "Flavored rice with mixed vegetables.",
+      "price": 3,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Vegetable%20Rice.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becf7932321339d3ca0288",
+      "name": "Mediterranean Salad",
+      "description": "Fresh salad with tomato, cucumber, feta cheese, and olives.",
+      "price": 5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Sides/Mediterranean%20Salad.jpeg",
+      "category": "Sides",
+      "__v": 0
+    },
+    {
+      "_id": "66becfa232321339d3ca028b",
+      "name": "Chilli",
+      "description": "Add a spicy kick with fresh chili.",
+      "price": 1,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20%26%20Accompaniments/Add%20extras/chillies.jpg",
+      "category": "Add Extras",
+      "__v": 0
+    },
+    {
+      "_id": "66becfa232321339d3ca028d",
+      "name": "Mushrooms",
+      "description": "Sautéed mushrooms to add a savory flavor.",
+      "price": 1,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Add%20extras/Mushrooms.jpeg",
+      "category": "Add Extras",
+      "__v": 0
+    },
+    {
+      "_id": "66becfa232321339d3ca028f",
+      "name": "Bacon",
+      "description": "Crispy bacon strips for extra crunch and flavor.",
+      "price": 1.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Add%20extras/Bacon.jpeg",
+      "category": "Add Extras",
+      "__v": 0
+    },
+    {
+      "_id": "66becfa232321339d3ca0291",
+      "name": "Pineapple",
+      "description": "Sweet pineapple chunks to complement your dish.",
+      "price": 1,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Extras%20&%20Accompaniments/Add%20extras/Pineapple.jpg",
+      "category": "Add Extras",
+      "__v": 0
+    },
+    {
+      "_id": "66bed28f32321339d3ca0295",
+      "name": "Amarula Laduma",
+      "description": "Luxurious milkshake with Amarula liqueur, offering a creamy and rich flavor.",
+      "price": 7.65,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Alcoholic%20Milkshake/Amarula%20laduma.jpg",
+      "category": "Alcoholic Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed28f32321339d3ca0297",
+      "name": "Lekka Milk Tart",
+      "description": "Creamy milkshake inspired by the traditional milk tart with a sweet and smooth taste.",
+      "price": 7.65,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Alcoholic%20Milkshake/Lekka%20Milk%20Tart.jpg",
+      "category": "Alcoholic Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed28f32321339d3ca0299",
+      "name": "Spring Bokkie",
+      "description": "Refreshing milkshake with a bold flavor profile for a unique and invigorating treat.",
+      "price": 7.65,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Alcoholic%20Milkshake/Spring%20Bokkie.jpeg",
+      "category": "Alcoholic Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed28f32321339d3ca029b",
+      "name": "Kahula",
+      "description": "Delicious milkshake with Kahula liqueur, offering a rich and indulgent experience.",
+      "price": 7.65,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Alcoholic%20Milkshake/Kahula.jpeg",
+      "category": "Alcoholic Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed28f32321339d3ca029d",
+      "name": "Irish Whisky",
+      "description": "Smooth milkshake blended with Irish whisky for a rich and warming flavor.",
+      "price": 7.65,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Alcoholic%20Milkshake/Irish%20Whisky.jpeg",
+      "category": "Alcoholic Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed2de32321339d3ca02a0",
+      "name": "Nutella",
+      "description": "Delicious milkshake flavored with Nutella, offering a rich and creamy taste.",
+      "price": 4.6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/Milkshakes/Nutella.jpg",
+      "category": "Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed2de32321339d3ca02a2",
+      "name": "Cookies",
+      "description": "Milkshake infused with crushed cookies, blending creamy texture with crunchy bits.",
+      "price": 4.6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/Milkshakes/cookies.jpeg",
+      "category": "Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed2de32321339d3ca02a4",
+      "name": "Oreo",
+      "description": "Smooth milkshake mixed with Oreo cookies for a classic and satisfying flavor.",
+      "price": 4.6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/Milkshakes/Oreo.jpeg",
+      "category": "Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed2df32321339d3ca02a6",
+      "name": "Maltesers",
+      "description": "Milkshake made with Maltesers, offering a unique malted and creamy experience.",
+      "price": 4.6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/Milkshakes/maltesers.webp",
+      "category": "Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed2df32321339d3ca02a8",
+      "name": "Strawberry",
+      "description": "Classic strawberry milkshake with a fresh and fruity flavor, blended to perfection.",
+      "price": 4.6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/Milkshakes/Strawberry.jpeg",
+      "category": "Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed2df32321339d3ca02aa",
+      "name": "Aero",
+      "description": "Milkshake featuring Aero chocolate, delivering a bubbly and smooth texture.",
+      "price": 4.6,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/Milkshakes/Aero_Milkshake.webp",
+      "category": "Milkshake",
+      "__v": 0
+    },
+    {
+      "_id": "66bed98632321339d3ca02af",
+      "name": "Soup of the Day",
+      "description": "Served with a Crusty Roll",
+      "price": 4.95,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNlXqfe5js3DQvi_Sg-1eqA77S3hpMszs6QLAIBmT5ERZMGZ9beQA6CHAHWX3mUUlIYLA&usqp=CAU",
+      "category": "Starters",
+      "__v": 0
+    },
+    {
+      "_id": "66bed98632321339d3ca02b1",
+      "name": "Vetkoek",
+      "description": "Traditional South African Fried Dough Bread filled with a Savoury Beef Mince",
+      "price": 5.95,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6uyjcHuhpa2CrkRR0un3ClWNcHtZZRGK4bHpHgovy4KaHad3wdAUgHLnfg4i9Ww4KQU&usqp=CAU",
+      "category": "Starters",
+      "__v": 0
+    },
+    {
+      "_id": "66bed98632321339d3ca02b3",
+      "name": "Biltong",
+      "description": "Dried, Cured Meat (Plain or Peri Peri)",
+      "price": 5.5,
+      "image": "https://bobaasbiltong.co.za/wp-content/uploads/2022/04/bb-5183a.jpg",
+      "category": "Starters",
+      "__v": 0
+    },
+    {
+      "_id": "66bed98632321339d3ca02b5",
+      "name": "Frikkadel Skewers",
+      "description": "Beef Meatballs Served with Mushrooms, Peppers, Pineapple, Tomatoes, Sweet Chilli Sauce",
+      "price": 5.5,
+      "image": "https://www.tasteandtellblog.com/wp-content/uploads/2014/07/Sweet-Sour-Meatball-Skewers-tasteandtellblog.com-1-lr.jpg",
+      "category": "Starters",
+      "__v": 0
+    },
+    {
+      "_id": "66bed98732321339d3ca02b7",
+      "name": "Creamy Mussels",
+      "description": "Half Shell Mussels Cooked in a Rich Creamy Sauce, Served with a Crusty Roll",
+      "price": 6.95,
+      "image": "https://lindseyeatsla.com/wp-content/uploads/2021/04/White_Wine_Mussels_Lemon-9-819x1024.jpg",
+      "category": "Starters",
+      "__v": 0
+    },
+    {
+      "_id": "66bed98732321339d3ca02b9",
+      "name": "Halloumi Sticks",
+      "description": "Five Chunky Sticks of Grilled Halloumi Served with Fruit Chutney",
+      "price": 4.25,
+      "image": "https://hillstreetgrocer.com/application/files/1515/6228/7209/Spicy_halloumi_skewers_with_chilli.jpg",
+      "category": "Starters",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02bc",
+      "name": "Grilled Whole Fish",
+      "description": "Grilled Whole Tilapia (Contains Bones), Chips, Sous, Salad Or Pap/Sadza, Sous, Greens",
+      "price": 20,
+      "image": "https://lh3.googleusercontent.com/-YntdQrMK_ac/X6EtnUxFLSI/AAAAAAAAYy4/GGFJ8KvvGqQT4x74GIxhp8hWCA4QbsmEwCLcBGAsYHQ/w640-h427/1604398361122732-0.png",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02be",
+      "name": "Oxtail & Red Bean Curry",
+      "description": "Served With Rice, Grilled Sweet Potatoes, Salad",
+      "price": 15.95,
+      "image": "https://jonoandjules.com/wp-content/uploads/2021/03/red-kidney-bean-sweet-potato-stew-with-yoghurt-hot-mint-oil.jpeg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02c0",
+      "name": "Mutton & Potato Curry",
+      "description": "Served With Rice, Tomato & Onion Chutney, Salad",
+      "price": 16.95,
+      "image": "https://www.teaforturmeric.com/wp-content/uploads/2016/11/Aloo-Gosht-10-1-728x1092.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02c2",
+      "name": "Cape Malay Chicken Curry",
+      "description": "Served With Rice, Carrot Sambal, Salad",
+      "price": 12.95,
+      "image": "https://www.tamingtwins.com/wp-content/uploads/2023/11/how-to-make-easy-chicken-curry-500x500.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02c4",
+      "name": "Prawns",
+      "description": "Nine Tiger Prawns (shell on), Salad, Chips Or Veggie Rice",
+      "price": 19.95,
+      "image": "https://farm4.staticflickr.com/3750/12709733454_314ea6ebe4_o.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02c6",
+      "name": "Boerie Roll",
+      "description": "Boerewors Sausage In A Crusty Baguette, Onion & Tomato Topping. Chips, Onion Rings, Corn On The Cob",
+      "price": 11.95,
+      "image": "https://thehomechannel.co.za/wp-content/uploads/2014/10/gourmet-boerie1.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02c8",
+      "name": "Creamy Mussels",
+      "description": "Cooked In A Creamy Rich Sauce. Served With A Salad Choice Of Rice, Mash Potato Or Crusty Bread",
+      "price": 16.5,
+      "image": "https://thefoodinmybeard.com/content/musselmash/musselmash8.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02ca",
+      "name": "Peri Peri Chicken",
+      "description": "1/2 Chicken Marinated Portuguese Style. Served With Chips, Salad",
+      "price": 11.95,
+      "image": "https://www.allrecipes.com/thmb/T9kqkcXwtyfInkxJg9n5d6oFXiA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7507145PeriPeriChickenChefJohn2x1-a7278602ca47469ab9a61ea2492a60f0.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02cc",
+      "name": "Bobotie",
+      "description": "Spiced Savoury Minced Beef, Baked With An Egg Based Topping. Served With Veggie Rice, Salad",
+      "price": 11.95,
+      "image": "https://images.squarespace-cdn.com/content/v1/54c00d91e4b0c74035795601/1422363751737-UCHXKYELA90SZXBRFZCT/bobotie.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02ce",
+      "name": "Chicken Livers",
+      "description": "Fried Chicken Livers Served With A Crusty Roll (Mild or Peri Peri)",
+      "price": 6.45,
+      "image": "https://assets.unileversolutions.com/recipes-v2/230886.png",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cb32321339d3ca02d0",
+      "name": "Samosas",
+      "description": "Filled With 100% Beef Mince, Potatoes, Peas",
+      "price": 5.5,
+      "image": "https://www.foodleclub.com/wp-content/uploads/2020/08/Beef-samosas-9.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cc32321339d3ca02d2",
+      "name": "Spicy Chicken Wings",
+      "description": "Grilled Chicken Wings",
+      "price": 5.45,
+      "image": "https://www.seriouseats.com/thmb/KhpkXCH6RmaviegAZm3iiRleWvI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2019__07__20190618-grilled-turkish-chicken-wings-vicky-wasik-13-6f722c8e117f4d6ab1b99ec8340de765.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bed9cc32321339d3ca02d4",
+      "name": "Spring Rolls",
+      "description": "Filled With Chicken, Prawns, Vegetables",
+      "price": 3.5,
+      "image": "https://www.thecookingcollective.com.au/wp-content/uploads/2022/08/Vegetable-Spring-Rolls-2-1.jpg",
+      "category": "Soul Food",
+      "__v": 0
+    },
+    {
+      "_id": "66bee24332321339d3ca02e7",
+      "name": "Beef Bunny",
+      "description": "Spicy beef curry in bread.",
+      "price": 14.95,
+      "image": "https://louskitchencorner.freybors.com/wp-content/uploads/2020/07/bunny-chow.png",
+      "category": "Bunny Chows",
+      "__v": 0
+    },
+    {
+      "_id": "66bee24332321339d3ca02e9",
+      "name": "Chicken Bunny",
+      "description": "Spicy chicken curry in bread.",
+      "price": 12.95,
+      "image": "https://img.taste.com.au/Oh86iNYZ/taste/2016/11/bunny-chow-chicken-curry-rolls-90510-1.jpeg",
+      "category": "Bunny Chows",
+      "__v": 0
+    },
+    {
+      "_id": "66bee24332321339d3ca02eb",
+      "name": "Mutton Bunny",
+      "description": "Rich mutton curry in bread.",
+      "price": 16.95,
+      "image": "https://i.ytimg.com/vi/BT9Wnaeg9wg/maxresdefault.jpg",
+      "category": "Bunny Chows",
+      "__v": 0
+    },
+    {
+      "_id": "66bee24332321339d3ca02ed",
+      "name": "Veggie Bunny",
+      "description": "Vegetable curry served in bread.",
+      "price": 11.95,
+      "image": "https://www.onegreenplanet.org/wp-content/uploads/2016/10/bunny-chow-south-african-street-food.jpg",
+      "category": "Bunny Chows",
+      "__v": 0
+    },
+    {
+      "_id": "66bee2af32321339d3ca02f1",
+      "name": "Vegetable Curry",
+      "description": "Served With Rice, Chapatti, Or Sadza",
+      "price": 9.95,
+      "image": "https://www.spiceindiaonline.com/wp-content/uploads/2019/09/Mixed-Veg-Curry-1-500x500.jpg",
+      "category": "Vegetarian Dishes",
+      "__v": 0
+    },
+    {
+      "_id": "66bee2af32321339d3ca02f3",
+      "name": "Vegetable Biryani",
+      "description": "Served With Papadoms, Mint Yoghurt, Salad",
+      "price": 9.95,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF5FxBYrRx8UjC9JSJJUbA8uFke7F2s7Gwpsw9NDl8ECtTn-se_8RkyL0-6n147TkH9vI&usqp=CAU",
+      "category": "Vegetarian Dishes",
+      "__v": 0
+    },
+    {
+      "_id": "66bee2af32321339d3ca02f5",
+      "name": "Braised Kale",
+      "description": "Cooked With Tomatoes & Onions, Served With Pap/Sadza Or Rice",
+      "price": 9.95,
+      "image": "https://healthiersteps.com/wp-content/uploads/2018/09/braised-kale-and-tomatoes-recipe.jpg",
+      "category": "Vegetarian Dishes",
+      "__v": 0
+    },
+    {
+      "_id": "66bee2af32321339d3ca02f7",
+      "name": "Chakalaka",
+      "description": "Spicy Vegetable Relish (Beans, Carrots & Peppers) Served With Pap/Sadza Or Rice",
+      "price": 9.95,
+      "image": "https://chefsatyourbreckandcall.com/wp-content/uploads/2024/07/Chakalaka-main-picture-650x433.jpg",
+      "category": "Vegetarian Dishes",
+      "__v": 0
+    },
+    {
+      "_id": "66bee2af32321339d3ca02f9",
+      "name": "Pap & Sous",
+      "description": "Served With Greens, Beans, Sous (Choice Of Rice)",
+      "price": 9.95,
+      "image": "https://static01.nyt.com/images/2010/05/25/health/25recipehealth_600/25recipehealth_600-superJumbo-v2.jpg",
+      "category": "Vegetarian Dishes",
+      "__v": 0
+    },
+    {
+      "_id": "66cc67cd21a12c7b65a930a2",
+      "name": "Vanilla Ice Cream",
+      "description": "Choice Of Chocolate, Strawberry, Toffee Sauce Topped With Whipped Cream.",
+      "price": 3.93,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/Vanilla-Ice-Cream.jpg",
+      "category": "Dessert",
+      "__v": 0
+    },
+    {
+      "_id": "66cc67cd21a12c7b65a930a4",
+      "name": "Chocolate Secret",
+      "description": "Warm Chocolate Tray Cake Served with Whipped Cream.",
+      "price": 5.93,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/Chocolate%20Secret.jpg?raw=true",
+      "category": "Dessert",
+      "__v": 0
+    },
+    {
+      "_id": "66cc67cd21a12c7b65a930a6",
+      "name": "Koek Sisters",
+      "description": "Fried Dough with Syrup",
+      "price": 5.5,
+      "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/koek%20Sisters.jpg",
+      "category": "Dessert",
+      "__v": 0
+    },
+    {
+      "_id": "66cc67cd21a12c7b65a930a8",
+      "name": "Strawberry & Marshmallow Fondue",
+      "description": "Served With Warm Chocolate And Whipped Cream.",
+      "price": 4.5,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/Strawberry%20&%20Marshmallow%20Fondue.jpeg?raw=true",
+      "category": "Dessert",
+      "__v": 0
+    },
+    {
+      "_id": "66cc67cd21a12c7b65a930aa",
+      "name": "Milk Tart",
+      "description": "Cinnamon-Dusted Custard Tart.",
+      "price": 4.65,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/Milk%20Tart.jpg?raw=true",
+      "category": "Dessert",
+      "__v": 0
+    },
+    {
+      "_id": "66cc67cd21a12c7b65a930ac",
+      "name": "Peppermint Tart",
+      "description": "Layered Caramel, Biscuit And Chocolate.",
+      "price": 4.65,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/Peppermint%20Tart.jpeg?raw=true",
+      "category": "Dessert",
+      "__v": 0
+    },
+    {
+      "_id": "66cc67cd21a12c7b65a930ae",
+      "name": "Malva Pudding",
+      "description": "Caramelised Sweet, Spongy Pudding Served With Custard.",
+      "price": 5.85,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/Malva%20Pudding.jpg?raw=true",
+      "category": "Dessert",
+      "__v": 0
+    }
+  ]

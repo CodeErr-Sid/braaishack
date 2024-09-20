@@ -6,6 +6,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/CartContexts'; // Adjust the import path if necessary
 import { StoreContext } from '../../Context/StoreContext';
+import MenuData from "../../data/shopdata.json"
 
 export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setShowLogin }) {
     const [addedItems, setAddedItems] = useState({});
@@ -14,19 +15,19 @@ export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setS
 
     const { addToCart } = useContext(StoreContext)
 
-    console.log(selectedMenu)
+    // console.log(selectedMenu)
 
 
     const handleAddToCart = (item) => {
         // addItemToCart({ ...item, quantity: quantities[item._id] || 1 }); // Include quantity in cart
-        if(isLoggedin){
+        if (isLoggedin) {
             addToCart(item._id)
-            console.log(item._id)
+            // // console.log(item._id)
             setAddedItems(prev => ({
                 ...prev,
                 [item._id]: !prev[item._id]
             }));
-        }else{
+        } else {
             setShowLogin(true)
         }
     };
@@ -53,7 +54,8 @@ export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setS
             </div>
             <div className="container">
                 <div className="row">
-                    {shopCardData.map(item => (
+                    {(shopCardData?.length ? shopCardData : MenuData).map(item => (
+
                         <div key={item._id} className="col-lg-3"
                             style={{
                                 display: selectedMenu.length === 0 || selectedMenu.includes(item.category)
