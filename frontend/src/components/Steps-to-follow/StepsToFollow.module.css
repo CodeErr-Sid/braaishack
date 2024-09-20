@@ -18,7 +18,7 @@
 
 .stepsdescription {
     font-family: "Open Sans", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     line-height: 27.24px;
     text-align: center;
@@ -59,4 +59,10 @@
 
 .stepdescription {
     text-align: center;
+}
+
+@media screen and ( 0 < width < 600px){
+    .steps{
+        flex-direction: column;
+    }
 }
