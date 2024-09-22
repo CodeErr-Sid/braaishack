@@ -6,7 +6,7 @@ import "./MenuNav.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const MenuNav = ({ setSelectedMenu, Menubtndata }) => {
-  const [activeCategory, setActiveCategory] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const handleCategorySelection = (category) => {
     setActiveCategory(category);
