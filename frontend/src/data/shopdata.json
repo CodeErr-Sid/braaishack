@@ -820,7 +820,7 @@
     },
     {
       "_id": "66bed9cb32321339d3ca02ce",
-      "name": "Chicken Livers",
+      "name": "Chicketarters",
       "description": "Fried Chicken Livers Served With A Crusty Roll (Mild or Peri Peri)",
       "price": 6.45,
       "image": "https://assets.unileversolutions.com/recipes-v2/230886.png",
@@ -833,7 +833,7 @@
       "description": "Filled With 100% Beef Mince, Potatoes, Peas",
       "price": 5.5,
       "image": "https://www.foodleclub.com/wp-content/uploads/2020/08/Beef-samosas-9.jpg",
-      "category": "Soul Food",
+      "category": "Starters",
       "__v": 0
     },
     {
@@ -842,7 +842,7 @@
       "description": "Grilled Chicken Wings",
       "price": 5.45,
       "image": "https://www.seriouseats.com/thmb/KhpkXCH6RmaviegAZm3iiRleWvI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2019__07__20190618-grilled-turkish-chicken-wings-vicky-wasik-13-6f722c8e117f4d6ab1b99ec8340de765.jpg",
-      "category": "Soul Food",
+      "category": "Starters",
       "__v": 0
     },
     {
@@ -851,7 +851,7 @@
       "description": "Filled With Chicken, Prawns, Vegetables",
       "price": 3.5,
       "image": "https://www.thecookingcollective.com.au/wp-content/uploads/2022/08/Vegetable-Spring-Rolls-2-1.jpg",
-      "category": "Soul Food",
+      "category": "Starters",
       "__v": 0
     },
     {

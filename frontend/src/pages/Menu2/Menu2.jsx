@@ -18,8 +18,9 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
     { src: assets.chilli, className: 'chilli' }
   ];
 
+
   const Menubtndata = {
-    "All":[
+    "All": [
       "Soul Food",
       "Vegetarian Dishes",
       "Bunny Chows",
@@ -36,41 +37,43 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Add Extras",
       "Sides",
       "Sauces",
-      "Hot Drink"
+      "Hot Drink",
+      "Starters"
     ],
-    "Starters & Soulful Flavors": [
+    "Starters": [
+      "Starters",
+    ],
+    "Mains":[
       "Soul Food",
       "Vegetarian Dishes",
       "Bunny Chows",
       "Potjiekos",
       "Sosaties",
-      "Go Traditional"
-    ],
-    "Grills & Burgers": [
+      "Go Traditional",
       "Burger",
       "Hot Rock Grill",
       "Grill",
-      "Steak"
+      "Steak",
     ],
-    "Sweet Indulgences": [
+    "Desserts":[
       "Dessert",
       "Milkshake",
-      "Alcoholic Milkshake"
+      "Alcoholic Milkshake",
     ],
-    "Beverages": [
-      "Hot Drink"
-    ],
-    "Extras & Accompaniments": [
+    "Kids Menu":[],
+    "Sides":[
       "Add Extras",
       "Sides",
-      "Sauces"
-    ]
-  };
-  
+      "Sauces",],
+    "Drinks":[
+      "Hot Drink",
+    ],
+  }
+
 
   return (
     <>
-    <Preloader />
+      <Preloader />
       <Header
         title="MENUS"
         content="Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time."

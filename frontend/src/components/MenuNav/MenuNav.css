@@ -15,7 +15,7 @@
 
 .Menubtn button,
 .Menubtn-fullscreen button {
-  width: 193px;
+  min-width: 160px;
   height: 52px;
   font-size: 15px;
   font-weight: 400;
