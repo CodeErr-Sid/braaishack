@@ -58,7 +58,7 @@ export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setS
 
                         <div key={item._id} className="col-lg-3"
                             style={{
-                                display: selectedMenu.length === 0 || selectedMenu.includes(item.category)
+                                display: selectedMenu.length !== 0 && selectedMenu.includes(item.category)
                                     ? "block"
                                     : "none",
                             }}>
