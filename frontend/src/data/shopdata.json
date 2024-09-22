@@ -997,5 +997,60 @@
       "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/Sweet-Indulgences/desserts/Malva%20Pudding.jpg?raw=true",
       "category": "Dessert",
       "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "66f0284ba76ee78122d08622"
+      },
+      "name": "MINI MAKE UP MEAL",
+      "description": "Pick one tasty meal for the kids.",
+      "price": 5.95,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/braai_kids/make_a_meal.webp",
+      "category": "kids_menu",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "66f0284ba76ee78122d08622"
+      },
+      "name": "MINI MAKE UP MEAL",
+      "description": "Pick one tasty meal for the kids.",
+      "price": 5.95,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/braai_kids/make_a_meal.webp",
+      "category": "kids_menu",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "66f0284aa76ee78122d0861e"
+      },
+      "name": "SPAGHETTI AND MEATBALLS",
+      "description": "Classic pasta dish with savory meatballs.",
+      "price": 5.95,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/braai_kids/spagetti_and_meatballs.jpg",
+      "category": "kids_menu",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "66f02849a76ee78122d0861c"
+      },
+      "name": "BEEF BURGER",
+      "description": "Juicy beef patty with fresh toppings.",
+      "price": 5.95,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/braai_kids/beef_burger.jpg",
+      "category": "kids_menu",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "66f02846a76ee78122d08617"
+      },
+      "name": "CHICKEN STRIPS",
+      "description": "Crispy chicken strips, delicious and tender.",
+      "price": 5.95,
+      "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/braai_kids/chicken_strips.jpg",
+      "category": "kids_menu",
+      "__v": 0
     }
   ]

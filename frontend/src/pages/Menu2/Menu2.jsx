@@ -38,7 +38,8 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Sides",
       "Sauces",
       "Hot Drink",
-      "Starters"
+      "Starters",
+      "kids_menu"
     ],
     "Starters": [
       "Starters",
@@ -60,7 +61,9 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Milkshake",
       "Alcoholic Milkshake",
     ],
-    "Kids Menu":[],
+    "Kids Menu":[
+      "kids_menu"
+    ],
     "Sides":[
       "Add Extras",
       "Sides",
