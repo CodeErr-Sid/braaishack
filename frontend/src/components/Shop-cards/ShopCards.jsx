@@ -48,9 +48,6 @@ export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setS
 
     return (
         <section className="sb-menu-section sb-p-90-60">
-            <div className="sb-bg-1">
-                <div></div>
-            </div>
             <div className="container">
                 <div className="row">
                     {(shopCardData?.length ? shopCardData : MenuData).map((item, index) => (
