@@ -9,16 +9,6 @@ import Preloader from '../../components/Preloader/Preloader';
 const Menu2 = ({ isLoggedin, setShowLogin }) => {
   const { food_list } = useContext(StoreContext);
 
-  const [selectedMenu, setSelectedMenu] = useState([]);
-
-  const images = [
-    { src: assets.burger3, className: 'burger' },
-    { src: assets.onion, className: 'onion' },
-    { src: assets.tomato, className: 'tomato' },
-    { src: assets.chilli, className: 'chilli' }
-  ];
-
-
   const Menubtndata = {
     "All": [
       "Soul Food",
@@ -72,6 +62,18 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Hot Drink",
     ],
   }
+
+
+  const [selectedMenu, setSelectedMenu] = useState(Menubtndata.All);
+
+  const images = [
+    { src: assets.burger3, className: 'burger' },
+    { src: assets.onion, className: 'onion' },
+    { src: assets.tomato, className: 'tomato' },
+    { src: assets.chilli, className: 'chilli' }
+  ];
+
+
 
 
   return (

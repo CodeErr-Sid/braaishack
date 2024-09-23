@@ -15,7 +15,6 @@ export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setS
 
     const { addToCart } = useContext(StoreContext)
 
-    // console.log(selectedMenu)
 
 
     const handleAddToCart = (item) => {
@@ -54,9 +53,9 @@ export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setS
             </div>
             <div className="container">
                 <div className="row">
-                    {(shopCardData?.length ? shopCardData : MenuData).map(item => (
+                    {(shopCardData?.length ? shopCardData : MenuData).map((item, index) => (
 
-                        <div key={item._id} className="col-lg-3"
+                        <div key={index} className="col-lg-3"
                             style={{
                                 display: selectedMenu.length !== 0 && selectedMenu.includes(item.category)
                                     ? "block"
