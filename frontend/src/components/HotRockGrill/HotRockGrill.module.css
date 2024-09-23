@@ -3,11 +3,11 @@
 .parentcontainer {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
 }
 
-.rsis-container{
-    display: none;
+.rsis-image{
+    width: 90%!important;
 }
 
 .childcontainer {
@@ -23,12 +23,12 @@
     width: 50%;
 }
 
-.contentcontainer{
+.contentcontainer {
     padding: 4rem;
     background-color: #1E1E1E;
 }
 
-.highlight{
+.highlight {
     color: yellow;
     font-weight: 800;
     word-spacing: normal;
@@ -43,9 +43,19 @@
     color: white;
 }
 
-@media screen and ( 0 < width <= 768px) {
-    .childcontainer{
-        width: 90%;
+@media screen and (0 < width <=768px) {
+    .childcontainer {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .imagecontainer,
+    .contentcontainer {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .contentcontainer {
+        padding: 1.5rem;
     }
 }

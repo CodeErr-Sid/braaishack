@@ -19,9 +19,9 @@ const DynamicSlider = () => {
         const updateSliderDimensions = () => {
             if (childContainerRef.current) {
                 const containerWidth = childContainerRef.current.offsetWidth;
-                const containerHeight = childContainerRef.current.offsetHeight;
+                const containerHeight = window.innerWidth > 768 ? childContainerRef.current.offsetHeight : 400;
                 setSliderDimensions({
-                    width: containerWidth / 2,
+                    width: window.innerWidth > 768 ? containerWidth / 2 : containerWidth * 0.9,
                     height: containerHeight
                 });
             }
