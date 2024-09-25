@@ -1,0 +1,437 @@
+[
+  {
+    "name": "KWV",
+    "category": "Brandy",
+    "description": "Premium South African brandy with rich flavors",
+    "price": 3.50,
+    "image": ""
+  },
+  {
+    "name": "Viceroy",
+    "category": "Brandy",
+    "description": "Smooth and balanced brandy with a light finish",
+    "price": 3.50,
+    "image": ""
+  },
+  {
+    "name": "Courvoisier",
+    "category": "Brandy",
+    "description": "French cognac with deep, complex flavor profile",
+    "price": 3.40,
+    "image": ""
+  },
+  {
+    "name": "Klipdrift",
+    "category": "Brandy",
+    "description": "South African brandy with bold, full-bodied taste",
+    "price": 3.60,
+    "image": ""
+  },
+  {
+    "name": "Richelieu",
+    "category": "Brandy",
+    "description": "Elegant brandy offering smooth and fruity notes",
+    "price": 3.60,
+    "image": ""
+  },
+  {
+    "name": "Bacardi",
+    "category": "Rum",
+    "description": "Popular rum with a light and refreshing character",
+    "price": 3.00,
+    "image": ""
+  },
+  {
+    "name": "Captain Morgan Dark Rum",
+    "category": "Rum",
+    "description": "Rich, full-bodied rum with notes of caramel and oak",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Captain Morgan Spiced Rum",
+    "category": "Rum",
+    "description": "Smooth spiced rum with notes of vanilla and spices",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Ciroc (Pineapple, Mango & Red Berry)",
+    "category": "Vodka",
+    "description": "Flavored vodka infused with tropical fruit flavors",
+    "price": 4.60,
+    "image": ""
+  },
+  {
+    "name": "Smirnoff Vodka",
+    "category": "Vodka",
+    "description": "Classic vodka known for its clean, crisp taste",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Mainstay",
+    "category": "Cane",
+    "description": "Smooth and refreshing cane spirit with light flavor",
+    "price": 3.40,
+    "image": ""
+  },
+  {
+    "name": "Glenfiddich",
+    "category": "Whisky",
+    "description": "Famous Scotch whisky with smooth and complex taste",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Jameson",
+    "category": "Whisky",
+    "description": "Irish whiskey with a smooth and mellow finish",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Southern Comfort",
+    "category": "Whisky",
+    "description": "American whiskey liqueur with fruity, spiced notes",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Bell’s",
+    "category": "Whisky",
+    "description": "Blended Scotch whisky with rich, smooth character",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Jack Daniel’s",
+    "category": "Whisky",
+    "description": "Famous Tennessee whiskey with signature bold flavor",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Amarula",
+    "category": "Liqueurs",
+    "description": "Cream liqueur made with African marula fruit",
+    "price": 3.30,
+    "image": ""
+  },
+  {
+    "name": "Baileys",
+    "category": "Liqueurs",
+    "description": "Popular Irish cream liqueur with smooth texture",
+    "price": 3.30,
+    "image": ""
+  },
+  {
+    "name": "Tia Maria",
+    "category": "Liqueurs",
+    "description": "Rich coffee liqueur with a sweet, creamy flavor",
+    "price": 3.30,
+    "image": ""
+  },
+  {
+    "name": "Bombay Sapphire",
+    "category": "Gin",
+    "description": "Well-known gin with distinct herbal and citrus notes",
+    "price": 3.30,
+    "image": ""
+  },
+  {
+    "name": "Gordon’s Gin",
+    "category": "Gin",
+    "description": "Popular gin with a crisp and clean flavor profile",
+    "price": 3.10,
+    "image": ""
+  },
+  {
+    "name": "Parma Violet Gin",
+    "category": "Gin",
+    "description": "Floral gin with notes of parma violet candy",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Pink Gin",
+    "category": "Gin",
+    "description": "Gin infused with flavors of summer fruits and berries",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Mediterranean Orange",
+    "category": "Gin",
+    "description": "Gin with bright, zesty notes of Mediterranean orange",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Rhubarb and Apple",
+    "category": "Gin",
+    "description": "Sweet and tart gin with flavors of rhubarb and apple",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Blackcurrant Royale",
+    "category": "Gin",
+    "description": "Gin with rich blackcurrant and berry flavors",
+    "price": 3.30,
+    "image": ""
+  },
+  {
+    "name": "White Peach",
+    "category": "Gin",
+    "description": "Gin with subtle, juicy flavors of white peach",
+    "price": 3.20,
+    "image": ""
+  },
+  {
+    "name": "Amstel",
+    "category": "Lager (On Tap)",
+    "description": "Light and refreshing lager with a smooth finish",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Budweiser",
+    "category": "Lager (On Tap)",
+    "description": "Classic American lager with a crisp finish",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Carling",
+    "category": "Lager (On Tap)",
+    "description": "Popular British lager with a light, malty flavor",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Foster’s",
+    "category": "Lager (On Tap)",
+    "description": "Australian lager with a smooth, easy-drinking taste",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Grolsch",
+    "category": "Lager (On Tap)",
+    "description": "Dutch lager with a balanced and refreshing flavor",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Heineken",
+    "category": "Lager (On Tap)",
+    "description": "Famous Dutch lager with crisp and balanced taste",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Stella",
+    "category": "Lager (On Tap)",
+    "description": "Premium Belgian lager with a rich flavor",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "John Smith’s",
+    "category": "Ale/Stout (On Tap)",
+    "description": "Classic British ale with a smooth and malty taste",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Guinness",
+    "category": "Ale/Stout (On Tap)",
+    "description": "Famous stout with a rich, creamy head and smooth finish",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Ale of The Day",
+    "category": "Ale/Stout (On Tap)",
+    "description": "Daily selection of freshly brewed ale",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Strongbow",
+    "category": "Cider (On Tap)",
+    "description": "Crisp and refreshing cider with a sweet apple flavor",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Strongbow Dark Fruit",
+    "category": "Cider (On Tap)",
+    "description": "Cider with dark fruit flavors and a refreshing finish",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Old Rosie",
+    "category": "Cider (On Tap)",
+    "description": "Cloudy cider with a bold, full-bodied flavor",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Savanna Dry",
+    "category": "Cider (On Tap)",
+    "description": "Crisp and dry cider with a refreshing apple taste",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Castle",
+    "category": "Imported Lager/Beer",
+    "description": "Imported South African lager with a crisp taste",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Windhoek",
+    "category": "Imported Lager/Beer",
+    "description": "Namibian lager with a light and refreshing finish",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Black Label",
+    "category": "Lager/Beer",
+    "description": "A smooth and rich beer with deep flavors.",
+    "price": 3.00,
+    "image": ""
+  },
+  {
+    "name": "Hunters Gold",
+    "category": "Cider",
+    "description": "A crisp and refreshing cider with fruity notes.",
+    "price": 3.30,
+    "image": ""
+  },
+  {
+    "name": "Hunters Dry",
+    "category": "Cider",
+    "description": "A classic dry cider with a hint of apple sweetness.",
+    "price": 3.30,
+    "image": ""
+  },
+  {
+    "name": "Spar-letta Cream Soda",
+    "category": "Soft Drink",
+    "description": "A sweet and creamy soft drink with a delightful flavor.",
+    "price": 2.50,
+    "image": ""
+  },
+  {
+    "name": "Spar-letta Sparberry",
+    "category": "Soft Drink",
+    "description": "A refreshing berry-flavored soft drink that's fizzy.",
+    "price": 2.50,
+    "image": ""
+  },
+  {
+    "name": "Fanta Grape",
+    "category": "Soft Drink",
+    "description": "A fruity grape soda that's full of flavor.",
+    "price": 2.00,
+    "image": ""
+  },
+  {
+    "name": "Fanta Orange",
+    "category": "Soft Drink",
+    "description": "A classic orange soda with a zesty taste.",
+    "price": 2.00,
+    "image": ""
+  },
+  {
+    "name": "Granadilla Twist",
+    "category": "Soft Drink",
+    "description": "A unique twist on soda with granadilla flavor.",
+    "price": 2.50,
+    "image": ""
+  },
+  {
+    "name": "Cream Soda Float",
+    "category": "Specialty Soft Drink",
+    "description": "A creamy float topped with delicious ice cream.",
+    "price": 3.00,
+    "image": ""
+  },
+  {
+    "name": "Coke Float",
+    "category": "Specialty Soft Drink",
+    "description": "A classic float with Coke and a scoop of ice cream.",
+    "price": 3.00,
+    "image": ""
+  },
+  {
+    "name": "Pepsi/Diet",
+    "category": "Soft Drink",
+    "description": "A popular cola beverage, available in regular and diet.",
+    "price": 2.00,
+    "image": ""
+  },
+  {
+    "name": "Coke/Diet",
+    "category": "Soft Drink",
+    "description": "Classic cola flavor, available in regular and diet.",
+    "price": 2.00,
+    "image": ""
+  },
+  {
+    "name": "Lemonade",
+    "category": "Soft Drink",
+    "description": "A refreshing drink made from lemons and sugar.",
+    "price": 2.00,
+    "image": ""
+  },
+  {
+    "name": "Tequila",
+    "category": "shots",
+    "description": "A popular Mexican spirit made from agave.",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Patron XO Cafe",
+    "category": "shots",
+    "description": "Coffee liqueur blended with premium tequila.",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Zappa",
+    "category": "shots",
+    "description": "A unique herbal spirit with intense flavor.",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Sambuca",
+    "category": "shots",
+    "description": "Anise-flavored Italian liqueur enjoyed as a shot.",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Spring Bokkies",
+    "category": "shots",
+    "description": "A fruity, vibrant liqueur perfect for shots.",
+    "price": null,
+    "image": ""
+  },
+  {
+    "name": "Sourz",
+    "category": "shots",
+    "description": "Sweet and sour liqueur, a popular party drink.",
+    "price": null,
+    "image": ""
+  }
+]
+

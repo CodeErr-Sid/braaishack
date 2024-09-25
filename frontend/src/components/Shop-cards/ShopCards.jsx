@@ -46,65 +46,63 @@ export default function ShopCards({ shopCardData, selectedMenu, isLoggedin, setS
 
     };
 
+    const groupedItems = (shopCardData?.length ? shopCardData : MenuData).reduce((acc, item) => {
+        if (!acc[item.category]) {
+            acc[item.category] = [];
+        }
+        acc[item.category].push(item);
+        return acc;
+    }, {});
+
     return (
         <section className="sb-menu-section sb-p-90-60">
             <div className="container">
                 <div className="row">
-                    {(shopCardData?.length ? shopCardData : MenuData).map((item, index) => (
-
-                        <div key={index} className="col-lg-3"
-                            style={{
-                                display: selectedMenu.length !== 0 && selectedMenu.includes(item.category)
-                                    ? "block"
-                                    : "none",
-                            }}>
-                            <div className="sb-menu-item sb-mb-30">
-                                <Link to={`/product/${item._id}`} className="sb-cover-frame">
-                                    <img src={item.image} alt={item.name} className='cards-img' />
-                                </Link>
-                                <div className="sb-card-tp">
-                                    <h4 className="sb-card-title">
-                                        <Link to={`/product/${item._id}`}>{item.name}</Link>
-                                    </h4>
-                                    {/* <div className="multi-select">
-                                        <div className="minus" onClick={() => decrement(item)}>-</div>
-                                        <h1>{quantities[item._id] || 1}</h1>
-                                        <div className="add" onClick={() => increment(item)}>+</div>
-                                    </div> */}
-                                    <div className="sb-price">
-                                        <sub>$</sub> {item.price}
+                    {Object.entries(groupedItems).map(([category, items], index) => (
+                        <div key={index} className="col-lg-12">
+                            {/* Render the category heading */}
+                            {selectedMenu.length === 0 || selectedMenu.includes(category) ? (
+                                <div className="category-heading">
+                                    <h3 className='categoryname'>{category}</h3>
+                                    <div className="row">
+                                        {items.map((item, itemIndex) => (
+                                            <div key={itemIndex} className="col-lg-3">
+                                                <div className="sb-menu-item sb-mb-30">
+                                                    <div className="sb-cover-frame">
+                                                        <img src={item.image} alt={item.name} className='cards-img' />
+                                                    </div>
+                                                    <div className="sb-card-tp">
+                                                        <h4 className="sb-card-title">{item.name}</h4>
+                                                        <div className="sb-price">
+                                                            <sub>$</sub> {item.price}
+                                                        </div>
+                                                    </div>
+                                                    <div className="sb-description">
+                                                        <p className="sb-text sb-mb-15">{item.description}</p>
+                                                    </div>
+                                                    <div className="sb-card-buttons-frame">
+                                                        <a
+                                                            href="#."
+                                                            className="sb-btn sb-atc"
+                                                            onClick={(e) => {
+                                                                e.preventDefault();
+                                                                // handleAddToCart(item);
+                                                            }}
+                                                        >
+                                                            <span className="sb-icon">
+                                                                <FontAwesomeIcon icon={faCartShopping} style={{ color: "black" }} />
+                                                            </span>
+                                                            <span className="sb-add-to-cart-text">
+                                                                {addedItems[item._id] ? 'Added' : 'Add to cart'}
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
-                                <div className="sb-description">
-                                    <p className="sb-text sb-mb-15">{item.description}</p>
-                                </div>
-                                <div className="sb-card-buttons-frame">
-                                    <Link to={`/product/${item._id}`} className="sb-btn sb-btn-2 sb-btn-gray sb-btn-icon sb-m-0">
-                                        <span className="sb-icon">
-                                            <img src={assets.arrow2} alt="icon" />
-                                        </span>
-                                        <span>Details</span>
-                                    </Link>
-                                    <a
-                                        href="#."
-                                        className="sb-btn sb-atc"
-                                        onClick={(e) => {
-                                            e.preventDefault(); // Prevent default link behavior
-                                            handleAddToCart(item);
-                                        }}
-                                    >
-                                        <span className="sb-icon">
-                                            <FontAwesomeIcon icon={faCartShopping} style={{ color: "black" }} />
-                                        </span>
-                                        <span className="sb-add-to-cart-text">
-                                            {addedItems[item._id] ? 'Added' : 'Add to cart'}
-                                        </span>
-                                        {addedItems[item._id] && (
-                                            <span className="sb-added-text"></span>
-                                        )}
-                                    </a>
-                                </div>
-                            </div>
+                            ) : null}
                         </div>
                     ))}
                 </div>

@@ -29,12 +29,28 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Sauces",
       "Hot Drink",
       "Starters",
-      "kids_menu"
+      "kids_menu",
+      "Brandy",
+      "Rum",
+      "Vodka",
+      "Cane",
+      "Whisky",
+      "Liqueurs",
+      "Gin",
+      "Lager (On Tap)",
+      "Ale/Stout (On Tap)",
+      "Cider (On Tap)",
+      "Imported Lager/Beer",
+      "Lager/Beer",
+      "Cider",
+      "Soft Drink",
+      "Specialty Soft Drink",
+      "shots"
     ],
     "Starters": [
       "Starters",
     ],
-    "Mains":[
+    "Mains": [
       "Soul Food",
       "Vegetarian Dishes",
       "Bunny Chows",
@@ -46,20 +62,36 @@ const Menu2 = ({ isLoggedin, setShowLogin }) => {
       "Grill",
       "Steak",
     ],
-    "Desserts":[
+    "Desserts": [
       "Dessert",
       "Milkshake",
       "Alcoholic Milkshake",
     ],
-    "Kids Menu":[
+    "Kids Menu": [
       "kids_menu"
     ],
-    "Sides":[
+    "Sides": [
       "Add Extras",
       "Sides",
       "Sauces",],
-    "Drinks":[
+    "Drinks": [
       "Hot Drink",
+      "Brandy",
+      "Rum",
+      "Vodka",
+      "Cane",
+      "Whisky",
+      "Liqueurs",
+      "Gin",
+      "Lager (On Tap)",
+      "Ale/Stout (On Tap)",
+      "Cider (On Tap)",
+      "Imported Lager/Beer",
+      "Lager/Beer",
+      "Cider",
+      "Soft Drink",
+      "Specialty Soft Drink",
+      "shots"
     ],
   }
 

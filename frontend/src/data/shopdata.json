@@ -1030,7 +1030,7 @@
     "description": "Golden fish fingers, crispy and tasty.",
     "price": "5.95",
     "category": "kids_menu",
-    "image": "https://github.com/Rasmi142/Braaishack-data/blob/main/braaishack%20data/braaishack-assets/braai_kids/fish_fingers.jpg"
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/braai_kids/fish_fingers.jpg"
   },
   {
     "_id": "66f02846a76ee78122d08617",
@@ -1039,6 +1039,1014 @@
     "price": 5.95,
     "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/braai_kids/chicken_strips.jpg",
     "category": "kids_menu",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69df12577f2688fa37c",
+    "name": "KWV",
+    "description": "Premium South African brandy with rich flavors",
+    "price": 3.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/KWV.png",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ef12577f2688fa37e",
+    "name": "Viceroy",
+    "description": "Smooth and balanced brandy with a light finish",
+    "price": 3.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/viceroy.webp",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ef12577f2688fa380",
+    "name": "Courvoisier",
+    "description": "French cognac with deep, complex flavor profile",
+    "price": 3.4,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Courvoisier.jpg",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ef12577f2688fa382",
+    "name": "Klipdrift",
+    "description": "South African brandy with bold, full-bodied taste",
+    "price": 3.6,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Klipdrift.png",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ef12577f2688fa384",
+    "name": "Richelieu",
+    "description": "Elegant brandy offering smooth and fruity notes",
+    "price": 3.6,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Richelieu.webp",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ef12577f2688fa386",
+    "name": "Bacardi",
+    "description": "Popular rum with a light and refreshing character",
+    "price": 3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Bacardi.webp",
+    "category": "Rum",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ff12577f2688fa388",
+    "name": "Captain Morgan Dark Rum",
+    "description": "Rich, full-bodied rum with notes of caramel and oak",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Captain-Morgan-Dark-Rum.jpg",
+    "category": "Rum",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ff12577f2688fa38a",
+    "name": "Captain Morgan Spiced Rum",
+    "description": "Smooth spiced rum with notes of vanilla and spices",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Captain-Morgan-Spiced-Rum.jpg",
+    "category": "Rum",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ff12577f2688fa38c",
+    "name": "Ciroc (Pineapple, Mango & Red Berry)",
+    "description": "Flavored vodka infused with tropical fruit flavors",
+    "price": 4.6,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Ciroc-PineApple-Orange-RedBerry.jpg",
+    "category": "Vodka",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ff12577f2688fa38e",
+    "name": "Smirnoff Vodka",
+    "description": "Classic vodka known for its clean, crisp taste",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Smirnoff-Vodka.webp",
+    "category": "Vodka",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d69ff12577f2688fa390",
+    "name": "Mainstay",
+    "description": "Smooth and refreshing cane spirit with light flavor",
+    "price": 3.4,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Mainstay.jpg",
+    "category": "Cane",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a0f12577f2688fa392",
+    "name": "Glenfiddich",
+    "description": "Famous Scotch whisky with smooth and complex taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Glenfiddich.webp",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a0f12577f2688fa394",
+    "name": "Jameson",
+    "description": "Irish whiskey with a smooth and mellow finish",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Jameson.png",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a0f12577f2688fa396",
+    "name": "Southern Comfort",
+    "description": "American whiskey liqueur with fruity, spiced notes",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Southern-Comfort.png",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a0f12577f2688fa398",
+    "name": "Bell’s",
+    "description": "Blended Scotch whisky with rich, smooth character",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Bells.jpg",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a0f12577f2688fa39a",
+    "name": "Jack Daniel’s",
+    "description": "Famous Tennessee whiskey with signature bold flavor",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Jack-Daniels.jpg",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a1f12577f2688fa39c",
+    "name": "Amarula",
+    "description": "Cream liqueur made with African marula fruit",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Amarula.jpg",
+    "category": "Liqueurs",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a1f12577f2688fa39e",
+    "name": "Baileys",
+    "description": "Popular Irish cream liqueur with smooth texture",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Baileys.jpg",
+    "category": "Liqueurs",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a1f12577f2688fa3a0",
+    "name": "Tia Maria",
+    "description": "Rich coffee liqueur with a sweet, creamy flavor",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Tia-Maria.webp",
+    "category": "Liqueurs",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a1f12577f2688fa3a2",
+    "name": "Bombay Sapphire",
+    "description": "Well-known gin with distinct herbal and citrus notes",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Bombay-Sapphire.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a1f12577f2688fa3a4",
+    "name": "Gordon’s Gin",
+    "description": "Popular gin with a crisp and clean flavor profile",
+    "price": 3.1,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Gordons-Gin.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a2f12577f2688fa3a6",
+    "name": "Parma Violet Gin",
+    "description": "Floral gin with notes of parma violet candy",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Parma-Violet-Gin.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a2f12577f2688fa3a8",
+    "name": "Pink Gin",
+    "description": "Gin infused with flavors of summer fruits and berries",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/pink-gin.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a2f12577f2688fa3aa",
+    "name": "Mediterranean Orange",
+    "description": "Gin with bright, zesty notes of Mediterranean orange",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Mediterranean-Orange.jpeg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a2f12577f2688fa3ac",
+    "name": "Rhubarb and Apple",
+    "description": "Sweet and tart gin with flavors of rhubarb and apple",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Rhubarb-Bramley-Apple.webp",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a2f12577f2688fa3ae",
+    "name": "Blackcurrant Royale",
+    "description": "Gin with rich blackcurrant and berry flavors",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Blackcurrant-Royale.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a3f12577f2688fa3b0",
+    "name": "White Peach",
+    "description": "Gin with subtle, juicy flavors of white peach",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/White-Peach.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a3f12577f2688fa3b2",
+    "name": "Amstel",
+    "description": "Light and refreshing lager with a smooth finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Amstel.webp",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a3f12577f2688fa3b4",
+    "name": "Budweiser",
+    "description": "Classic American lager with a crisp finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Budweiser.webp",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a3f12577f2688fa3b6",
+    "name": "Carling",
+    "description": "Popular British lager with a light, malty flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/carling.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a3f12577f2688fa3b8",
+    "name": "Foster’s",
+    "description": "Australian lager with a smooth, easy-drinking taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Fosters.png",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a3f12577f2688fa3ba",
+    "name": "Grolsch",
+    "description": "Dutch lager with a balanced and refreshing flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Grolsch.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a4f12577f2688fa3bc",
+    "name": "Heineken",
+    "description": "Famous Dutch lager with crisp and balanced taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Heineken.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a4f12577f2688fa3be",
+    "name": "Stella",
+    "description": "Premium Belgian lager with a rich flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Stella.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a4f12577f2688fa3c0",
+    "name": "John Smith’s",
+    "description": "Classic British ale with a smooth and malty taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/John-Smiths.webp",
+    "category": "Ale/Stout (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a4f12577f2688fa3c2",
+    "name": "Guinness",
+    "description": "Famous stout with a rich, creamy head and smooth finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Guinness.jpg",
+    "category": "Ale/Stout (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a4f12577f2688fa3c4",
+    "name": "Ale of The Day",
+    "description": "Daily selection of freshly brewed ale",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Ale-of-The-Day.jpeg",
+    "category": "Ale/Stout (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a5f12577f2688fa3c6",
+    "name": "Strongbow",
+    "description": "Crisp and refreshing cider with a sweet apple flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Strongbow.jpg",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a5f12577f2688fa3c8",
+    "name": "Strongbow Dark Fruit",
+    "description": "Cider with dark fruit flavors and a refreshing finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Strongbo-Dark-Fruit.png",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a5f12577f2688fa3ca",
+    "name": "Old Rosie",
+    "description": "Cloudy cider with a bold, full-bodied flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Old-Rosie.jpg",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a5f12577f2688fa3cc",
+    "name": "Savanna Dry",
+    "description": "Crisp and dry cider with a refreshing apple taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Savanna-Dry.png",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a5f12577f2688fa3ce",
+    "name": "Castle",
+    "description": "Imported South African lager with a crisp taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Castle.png",
+    "category": "Imported Lager/Beer",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a6f12577f2688fa3d0",
+    "name": "Windhoek",
+    "description": "Namibian lager with a light and refreshing finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Windhoek.webp",
+    "category": "Imported Lager/Beer",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a6f12577f2688fa3d4",
+    "name": "Hunters Gold",
+    "description": "A crisp and refreshing cider with fruity notes.",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Hunters-Gold.webp",
+    "category": "Cider",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a6f12577f2688fa3d6",
+    "name": "Hunters Dry",
+    "description": "A classic dry cider with a hint of apple sweetness.",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Hunters-Dry.webp",
+    "category": "Cider",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a6f12577f2688fa3d8",
+    "name": "Spar-letta Cream Soda",
+    "description": "A sweet and creamy soft drink with a delightful flavor.",
+    "price": 2.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Spar-letta-Cream-Soda.jpg",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a7f12577f2688fa3da",
+    "name": "Spar-letta Sparberry",
+    "description": "A refreshing berry-flavored soft drink that's fizzy.",
+    "price": 2.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Spar-letta-Sparberry.webp",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a7f12577f2688fa3dc",
+    "name": "Fanta Grape",
+    "description": "A fruity grape soda that's full of flavor.",
+    "price": 2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Fanta-Grape.jpg",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a7f12577f2688fa3de",
+    "name": "Fanta Orange",
+    "description": "A classic orange soda with a zesty taste.",
+    "price": 2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Fanta-Orange.webp",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a7f12577f2688fa3e0",
+    "name": "Granadilla Twist",
+    "description": "A unique twist on soda with granadilla flavor.",
+    "price": 2.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Granadilla-Twist.webp",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d6a7f12577f2688fa3e2",
+    "name": "Cream Soda Float",
+    "description": "A creamy float topped with delicious ice cream.",
+    "price": 3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Cream-Soda-Float.webp",
+    "category": "Specialty Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d715529ee548c1446f10",
+    "name": "KWV",
+    "description": "Premium South African brandy with rich flavors",
+    "price": 3.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/KWV.png",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d718529ee548c1446f15",
+    "name": "Viceroy",
+    "description": "Smooth and balanced brandy with a light finish",
+    "price": 3.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/viceroy.webp",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d719529ee548c1446f17",
+    "name": "Courvoisier",
+    "description": "French cognac with deep, complex flavor profile",
+    "price": 3.4,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Courvoisier.jpg",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d719529ee548c1446f19",
+    "name": "Klipdrift",
+    "description": "South African brandy with bold, full-bodied taste",
+    "price": 3.6,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Klipdrift.png",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d719529ee548c1446f1b",
+    "name": "Richelieu",
+    "description": "Elegant brandy offering smooth and fruity notes",
+    "price": 3.6,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Richelieu.webp",
+    "category": "Brandy",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71a529ee548c1446f1d",
+    "name": "Bacardi",
+    "description": "Popular rum with a light and refreshing character",
+    "price": 3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Bacardi.webp",
+    "category": "Rum",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71a529ee548c1446f1f",
+    "name": "Captain Morgan Dark Rum",
+    "description": "Rich, full-bodied rum with notes of caramel and oak",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Captain-Morgan-Dark-Rum.jpg",
+    "category": "Rum",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71a529ee548c1446f21",
+    "name": "Captain Morgan Spiced Rum",
+    "description": "Smooth spiced rum with notes of vanilla and spices",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Captain-Morgan-Spiced-Rum.jpg",
+    "category": "Rum",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71a529ee548c1446f23",
+    "name": "Ciroc (Pineapple, Mango & Red Berry)",
+    "description": "Flavored vodka infused with tropical fruit flavors",
+    "price": 4.6,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Ciroc-PineApple-Orange-RedBerry.jpg",
+    "category": "Vodka",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71a529ee548c1446f25",
+    "name": "Smirnoff Vodka",
+    "description": "Classic vodka known for its clean, crisp taste",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Smirnoff-Vodka.webp",
+    "category": "Vodka",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71b529ee548c1446f29",
+    "name": "Glenfiddich",
+    "description": "Famous Scotch whisky with smooth and complex taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Glenfiddich.webp",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71b529ee548c1446f2b",
+    "name": "Jameson",
+    "description": "Irish whiskey with a smooth and mellow finish",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Jameson.png",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71b529ee548c1446f2d",
+    "name": "Southern Comfort",
+    "description": "American whiskey liqueur with fruity, spiced notes",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Southern-Comfort.png",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71b529ee548c1446f2f",
+    "name": "Bell’s",
+    "description": "Blended Scotch whisky with rich, smooth character",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Bells.jpg",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71c529ee548c1446f31",
+    "name": "Jack Daniel’s",
+    "description": "Famous Tennessee whiskey with signature bold flavor",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Jack-Daniels.jpg",
+    "category": "Whisky",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71c529ee548c1446f33",
+    "name": "Amarula",
+    "description": "Cream liqueur made with African marula fruit",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Amarula.jpg",
+    "category": "Liqueurs",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71c529ee548c1446f35",
+    "name": "Baileys",
+    "description": "Popular Irish cream liqueur with smooth texture",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Baileys.jpg",
+    "category": "Liqueurs",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71c529ee548c1446f37",
+    "name": "Tia Maria",
+    "description": "Rich coffee liqueur with a sweet, creamy flavor",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Tia-Maria.webp",
+    "category": "Liqueurs",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71c529ee548c1446f39",
+    "name": "Bombay Sapphire",
+    "description": "Well-known gin with distinct herbal and citrus notes",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Bombay-Sapphire.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71c529ee548c1446f3b",
+    "name": "Gordon’s Gin",
+    "description": "Popular gin with a crisp and clean flavor profile",
+    "price": 3.1,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Gordons-Gin.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71d529ee548c1446f3d",
+    "name": "Parma Violet Gin",
+    "description": "Floral gin with notes of parma violet candy",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Parma-Violet-Gin.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71d529ee548c1446f3f",
+    "name": "Pink Gin",
+    "description": "Gin infused with flavors of summer fruits and berries",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/pink-gin.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71d529ee548c1446f41",
+    "name": "Mediterranean Orange",
+    "description": "Gin with bright, zesty notes of Mediterranean orange",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Mediterranean-Orange.jpeg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71d529ee548c1446f43",
+    "name": "Rhubarb and Apple",
+    "description": "Sweet and tart gin with flavors of rhubarb and apple",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Rhubarb-Bramley-Apple.webp",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71d529ee548c1446f45",
+    "name": "Blackcurrant Royale",
+    "description": "Gin with rich blackcurrant and berry flavors",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Blackcurrant-Royale.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d71e529ee548c1446f47",
+    "name": "White Peach",
+    "description": "Gin with subtle, juicy flavors of white peach",
+    "price": 3.2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/White-Peach.jpg",
+    "category": "Gin",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74a529ee548c1446f49",
+    "name": "Amstel",
+    "description": "Light and refreshing lager with a smooth finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Amstel.webp",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74a529ee548c1446f4b",
+    "name": "Budweiser",
+    "description": "Classic American lager with a crisp finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Budweiser.webp",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74b529ee548c1446f4d",
+    "name": "Carling",
+    "description": "Popular British lager with a light, malty flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/carling.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74b529ee548c1446f4f",
+    "name": "Foster’s",
+    "description": "Australian lager with a smooth, easy-drinking taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Fosters.png",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74b529ee548c1446f51",
+    "name": "Grolsch",
+    "description": "Dutch lager with a balanced and refreshing flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Grolsch.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74b529ee548c1446f53",
+    "name": "Heineken",
+    "description": "Famous Dutch lager with crisp and balanced taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Heineken.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74b529ee548c1446f55",
+    "name": "Stella",
+    "description": "Premium Belgian lager with a rich flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Stella.jpg",
+    "category": "Lager (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74c529ee548c1446f57",
+    "name": "John Smith’s",
+    "description": "Classic British ale with a smooth and malty taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/John-Smiths.webp",
+    "category": "Ale/Stout (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74c529ee548c1446f59",
+    "name": "Guinness",
+    "description": "Famous stout with a rich, creamy head and smooth finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Guinness.jpg",
+    "category": "Ale/Stout (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74c529ee548c1446f5b",
+    "name": "Ale of The Day",
+    "description": "Daily selection of freshly brewed ale",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Ale-of-The-Day.jpeg",
+    "category": "Ale/Stout (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74c529ee548c1446f5d",
+    "name": "Strongbow",
+    "description": "Crisp and refreshing cider with a sweet apple flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Strongbow.jpg",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74c529ee548c1446f5f",
+    "name": "Strongbow Dark Fruit",
+    "description": "Cider with dark fruit flavors and a refreshing finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Strongbo-Dark-Fruit.png",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74d529ee548c1446f61",
+    "name": "Old Rosie",
+    "description": "Cloudy cider with a bold, full-bodied flavor",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Old-Rosie.jpg",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74d529ee548c1446f63",
+    "name": "Savanna Dry",
+    "description": "Crisp and dry cider with a refreshing apple taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Savanna-Dry.png",
+    "category": "Cider (On Tap)",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74d529ee548c1446f65",
+    "name": "Castle",
+    "description": "Imported South African lager with a crisp taste",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Castle.png",
+    "category": "Imported Lager/Beer",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74d529ee548c1446f67",
+    "name": "Windhoek",
+    "description": "Namibian lager with a light and refreshing finish",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Windhoek.webp",
+    "category": "Imported Lager/Beer",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74d529ee548c1446f69",
+    "name": "Black Label",
+    "description": "A smooth and rich beer with deep flavors.",
+    "price": 3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Black-Label.jpg",
+    "category": "Lager/Beer",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74e529ee548c1446f6b",
+    "name": "Hunters Gold",
+    "description": "A crisp and refreshing cider with fruity notes.",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Hunters-Gold.webp",
+    "category": "Cider",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74e529ee548c1446f6d",
+    "name": "Hunters Dry",
+    "description": "A classic dry cider with a hint of apple sweetness.",
+    "price": 3.3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Hunters-Dry.webp",
+    "category": "Cider",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74e529ee548c1446f6f",
+    "name": "Spar-letta Cream Soda",
+    "description": "A sweet and creamy soft drink with a delightful flavor.",
+    "price": 2.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Spar-letta-Cream-Soda.jpg",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74e529ee548c1446f71",
+    "name": "Spar-letta Sparberry",
+    "description": "A refreshing berry-flavored soft drink that's fizzy.",
+    "price": 2.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Spar-letta-Sparberry.webp",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74e529ee548c1446f73",
+    "name": "Fanta Grape",
+    "description": "A fruity grape soda that's full of flavor.",
+    "price": 2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Fanta-Grape.jpg",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74e529ee548c1446f75",
+    "name": "Fanta Orange",
+    "description": "A classic orange soda with a zesty taste.",
+    "price": 2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Fanta-Orange.webp",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74f529ee548c1446f77",
+    "name": "Granadilla Twist",
+    "description": "A unique twist on soda with granadilla flavor.",
+    "price": 2.5,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Granadilla-Twist.webp",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74f529ee548c1446f79",
+    "name": "Cream Soda Float",
+    "description": "A creamy float topped with delicious ice cream.",
+    "price": 3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Cream-Soda-Float.webp",
+    "category": "Specialty Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74f529ee548c1446f7b",
+    "name": "Coke Float",
+    "description": "A classic float with Coke and a scoop of ice cream.",
+    "price": 3,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Coke-Float.webp",
+    "category": "Specialty Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74f529ee548c1446f7d",
+    "name": "Pepsi/Diet",
+    "description": "A popular cola beverage, available in regular and diet.",
+    "price": 2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Pepsi-Diet.jpg",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d74f529ee548c1446f7f",
+    "name": "Coke/Diet",
+    "description": "Classic cola flavor, available in regular and diet.",
+    "price": 2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Coke-Diet.webp",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d750529ee548c1446f81",
+    "name": "Lemonade",
+    "description": "A refreshing drink made from lemons and sugar.",
+    "price": 2,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Lemonade.jpg",
+    "category": "Soft Drink",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d750529ee548c1446f83",
+    "name": "Tequila",
+    "description": "A popular Mexican spirit made from agave.",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/tequila.webp",
+    "category": "shots",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d750529ee548c1446f85",
+    "name": "Patron XO Cafe",
+    "description": "Coffee liqueur blended with premium tequila.",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Patron-XO-Cafe.webp",
+    "category": "shots",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d750529ee548c1446f87",
+    "name": "Zappa",
+    "description": "A unique herbal spirit with intense flavor.",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Zappa.png",
+    "category": "shots",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d750529ee548c1446f89",
+    "name": "Sambuca",
+    "description": "Anise-flavored Italian liqueur enjoyed as a shot.",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Sambuca.jpg",
+    "category": "shots",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d751529ee548c1446f8b",
+    "name": "Spring Bokkies",
+    "description": "A fruity, vibrant liqueur perfect for shots.",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Spring-Bokkies.jpg",
+    "category": "shots",
+    "__v": 0
+  },
+  {
+    "_id": "66f3d751529ee548c1446f8d",
+    "name": "Sourz",
+    "description": "Sweet and sour liqueur, a popular party drink.",
+    "price": 0,
+    "image": "https://raw.githubusercontent.com/Rasmi142/Braaishack-data/refs/heads/main/braaishack%20data/braaishack-assets/Beverages/hot_drinks/Drinks/Sourz.jpeg",
+    "category": "shots",
     "__v": 0
   }
 ]
