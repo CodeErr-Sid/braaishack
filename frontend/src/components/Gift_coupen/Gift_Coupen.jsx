@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Gift_Coupen = () => {
+const Gift_Coupen = ({ name, price, description, id }) => {
   // useEffect(() => {
   //   gsap.from('.giftsection', {
   //     scrollTrigger: {
@@ -103,8 +103,8 @@ const Gift_Coupen = () => {
           <h1>30% OFF</h1>
           <h3>MAGIC30</h3>
           <p> Say the magic word, and you will find out.
-Just say MAGIC30 to get 30% off
-</p>
+            Just say MAGIC30 to get 30% off
+          </p>
           <div className="rate"><h1>$44.50</h1> <span>$22.25</span></div>
           <button>GET COUPEN</button>
         </div>

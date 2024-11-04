@@ -33,6 +33,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Reservation from './pages/Reservation/Reservation';
 import { StoreContext } from './Context/StoreContext';
 import axios from 'axios';
+import GiftCheckout from './pages/GiftCheckout/GiftCheckout';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -129,7 +130,8 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/reservation' element={<Reservation />} />
           <Route path='/shop' element={<Shop />} />
-          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/order-checkout' element={<Checkout />} />
+          <Route path='/checkout' element={<GiftCheckout />} />
           <Route path='/cart' element={<ShopCart />} />
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/myorders" element={<MyOrders />} />

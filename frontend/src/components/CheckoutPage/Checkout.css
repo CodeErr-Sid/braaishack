@@ -10,6 +10,10 @@ spaces */
   margin-bottom: 30px !important;
 }
 
+.sb-mb-0{
+  margin-bottom: 0;
+}
+
 /***************************
 
 checkout
