@@ -9,7 +9,8 @@ import orderRouter from "./routes/orderRoute.js";
 import cookieParser from "cookie-parser";
 import adminRouter from "./routes/adminRoute.js";
 import uploadRoute from "./routes/upload.js";
-import couponRouter from "./routes/couponRoute.js";
+import couponRouter from "./routes/couponRouter.js";
+import customerCouponRouter from "./routes/customerCouponRouter.js";
 
 // app config
 const app = express();
@@ -72,6 +73,7 @@ app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
+app.use("/api/customercoupon", customerCouponRouter)
 app.use("/api/coupon", couponRouter)
 app.use("/api", uploadRoute);
 

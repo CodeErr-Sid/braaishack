@@ -1,91 +1,94 @@
-import CustomerCoupon from "../models/customerCouponModel.js";
+import Stripe from 'stripe';
+import CustomerCoupon from '../models/customerCouponModel.js';
+import Coupon from '../models/couponModel.js';
 
-// Add customer coupon
-export const addCustomerCoupon = async (req, res) => {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); // Replace with your Stripe secret key
+
+// Purchase Coupon
+export const purchaseCoupon = async (req, res) => {
+    const { couponId, quantity } = req.body;
     try {
-        const { couponDataId, customerEmail, numberOfCoupons, couponCodes } = req.body;
+        const coupon = await Coupon.findById(couponId);
+        if (!coupon) return res.status(404).json({ error: 'Coupon not found' });
 
-        const newCustomerCoupon = new CustomerCoupon({ couponDataId, customerEmail, numberOfCoupons, couponCodes });
-        await newCustomerCoupon.save();
+        const totalPrice = coupon.price * quantity;
 
-
-        const line_items = req.body.items.map((item) => ({
-            price_data: {
-                currency: currency,
-                product_data: {
-                    name: item.name
-                },
-                unit_amount: item.price * 100
-            },
-            quantity: item.quantity
-        }))
-
-        line_items.push({
-            price_data: {
-                currency: currency,
-                product_data: {
-                    name: "Delivery Charge"
-                },
-                unit_amount: deliveryCharge * 100
-            },
-            quantity: 1
-        })
-
+        // Create Stripe session
         const session = await stripe.checkout.sessions.create({
-            success_url: `${frontend_URL}/verify?success=true&orderId=${newOrder._id}`,
-            cancel_url: `${frontend_URL}/verify?success=false&orderId=${newOrder._id}`,
-            line_items: line_items,
+            payment_method_types: ['card'],
+            line_items: [{
+                price_data: {
+                    currency: 'usd',
+                    product_data: { name: coupon.title, description: coupon.description },
+                    unit_amount: coupon.price * 100
+                },
+                quantity
+            }],
             mode: 'payment',
+            success_url: `${process.env.FRONTEND_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${process.env.FRONTEND_URL}/cancel`
         });
 
-        res.json({ success: true, session_url: session.url });
-
+        res.status(200).json({ url: session.url });
     } catch (error) {
-        return res.status(500).json({ success: false, message: 'Error adding customer coupon', error: error.message });
+        console.error('Error processing purchase:', error);
+        res.status(500).json({ error: 'Failed to process purchase' });
     }
 };
 
-// List all customer coupons
-export const listCustomerCoupons = async (req, res) => {
-    try {
-        const customerCoupons = await CustomerCoupon.find().populate('couponDataId');
-        return res.status(200).json({ message: 'Customer coupons retrieved successfully', data: customerCoupons });
-    } catch (error) {
-        return res.status(500).json({ message: 'Error retrieving customer coupons', error: error.message });
-    }
-};
+// Confirm Payment
+export const confirmPayment = async (req, res) => {
+    const { sessionId, couponId, name, email, phoneNumber, giftNotes, quantity } = req.body;
 
-// Redeem a coupon by coupon code
-// Verify coupon code
-export const verifyCoupon = async (req, res) => {
     try {
-        const { couponCode } = req.body; // Get coupon code from request body
+        const session = await stripe.checkout.sessions.retrieve(sessionId);
 
-        // Find the coupon in the database
-        const coupon = await CustomerCoupon.findOne({
-            'couponCodes.code': couponCode
+        if (session.payment_status !== 'paid') {
+            return res.status(400).json({ error: 'Payment not completed' });
+        }
+
+        const coupon = await Coupon.findById(couponId);
+        if (!coupon) return res.status(404).json({ error: 'Coupon not found' });
+
+        const customerCoupon = new CustomerCoupon({
+            couponId,
+            name,
+            email,
+            phoneNumber,
+            giftNotes,
+            quantity,
+            totalPrice: coupon.price * quantity,
+            secretCode: `COUPON-${Math.random().toString(36).substr(2, 9).toUpperCase()}`,
+            expiration: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
+            redeemed: false
         });
 
-        if (!coupon) {
-            return res.status(404).json({ message: 'Coupon code not found' });
-        }
+        await customerCoupon.save();
 
-        const couponToVerify = coupon.couponCodes.find(c => c.code === couponCode);
+        // TODO: Send Email Logic (use a library like nodemailer)
+        // sendCouponEmail(email, customerCoupon);
 
-        // Check if the coupon is already redeemed
-        if (couponToVerify.redeemed) {
-            return res.status(400).json({ message: 'Coupon has already been redeemed' });
-        }
-
-        // Optionally check for expiration date if implemented
-        // if (couponToVerify.expirationDate < new Date()) {
-        //     return res.status(400).json({ message: 'Coupon has expired' });
-        // }
-
-        // Coupon is valid and not redeemed
-        return res.status(200).json({ message: 'Coupon is valid', coupon: couponToVerify });
+        res.status(201).json(customerCoupon);
     } catch (error) {
-        return res.status(500).json({ message: 'Error verifying coupon', error: error.message });
+        console.error('Error confirming payment:', error);
+        res.status(500).json({ error: 'Failed to confirm payment' });
     }
 };
 
+// Redeem Coupon
+export const redeemCoupon = async (req, res) => {
+    const { secretCode } = req.body;
+    try {
+        const customerCoupon = await CustomerCoupon.findOne({ secretCode });
+        if (!customerCoupon) return res.status(404).json({ error: 'Coupon not found' });
+        if (customerCoupon.redeemed) return res.status(400).json({ error: 'Coupon already redeemed' });
+
+        customerCoupon.redeemed = true;
+        await customerCoupon.save();
+
+        res.status(200).json({ message: 'Coupon redeemed successfully' });
+    } catch (error) {
+        console.error('Error redeeming coupon:', error);
+        res.status(500).json({ error: 'Failed to redeem coupon' });
+    }
+};

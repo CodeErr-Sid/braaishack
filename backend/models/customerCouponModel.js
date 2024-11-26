@@ -1,40 +1,18 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const customerCouponSchema = new mongoose.Schema({
-    couponDataId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'CouponData',
-        required: true
-    }, // Reference to the CouponData schema (the coupon plan)
-    customerEmail: {
-        type: String,
-        required: true
-    }, // The email of the customer who bought the coupons
-    numberOfCoupons: {
-        type: Number,
-        required: true
-    }, // Number of coupons purchased
-    couponCodes: [{
-        code: {
-            type: String,
-            unique: true,
-            required: true
-        }, // Unique coupon code for each purchased coupon
-        redeemed: {
-            type: Boolean,
-            default: false
-        }, // Status to check if the coupon has been redeemed
-        redeemedAt: {
-            type: Date,
-            default: null
-        }, // Date and time when the coupon was redeemed
-    }],
-    purchaseDate: {
-        type: Date,
-        default: Date.now
-    }, // Date when the coupons were purchased
+    couponId: { type: mongoose.Schema.Types.ObjectId, ref: 'Coupon', required: true },
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    phoneNumber: { type: String, required: true },
+    giftNotes: { type: String },
+    quantity: { type: Number, required: true },
+    totalPrice: { type: Number, required: true },
+    secretCode: { type: String, required: true },
+    expiration: { type: Date, required: true },
+    redeemed: { type: Boolean, default: false }
 });
 
-const CustomerCoupon = mongoose.models.CustomerCoupon || mongoose.model("CustomerCoupon", customerCouponSchema);
-export default CustomerCoupon;
+const CustomerCoupon = mongoose.model('CustomerCoupon', customerCouponSchema);
 
+export default CustomerCoupon;
