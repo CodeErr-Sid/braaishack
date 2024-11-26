@@ -1,11 +1,13 @@
 import React from 'react'
 import Preloader from '../../components/Preloader/Preloader'
 import Header from '../../components/About-header/Header'
-import GiftCheckoutSection from '../../components/GiftCheckoutSection/GiftCheckoutSection'
+import GiftCheckoutSection from '../../components/GiftCheckout/GiftCheckoutSection/GiftCheckoutSection'
 
 
 
 const GiftCheckout = () => {
+
+  
   return (
     <section>
       <Preloader />
