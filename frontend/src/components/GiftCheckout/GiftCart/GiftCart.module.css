@@ -1,20 +1,44 @@
 .cart {
     padding: 20px;
-    background-color: #fff;
+    background-color: #121212;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 20px;
+    flex: 1;
 }
 
 .cart h2 {
     font-size: 1.5rem;
-    color: #333;
     margin-bottom: 20px;
 }
 
 .cartItem {
     display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.cartImageContainer {
+    flex-shrink: 0;
+}
+
+.cartImage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cartDetails {
+    display: flex;
     flex-direction: column;
     gap: 10px;
+    flex-grow: 1;
 }
 
 .quantityControls {
@@ -24,17 +48,17 @@
 }
 
 .quantityControls button {
-    padding: 5px 10px;
+    padding: 2px 10px;
     font-size: 1.2rem;
     cursor: pointer;
-    background-color: #ff7f50;
-    color: white;
+    background-color: yellow;
+    color: black;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
 }
 
 .quantityControls button:hover {
-    background-color: #ff6347;
+    background-color: rgba(255, 255, 0, 0.842);
 }
 
 .quantityControls span {
@@ -45,5 +69,15 @@
     margin-top: 20px;
     font-size: 1.4rem;
     font-weight: bold;
-    color: #333;
+}
+
+@media screen and (0 < width <=425px) {
+    .cartItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cartImage{
+        width: 100%;
+        height: auto;
+    }
 }

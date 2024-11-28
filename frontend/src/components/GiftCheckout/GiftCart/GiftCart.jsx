@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './GiftCart.module.css';
 
-const GiftCart = () => {
-    // Assuming the price of the gift voucher is $25
-    const pricePerItem = 25;
-    const [quantity, setQuantity] = useState(1);
-
+const GiftCart = ({ coupon, quantity, setQuantity }) => {
     const increment = () => setQuantity(quantity + 1);
     const decrement = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
     const calculateGrandTotal = () => {
-        return pricePerItem * quantity;
+        return coupon.price * quantity;
     };
 
     return (
         <div className={styles.cart}>
             <h2>Your Gift Cart</h2>
             <div className={styles.cartItem}>
-                <h3>Gift Voucher</h3>
-                <p>Price: ${pricePerItem}</p>
-                <div className={styles.quantityControls}>
-                    <button onClick={decrement}>-</button>
-                    <span>{quantity}</span>
-                    <button onClick={increment}>+</button>
+                <div className={styles.cartImageContainer}>
+                    <img src={coupon.imgSrc} alt={coupon.title} className={styles.cartImage} />
+                </div>
+                <div className={styles.cartDetails}>
+                    <h3>{coupon.title}</h3>
+                    <p>Price: ${coupon.price}</p>
+                    <div className={styles.quantityControls}>
+                        <button onClick={decrement}>-</button>
+                        <span>{quantity}</span>
+                        <button onClick={increment}>+</button>
+                    </div>
                 </div>
             </div>
             <div className={styles.grandTotal}>

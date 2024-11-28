@@ -12,3 +12,20 @@
     font-size: 2rem;
     color: #333;
 }
+
+
+.checkoutInnerContainer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+
+}
+
+
+@media screen and (0 < width < 800px) {
+    .checkoutInnerContainer {
+        padding: .5rem;
+        flex-direction: column;
+    }
+}

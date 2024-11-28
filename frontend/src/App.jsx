@@ -34,6 +34,7 @@ import Reservation from './pages/Reservation/Reservation';
 import { StoreContext } from './Context/StoreContext';
 import axios from 'axios';
 import GiftCheckout from './pages/GiftCheckout/GiftCheckout';
+import GiftVerify from './pages/GiftVerify/GiftVerify';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -126,6 +127,7 @@ const App = () => {
           <Route path='/gift-section' element={<GiftSection />} />
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />
+          <Route path='/success' element={<GiftVerify />} />
           <Route path='/events' element={<Events />} />
           <Route path='/about' element={<About />} />
           <Route path='/reservation' element={<Reservation />} />

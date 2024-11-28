@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './GiftCard.module.css';
+import { StoreContext } from '../../Context/StoreContext';
 
 const Card = ({ img, title, description, pricing, card }) => {
   const navigate = useNavigate();
 
-  const handleAddToCart = () => {
+  const { currency } = useContext(StoreContext)
+
+  const handlePurchase = () => {
     // Navigate to checkout page and pass the selected card as state
     navigate('/checkout', { state: { card } });
   };
@@ -16,9 +19,9 @@ const Card = ({ img, title, description, pricing, card }) => {
       <div className={styles.cardContent}>
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardDescription}>{description}</p>
-        <div className={styles.cardPricing}>{pricing}</div>
-        <button className={styles.ctaButton} onClick={handleAddToCart}>
-          Add to Cart
+        <div className={styles.cardPricing}>{currency + pricing}</div>
+        <button className={styles.ctaButton} onClick={handlePurchase}>
+          Purchase
         </button>
       </div>
     </div>
@@ -30,10 +33,10 @@ const GiftCard = ({ cards }) => (
     {cards.map((card, index) => (
       <Card
         key={index}
-        img={card.img}
+        img={card.imgSrc}
         title={card.title}
         description={card.description}
-        pricing={card.pricing}
+        pricing={card.price}
         card={card} // Pass the whole card data
       />
     ))}

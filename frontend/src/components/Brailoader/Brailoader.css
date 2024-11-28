@@ -1,7 +1,7 @@
 /* -------------------------------------------
  Preloader
  ------------------------------------------- */
- .mil-preloader {
+.mil-preloader {
     position: fixed;
     z-index: 10000;
     top: 0;
@@ -16,7 +16,8 @@
     position: relative;
     height: 100vh;
     color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-family: 'Montserrat', sans-serif;
+    /* Apply Montserrat font */
 }
 
 .mil-preloader .mil-preloader-animation .mil-pos-abs {
@@ -37,7 +38,8 @@
 .mil-preloader .mil-preloader-animation .mil-pos-abs p {
     opacity: 0;
     margin-right: 15px;
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-family: 'Montserrat', sans-serif;
+    /* Apply Montserrat font */
 }
 
 @media screen and (max-width: 992px) {
@@ -76,4 +78,15 @@
     font-size: 2rem;
 }
 
+.min-web-header {
+    font-size: 2rem;
+    color: #fde419;
+}
 
+
+
+@media screen and (0 < width <=425px) {
+    .min-web-header {
+        font-size: 1.5rem;
+    }
+}

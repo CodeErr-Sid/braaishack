@@ -34,14 +34,14 @@
 }
 
 .cardTitle {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0 10px;
-  color: #333;
+  color: #fff
 }
 
 .cardDescription {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #666;
   margin-bottom: 15px;
 }
@@ -73,4 +73,10 @@
   /* Adds a shadow on hover */
   transform: translateY(-2px);
   /* Slightly lifts the button on hover */
+}
+
+@media screen and ( width <= 500px) {
+  .cardContainer{
+    flex-direction: column;
+  }
 }

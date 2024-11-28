@@ -87,7 +87,7 @@ const Brailoader = () => {
                 <div className="mil-pos-abs mil-animation-2">
                     <div className="mil-reveal-frame">
                         <p className="mil-reveal-box"></p>
-                        <p className="mil-h3 mil-maroon mil-thin" style={{ color: '#fde419', fontSize: '2rem' }}>braaishackrestaurant.com</p>
+                        <p className="mil-h3 mil-maroon mil-thin min-web-header">braaishackrestaurant.com</p>
                     </div>
                 </div>
             </div>
