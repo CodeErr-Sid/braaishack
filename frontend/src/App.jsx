@@ -128,7 +128,7 @@ const App = () => {
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />
           <Route path='/success' element={<GiftVerify />} />
-          <Route path='/events' element={<Events />} />
+          <Route path='/events' element={<Events />} /> 
           <Route path='/about' element={<About />} />
           <Route path='/reservation' element={<Reservation />} />
           <Route path='/shop' element={<Shop />} />
