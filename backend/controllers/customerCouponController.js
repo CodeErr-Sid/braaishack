@@ -87,7 +87,7 @@ export const confirmPayment = async (req, res) => {
 
         await customerCoupon.save();
 
-        sendCouponEmail(email, customerCoupon);
+        sendCouponEmail(email, customerCoupon, coupon);
 
         // Send success response
         res.status(201).json({
