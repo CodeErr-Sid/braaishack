@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import styles from './GiftVerify.module.css';
 import { StoreContext } from '../../Context/StoreContext';
+import { toast } from 'react-toastify';
 
 const GiftVerify = () => {
     const [searchParams] = useSearchParams();  // Hook to access URL parameters
@@ -23,10 +24,12 @@ const GiftVerify = () => {
 
             if (response.data.success) {
                 setPaymentStatus('Payment Verified');
-                navigate('/gift-section');
-                console.log("message : " + response.data.message)
-
-            } else {
+                navigate('/gift-section', {
+                    state: { message: response.data.message }, // Pass the message here
+                });
+                console.log("message : " + response.data.message);
+            }
+            else {
                 setPaymentStatus('Payment Failed');
                 // Handle failure if necessary
             }
