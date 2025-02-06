@@ -18,7 +18,6 @@ export default function About() {
         <div className='about-section'>
             <Preloader /> 
             <Header header_title={'ABOUT US'} header_btn={'HOME/ABOUT US'} />
-            
             <Details />
             <Location/>
             <Features />
